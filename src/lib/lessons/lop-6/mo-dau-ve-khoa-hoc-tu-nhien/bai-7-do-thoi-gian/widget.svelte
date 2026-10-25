@@ -119,7 +119,7 @@
   /** @type {{ tone: 'ok' | 'warn' | 'info', text: string }} */
   const feedback = $derived.by(() => {
     if (summary.count >= 3 && summary.mean !== null && summary.spread !== null) {
-      const text = `Trung bình ${summary.count} lần đo: ${s(summary.mean)}; các lần lệch nhau tới ${s(summary.spread)} vì tay bấm nhanh chậm khác nhau. Đồng hồ đo thời gian hiện số dùng cổng quang đo được ${s(slope.time)}, chênh ${s(Math.abs(gap(summary.mean, slope.time)))} so với trung bình.`;
+      const text = `Trung bình ${summary.count} lần đo: ${s(summary.mean)}; có lần lệch khỏi trung bình tới ${s(summary.spread)} vì tay bấm lúc sớm lúc muộn. Đồng hồ đo thời gian hiện số dùng cổng quang đo được ${s(slope.time)}, chênh ${s(Math.abs(gap(summary.mean, slope.time)))} so với trung bình.`;
       return { tone: note?.tone ?? 'info', text: note ? `${note.text} ${text}` : text };
     }
     if (note) return note;

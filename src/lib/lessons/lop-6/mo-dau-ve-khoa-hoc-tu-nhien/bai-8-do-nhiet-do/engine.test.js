@@ -56,6 +56,16 @@ describe('virtual thermometer', () => {
     expect(judge({ th: ruou, sample: nach, level: 38.6, typed: 39 })).toBe('dung');
   });
 
+  it('keeps a feverish reading when the next person is measured without shaking', () => {
+    const khoe = sample('nach-khoe');
+    let level = step(yTe, 35, 38.6, 20);
+    level = step(yTe, level, khoe.temp, 20);
+    expect(level).toBe(38.6);
+    expect(judge({ th: yTe, sample: khoe, level, typed: 38.6 })).toBe('chua-vay');
+    level = step(yTe, Math.min(level, yTe.min), khoe.temp, 20);
+    expect(judge({ th: yTe, sample: khoe, level, typed: 36.8 })).toBe('dung');
+  });
+
   it('converts to °F and to K with the offset 273', () => {
     expect(otherScales(0)).toEqual({ f: 32, k: 273 });
     expect(otherScales(100)).toEqual({ f: 212, k: 373 });

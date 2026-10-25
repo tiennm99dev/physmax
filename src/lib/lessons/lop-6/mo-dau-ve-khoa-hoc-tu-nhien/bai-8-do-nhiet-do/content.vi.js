@@ -121,7 +121,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Đo nhiệt độ cơ thể bằng nhiệt kế y tế thuỷ ngân: lau sạch thân và bầu nhiệt kế bằng bông và cồn; vẩy cho thuỷ ngân tụt xuống dưới vạch $35\\ ^\\circ\\text{C}$; đặt bầu nhiệt kế vào nách, kẹp cánh tay lại, đợi $2$ đến $3$ phút rồi lấy ra đọc.',
+          text: 'Đo nhiệt độ cơ thể bằng nhiệt kế y tế thuỷ ngân: vẩy cho thuỷ ngân tụt xuống dưới vạch $35\\ ^\\circ\\text{C}$; lau sạch thân và bầu nhiệt kế bằng bông và cồn; đặt bầu nhiệt kế vào nách, kẹp cánh tay lại, đợi $2$ đến $3$ phút rồi lấy ra đọc.',
         },
         {
           type: 'p',
@@ -140,7 +140,7 @@ export default {
   explore: {
     title: 'Nhiệt kế ảo',
     instruction:
-      'Chọn nhiệt kế, rồi chọn nơi nhúng bầu nhiệt kế vào. Quan sát cột chất lỏng dâng lên hay hạ xuống, đợi nó đứng yên rồi đọc ở khung phóng to và nhập kết quả bằng độ C. Thang bên phải cho thấy cùng mức đó trên thang Kelvin hoặc Fahrenheit. Thử nhúng nhiệt kế rượu vào nước sôi, dùng nhiệt kế y tế đo nước đá, hay đo hai lần liền bằng nhiệt kế y tế mà không vẩy để thấy vì sao phải chọn và dùng nhiệt kế đúng cách.',
+      'Chọn nhiệt kế, rồi chọn nơi nhúng bầu nhiệt kế vào. Quan sát cột chất lỏng dâng lên hay hạ xuống, đợi nó đứng yên rồi đọc ở khung phóng to và nhập kết quả bằng độ C. Thang bên phải cho thấy cùng mức đó trên thang Kelvin hoặc Fahrenheit. Thử nhúng nhiệt kế rượu vào nước sôi, dùng nhiệt kế y tế đo nước đá, hay dùng nhiệt kế y tế đo bạn Nam rồi đo tiếp bạn Lan mà không vẩy để thấy vì sao phải chọn và dùng nhiệt kế đúng cách.',
   },
   examples: [
     {
@@ -279,13 +279,12 @@ export default {
         'Đặt bầu nhiệt kế vào nách, kẹp cánh tay lại',
         'Vẩy cho thuỷ ngân tụt xuống dưới vạch 35 °C',
         'Lấy nhiệt kế ra và đọc kết quả',
-        'Lau sạch thân và bầu nhiệt kế bằng bông và cồn',
         'Đợi 2 đến 3 phút',
       ],
-      answer: [3, 1, 0, 4, 2],
-      hints: ['Làm sạch và vẩy nhiệt kế trước khi đặt vào nách.'],
+      answer: [1, 0, 3, 2],
+      hints: ['Nhiệt kế y tế giữ số chỉ cũ, nên phải làm gì trước khi đặt vào nách?'],
       solution:
-        'Lau sạch nhiệt kế → vẩy cho thuỷ ngân tụt dưới vạch 35 °C → đặt vào nách, kẹp tay lại → đợi 2 đến 3 phút → lấy ra đọc kết quả.',
+        'Vẩy cho thuỷ ngân tụt dưới vạch 35 °C (rồi lau sạch nhiệt kế bằng bông và cồn) → đặt vào nách, kẹp tay lại → đợi 2 đến 3 phút → lấy ra đọc kết quả.',
     },
     {
       type: 'choice',

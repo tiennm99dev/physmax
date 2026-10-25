@@ -171,7 +171,7 @@
         const o = otherScales(t);
         return {
           tone: 'ok',
-          text: `Chính xác: ${deg(t)}. Đổi sang thang khác: ${formatNumber(o.f, 2)} °F (1,8 · ${formatNumber(t, 1)} + 32) và ${formatNumber(o.k, 1)} K (${formatNumber(t, 1)} + 273).`,
+          text: `Chính xác: ${deg(t)}. Đổi sang thang khác: ${formatNumber(o.f, 2)} °F (${formatNumber(t, 1)} × 1,8 + 32) và ${formatNumber(o.k, 1)} K (${formatNumber(t, 1)} + 273).`,
         };
       }
     }

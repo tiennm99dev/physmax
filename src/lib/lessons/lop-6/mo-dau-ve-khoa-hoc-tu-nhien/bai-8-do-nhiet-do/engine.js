@@ -62,6 +62,7 @@ export const SAMPLES = [
   { id: 'nuoc-am', name: 'Nước ấm', temp: 45 },
   { id: 'nuoc-soi', name: 'Nước đang sôi', temp: 100 },
   { id: 'nach', name: 'Nách bạn Nam (đang sốt)', temp: 38.6 },
+  { id: 'nach-khoe', name: 'Nách bạn Lan (khoẻ mạnh)', temp: 36.8 },
 ];
 
 /** Room temperature, °C. */
