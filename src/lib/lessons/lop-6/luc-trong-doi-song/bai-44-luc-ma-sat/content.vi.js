@@ -169,7 +169,7 @@ export default {
       unit: 'N',
       hints: ['Khi hộp chuyển động đều, lực kéo và lực ma sát cân bằng nhau.'],
       solution:
-        'Hộp chuyển động đều nên lực ma sát trượt cân bằng với lực kéo: $F_{ms} = 4{,}5\\ \\text{N}$, ngược chiều chuyển động.',
+        'Hộp chuyển động đều nên lực ma sát trượt cân bằng với lực kéo: $F_{\\text{ms}} = 4{,}5\\ \\text{N}$, ngược chiều chuyển động.',
     },
     {
       type: 'choice',

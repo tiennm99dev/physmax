@@ -211,11 +211,11 @@ export default {
     {
       type: 'multi',
       prompt: 'Những dụng cụ nào hoạt động nhờ biến dạng đàn hồi của lò xo?',
-      options: ['Lực kế lò xo', 'Cân lò xo (cân treo)', 'Thước dây', 'Giảm xóc xe máy', 'Nhiệt kế'],
+      options: ['Lực kế lò xo', 'Cân lò xo (cân treo)', 'Thước kẻ', 'Giảm xóc xe máy', 'Nhiệt kế'],
       answers: [0, 1, 3],
       hints: ['Tìm dụng cụ có lò xo bên trong, lò xo dãn hoặc nén khi dùng.'],
       solution:
-        'Lực kế lò xo, cân lò xo và giảm xóc xe máy đều có lò xo dãn hoặc nén khi chịu lực rồi trở lại như cũ. Thước dây và nhiệt kế không dùng lò xo để hoạt động.',
+        'Lực kế lò xo, cân lò xo và giảm xóc xe máy đều có lò xo dãn hoặc nén khi chịu lực rồi trở lại như cũ. Thước kẻ và nhiệt kế không dùng lò xo để hoạt động.',
     },
   ],
   takeaways: [

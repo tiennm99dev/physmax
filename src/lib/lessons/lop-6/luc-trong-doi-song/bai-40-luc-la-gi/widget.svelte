@@ -49,11 +49,12 @@
   const after = $derived([1, 2, 3].map((t) => px({ x: v.x * t * STEP, y: v.y * t * STEP })));
 
   const unit = $derived(fromPolar(1, angle));
-  // A push comes from behind the ball, a pull from a rope in front of it.
+  // A push comes from behind the ball and squashes it along the force; a pull
+  // comes from a rope in front of it and stretches it along the force.
   const hand = $derived(
     action === 'day'
       ? px({ x: -unit.x * (R + 22), y: -unit.y * (R + 22) })
-      : px({ x: unit.x * (R + 70), y: unit.y * (R + 70) }),
+      : px({ x: unit.x * (R + 86), y: unit.y * (R + 86) }),
   );
   const forceTip = $derived(px({ x: unit.x * (R + 14 + 14 * s), y: unit.y * (R + 14 + 14 * s) }));
 
@@ -62,8 +63,8 @@
 
   /** @type {Record<import('./engine.js').Change, string>} */
   const CHANGE_TEXT = {
-    'dung-yen': 'Không có lực tác dụng: quả bóng vẫn đứng yên.',
-    'khong-doi': 'Không có lực tác dụng: quả bóng vẫn lăn thẳng như cũ, tốc độ và hướng không đổi.',
+    'dung-yen': 'Không có lực tác dụng: vật vẫn đứng yên.',
+    'khong-doi': 'Không có lực tác dụng: vật vẫn lăn thẳng như cũ, tốc độ và hướng không đổi.',
     'bat-dau': 'Vật đang đứng yên bắt đầu chuyển động theo hướng của lực.',
     'dung-lai': 'Lực ngược chiều chuyển động làm vật đang chuyển động dừng lại.',
     'nhanh-len': 'Lực cùng chiều chuyển động làm vật chuyển động nhanh lên.',
@@ -201,8 +202,8 @@
       <ellipse
         cx={CX}
         cy={CY}
-        rx={R * (1 - dent)}
-        ry={R * (1 + dent / 2)}
+        rx={R * (action === 'keo' ? 1 + dent / 2 : 1 - dent)}
+        ry={R * (action === 'keo' ? 1 - dent / 2 : 1 + dent / 2)}
         transform="rotate({-angle} {CX} {CY})"
         fill={ballId === 'bong' ? '#f97316' : '#64748b'}
         stroke={ballId === 'bong' ? '#9a3412' : '#1e293b'}

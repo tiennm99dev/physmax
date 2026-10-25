@@ -160,7 +160,7 @@
   <div class="grid gap-4 sm:grid-cols-[minmax(0,15rem)_1fr]">
     <figure class="{card} overflow-hidden p-2">
       <svg
-        viewBox="0 0 220 480"
+        viewBox="0 0 220 500"
         class="mx-auto block w-full max-w-[15rem] select-none"
         role="img"
         aria-label="{status} Kim chỉ vạch {formatFixed(l, 1)} cm trên thước."

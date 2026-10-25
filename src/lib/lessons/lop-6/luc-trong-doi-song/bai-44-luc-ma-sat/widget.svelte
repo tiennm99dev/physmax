@@ -26,6 +26,9 @@
   const STRIPE = 36;
   const PX_PER_M = 120;
   const V_MAX = 2; // fastest a hand pulling the balance can follow, m/s
+  // The run plays at a quarter of real speed, so a learner has several
+  // seconds to press "Kéo đều" after the block starts to slide.
+  const SLOW = 0.25;
 
   /** @type {import('./engine.js').SurfaceId} */
   let surfaceId = $state('go');
@@ -53,13 +56,14 @@
     const tick = (/** @type {number} */ now) => {
       const dt = Math.min(0.05, (now - last) / 1000);
       last = now;
-      const next = step(motion, f, lim, dt);
+      const next = step(motion, f, lim, dt * SLOW);
+      if (next.moving && !motion.moving) note = '';
       if (next.moving !== motion.moving || next.v !== motion.v) motion = next;
       if (motion.v > V_MAX && pull > 0) {
         // The hand cannot keep up with a block that keeps speeding up: it lets go.
         pull = 0;
         note =
-          'Khối gỗ chạy nhanh dần mãi nên tay không theo kịp và phải thả ra: không còn lực kéo, lực ma sát làm khối gỗ chậm dần rồi dừng lại.';
+          'Khối gỗ chạy nhanh dần mãi nên tay không theo kịp và phải thả ra: không còn lực kéo, lực ma sát làm khối gỗ chậm dần rồi dừng lại. Lần sau, khi khối gỗ vừa bắt đầu trượt, hãy nhấn "Kéo đều".';
       }
       if (motion.v > 0) offset = (offset + motion.v * dt * PX_PER_M) % STRIPE;
       frame = requestAnimationFrame(tick);
