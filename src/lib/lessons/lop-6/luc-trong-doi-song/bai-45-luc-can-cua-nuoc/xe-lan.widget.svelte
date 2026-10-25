@@ -31,7 +31,8 @@
   const p = $derived(plate(plateId));
   const v = $derived(Math.round(speed * 10) / 10);
   const now = $derived(reading(plateId, water, v));
-  const shown = $derived(running ? now.balance : 0);
+  // After a run the balance keeps showing the last steady reading until the setup changes.
+  const shown = $derived.by(() => (running ? now.balance : (last?.balance ?? 0)));
 
   $effect(() => {
     if (!running) return;

@@ -179,10 +179,10 @@ export default {
       prompt:
         'Làm thí nghiệm với hai tấm cản có diện tích $50\\ \\text{cm}^2$ và $100\\ \\text{cm}^2$, kéo xe đều với cùng tốc độ trong hộp có nước. Kết quả nào đúng?',
       options: [
-        'Số chỉ lực kế với tấm $100\\ \\text{cm}^2$ lớn hơn',
-        'Số chỉ lực kế với tấm $50\\ \\text{cm}^2$ lớn hơn',
-        'Số chỉ lực kế như nhau',
-        'Lực kế chỉ $0$ với cả hai tấm',
+        'Với tấm lớn hơn ($100\\ \\text{cm}^2$), lực kế chỉ số lớn hơn',
+        'Với tấm nhỏ hơn ($50\\ \\text{cm}^2$), lực kế chỉ số lớn hơn',
+        'Số chỉ lực kế như nhau với cả hai tấm',
+        'Lực kế chỉ số 0 với cả hai tấm',
       ],
       answer: 0,
       hints: ['Diện tích mặt cản ảnh hưởng thế nào đến lực cản của nước?'],
@@ -207,15 +207,15 @@ export default {
     {
       type: 'order',
       prompt:
-        'Bốn vật cùng chất, cùng khối lượng được thả cùng lúc trong một bể nước sâu. Sắp xếp theo thứ tự chạm đáy, từ vật chạm đáy trước đến vật chạm đáy sau cùng.',
-      items: ['Tấm phẳng nằm ngang', 'Hình thuôn như thân cá', 'Hình lập phương', 'Hình cầu'],
-      answer: [1, 3, 2, 0],
+        'Ba vật cùng chất, cùng khối lượng được thả cùng lúc trong một bể nước sâu: một vật hình thuôn như thân cá (đầu nhọn hướng xuống), một hòn bi hình cầu và một tấm phẳng mỏng nằm ngang. Sắp xếp theo thứ tự chạm đáy, từ vật chạm đáy trước đến vật chạm đáy sau cùng.',
+      items: ['Tấm phẳng nằm ngang', 'Hình thuôn như thân cá', 'Hình cầu'],
+      answer: [1, 2, 0],
       hints: [
         'Vật chịu lực cản càng nhỏ thì chìm càng nhanh.',
         'Vật thuôn rẽ nước tốt nhất; tấm phẳng nằm ngang có diện tích mặt cản lớn nhất.',
       ],
       solution:
-        'Hình thuôn chịu lực cản nhỏ nhất nên chạm đáy trước, rồi đến hình cầu, hình lập phương; tấm phẳng nằm ngang có diện tích mặt cản lớn nhất nên chạm đáy sau cùng (đúng như trong cuộc đua ở bể nước ảo).',
+        'Hình thuôn rẽ nước tốt nhất, chịu lực cản nhỏ nhất nên chạm đáy trước, rồi đến hình cầu; tấm phẳng nằm ngang có diện tích mặt cản lớn nhất nên chịu lực cản lớn nhất và chạm đáy sau cùng (đúng như trong cuộc đua ở bể nước ảo).',
     },
     {
       type: 'multi',

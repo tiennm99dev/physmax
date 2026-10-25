@@ -80,14 +80,14 @@
     if (running) return 'Các vật đang chìm xuống…';
     if (!finished) {
       return guess
-        ? 'Nhấn "Thả" để cả bốn vật cùng bắt đầu rơi từ mặt nước.'
+        ? `Nhấn "Thả" để cả bốn vật cùng bắt đầu rơi từ ${water ? 'mặt nước' : 'miệng bể'}.`
         : 'Hãy dự đoán vật nào chạm đáy trước, rồi nhấn "Thả".';
     }
     const result = order.map((r) => `${r.name.toLowerCase()} ${sec(r.time)}`).join(', ');
     const verdict =
       best === 'cung-luc'
         ? 'Trong không khí, lực cản rất nhỏ nên hình dạng hầu như không ảnh hưởng: cả bốn vật chạm đáy gần như cùng lúc.'
-        : `Trong nước, ${nameOf(best)} chạm đáy trước, tấm phẳng nằm ngang chạm đáy sau cùng: vật có diện tích mặt cản lớn chịu lực cản lớn hơn, vật hình thuôn chịu lực cản nhỏ nhất.`;
+        : `Trong nước, ${nameOf(best)} chạm đáy trước, tấm phẳng nằm ngang chạm đáy sau cùng: tấm phẳng có diện tích mặt cản lớn nhất nên chịu lực cản lớn nhất, còn vật hình thuôn rẽ nước tốt nhất nên chịu lực cản nhỏ nhất.`;
     const check = !guess
       ? ''
       : guess === best
