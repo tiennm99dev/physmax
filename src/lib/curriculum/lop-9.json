@@ -1,0 +1,246 @@
+{
+  "grade": 9,
+  "volumes": ["Sách giáo khoa (1 tập)"],
+  "chapters": [
+    {
+      "no": 0,
+      "label": "Mở đầu",
+      "title": "Bài mở đầu",
+      "slug": "bai-mo-dau",
+      "strand": "mo-dau-do-luong",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Nhận biết một số dụng cụ, hóa chất. Thuyết trình một vấn đề khoa học",
+          "slug": "bai-1-nhan-biet-mot-so-dung-cu-hoa-chat-thuyet-trinh-mot-van-de-khoa-hoc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Dụng cụ quang học và điện",
+            "Hóa chất thường dùng",
+            "Kĩ năng thuyết trình khoa học"
+          ],
+          "interactiveIdea": "Kho dụng cụ ảo: bấm vào từng dụng cụ để xem tên, công dụng và lưu ý an toàn, rồi ghép vào thí nghiệm phù hợp."
+        }
+      ]
+    },
+    {
+      "no": 1,
+      "label": "Chương 1",
+      "title": "Năng lượng cơ học",
+      "slug": "nang-luong-co-hoc",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 2,
+          "title": "Bài 2. Động năng. Thế năng",
+          "slug": "bai-2-dong-nang-the-nang",
+          "kind": "theory",
+          "keyIdeas": [
+            "Động năng Wđ = ½mv²",
+            "Thế năng trọng trường Wt = Ph",
+            "Phụ thuộc khối lượng, tốc độ, độ cao"
+          ],
+          "interactiveIdea": "Thả vật từ các độ cao và khối lượng khác nhau, thanh động năng và thế năng cập nhật trực tiếp."
+        },
+        {
+          "no": 3,
+          "title": "Bài 3. Cơ năng",
+          "slug": "bai-3-co-nang",
+          "kind": "theory",
+          "keyIdeas": [
+            "Cơ năng bằng tổng động năng và thế năng",
+            "Chuyển hóa động năng và thế năng",
+            "Bảo toàn cơ năng khi bỏ qua ma sát"
+          ],
+          "interactiveIdea": "Đường trượt ván ảo vẽ được, biểu đồ cột năng lượng thay đổi theo vị trí, bật tắt ma sát."
+        },
+        {
+          "no": 4,
+          "title": "Bài 4. Công và công suất",
+          "slug": "bai-4-cong-va-cong-suat",
+          "kind": "theory",
+          "keyIdeas": ["Công cơ học A = F.s", "Công suất P = A/t", "Đơn vị J và W"],
+          "interactiveIdea": "So sánh hai người kéo vật lên cao với thời gian khác nhau, tính công và công suất."
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "label": "Chương 2",
+      "title": "Ánh sáng",
+      "slug": "anh-sang",
+      "strand": "quang-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 5,
+          "title": "Bài 5. Khúc xạ ánh sáng",
+          "slug": "bai-5-khuc-xa-anh-sang",
+          "kind": "theory",
+          "keyIdeas": ["Hiện tượng khúc xạ", "Chiết suất", "Định luật khúc xạ"],
+          "interactiveIdea": "Tia laser qua mặt phân cách không khí và nước, xoay góc tới để thấy góc khúc xạ và kiểm tra định luật."
+        },
+        {
+          "no": 6,
+          "title": "Bài 6. Phản xạ toàn phần",
+          "slug": "bai-6-phan-xa-toan-phan",
+          "kind": "theory",
+          "keyIdeas": ["Điều kiện phản xạ toàn phần", "Góc tới hạn", "Ứng dụng cáp quang"],
+          "interactiveIdea": "Tăng góc tới từ trong nước ra không khí đến khi tia khúc xạ biến mất, mô phỏng sợi quang."
+        },
+        {
+          "no": 7,
+          "title": "Bài 7. Lăng kính",
+          "slug": "bai-7-lang-kinh",
+          "kind": "theory",
+          "keyIdeas": [
+            "Đường đi tia sáng qua lăng kính",
+            "Tán sắc ánh sáng trắng",
+            "Màu sắc của vật"
+          ],
+          "interactiveIdea": "Lăng kính xoay được tách ánh sáng trắng thành dải màu, chọn kính lọc màu để thấy màu vật thay đổi."
+        },
+        {
+          "no": 8,
+          "title": "Bài 8. Thấu kính",
+          "slug": "bai-8-thau-kinh",
+          "kind": "theory",
+          "keyIdeas": ["Thấu kính hội tụ và phân kì", "Tiêu điểm, tiêu cự", "Vẽ ảnh qua thấu kính"],
+          "interactiveIdea": "Bàn quang học: kéo vật dọc trục chính, các tia đặc biệt và ảnh tự vẽ, ghi tính chất ảnh."
+        },
+        {
+          "no": 9,
+          "title": "Bài 9. Thực hành đo tiêu cự của thấu kính hội tụ",
+          "slug": "bai-9-thuc-hanh-do-tieu-cu-cua-thau-kinh-hoi-tu",
+          "kind": "activity",
+          "keyIdeas": ["Bố trí thí nghiệm", "Tìm ảnh rõ nét trên màn", "Tính tiêu cự"],
+          "interactiveIdea": "Băng quang học ảo: dịch màn và vật đến khi ảnh rõ nét, ghi d và d' để tính f."
+        },
+        {
+          "no": 10,
+          "title": "Bài 10. Kính lúp. Bài tập thấu kính",
+          "slug": "bai-10-kinh-lup-bai-tap-thau-kinh",
+          "kind": "theory",
+          "keyIdeas": [
+            "Kính lúp là thấu kính hội tụ tiêu cự ngắn",
+            "Số bội giác",
+            "Giải bài toán thấu kính"
+          ],
+          "interactiveIdea": "Bộ bài tập thấu kính có hình vẽ tia động: nhập d, f để kiểm tra vị trí và độ lớn ảnh."
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "label": "Chương 3",
+      "title": "Điện",
+      "slug": "dien",
+      "strand": "dien-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 11,
+          "title": "Bài 11. Điện trở. Định luật Ohm",
+          "slug": "bai-11-dien-tro-dinh-luat-ohm",
+          "kind": "theory",
+          "keyIdeas": [
+            "Điện trở và đơn vị ohm",
+            "Định luật Ohm I = U/R",
+            "Điện trở phụ thuộc chiều dài, tiết diện, vật liệu"
+          ],
+          "interactiveIdea": "Mạch có biến trở và dây dẫn thay được, vẽ đồ thị I–U và thấy điện trở là nghịch đảo độ dốc."
+        },
+        {
+          "no": 12,
+          "title": "Bài 12. Đoạn mạch nối tiếp, song song",
+          "slug": "bai-12-doan-mach-noi-tiep-song-song",
+          "kind": "theory",
+          "keyIdeas": [
+            "Điện trở tương đương",
+            "Cường độ dòng và hiệu điện thế trong mạch nối tiếp",
+            "Mạch song song"
+          ],
+          "interactiveIdea": "Lắp mạch nối tiếp và song song bằng kéo thả, đồng hồ đo tại mọi điểm để so sánh I và U."
+        },
+        {
+          "no": 13,
+          "title": "Bài 13. Năng lượng của dòng điện và công suất điện",
+          "slug": "bai-13-nang-luong-cua-dong-dien-va-cong-suat-dien",
+          "kind": "theory",
+          "keyIdeas": ["Năng lượng điện W = UIt", "Công suất điện P = UI", "Số kWh trên công tơ"],
+          "interactiveIdea": "Bảng thiết bị gia dụng với công suất và thời gian dùng, tính tiền điện hàng tháng."
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "label": "Chương 4",
+      "title": "Điện từ",
+      "slug": "dien-tu",
+      "strand": "tu-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 14,
+          "title": "Bài 14. Cảm ứng điện từ. Nguyên tắc tạo ra dòng điện xoay chiều",
+          "slug": "bai-14-cam-ung-dien-tu-nguyen-tac-tao-ra-dong-dien-xoay-chieu",
+          "kind": "theory",
+          "keyIdeas": [
+            "Hiện tượng cảm ứng điện từ",
+            "Số đường sức từ qua cuộn dây biến thiên",
+            "Dòng điện xoay chiều"
+          ],
+          "interactiveIdea": "Đưa nam châm ra vào cuộn dây ảo, kim điện kế lệch hai chiều và đồ thị dòng điện xoay chiều hiện ra."
+        },
+        {
+          "no": 15,
+          "title": "Bài 15. Tác dụng của dòng điện xoay chiều",
+          "slug": "bai-15-tac-dung-cua-dong-dien-xoay-chieu",
+          "kind": "theory",
+          "keyIdeas": [
+            "Tác dụng nhiệt, phát sáng",
+            "Tác dụng từ, sinh lí",
+            "An toàn khi dùng điện xoay chiều"
+          ],
+          "interactiveIdea": "So sánh nam châm điện dùng dòng một chiều và xoay chiều, kim nam châm đứng yên hay rung."
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "label": "Chương 5",
+      "title": "Năng lượng với cuộc sống",
+      "slug": "nang-luong-voi-cuoc-song",
+      "strand": "nang-luong",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 16,
+          "title": "Bài 16. Vòng năng lượng trên Trái Đất. Năng lượng hóa thạch",
+          "slug": "bai-16-vong-nang-luong-tren-trai-dat-nang-luong-hoa-thach",
+          "kind": "theory",
+          "keyIdeas": [
+            "Vòng năng lượng từ Mặt Trời",
+            "Nhiên liệu hóa thạch",
+            "Tác động môi trường"
+          ],
+          "interactiveIdea": "Sơ đồ vòng năng lượng tương tác: bấm từng khâu để thấy năng lượng được lưu trữ và chuyển hóa."
+        },
+        {
+          "no": 17,
+          "title": "Bài 17. Một số dạng năng lượng tái tạo",
+          "slug": "bai-17-mot-so-dang-nang-luong-tai-tao",
+          "kind": "theory",
+          "keyIdeas": [
+            "Năng lượng Mặt Trời, gió, nước",
+            "Năng lượng sinh khối, địa nhiệt",
+            "Ưu nhược điểm của từng nguồn"
+          ],
+          "interactiveIdea": "Trò chơi quy hoạch điện cho một tỉnh: chọn tổ hợp nguồn tái tạo theo địa hình và thời tiết."
+        }
+      ]
+    }
+  ]
+}

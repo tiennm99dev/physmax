@@ -1,0 +1,248 @@
+{
+  "grade": 8,
+  "volumes": ["Sách giáo khoa (1 tập)"],
+  "chapters": [
+    {
+      "no": 0,
+      "label": "Mở đầu",
+      "title": "Bài mở đầu",
+      "slug": "bai-mo-dau",
+      "strand": "mo-dau-do-luong",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Sử dụng một số hóa chất, thiết bị cơ bản trong phòng thí nghiệm",
+          "slug": "bai-1-su-dung-mot-so-hoa-chat-thiet-bi-co-ban-trong-phong-thi-nghiem",
+          "kind": "theory",
+          "keyIdeas": [
+            "Hóa chất và dụng cụ thí nghiệm",
+            "Thiết bị điện: biến áp nguồn, ampe kế, vôn kế, joulemeter",
+            "Quy tắc sử dụng an toàn"
+          ],
+          "interactiveIdea": "Bàn thí nghiệm ảo: chọn đúng thiết bị cho từng phép đo và mắc vào mạch theo hướng dẫn."
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "label": "Chương 3",
+      "title": "Khối lượng riêng và áp suất",
+      "slug": "khoi-luong-rieng-va-ap-suat",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 13,
+          "title": "Bài 13. Khối lượng riêng",
+          "slug": "bai-13-khoi-luong-rieng",
+          "kind": "theory",
+          "keyIdeas": [
+            "Khối lượng riêng D = m/V",
+            "Đơn vị kg/m³",
+            "Bảng khối lượng riêng các chất"
+          ],
+          "interactiveIdea": "Bộ khối vật liệu kéo được: đổi kích thước để thấy khối lượng và thể tích thay đổi nhưng D không đổi."
+        },
+        {
+          "no": 14,
+          "title": "Bài 14. Thực hành xác định khối lượng riêng",
+          "slug": "bai-14-thuc-hanh-xac-dinh-khoi-luong-rieng",
+          "kind": "activity",
+          "keyIdeas": [
+            "Đo khối lượng bằng cân",
+            "Đo thể tích bằng bình chia độ",
+            "Tính khối lượng riêng"
+          ],
+          "interactiveIdea": "Thả vật vào bình chia độ ảo, đọc mực nước dâng và khối lượng trên cân để tính D."
+        },
+        {
+          "no": 15,
+          "title": "Bài 15. Áp suất trên một bề mặt",
+          "slug": "bai-15-ap-suat-tren-mot-be-mat",
+          "kind": "theory",
+          "keyIdeas": ["Áp lực", "Áp suất p = F/S", "Tăng giảm áp suất"],
+          "interactiveIdea": "Đặt viên gạch theo các mặt khác nhau trên nền cát ảo, độ lún và giá trị áp suất thay đổi."
+        },
+        {
+          "no": 16,
+          "title": "Bài 16. Áp suất chất lỏng. Áp suất khí quyển",
+          "slug": "bai-16-ap-suat-chat-long-ap-suat-khi-quyen",
+          "kind": "theory",
+          "keyIdeas": [
+            "Áp suất chất lỏng tăng theo độ sâu",
+            "Bình thông nhau",
+            "Áp suất khí quyển"
+          ],
+          "interactiveIdea": "Bể nước có cảm biến áp suất kéo lên xuống theo độ sâu, kèm thí nghiệm cốc nước úp giấy."
+        },
+        {
+          "no": 17,
+          "title": "Bài 17. Lực đẩy Archimedes",
+          "slug": "bai-17-luc-day-archimedes",
+          "kind": "theory",
+          "keyIdeas": ["Lực đẩy hướng lên", "F = d.V phần chìm", "Điều kiện vật nổi, chìm"],
+          "interactiveIdea": "Thả vật vào chất lỏng ảo, lực kế hiển thị lực đẩy, đổi chất lỏng và vật để thấy vật nổi hay chìm."
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "label": "Chương 4",
+      "title": "Tác dụng làm quay của lực",
+      "slug": "tac-dung-lam-quay-cua-luc",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 18,
+          "title": "Bài 18. Tác dụng làm quay của lực. Moment lực",
+          "slug": "bai-18-tac-dung-lam-quay-cua-luc-moment-luc",
+          "kind": "theory",
+          "keyIdeas": ["Lực làm vật quay quanh trục", "Moment lực M = F.d", "Cánh tay đòn"],
+          "interactiveIdea": "Mở cửa ảo: chọn điểm đặt lực và hướng lực để thấy cửa quay nhanh hay chậm, hiện giá trị moment."
+        },
+        {
+          "no": 19,
+          "title": "Bài 19. Đòn bẩy và ứng dụng",
+          "slug": "bai-19-don-bay-va-ung-dung",
+          "kind": "theory",
+          "keyIdeas": [
+            "Điểm tựa, lực tác dụng, vật cần nâng",
+            "Các loại đòn bẩy",
+            "Được lợi về lực"
+          ],
+          "interactiveIdea": "Bập bênh ảo: đặt quả nặng và điểm tựa ở các vị trí để cân bằng, ghép dụng cụ đời thường với loại đòn bẩy."
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "label": "Chương 5",
+      "title": "Điện",
+      "slug": "dien",
+      "strand": "dien-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 20,
+          "title": "Bài 20. Hiện tượng nhiễm điện do cọ xát",
+          "slug": "bai-20-hien-tuong-nhiem-dien-do-co-xat",
+          "kind": "theory",
+          "keyIdeas": [
+            "Vật nhiễm điện do cọ xát",
+            "Hai loại điện tích",
+            "Điện tích cùng loại đẩy, khác loại hút"
+          ],
+          "interactiveIdea": "Cọ xát thước nhựa với vải ảo, các electron di chuyển và mẩu giấy bị hút."
+        },
+        {
+          "no": 21,
+          "title": "Bài 21. Dòng điện, nguồn điện",
+          "slug": "bai-21-dong-dien-nguon-dien",
+          "kind": "theory",
+          "keyIdeas": [
+            "Dòng điện là dòng điện tích dịch chuyển có hướng",
+            "Nguồn điện có hai cực",
+            "Vật dẫn điện và cách điện"
+          ],
+          "interactiveIdea": "Mạch có pin và các vật liệu thay được, quan sát electron chạy và đèn sáng hay không."
+        },
+        {
+          "no": 22,
+          "title": "Bài 22. Mạch điện đơn giản",
+          "slug": "bai-22-mach-dien-don-gian",
+          "kind": "theory",
+          "keyIdeas": [
+            "Kí hiệu các bộ phận mạch điện",
+            "Sơ đồ mạch điện",
+            "Chiều dòng điện quy ước"
+          ],
+          "interactiveIdea": "Bộ lắp mạch kéo thả: ghép pin, công tắc, đèn và vẽ song song sơ đồ bằng kí hiệu."
+        },
+        {
+          "no": 23,
+          "title": "Bài 23. Tác dụng của dòng điện",
+          "slug": "bai-23-tac-dung-cua-dong-dien",
+          "kind": "theory",
+          "keyIdeas": ["Tác dụng nhiệt, phát sáng", "Tác dụng từ, hóa học", "Tác dụng sinh lí"],
+          "interactiveIdea": "Thẻ thiết bị: bấm vào bàn là, đèn LED, chuông điện để thấy tác dụng của dòng điện tương ứng."
+        },
+        {
+          "no": 24,
+          "title": "Bài 24. Cường độ dòng điện và hiệu điện thế",
+          "slug": "bai-24-cuong-do-dong-dien-va-hieu-dien-the",
+          "kind": "theory",
+          "keyIdeas": [
+            "Cường độ dòng điện, ampe kế",
+            "Hiệu điện thế, vôn kế",
+            "Cách mắc ampe kế, vôn kế"
+          ],
+          "interactiveIdea": "Mạch ảo cho mắc ampe kế nối tiếp, vôn kế song song, báo lỗi khi mắc sai."
+        },
+        {
+          "no": 25,
+          "title": "Bài 25. Thực hành đo cường độ dòng điện và hiệu điện thế",
+          "slug": "bai-25-thuc-hanh-do-cuong-do-dong-dien-va-hieu-dien-the",
+          "kind": "activity",
+          "keyIdeas": ["Lắp mạch đo", "Đọc số chỉ dụng cụ đo", "Ghi và nhận xét kết quả"],
+          "interactiveIdea": "Bàn thực hành ảo: đổi nguồn và bóng đèn, ghi số đo vào bảng và vẽ đồ thị."
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "label": "Chương 6",
+      "title": "Nhiệt",
+      "slug": "nhiet",
+      "strand": "nhiet-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 26,
+          "title": "Bài 26. Năng lượng nhiệt và nội năng",
+          "slug": "bai-26-nang-luong-nhiet-va-noi-nang",
+          "kind": "theory",
+          "keyIdeas": [
+            "Phân tử chuyển động không ngừng",
+            "Nội năng",
+            "Nhiệt độ liên quan tốc độ phân tử"
+          ],
+          "interactiveIdea": "Hộp hạt chuyển động nhanh chậm theo thanh nhiệt độ, hiển thị động năng trung bình."
+        },
+        {
+          "no": 27,
+          "title": "Bài 27. Thực hành đo năng lượng nhiệt bằng Joulemeter",
+          "slug": "bai-27-thuc-hanh-do-nang-luong-nhiet-bang-joulemeter",
+          "kind": "activity",
+          "keyIdeas": [
+            "Sử dụng joulemeter",
+            "Đo năng lượng cung cấp cho nước",
+            "Liên hệ năng lượng và độ tăng nhiệt độ"
+          ],
+          "interactiveIdea": "Joulemeter ảo nối với dây đun trong cốc nước, đồng hồ năng lượng và nhiệt kế tăng theo thời gian."
+        },
+        {
+          "no": 28,
+          "title": "Bài 28. Sự truyền nhiệt",
+          "slug": "bai-28-su-truyen-nhiet",
+          "kind": "theory",
+          "keyIdeas": ["Dẫn nhiệt", "Đối lưu", "Bức xạ nhiệt"],
+          "interactiveIdea": "Ba kịch bản đun nóng thanh kim loại, ấm nước, sưởi bằng đèn với mũi tên dòng nhiệt hoạt họa."
+        },
+        {
+          "no": 29,
+          "title": "Bài 29. Sự nở vì nhiệt",
+          "slug": "bai-29-su-no-vi-nhiet",
+          "kind": "theory",
+          "keyIdeas": [
+            "Chất rắn, lỏng, khí nở ra khi nóng",
+            "Mức độ nở khác nhau",
+            "Ứng dụng và phòng tránh"
+          ],
+          "interactiveIdea": "Thanh ray và băng kép ảo theo thanh nhiệt độ, thấy khe hở co giãn và băng kép uốn cong."
+        }
+      ]
+    }
+  ]
+}

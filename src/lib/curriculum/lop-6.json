@@ -1,0 +1,328 @@
+{
+  "grade": 6,
+  "volumes": ["Sách giáo khoa (1 tập)"],
+  "chapters": [
+    {
+      "no": 1,
+      "label": "Chương I",
+      "title": "Mở đầu về Khoa học tự nhiên",
+      "slug": "mo-dau-ve-khoa-hoc-tu-nhien",
+      "strand": "mo-dau-do-luong",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Giới thiệu về Khoa học tự nhiên",
+          "slug": "bai-1-gioi-thieu-ve-khoa-hoc-tu-nhien",
+          "kind": "theory",
+          "keyIdeas": [
+            "Khái niệm khoa học tự nhiên",
+            "Các lĩnh vực chủ yếu của KHTN",
+            "Vật sống và vật không sống"
+          ],
+          "interactiveIdea": "Thẻ hiện tượng đời sống để kéo vào đúng lĩnh vực: vật lí, hóa học, sinh học, Trái Đất và bầu trời."
+        },
+        {
+          "no": 2,
+          "title": "Bài 2. An toàn trong phòng thực hành",
+          "slug": "bai-2-an-toan-trong-phong-thuc-hanh",
+          "kind": "theory",
+          "keyIdeas": [
+            "Quy tắc an toàn phòng thực hành",
+            "Kí hiệu cảnh báo",
+            "Dụng cụ và thiết bị thường dùng"
+          ],
+          "interactiveIdea": "Phòng thí nghiệm ảo: bấm vào các tình huống để chỉ ra hành vi nguy hiểm và ghép kí hiệu cảnh báo đúng."
+        },
+        {
+          "no": 3,
+          "title": "Bài 3. Sử dụng kính lúp",
+          "slug": "bai-3-su-dung-kinh-lup",
+          "kind": "theory",
+          "keyIdeas": [
+            "Cấu tạo kính lúp",
+            "Cách cầm và điều chỉnh khoảng cách",
+            "Bảo quản kính lúp"
+          ],
+          "interactiveIdea": "Kính lúp mô phỏng: kéo kính lại gần hoặc xa vật để thấy ảnh phóng to rõ nét hoặc bị mờ."
+        },
+        {
+          "no": 4,
+          "title": "Bài 4. Sử dụng kính hiển vi quang học",
+          "slug": "bai-4-su-dung-kinh-hien-vi-quang-hoc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Các bộ phận của kính hiển vi",
+            "Quy trình quan sát mẫu",
+            "Độ phóng đại thị kính và vật kính"
+          ],
+          "interactiveIdea": "Kính hiển vi ảo: chọn vật kính, vặn ốc to và ốc nhỏ để lấy nét tiêu bản, hiển thị độ phóng đại tổng."
+        },
+        {
+          "no": 5,
+          "title": "Bài 5. Đo chiều dài",
+          "slug": "bai-5-do-chieu-dai",
+          "kind": "theory",
+          "keyIdeas": [
+            "Đơn vị đo chiều dài",
+            "Giới hạn đo và độ chia nhỏ nhất",
+            "Cách đặt thước và đọc kết quả"
+          ],
+          "interactiveIdea": "Thước ảo kéo thả để đo vật, chọn thước có GHĐ và ĐCNN phù hợp rồi đọc số đúng cách đặt mắt."
+        },
+        {
+          "no": 6,
+          "title": "Bài 6. Đo khối lượng",
+          "slug": "bai-6-do-khoi-luong",
+          "kind": "theory",
+          "keyIdeas": ["Đơn vị khối lượng", "Các loại cân", "Cách đo khối lượng bằng cân"],
+          "interactiveIdea": "Cân đồng hồ và cân điện tử ảo: đặt vật lên đĩa, hiệu chỉnh số 0 và đọc khối lượng."
+        },
+        {
+          "no": 7,
+          "title": "Bài 7. Đo thời gian",
+          "slug": "bai-7-do-thoi-gian",
+          "kind": "theory",
+          "keyIdeas": [
+            "Đơn vị đo thời gian",
+            "Đồng hồ bấm giây và đồng hồ điện tử",
+            "Ước lượng thời gian"
+          ],
+          "interactiveIdea": "Đồng hồ bấm giây trên màn hình để đo thời gian quả bóng lăn, so sánh sai lệch giữa các lần đo."
+        },
+        {
+          "no": 8,
+          "title": "Bài 8. Đo nhiệt độ",
+          "slug": "bai-8-do-nhiet-do",
+          "kind": "theory",
+          "keyIdeas": [
+            "Thang nhiệt độ Celsius",
+            "Nhiệt kế và nguyên tắc hoạt động",
+            "Cách đo nhiệt độ cơ thể"
+          ],
+          "interactiveIdea": "Nhiệt kế ảo nhúng vào cốc nước nóng lạnh, cột chất lỏng dâng hạ và đổi qua lại °C với K."
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "label": "Chương VIII",
+      "title": "Lực trong đời sống",
+      "slug": "luc-trong-doi-song",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 40,
+          "title": "Bài 40. Lực là gì?",
+          "slug": "bai-40-luc-la-gi",
+          "kind": "theory",
+          "keyIdeas": [
+            "Lực là sự đẩy hoặc kéo",
+            "Tác dụng của lực làm biến đổi chuyển động",
+            "Lực làm vật biến dạng",
+            "Lực tiếp xúc và không tiếp xúc"
+          ],
+          "interactiveIdea": "Sân chơi kéo đẩy quả bóng: chọn hướng và độ mạnh của lực để thấy vật đổi tốc độ, đổi hướng hoặc biến dạng."
+        },
+        {
+          "no": 41,
+          "title": "Bài 41. Biểu diễn lực",
+          "slug": "bai-41-bieu-dien-luc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Đơn vị lực newton",
+            "Mũi tên biểu diễn lực",
+            "Điểm đặt, phương, chiều, độ lớn"
+          ],
+          "interactiveIdea": "Vẽ mũi tên lực trên lưới tỉ xích, ứng dụng kiểm tra điểm đặt, phương, chiều và độ lớn."
+        },
+        {
+          "no": 42,
+          "title": "Bài 42. Biến dạng của lò xo",
+          "slug": "bai-42-bien-dang-cua-lo-xo",
+          "kind": "theory",
+          "keyIdeas": [
+            "Biến dạng đàn hồi",
+            "Độ dãn tỉ lệ với khối lượng vật treo",
+            "Đo lực bằng lực kế"
+          ],
+          "interactiveIdea": "Treo quả nặng vào lò xo ảo, đo độ dãn và vẽ đồ thị độ dãn theo khối lượng."
+        },
+        {
+          "no": 43,
+          "title": "Bài 43. Trọng lượng, lực hấp dẫn",
+          "slug": "bai-43-trong-luong-luc-hap-dan",
+          "kind": "theory",
+          "keyIdeas": [
+            "Lực hấp dẫn giữa các vật",
+            "Trọng lượng là lực hút của Trái Đất",
+            "Phân biệt khối lượng và trọng lượng"
+          ],
+          "interactiveIdea": "So sánh cùng một vật trên Trái Đất, Mặt Trăng, Sao Hỏa: khối lượng không đổi, trọng lượng thay đổi."
+        },
+        {
+          "no": 44,
+          "title": "Bài 44. Lực ma sát",
+          "slug": "bai-44-luc-ma-sat",
+          "kind": "theory",
+          "keyIdeas": [
+            "Ma sát trượt và ma sát nghỉ",
+            "Lợi ích và tác hại của ma sát",
+            "Cách tăng giảm ma sát"
+          ],
+          "interactiveIdea": "Kéo khối gỗ trên các mặt phẳng khác nhau, lực kế ảo hiển thị lực ma sát theo bề mặt."
+        },
+        {
+          "no": 45,
+          "title": "Bài 45. Lực cản của nước",
+          "slug": "bai-45-luc-can-cua-nuoc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Lực cản của nước lên vật chuyển động",
+            "Hình dạng vật ảnh hưởng lực cản",
+            "Ứng dụng thiết kế thuyền, cá"
+          ],
+          "interactiveIdea": "Bể nước ảo thả các vật hình dạng khác nhau, so sánh tốc độ chuyển động và lực cản."
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "label": "Chương IX",
+      "title": "Năng lượng",
+      "slug": "nang-luong",
+      "strand": "nang-luong",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 46,
+          "title": "Bài 46. Năng lượng và sự truyền năng lượng",
+          "slug": "bai-46-nang-luong-va-su-truyen-nang-luong",
+          "kind": "theory",
+          "keyIdeas": [
+            "Năng lượng đặc trưng cho khả năng tác dụng lực",
+            "Năng lượng truyền từ vật này sang vật khác",
+            "Nhiên liệu và năng lượng"
+          ],
+          "interactiveIdea": "Chuỗi domino năng lượng: kéo thả các thiết bị nối tiếp nhau để thấy năng lượng truyền qua từng khâu."
+        },
+        {
+          "no": 47,
+          "title": "Bài 47. Một số dạng năng lượng",
+          "slug": "bai-47-mot-so-dang-nang-luong",
+          "kind": "theory",
+          "keyIdeas": [
+            "Động năng và thế năng",
+            "Nhiệt năng, điện năng, quang năng",
+            "Năng lượng âm, năng lượng hóa học"
+          ],
+          "interactiveIdea": "Thẻ hình đồ vật đời thường để phân loại vào các dạng năng lượng tương ứng."
+        },
+        {
+          "no": 48,
+          "title": "Bài 48. Sự chuyển hóa năng lượng",
+          "slug": "bai-48-su-chuyen-hoa-nang-luong",
+          "kind": "theory",
+          "keyIdeas": [
+            "Năng lượng chuyển từ dạng này sang dạng khác",
+            "Định luật bảo toàn năng lượng",
+            "Sơ đồ chuyển hóa năng lượng"
+          ],
+          "interactiveIdea": "Mô phỏng con lắc và quạt điện với thanh năng lượng động, cho thấy tổng năng lượng không đổi."
+        },
+        {
+          "no": 49,
+          "title": "Bài 49. Năng lượng hao phí",
+          "slug": "bai-49-nang-luong-hao-phi",
+          "kind": "theory",
+          "keyIdeas": [
+            "Năng lượng có ích và hao phí",
+            "Hao phí thường dưới dạng nhiệt",
+            "Giảm hao phí năng lượng"
+          ],
+          "interactiveIdea": "Biểu đồ Sankey cho bóng đèn sợi đốt và đèn LED, so sánh phần năng lượng có ích và hao phí."
+        },
+        {
+          "no": 50,
+          "title": "Bài 50. Năng lượng tái tạo",
+          "slug": "bai-50-nang-luong-tai-tao",
+          "kind": "theory",
+          "keyIdeas": [
+            "Nguồn năng lượng tái tạo",
+            "Năng lượng Mặt Trời, gió, nước",
+            "Ưu điểm so với nhiên liệu hóa thạch"
+          ],
+          "interactiveIdea": "Bản đồ thành phố ảo: đặt tấm pin Mặt Trời, tua bin gió, thủy điện và theo dõi sản lượng điện."
+        },
+        {
+          "no": 51,
+          "title": "Bài 51. Tiết kiệm năng lượng",
+          "slug": "bai-51-tiet-kiem-nang-luong",
+          "kind": "theory",
+          "keyIdeas": [
+            "Lí do cần tiết kiệm năng lượng",
+            "Biện pháp tiết kiệm ở gia đình, trường học",
+            "Thói quen sử dụng năng lượng"
+          ],
+          "interactiveIdea": "Ngôi nhà ảo: tắt bật thiết bị và thay đèn để thấy hóa đơn điện thay đổi theo thời gian thực."
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "label": "Chương X",
+      "title": "Trái Đất và bầu trời",
+      "slug": "trai-dat-va-bau-troi",
+      "strand": "thien-van",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 52,
+          "title": "Bài 52. Chuyển động nhìn thấy của Mặt Trời. Thiên thể",
+          "slug": "bai-52-chuyen-dong-nhin-thay-cua-mat-troi-thien-the",
+          "kind": "theory",
+          "keyIdeas": [
+            "Trái Đất tự quay quanh trục",
+            "Mặt Trời mọc ở đông lặn ở tây",
+            "Ngày và đêm",
+            "Khái niệm thiên thể"
+          ],
+          "interactiveIdea": "Quả địa cầu xoay được cạnh đèn Mặt Trời, người quan sát trên mặt đất thấy Mặt Trời mọc lặn."
+        },
+        {
+          "no": 53,
+          "title": "Bài 53. Mặt Trăng",
+          "slug": "bai-53-mat-trang",
+          "kind": "theory",
+          "keyIdeas": [
+            "Mặt Trăng phản chiếu ánh sáng Mặt Trời",
+            "Các pha của Mặt Trăng",
+            "Chu kì tuần trăng"
+          ],
+          "interactiveIdea": "Kéo Mặt Trăng quanh Trái Đất để thấy pha trăng tương ứng nhìn từ Trái Đất."
+        },
+        {
+          "no": 54,
+          "title": "Bài 54. Hệ Mặt Trời",
+          "slug": "bai-54-he-mat-troi",
+          "kind": "theory",
+          "keyIdeas": [
+            "Mặt Trời và tám hành tinh",
+            "Thứ tự các hành tinh",
+            "Khoảng cách và kích thước tương đối"
+          ],
+          "interactiveIdea": "Mô hình Hệ Mặt Trời theo tỉ lệ, phóng to thu nhỏ để so sánh kích thước và quỹ đạo các hành tinh."
+        },
+        {
+          "no": 55,
+          "title": "Bài 55. Ngân Hà",
+          "slug": "bai-55-ngan-ha",
+          "kind": "theory",
+          "keyIdeas": ["Ngôi sao và thiên hà", "Hệ Mặt Trời thuộc Ngân Hà", "Năm ánh sáng"],
+          "interactiveIdea": "Hành trình phóng ra từ Trái Đất tới Ngân Hà với thước đo khoảng cách năm ánh sáng."
+        }
+      ]
+    }
+  ]
+}

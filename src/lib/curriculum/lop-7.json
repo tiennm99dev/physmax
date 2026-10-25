@@ -1,0 +1,204 @@
+{
+  "grade": 7,
+  "volumes": ["Sách giáo khoa (1 tập)"],
+  "chapters": [
+    {
+      "no": 0,
+      "label": "Mở đầu",
+      "title": "Mở đầu",
+      "slug": "mo-dau",
+      "strand": "mo-dau-do-luong",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Phương pháp và kĩ năng học tập môn Khoa học tự nhiên",
+          "slug": "bai-1-phuong-phap-va-ki-nang-hoc-tap-mon-khoa-hoc-tu-nhien",
+          "kind": "theory",
+          "keyIdeas": [
+            "Phương pháp tìm hiểu tự nhiên",
+            "Kĩ năng quan sát, đo, dự báo",
+            "Đo thời gian bằng đồng hồ đo thời gian hiện số và cổng quang"
+          ],
+          "interactiveIdea": "Thí nghiệm ảo với cổng quang và đồng hồ hiện số đo thời gian viên bi lăn, ghi kết quả vào bảng."
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "label": "Chương III",
+      "title": "Tốc độ",
+      "slug": "toc-do",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 8,
+          "title": "Bài 8. Tốc độ chuyển động",
+          "slug": "bai-8-toc-do-chuyen-dong",
+          "kind": "theory",
+          "keyIdeas": [
+            "Tốc độ bằng quãng đường chia thời gian",
+            "Đơn vị m/s và km/h",
+            "So sánh nhanh chậm"
+          ],
+          "interactiveIdea": "Cuộc đua ảo: chỉnh quãng đường và thời gian cho từng nhân vật, tính tốc độ và xếp hạng."
+        },
+        {
+          "no": 9,
+          "title": "Bài 9. Đo tốc độ",
+          "slug": "bai-9-do-toc-do",
+          "kind": "theory",
+          "keyIdeas": [
+            "Đo tốc độ bằng đồng hồ bấm giây",
+            "Đo bằng cổng quang",
+            "Thiết bị bắn tốc độ"
+          ],
+          "interactiveIdea": "Mô phỏng xe chạy qua hai cổng quang, tự đọc thời gian và tính tốc độ."
+        },
+        {
+          "no": 10,
+          "title": "Bài 10. Đồ thị quãng đường - thời gian",
+          "slug": "bai-10-do-thi-quang-duong-thoi-gian",
+          "kind": "theory",
+          "keyIdeas": ["Vẽ đồ thị s–t", "Đọc tốc độ từ độ dốc", "Mô tả chuyển động từ đồ thị"],
+          "interactiveIdea": "Đồ thị s–t vẽ theo thời gian thực khi xe di chuyển, kéo độ dốc để thay đổi tốc độ."
+        },
+        {
+          "no": 11,
+          "title": "Bài 11. Thảo luận về ảnh hưởng của tốc độ trong an toàn giao thông",
+          "slug": "bai-11-thao-luan-ve-anh-huong-cua-toc-do-trong-an-toan-giao-thong",
+          "kind": "activity",
+          "keyIdeas": [
+            "Tốc độ giới hạn",
+            "Khoảng cách an toàn",
+            "Quãng đường phanh tăng theo tốc độ"
+          ],
+          "interactiveIdea": "Mô phỏng xe phanh gấp ở các tốc độ khác nhau, hiển thị khoảng cách dừng xe so với vật cản."
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "label": "Chương IV",
+      "title": "Âm thanh",
+      "slug": "am-thanh",
+      "strand": "am-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 12,
+          "title": "Bài 12. Sóng âm",
+          "slug": "bai-12-song-am",
+          "kind": "theory",
+          "keyIdeas": [
+            "Nguồn âm dao động",
+            "Sóng âm truyền qua rắn, lỏng, khí",
+            "Âm không truyền trong chân không"
+          ],
+          "interactiveIdea": "Màng loa ảo rung tạo các lớp không khí nén giãn, chọn môi trường để thấy âm truyền hoặc không."
+        },
+        {
+          "no": 13,
+          "title": "Bài 13. Độ to và độ cao của âm",
+          "slug": "bai-13-do-to-va-do-cao-cua-am",
+          "kind": "theory",
+          "keyIdeas": ["Tần số và độ cao", "Biên độ và độ to", "Hạ âm, siêu âm"],
+          "interactiveIdea": "Máy phát âm: kéo thanh tần số và biên độ, nghe âm và xem dạng sóng trên dao động kí."
+        },
+        {
+          "no": 14,
+          "title": "Bài 14. Phản xạ âm, chống ô nhiễm tiếng ồn",
+          "slug": "bai-14-phan-xa-am-chong-o-nhiem-tieng-on",
+          "kind": "theory",
+          "keyIdeas": [
+            "Phản xạ âm và tiếng vang",
+            "Vật phản xạ âm tốt, kém",
+            "Biện pháp chống ô nhiễm tiếng ồn"
+          ],
+          "interactiveIdea": "Căn phòng ảo: đổi vật liệu tường để thấy tiếng vang thay đổi, đặt rào chắn giảm tiếng ồn cho nhà."
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "label": "Chương V",
+      "title": "Ánh sáng",
+      "slug": "anh-sang",
+      "strand": "quang-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 15,
+          "title": "Bài 15. Năng lượng ánh sáng. Tia sáng, vùng tối",
+          "slug": "bai-15-nang-luong-anh-sang-tia-sang-vung-toi",
+          "kind": "theory",
+          "keyIdeas": [
+            "Ánh sáng là một dạng năng lượng",
+            "Tia sáng và chùm sáng",
+            "Vùng tối và vùng nửa tối"
+          ],
+          "interactiveIdea": "Kéo nguồn sáng và vật cản để thấy vùng tối, vùng nửa tối trên màn chắn."
+        },
+        {
+          "no": 16,
+          "title": "Bài 16. Sự phản xạ ánh sáng",
+          "slug": "bai-16-su-phan-xa-anh-sang",
+          "kind": "theory",
+          "keyIdeas": [
+            "Định luật phản xạ ánh sáng",
+            "Góc tới bằng góc phản xạ",
+            "Phản xạ gương và phản xạ khuếch tán"
+          ],
+          "interactiveIdea": "Xoay đèn laser chiếu vào gương, thước đo góc hiển thị góc tới và góc phản xạ."
+        },
+        {
+          "no": 17,
+          "title": "Bài 17. Ảnh của vật qua gương phẳng",
+          "slug": "bai-17-anh-cua-vat-qua-guong-phang",
+          "kind": "theory",
+          "keyIdeas": ["Ảnh ảo, bằng vật", "Ảnh đối xứng với vật qua gương", "Vẽ ảnh của vật"],
+          "interactiveIdea": "Kéo vật trước gương phẳng, ảnh đối xứng di chuyển theo, vẽ các tia phản xạ tới mắt."
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "label": "Chương VI",
+      "title": "Từ",
+      "slug": "tu",
+      "strand": "tu-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 18,
+          "title": "Bài 18. Nam châm",
+          "slug": "bai-18-nam-cham",
+          "kind": "theory",
+          "keyIdeas": ["Hai cực Bắc Nam", "Cùng cực đẩy, khác cực hút", "La bàn"],
+          "interactiveIdea": "Kéo hai nam châm lại gần để thấy hút đẩy, xoay la bàn ảo theo hướng Bắc."
+        },
+        {
+          "no": 19,
+          "title": "Bài 19. Từ trường",
+          "slug": "bai-19-tu-truong",
+          "kind": "theory",
+          "keyIdeas": ["Từ trường quanh nam châm", "Đường sức từ", "Từ trường Trái Đất"],
+          "interactiveIdea": "Rắc mạt sắt ảo quanh nam châm để hiện đường sức từ, kim nam châm nhỏ chỉ hướng tại mỗi điểm."
+        },
+        {
+          "no": 20,
+          "title": "Bài 20. Chế tạo nam châm điện đơn giản",
+          "slug": "bai-20-che-tao-nam-cham-dien-don-gian",
+          "kind": "activity",
+          "keyIdeas": [
+            "Ống dây có dòng điện là nam châm điện",
+            "Lõi sắt tăng từ trường",
+            "Đổi chiều dòng điện đổi cực"
+          ],
+          "interactiveIdea": "Lắp nam châm điện ảo: chỉnh số vòng dây và cường độ dòng điện, đếm số ghim hút được."
+        }
+      ]
+    }
+  ]
+}

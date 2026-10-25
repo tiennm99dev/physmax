@@ -1,0 +1,428 @@
+{
+  "grade": 12,
+  "volumes": ["Sách giáo khoa (1 tập)", "Chuyên đề học tập Vật lí 12"],
+  "chapters": [
+    {
+      "no": 1,
+      "label": "Chương 1",
+      "title": "Vật lí nhiệt",
+      "slug": "vat-li-nhiet",
+      "strand": "nhiet-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Cấu trúc của chất. Sự chuyển thể",
+          "slug": "bai-1-cau-truc-cua-chat-su-chuyen-the",
+          "kind": "theory",
+          "keyIdeas": [
+            "Mô hình động học phân tử",
+            "Cấu trúc chất rắn, lỏng, khí",
+            "Sự nóng chảy, hóa hơi"
+          ],
+          "interactiveIdea": "Hộp phân tử ảo: tăng nhiệt độ để thấy chất chuyển từ rắn sang lỏng và khí."
+        },
+        {
+          "no": 2,
+          "title": "Bài 2. Nội năng. Định luật I của nhiệt động lực học",
+          "slug": "bai-2-noi-nang-dinh-luat-i-cua-nhiet-dong-luc-hoc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Nội năng",
+            "Thay đổi nội năng bằng thực hiện công và truyền nhiệt",
+            "ΔU = A + Q"
+          ],
+          "interactiveIdea": "Xi lanh khí ảo với pít-tông và bếp đun, đồng hồ hiển thị A, Q và ΔU."
+        },
+        {
+          "no": 3,
+          "title": "Bài 3. Nhiệt độ. Thang nhiệt độ - Nhiệt kế",
+          "slug": "bai-3-nhiet-do-thang-nhiet-do-nhiet-ke",
+          "kind": "theory",
+          "keyIdeas": [
+            "Nhiệt độ và cân bằng nhiệt",
+            "Thang Celsius và Kelvin",
+            "Các loại nhiệt kế"
+          ],
+          "interactiveIdea": "Bộ chuyển đổi thang nhiệt độ có nhiệt kế ảo, đặt hai vật tiếp xúc để đạt cân bằng nhiệt."
+        },
+        {
+          "no": 4,
+          "title": "Bài 4. Nhiệt dung riêng",
+          "slug": "bai-4-nhiet-dung-rieng",
+          "kind": "theory",
+          "keyIdeas": ["Nhiệt lượng Q = mcΔt", "Nhiệt dung riêng các chất", "Đo nhiệt dung riêng"],
+          "interactiveIdea": "Đun cùng khối lượng nước, dầu, nhôm ảo bằng cùng công suất, đồ thị nhiệt độ theo thời gian khác nhau."
+        },
+        {
+          "no": 5,
+          "title": "Bài 5. Nhiệt nóng chảy riêng",
+          "slug": "bai-5-nhiet-nong-chay-rieng",
+          "kind": "theory",
+          "keyIdeas": ["Q = λm", "Nhiệt độ không đổi khi nóng chảy", "Đo nhiệt nóng chảy riêng"],
+          "interactiveIdea": "Đồ thị nhiệt độ – thời gian khi đun nước đá, đoạn nằm ngang tô màu ứng với nhiệt nóng chảy."
+        },
+        {
+          "no": 6,
+          "title": "Bài 6. Nhiệt hóa hơi riêng",
+          "slug": "bai-6-nhiet-hoa-hoi-rieng",
+          "kind": "theory",
+          "keyIdeas": ["Q = Lm", "Sự sôi và bay hơi", "Đo nhiệt hóa hơi riêng"],
+          "interactiveIdea": "Ấm nước ảo trên cân với joulemeter, đo khối lượng bay hơi để tính L."
+        },
+        {
+          "no": 7,
+          "title": "Bài 7. Bài tập về vật lí nhiệt",
+          "slug": "bai-7-bai-tap-ve-vat-li-nhiet",
+          "kind": "practice",
+          "keyIdeas": [
+            "Phương trình cân bằng nhiệt",
+            "Bài toán chuyển thể",
+            "Định luật I nhiệt động lực học"
+          ],
+          "interactiveIdea": "Bài tập trộn chất ảo: chọn khối lượng, nhiệt độ ban đầu và dự đoán nhiệt độ cân bằng rồi kiểm tra."
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "label": "Chương 2",
+      "title": "Khí lí tưởng",
+      "slug": "khi-li-tuong",
+      "strand": "nhiet-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 8,
+          "title": "Bài 8. Mô hình động học phân tử chất khí",
+          "slug": "bai-8-mo-hinh-dong-hoc-phan-tu-chat-khi",
+          "kind": "theory",
+          "keyIdeas": [
+            "Chuyển động Brown",
+            "Giả thuyết khí lí tưởng",
+            "Áp suất do va chạm phân tử"
+          ],
+          "interactiveIdea": "Hộp khí ảo với hạt Brown và các phân tử va chạm thành bình, đếm va chạm theo thời gian."
+        },
+        {
+          "no": 9,
+          "title": "Bài 9. Định luật Boyle",
+          "slug": "bai-9-dinh-luat-boyle",
+          "kind": "theory",
+          "keyIdeas": ["Quá trình đẳng nhiệt", "pV = hằng số", "Đường đẳng nhiệt"],
+          "interactiveIdea": "Xi lanh ảo nén pít-tông ở nhiệt độ không đổi, đồ thị p–V vẽ từ các điểm đo."
+        },
+        {
+          "no": 10,
+          "title": "Bài 10. Định luật Charles",
+          "slug": "bai-10-dinh-luat-charles",
+          "kind": "theory",
+          "keyIdeas": ["Quá trình đẳng áp", "V/T = hằng số", "Độ không tuyệt đối"],
+          "interactiveIdea": "Đun khí trong xi lanh có pít-tông tự do, đồ thị V–T kéo dài cắt trục tại 0 K."
+        },
+        {
+          "no": 11,
+          "title": "Bài 11. Phương trình trạng thái của khí lí tưởng",
+          "slug": "bai-11-phuong-trinh-trang-thai-cua-khi-li-tuong",
+          "kind": "theory",
+          "keyIdeas": ["pV/T = hằng số", "Phương trình Clapeyron pV = nRT", "Hằng số khí R"],
+          "interactiveIdea": "Bảng điều khiển ba thông số p, V, T: cố định một thông số, thay đổi thông số khác và quan sát."
+        },
+        {
+          "no": 12,
+          "title": "Bài 12. Áp suất khí theo mô hình động học phân tử. Quan hệ giữa động năng phân tử và nhiệt độ",
+          "slug": "bai-12-ap-suat-khi-theo-mo-hinh-dong-hoc-phan-tu-quan-he-giua-dong-nang-phan-tu",
+          "kind": "theory",
+          "keyIdeas": ["p = ⅓ρv²", "Động năng trung bình phân tử tỉ lệ với T", "Hằng số Boltzmann"],
+          "interactiveIdea": "Phân bố tốc độ phân tử thay đổi theo nhiệt độ, hiển thị động năng trung bình và áp suất."
+        },
+        {
+          "no": 13,
+          "title": "Bài 13. Bài tập về khí lí tưởng",
+          "slug": "bai-13-bai-tap-ve-khi-li-tuong",
+          "kind": "practice",
+          "keyIdeas": [
+            "Áp dụng các định luật chất khí",
+            "Đọc đồ thị trạng thái",
+            "Bài toán biến đổi trạng thái"
+          ],
+          "interactiveIdea": "Đồ thị p–V, p–T, V–T kéo thả các quá trình để giải bài tập chuyển trạng thái."
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "label": "Chương 3",
+      "title": "Từ trường",
+      "slug": "tu-truong",
+      "strand": "tu-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 14,
+          "title": "Bài 14. Từ trường",
+          "slug": "bai-14-tu-truong",
+          "kind": "theory",
+          "keyIdeas": [
+            "Từ trường của nam châm và dòng điện",
+            "Đường sức từ",
+            "Quy tắc nắm tay phải"
+          ],
+          "interactiveIdea": "Dòng điện thẳng và ống dây ảo, la bàn nhỏ quanh đó xoay theo đường sức từ."
+        },
+        {
+          "no": 15,
+          "title": "Bài 15. Lực từ tác dụng lên dây dẫn mang dòng điện. Cảm ứng từ",
+          "slug": "bai-15-luc-tu-tac-dung-len-day-dan-mang-dong-dien-cam-ung-tu",
+          "kind": "theory",
+          "keyIdeas": ["Lực từ F = BIl sinα", "Quy tắc bàn tay trái", "Cảm ứng từ B"],
+          "interactiveIdea": "Đoạn dây trong từ trường, chỉnh I, B và góc để thấy vectơ lực từ theo quy tắc bàn tay trái."
+        },
+        {
+          "no": 16,
+          "title": "Bài 16. Từ thông. Hiện tượng cảm ứng điện từ",
+          "slug": "bai-16-tu-thong-hien-tuong-cam-ung-dien-tu",
+          "kind": "theory",
+          "keyIdeas": ["Từ thông Φ = BS cosα", "Định luật Faraday", "Định luật Lenz"],
+          "interactiveIdea": "Vòng dây quay trong từ trường ảo, đồ thị từ thông và suất điện động cảm ứng vẽ đồng thời."
+        },
+        {
+          "no": 17,
+          "title": "Bài 17. Máy phát điện xoay chiều",
+          "slug": "bai-17-may-phat-dien-xoay-chieu",
+          "kind": "theory",
+          "keyIdeas": ["Nguyên tắc hoạt động", "Cấu tạo roto, stato", "Suất điện động xoay chiều"],
+          "interactiveIdea": "Máy phát điện ảo: chỉnh tốc độ quay để thấy tần số và biên độ điện áp ra trên dao động kí."
+        },
+        {
+          "no": 18,
+          "title": "Bài 18. Ứng dụng hiện tượng cảm ứng điện từ",
+          "slug": "bai-18-ung-dung-hien-tuong-cam-ung-dien-tu",
+          "kind": "theory",
+          "keyIdeas": ["Máy biến áp", "Bếp từ", "Truyền tải điện năng"],
+          "interactiveIdea": "Máy biến áp ảo đổi số vòng cuộn sơ cấp, thứ cấp và mô phỏng hao phí truyền tải ở các điện áp."
+        },
+        {
+          "no": 19,
+          "title": "Bài 19. Điện từ trường. Mô hình sóng điện từ",
+          "slug": "bai-19-dien-tu-truong-mo-hinh-song-dien-tu",
+          "kind": "theory",
+          "keyIdeas": ["Điện trường xoáy", "Điện từ trường", "Mô hình sóng điện từ"],
+          "interactiveIdea": "Hoạt họa 3D sóng điện từ với vectơ E và B vuông góc, xoay góc nhìn được."
+        },
+        {
+          "no": 20,
+          "title": "Bài 20. Bài tập về từ trường",
+          "slug": "bai-20-bai-tap-ve-tu-truong",
+          "kind": "practice",
+          "keyIdeas": [
+            "Lực từ, cảm ứng từ",
+            "Từ thông, suất điện động cảm ứng",
+            "Bài toán máy biến áp"
+          ],
+          "interactiveIdea": "Bộ bài tập có hình vẽ tương tác: xác định chiều lực và dòng cảm ứng bằng cách kéo mũi tên."
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "label": "Chương 4",
+      "title": "Vật lí hạt nhân",
+      "slug": "vat-li-hat-nhan",
+      "strand": "vat-li-hat-nhan",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 21,
+          "title": "Bài 21. Cấu trúc hạt nhân",
+          "slug": "bai-21-cau-truc-hat-nhan",
+          "kind": "theory",
+          "keyIdeas": ["Proton và neutron", "Số khối, đồng vị", "Kích thước hạt nhân"],
+          "interactiveIdea": "Bộ xếp hạt nhân: thêm proton, neutron để tạo nguyên tố và đồng vị, hiển thị kí hiệu."
+        },
+        {
+          "no": 22,
+          "title": "Bài 22. Phản ứng hạt nhân và năng lượng liên kết",
+          "slug": "bai-22-phan-ung-hat-nhan-va-nang-luong-lien-ket",
+          "kind": "theory",
+          "keyIdeas": [
+            "Bảo toàn số khối và điện tích",
+            "Độ hụt khối, E = mc²",
+            "Năng lượng liên kết riêng, phân hạch và nhiệt hạch"
+          ],
+          "interactiveIdea": "Đồ thị năng lượng liên kết riêng theo số khối, bấm để mô phỏng phân hạch và nhiệt hạch."
+        },
+        {
+          "no": 23,
+          "title": "Bài 23. Hiện tượng phóng xạ",
+          "slug": "bai-23-hien-tuong-phong-xa",
+          "kind": "theory",
+          "keyIdeas": ["Các loại tia phóng xạ", "Định luật phóng xạ", "Chu kì bán rã"],
+          "interactiveIdea": "Mẫu chất phóng xạ ảo phân rã ngẫu nhiên, đồ thị số hạt còn lại theo thời gian và chu kì bán rã."
+        },
+        {
+          "no": 24,
+          "title": "Bài 24. Công nghiệp hạt nhân",
+          "slug": "bai-24-cong-nghiep-hat-nhan",
+          "kind": "theory",
+          "keyIdeas": [
+            "Nhà máy điện hạt nhân",
+            "Ứng dụng trong y tế, nông nghiệp",
+            "An toàn phóng xạ"
+          ],
+          "interactiveIdea": "Lò phản ứng ảo: điều khiển thanh hấp thụ neutron để giữ phản ứng dây chuyền ổn định."
+        },
+        {
+          "no": 25,
+          "title": "Bài 25. Bài tập về vật lí hạt nhân",
+          "slug": "bai-25-bai-tap-ve-vat-li-hat-nhan",
+          "kind": "practice",
+          "keyIdeas": [
+            "Tính năng lượng liên kết",
+            "Cân bằng phương trình phản ứng",
+            "Bài toán chu kì bán rã"
+          ],
+          "interactiveIdea": "Bài tập tự sinh đề: điền hạt còn thiếu trong phản ứng và tính năng lượng, kiểm tra tức thì."
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "label": "Chuyên đề 1",
+      "title": "Dòng điện xoay chiều",
+      "slug": "cd-dong-dien-xoay-chieu",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 12",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Đặc trưng của dòng điện xoay chiều",
+          "slug": "cd-bai-1-dac-trung-cua-dong-dien-xoay-chieu",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Giá trị tức thời, cực đại, hiệu dụng", "Tần số, chu kì", "Độ lệch pha"],
+          "interactiveIdea": "Dao động kí ảo hiển thị điện áp và dòng điện xoay chiều, đọc giá trị hiệu dụng và độ lệch pha."
+        },
+        {
+          "no": 2,
+          "title": "Bài 2. Đoạn mạch điện xoay chiều RLC mắc nối tiếp",
+          "slug": "cd-bai-2-doan-mach-dien-xoay-chieu-rlc-mac-noi-tiep",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Cảm kháng, dung kháng, tổng trở", "Giản đồ vectơ", "Cộng hưởng điện"],
+          "interactiveIdea": "Mạch RLC với thanh R, L, C và tần số, giản đồ pha và đồ thị cộng hưởng cập nhật."
+        },
+        {
+          "no": 3,
+          "title": "Bài 3. Máy biến áp",
+          "slug": "cd-bai-3-may-bien-ap",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Cấu tạo và nguyên tắc", "U1/U2 = N1/N2", "Truyền tải điện năng đi xa"],
+          "interactiveIdea": "Máy biến áp ảo: chỉnh số vòng dây và tải, quan sát điện áp, dòng điện hai cuộn và hao phí đường dây."
+        },
+        {
+          "no": 4,
+          "title": "Bài 4. Chỉnh lưu dòng điện xoay chiều",
+          "slug": "cd-bai-4-chinh-luu-dong-dien-xoay-chieu",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Diode bán dẫn", "Chỉnh lưu nửa chu kì, cả chu kì", "Lọc bằng tụ điện"],
+          "interactiveIdea": "Mạch chỉnh lưu kéo thả diode và tụ, dạng sóng ra hiển thị trên dao động kí."
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "label": "Chuyên đề 2",
+      "title": "Một số ứng dụng vật lí trong chẩn đoán y học",
+      "slug": "cd-mot-so-ung-dung-vat-li-trong-chan-doan-y-hoc",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 12",
+      "lessons": [
+        {
+          "no": 5,
+          "title": "Bài 5. Tia X",
+          "slug": "cd-bai-5-tia-x",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Bản chất tia X", "Ống Coolidge tạo tia X", "Tính chất và an toàn"],
+          "interactiveIdea": "Ống tia X ảo: chỉnh hiệu điện thế để thấy phổ tia X và khả năng đâm xuyên thay đổi."
+        },
+        {
+          "no": 6,
+          "title": "Bài 6. Chụp X-quang. Chụp cắt lớp",
+          "slug": "cd-bai-6-chup-x-quang-chup-cat-lop",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Nguyên lí chụp X-quang", "Hấp thụ tia X theo mô", "Chụp cắt lớp CT"],
+          "interactiveIdea": "Quét CT ảo: chiếu tia X từ nhiều góc qua vật thể và dựng lại ảnh lát cắt."
+        },
+        {
+          "no": 7,
+          "title": "Bài 7. Siêu âm",
+          "slug": "cd-bai-7-sieu-am",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Sóng siêu âm", "Phản xạ siêu âm ở mặt phân cách mô", "Tạo ảnh siêu âm"],
+          "interactiveIdea": "Đầu dò siêu âm ảo kéo trên cơ thể, tiếng vọng từ các lớp mô tạo thành ảnh."
+        },
+        {
+          "no": 8,
+          "title": "Bài 8. Chụp cộng hưởng từ",
+          "slug": "cd-bai-8-chup-cong-huong-tu",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Từ trường mạnh và proton", "Cộng hưởng từ hạt nhân", "Ưu điểm của MRI"],
+          "interactiveIdea": "Mô phỏng spin proton thẳng hàng trong từ trường, bật xung sóng vô tuyến để thấy tín hiệu hồi phục."
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "label": "Chuyên đề 3",
+      "title": "Vật lí lượng tử",
+      "slug": "cd-vat-li-luong-tu",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 12",
+      "lessons": [
+        {
+          "no": 9,
+          "title": "Bài 9. Hiệu ứng quang điện và năng lượng của photon",
+          "slug": "cd-bai-9-hieu-ung-quang-dien-va-nang-luong-cua-photon",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Hiệu ứng quang điện",
+            "Năng lượng photon E = hf",
+            "Giới hạn quang điện, công thức Einstein"
+          ],
+          "interactiveIdea": "Tấm kim loại ảo chiếu ánh sáng với bước sóng và cường độ khác nhau, đếm electron bật ra."
+        },
+        {
+          "no": 10,
+          "title": "Bài 10. Lưỡng tính sóng hạt",
+          "slug": "cd-bai-10-luong-tinh-song-hat",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Lưỡng tính sóng hạt của ánh sáng",
+            "Bước sóng de Broglie",
+            "Nhiễu xạ electron"
+          ],
+          "interactiveIdea": "Thí nghiệm hai khe với electron bắn từng hạt, vân giao thoa dần hiện ra."
+        },
+        {
+          "no": 11,
+          "title": "Bài 11. Quang phổ vạch của nguyên tử",
+          "slug": "cd-bai-11-quang-pho-vach-cua-nguyen-tu",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Mức năng lượng nguyên tử",
+            "Phát xạ và hấp thụ photon",
+            "Quang phổ vạch hydrogen"
+          ],
+          "interactiveIdea": "Sơ đồ mức năng lượng hydrogen: kéo electron giữa các mức để phát photon, vạch phổ hiện màu tương ứng."
+        },
+        {
+          "no": 12,
+          "title": "Bài 12. Vùng năng lượng của tinh thể chất rắn",
+          "slug": "cd-bai-12-vung-nang-luong-cua-tinh-the-chat-ran",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Vùng hóa trị, vùng dẫn", "Vùng cấm", "Kim loại, bán dẫn, điện môi"],
+          "interactiveIdea": "Sơ đồ vùng năng lượng chọn vật liệu, tăng nhiệt độ hoặc chiếu sáng để electron nhảy qua vùng cấm."
+        }
+      ]
+    }
+  ]
+}

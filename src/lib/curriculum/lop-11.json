@@ -1,0 +1,408 @@
+{
+  "grade": 11,
+  "volumes": ["Sách giáo khoa (1 tập)", "Chuyên đề học tập Vật lí 11"],
+  "chapters": [
+    {
+      "no": 1,
+      "label": "Chương I",
+      "title": "Dao động",
+      "slug": "dao-dong",
+      "strand": "dao-dong-song",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Dao động điều hòa",
+          "slug": "bai-1-dao-dong-dieu-hoa",
+          "kind": "theory",
+          "keyIdeas": [
+            "Dao động cơ, dao động tuần hoàn",
+            "Dao động điều hòa",
+            "Li độ, biên độ, chu kì, tần số"
+          ],
+          "interactiveIdea": "Con lắc lò xo ảo dao động cạnh đồ thị li độ theo thời gian vẽ trực tiếp."
+        },
+        {
+          "no": 2,
+          "title": "Bài 2. Mô tả dao động điều hòa",
+          "slug": "bai-2-mo-ta-dao-dong-dieu-hoa",
+          "kind": "theory",
+          "keyIdeas": ["Phương trình x = A cos(ωt + φ)", "Tần số góc, pha ban đầu", "Độ lệch pha"],
+          "interactiveIdea": "Chuyển động tròn đều chiếu lên trục tạo dao động điều hòa, thanh trượt A, ω, φ."
+        },
+        {
+          "no": 3,
+          "title": "Bài 3. Vận tốc, gia tốc trong dao động điều hòa",
+          "slug": "bai-3-van-toc-gia-toc-trong-dao-dong-dieu-hoa",
+          "kind": "theory",
+          "keyIdeas": [
+            "Phương trình vận tốc, gia tốc",
+            "Quan hệ pha giữa x, v, a",
+            "Giá trị cực đại"
+          ],
+          "interactiveIdea": "Ba đồ thị x, v, a đồng bộ với vật dao động, rê chuột theo thời gian để đọc giá trị."
+        },
+        {
+          "no": 4,
+          "title": "Bài 4. Bài tập về dao động điều hòa",
+          "slug": "bai-4-bai-tap-ve-dao-dong-dieu-hoa",
+          "kind": "practice",
+          "keyIdeas": [
+            "Viết phương trình dao động",
+            "Tính v, a tại li độ bất kì",
+            "Đọc đồ thị dao động"
+          ],
+          "interactiveIdea": "Bộ bài tập sinh đề ngẫu nhiên kèm đồ thị dao động để người học đọc A, T, φ và tự kiểm tra."
+        },
+        {
+          "no": 5,
+          "title": "Bài 5. Động năng. Thế năng. Sự chuyển hóa năng lượng trong dao động điều hòa",
+          "slug": "bai-5-dong-nang-the-nang-su-chuyen-hoa-nang-luong-trong-dao-dong-dieu-hoa",
+          "kind": "theory",
+          "keyIdeas": [
+            "Động năng và thế năng biến thiên",
+            "Cơ năng được bảo toàn",
+            "Đồ thị năng lượng"
+          ],
+          "interactiveIdea": "Con lắc lò xo với biểu đồ cột Wđ, Wt và đồ thị năng lượng theo li độ."
+        },
+        {
+          "no": 6,
+          "title": "Bài 6. Dao động tắt dần. Dao động cưỡng bức. Hiện tượng cộng hưởng",
+          "slug": "bai-6-dao-dong-tat-dan-dao-dong-cuong-buc-hien-tuong-cong-huong",
+          "kind": "theory",
+          "keyIdeas": ["Dao động tắt dần do lực cản", "Dao động cưỡng bức", "Cộng hưởng"],
+          "interactiveIdea": "Chỉnh lực cản và tần số ngoại lực, đồ thị biên độ theo tần số cho thấy đỉnh cộng hưởng."
+        },
+        {
+          "no": 7,
+          "title": "Bài 7. Bài tập về sự chuyển hóa năng lượng trong dao động điều hòa",
+          "slug": "bai-7-bai-tap-ve-su-chuyen-hoa-nang-luong-trong-dao-dong-dieu-hoa",
+          "kind": "practice",
+          "keyIdeas": [
+            "Tính động năng, thế năng, cơ năng",
+            "Vị trí Wđ = nWt",
+            "Bài toán con lắc lò xo, con lắc đơn"
+          ],
+          "interactiveIdea": "Bài tập tương tác: kéo vật đến vị trí đề yêu cầu, ứng dụng kiểm tra tỉ số Wđ/Wt."
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "label": "Chương II",
+      "title": "Sóng",
+      "slug": "song",
+      "strand": "dao-dong-song",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 8,
+          "title": "Bài 8. Mô tả sóng",
+          "slug": "bai-8-mo-ta-song",
+          "kind": "theory",
+          "keyIdeas": ["Sóng cơ", "Bước sóng, chu kì, tần số, tốc độ", "v = λf"],
+          "interactiveIdea": "Dây sóng ảo: lắc đầu dây với tần số và biên độ khác nhau, thước đo bước sóng."
+        },
+        {
+          "no": 9,
+          "title": "Bài 9. Sóng ngang. Sóng dọc. Sự truyền năng lượng của sóng cơ",
+          "slug": "bai-9-song-ngang-song-doc-su-truyen-nang-luong-cua-song-co",
+          "kind": "theory",
+          "keyIdeas": [
+            "Sóng ngang và sóng dọc",
+            "Phương dao động và phương truyền",
+            "Cường độ sóng"
+          ],
+          "interactiveIdea": "So sánh lò xo truyền sóng dọc và dây truyền sóng ngang, đánh dấu một phần tử để thấy phương dao động."
+        },
+        {
+          "no": 10,
+          "title": "Bài 10. Thực hành: Đo tần số của sóng âm",
+          "slug": "bai-10-thuc-hanh-do-tan-so-cua-song-am",
+          "kind": "activity",
+          "keyIdeas": ["Dao động kí điện tử", "Đọc chu kì từ màn hình", "Tính tần số"],
+          "interactiveIdea": "Dao động kí ảo hiển thị sóng âm từ âm thoa, chỉnh thang thời gian để đọc chu kì."
+        },
+        {
+          "no": 11,
+          "title": "Bài 11. Sóng điện từ",
+          "slug": "bai-11-song-dien-tu",
+          "kind": "theory",
+          "keyIdeas": ["Bản chất sóng điện từ", "Thang sóng điện từ", "Tốc độ ánh sáng"],
+          "interactiveIdea": "Thang sóng điện từ kéo theo bước sóng, hiển thị tên vùng, nguồn phát và ứng dụng."
+        },
+        {
+          "no": 12,
+          "title": "Bài 12. Giao thoa sóng",
+          "slug": "bai-12-giao-thoa-song",
+          "kind": "theory",
+          "keyIdeas": [
+            "Hai nguồn kết hợp",
+            "Cực đại và cực tiểu giao thoa",
+            "Giao thoa ánh sáng khe Young"
+          ],
+          "interactiveIdea": "Mặt nước ảo với hai nguồn, chỉnh khoảng cách và tần số để thấy vân giao thoa; chuyển sang khe Young."
+        },
+        {
+          "no": 13,
+          "title": "Bài 13. Sóng dừng",
+          "slug": "bai-13-song-dung",
+          "kind": "theory",
+          "keyIdeas": ["Sóng tới và sóng phản xạ", "Nút và bụng", "Điều kiện có sóng dừng"],
+          "interactiveIdea": "Dây hai đầu cố định, chỉnh tần số đến khi xuất hiện sóng dừng, đếm nút và bụng."
+        },
+        {
+          "no": 14,
+          "title": "Bài 14. Bài tập về sóng",
+          "slug": "bai-14-bai-tap-ve-song",
+          "kind": "practice",
+          "keyIdeas": ["Tính bước sóng, tốc độ", "Bài toán giao thoa", "Bài toán sóng dừng"],
+          "interactiveIdea": "Bài tập có mô phỏng đi kèm: tự đặt thông số theo đề để kiểm tra đáp án."
+        },
+        {
+          "no": 15,
+          "title": "Bài 15. Thực hành: Đo tốc độ truyền âm",
+          "slug": "bai-15-thuc-hanh-do-toc-do-truyen-am",
+          "kind": "activity",
+          "keyIdeas": ["Ống cộng hưởng", "Xác định bước sóng âm", "Tính tốc độ truyền âm"],
+          "interactiveIdea": "Ống cộng hưởng ảo dịch pít-tông tìm vị trí âm to nhất, đo khoảng cách để tính tốc độ âm."
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "label": "Chương III",
+      "title": "Điện trường",
+      "slug": "dien-truong",
+      "strand": "dien-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 16,
+          "title": "Bài 16. Lực tương tác giữa hai điện tích",
+          "slug": "bai-16-luc-tuong-tac-giua-hai-dien-tich",
+          "kind": "theory",
+          "keyIdeas": ["Định luật Coulomb", "Hằng số điện môi", "Tổng hợp lực điện"],
+          "interactiveIdea": "Kéo hai điện tích điểm, vectơ lực Coulomb thay đổi theo khoảng cách và độ lớn điện tích."
+        },
+        {
+          "no": 17,
+          "title": "Bài 17. Khái niệm điện trường",
+          "slug": "bai-17-khai-niem-dien-truong",
+          "kind": "theory",
+          "keyIdeas": ["Điện trường", "Cường độ điện trường E", "Đường sức điện"],
+          "interactiveIdea": "Đặt các điện tích lên mặt phẳng, đường sức và vectơ E tại điểm thử được vẽ tự động."
+        },
+        {
+          "no": 18,
+          "title": "Bài 18. Điện trường đều",
+          "slug": "bai-18-dien-truong-deu",
+          "kind": "theory",
+          "keyIdeas": [
+            "Điện trường giữa hai bản phẳng",
+            "E = U/d",
+            "Chuyển động của điện tích trong điện trường đều"
+          ],
+          "interactiveIdea": "Bắn electron vào giữa hai bản tụ ảo, chỉnh hiệu điện thế để thấy quỹ đạo parabol."
+        },
+        {
+          "no": 19,
+          "title": "Bài 19. Thế năng điện",
+          "slug": "bai-19-the-nang-dien",
+          "kind": "theory",
+          "keyIdeas": ["Công của lực điện", "Thế năng điện", "Không phụ thuộc hình dạng đường đi"],
+          "interactiveIdea": "Kéo điện tích theo các đường khác nhau giữa hai điểm, công tính được luôn bằng nhau."
+        },
+        {
+          "no": 20,
+          "title": "Bài 20. Điện thế",
+          "slug": "bai-20-dien-the",
+          "kind": "theory",
+          "keyIdeas": ["Điện thế tại một điểm", "Hiệu điện thế", "Mặt đẳng thế"],
+          "interactiveIdea": "Bản đồ điện thế màu quanh các điện tích, rê chuột để đọc điện thế và vẽ đường đẳng thế."
+        },
+        {
+          "no": 21,
+          "title": "Bài 21. Tụ điện",
+          "slug": "bai-21-tu-dien",
+          "kind": "theory",
+          "keyIdeas": ["Cấu tạo tụ điện", "Điện dung C = Q/U", "Ghép tụ và năng lượng tụ điện"],
+          "interactiveIdea": "Tụ phẳng ảo: chỉnh diện tích bản, khoảng cách, điện môi để thấy điện dung và điện tích thay đổi."
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "label": "Chương IV",
+      "title": "Dòng điện. Mạch điện",
+      "slug": "dong-dien-mach-dien",
+      "strand": "dien-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 22,
+          "title": "Bài 22. Cường độ dòng điện",
+          "slug": "bai-22-cuong-do-dong-dien",
+          "kind": "theory",
+          "keyIdeas": ["I = Δq/Δt", "Chiều dòng điện", "Tốc độ trôi của electron"],
+          "interactiveIdea": "Dây dẫn ảo với electron trôi, đếm điện tích qua tiết diện trong một giây."
+        },
+        {
+          "no": 23,
+          "title": "Bài 23. Điện trở. Định luật Ohm",
+          "slug": "bai-23-dien-tro-dinh-luat-ohm",
+          "kind": "theory",
+          "keyIdeas": [
+            "Điện trở và nguyên nhân",
+            "Định luật Ohm cho đoạn mạch",
+            "Điện trở phụ thuộc nhiệt độ, đặc tuyến I–U"
+          ],
+          "interactiveIdea": "Đo đặc tuyến I–U của điện trở, đèn sợi đốt, điốt ảo để so sánh."
+        },
+        {
+          "no": 24,
+          "title": "Bài 24. Nguồn điện",
+          "slug": "bai-24-nguon-dien",
+          "kind": "theory",
+          "keyIdeas": ["Suất điện động", "Điện trở trong", "Định luật Ohm cho toàn mạch"],
+          "interactiveIdea": "Pin ảo có điện trở trong, đổi điện trở ngoài để thấy hiệu điện thế mạch ngoài giảm khi dòng tăng."
+        },
+        {
+          "no": 25,
+          "title": "Bài 25. Năng lượng và công suất điện",
+          "slug": "bai-25-nang-luong-va-cong-suat-dien",
+          "kind": "theory",
+          "keyIdeas": ["Điện năng tiêu thụ", "Công suất điện", "Định luật Joule–Lenz"],
+          "interactiveIdea": "Bảng điều khiển thiết bị với công tơ điện ảo, tính nhiệt tỏa ra trên điện trở theo thời gian."
+        },
+        {
+          "no": 26,
+          "title": "Bài 26. Thực hành: Đo suất điện động và điện trở trong của pin điện hóa",
+          "slug": "bai-26-thuc-hanh-do-suat-dien-dong-va-dien-tro-trong-cua-pin-dien-hoa",
+          "kind": "activity",
+          "keyIdeas": ["Mạch đo dùng biến trở", "Vẽ đồ thị U theo I", "Suy ra E và r"],
+          "interactiveIdea": "Thí nghiệm ảo đổi biến trở, ghi các cặp U–I và hồi quy tuyến tính để tìm E và r."
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "label": "Chuyên đề 1",
+      "title": "Trường hấp dẫn",
+      "slug": "cd-truong-hap-dan",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 11",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Trường hấp dẫn",
+          "slug": "cd-bai-1-truong-hap-dan",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Định luật vạn vật hấp dẫn",
+            "Khái niệm trường hấp dẫn",
+            "Đường sức trường hấp dẫn"
+          ],
+          "interactiveIdea": "Đặt các khối lượng lên mặt phẳng để thấy đường sức trường hấp dẫn và lực tác dụng lên vật thử."
+        },
+        {
+          "no": 2,
+          "title": "Bài 2. Cường độ trường hấp dẫn",
+          "slug": "cd-bai-2-cuong-do-truong-hap-dan",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Cường độ trường hấp dẫn g",
+            "g thay đổi theo độ cao",
+            "Trường hấp dẫn gần mặt đất"
+          ],
+          "interactiveIdea": "Kéo vệ tinh ra xa Trái Đất, đồ thị g theo khoảng cách vẽ theo luật bình phương nghịch đảo."
+        },
+        {
+          "no": 3,
+          "title": "Bài 3. Thế hấp dẫn và thế năng hấp dẫn",
+          "slug": "cd-bai-3-the-hap-dan-va-the-nang-hap-dan",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Thế hấp dẫn", "Thế năng hấp dẫn", "Tốc độ vũ trụ"],
+          "interactiveIdea": "Bắn tên lửa ảo với tốc độ đầu khác nhau để thấy rơi lại, bay quanh hay thoát khỏi Trái Đất."
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "label": "Chuyên đề 2",
+      "title": "Truyền thông tin bằng sóng vô tuyến",
+      "slug": "cd-truyen-thong-tin-bang-song-vo-tuyen",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 11",
+      "lessons": [
+        {
+          "no": 4,
+          "title": "Bài 4. Biến điệu",
+          "slug": "cd-bai-4-bien-dieu",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Sóng mang", "Biến điệu biên độ AM", "Biến điệu tần số FM"],
+          "interactiveIdea": "Bộ tạo tín hiệu: chọn tín hiệu âm và sóng mang, xem sóng AM và FM tạo thành."
+        },
+        {
+          "no": 5,
+          "title": "Bài 5. Tín hiệu tương tự và tín hiệu số",
+          "slug": "cd-bai-5-tin-hieu-tuong-tu-va-tin-hieu-so",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Tín hiệu tương tự", "Tín hiệu số và lấy mẫu", "Chuyển đổi ADC, DAC"],
+          "interactiveIdea": "Chỉnh tần số lấy mẫu và số bit để thấy tín hiệu số bám sát tín hiệu tương tự đến đâu."
+        },
+        {
+          "no": 6,
+          "title": "Bài 6. Suy giảm tín hiệu",
+          "slug": "cd-bai-6-suy-giam-tin-hieu",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Suy giảm theo khoảng cách", "Đơn vị decibel", "Khuếch đại và chống nhiễu"],
+          "interactiveIdea": "Truyền tín hiệu qua cáp ảo dài dần, đồng hồ dB hiển thị mức suy giảm và vị trí đặt bộ khuếch đại."
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "label": "Chuyên đề 3",
+      "title": "Mở đầu điện tử học",
+      "slug": "cd-mo-dau-dien-tu-hoc",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 11",
+      "lessons": [
+        {
+          "no": 7,
+          "title": "Bài 7. Cảm biến",
+          "slug": "cd-bai-7-cam-bien",
+          "kind": "chuyen-de",
+          "keyIdeas": ["Cảm biến ánh sáng LDR", "Cảm biến nhiệt điện trở", "Mạch chia áp"],
+          "interactiveIdea": "Mạch chia áp với LDR và nhiệt điện trở, kéo thanh ánh sáng, nhiệt độ để thấy điện áp ra thay đổi."
+        },
+        {
+          "no": 8,
+          "title": "Bài 8. Bộ khuếch đại thuật toán và thiết bị đầu ra",
+          "slug": "cd-bai-8-bo-khuech-dai-thuat-toan-va-thiet-bi-dau-ra",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Op-amp lí tưởng",
+            "Mạch so sánh, khuếch đại đảo, không đảo",
+            "Relay, LED, loa"
+          ],
+          "interactiveIdea": "Mô phỏng op-amp: chỉnh điện áp vào và điện trở hồi tiếp, xem điện áp ra và bão hòa."
+        },
+        {
+          "no": 9,
+          "title": "Bài 9. Mạch điện đơn giản có sử dụng thiết bị đầu ra",
+          "slug": "cd-bai-9-mach-dien-don-gian-co-su-dung-thiet-bi-dau-ra",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Ghép cảm biến với op-amp",
+            "Điều khiển relay, LED",
+            "Thiết kế mạch báo động"
+          ],
+          "interactiveIdea": "Bộ lắp mạch kéo thả để tạo đèn tự bật khi trời tối, kiểm tra hoạt động bằng thanh ánh sáng."
+        }
+      ]
+    }
+  ]
+}

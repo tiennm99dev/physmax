@@ -1,0 +1,578 @@
+{
+  "grade": 10,
+  "volumes": ["Sách giáo khoa (1 tập)", "Chuyên đề học tập Vật lí 10"],
+  "chapters": [
+    {
+      "no": 1,
+      "label": "Chương I",
+      "title": "Mở đầu",
+      "slug": "mo-dau",
+      "strand": "mo-dau-do-luong",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Làm quen với Vật lí",
+          "slug": "bai-1-lam-quen-voi-vat-li",
+          "kind": "theory",
+          "keyIdeas": [
+            "Đối tượng nghiên cứu của vật lí",
+            "Phương pháp thực nghiệm và mô hình",
+            "Vai trò của vật lí với công nghệ"
+          ],
+          "interactiveIdea": "Dòng thời gian tương tác các cuộc cách mạng công nghiệp gắn với phát minh vật lí."
+        },
+        {
+          "no": 2,
+          "title": "Bài 2. Các quy tắc an toàn trong phòng thực hành vật lí",
+          "slug": "bai-2-cac-quy-tac-an-toan-trong-phong-thuc-hanh-vat-li",
+          "kind": "theory",
+          "keyIdeas": [
+            "Kí hiệu trên thiết bị",
+            "Quy tắc an toàn điện, nhiệt, quang",
+            "Xử lí sự cố"
+          ],
+          "interactiveIdea": "Ghép biển báo và kí hiệu trên dụng cụ với ý nghĩa, tình huống ảo để chọn cách xử lí an toàn."
+        },
+        {
+          "no": 3,
+          "title": "Bài 3. Thực hành tính sai số trong phép đo. Ghi kết quả đo",
+          "slug": "bai-3-thuc-hanh-tinh-sai-so-trong-phep-do-ghi-ket-qua-do",
+          "kind": "activity",
+          "keyIdeas": [
+            "Phép đo trực tiếp và gián tiếp",
+            "Sai số ngẫu nhiên và hệ thống",
+            "Sai số tuyệt đối, tương đối, chữ số có nghĩa"
+          ],
+          "interactiveIdea": "Đo lặp lại đường kính viên bi ảo nhiều lần, ứng dụng tính giá trị trung bình, sai số và cách ghi kết quả."
+        }
+      ]
+    },
+    {
+      "no": 2,
+      "label": "Chương II",
+      "title": "Động học",
+      "slug": "dong-hoc",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 4,
+          "title": "Bài 4. Độ dịch chuyển và quãng đường đi được",
+          "slug": "bai-4-do-dich-chuyen-va-quang-duong-di-duoc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Độ dịch chuyển là vectơ",
+            "Phân biệt với quãng đường",
+            "Tổng hợp độ dịch chuyển"
+          ],
+          "interactiveIdea": "Vẽ lộ trình trên bản đồ lưới, ứng dụng hiện mũi tên độ dịch chuyển và độ dài quãng đường."
+        },
+        {
+          "no": 5,
+          "title": "Bài 5. Tốc độ và vận tốc",
+          "slug": "bai-5-toc-do-va-van-toc",
+          "kind": "theory",
+          "keyIdeas": ["Tốc độ trung bình, tức thời", "Vận tốc là vectơ", "Tổng hợp vận tốc"],
+          "interactiveIdea": "Thuyền qua sông ảo: chỉnh vận tốc thuyền và dòng nước, vectơ vận tốc tổng hợp và quỹ đạo hiện ra."
+        },
+        {
+          "no": 6,
+          "title": "Bài 6. Thực hành: Đo tốc độ của vật chuyển động",
+          "slug": "bai-6-thuc-hanh-do-toc-do-cua-vat-chuyen-dong",
+          "kind": "activity",
+          "keyIdeas": [
+            "Đồng hồ hiện số và cổng quang",
+            "Đo thời gian vật qua cổng",
+            "Tính tốc độ và sai số"
+          ],
+          "interactiveIdea": "Máng nghiêng ảo với hai cổng quang dời được, ghi thời gian và tính tốc độ trung bình, tức thời."
+        },
+        {
+          "no": 7,
+          "title": "Bài 7. Đồ thị độ dịch chuyển - thời gian",
+          "slug": "bai-7-do-thi-do-dich-chuyen-thoi-gian",
+          "kind": "theory",
+          "keyIdeas": ["Vẽ đồ thị d–t", "Độ dốc là vận tốc", "Mô tả chuyển động từ đồ thị"],
+          "interactiveIdea": "Kéo nhân vật trên đường thẳng để vẽ đồ thị d–t theo thời gian thực."
+        },
+        {
+          "no": 8,
+          "title": "Bài 8. Chuyển động biến đổi. Gia tốc",
+          "slug": "bai-8-chuyen-dong-bien-doi-gia-toc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Gia tốc là độ biến thiên vận tốc theo thời gian",
+            "Chuyển động nhanh dần, chậm dần",
+            "Đơn vị m/s²"
+          ],
+          "interactiveIdea": "Xe ảo với chân ga và phanh, đồng hồ vận tốc và mũi tên gia tốc cập nhật liên tục."
+        },
+        {
+          "no": 9,
+          "title": "Bài 9. Chuyển động thẳng biến đổi đều",
+          "slug": "bai-9-chuyen-dong-thang-bien-doi-deu",
+          "kind": "theory",
+          "keyIdeas": [
+            "Đồ thị v–t",
+            "Công thức v = v0 + at",
+            "Độ dịch chuyển bằng diện tích dưới đồ thị v–t"
+          ],
+          "interactiveIdea": "Đồ thị v–t kéo thả, vùng diện tích tô màu cho độ dịch chuyển và hoạt họa chuyển động tương ứng."
+        },
+        {
+          "no": 10,
+          "title": "Bài 10. Sự rơi tự do",
+          "slug": "bai-10-su-roi-tu-do",
+          "kind": "theory",
+          "keyIdeas": [
+            "Rơi tự do trong chân không",
+            "Gia tốc rơi tự do g",
+            "Các công thức rơi tự do"
+          ],
+          "interactiveIdea": "Ống chân không ảo thả lông chim và hòn bi, bật tắt không khí để so sánh."
+        },
+        {
+          "no": 11,
+          "title": "Bài 11. Thực hành: Đo gia tốc rơi tự do",
+          "slug": "bai-11-thuc-hanh-do-gia-toc-roi-tu-do",
+          "kind": "activity",
+          "keyIdeas": [
+            "Bố trí cổng quang và nam châm điện",
+            "Đo thời gian rơi",
+            "Tính g và sai số"
+          ],
+          "interactiveIdea": "Thí nghiệm rơi ảo với cổng quang đặt ở các độ cao, vẽ đồ thị s theo t² để suy ra g."
+        },
+        {
+          "no": 12,
+          "title": "Bài 12. Chuyển động ném",
+          "slug": "bai-12-chuyen-dong-nem",
+          "kind": "theory",
+          "keyIdeas": ["Ném ngang", "Ném xiên", "Tầm xa và tầm cao"],
+          "interactiveIdea": "Súng bắn bóng ảo: chỉnh góc và vận tốc đầu, quỹ đạo parabol và các thành phần vận tốc hiển thị."
+        }
+      ]
+    },
+    {
+      "no": 3,
+      "label": "Chương III",
+      "title": "Động lực học",
+      "slug": "dong-luc-hoc",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 13,
+          "title": "Bài 13. Tổng hợp và phân tích lực. Cân bằng lực",
+          "slug": "bai-13-tong-hop-va-phan-tich-luc-can-bang-luc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Quy tắc hình bình hành",
+            "Phân tích lực theo hai phương",
+            "Điều kiện cân bằng của chất điểm"
+          ],
+          "interactiveIdea": "Kéo các vectơ lực trên mặt phẳng, hình bình hành và hợp lực vẽ tự động."
+        },
+        {
+          "no": 14,
+          "title": "Bài 14. Định luật 1 Newton",
+          "slug": "bai-14-dinh-luat-1-newton",
+          "kind": "theory",
+          "keyIdeas": [
+            "Quán tính",
+            "Vật giữ nguyên trạng thái khi hợp lực bằng không",
+            "Khối lượng là số đo quán tính"
+          ],
+          "interactiveIdea": "Xe trượt ảo trên mặt giảm dần ma sát đến khi không ma sát, xe chuyển động thẳng đều mãi."
+        },
+        {
+          "no": 15,
+          "title": "Bài 15. Định luật 2 Newton",
+          "slug": "bai-15-dinh-luat-2-newton",
+          "kind": "theory",
+          "keyIdeas": ["a = F/m", "Quan hệ gia tốc, lực và khối lượng", "Đơn vị newton"],
+          "interactiveIdea": "Đẩy xe với lực và tải khác nhau, đồ thị a theo F và a theo 1/m vẽ từ dữ liệu."
+        },
+        {
+          "no": 16,
+          "title": "Bài 16. Định luật 3 Newton",
+          "slug": "bai-16-dinh-luat-3-newton",
+          "kind": "theory",
+          "keyIdeas": [
+            "Lực và phản lực",
+            "Cùng phương, ngược chiều, cùng độ lớn",
+            "Đặt vào hai vật khác nhau"
+          ],
+          "interactiveIdea": "Hai người trượt băng đẩy nhau, lực kế ở hai bên luôn chỉ cùng số đo."
+        },
+        {
+          "no": 17,
+          "title": "Bài 17. Trọng lực và lực căng",
+          "slug": "bai-17-trong-luc-va-luc-cang",
+          "kind": "theory",
+          "keyIdeas": ["Trọng lực P = mg", "Trọng tâm", "Lực căng dây"],
+          "interactiveIdea": "Treo vật bằng một hoặc hai dây với góc thay đổi, hiển thị lực căng và trọng lực."
+        },
+        {
+          "no": 18,
+          "title": "Bài 18. Lực ma sát",
+          "slug": "bai-18-luc-ma-sat",
+          "kind": "theory",
+          "keyIdeas": [
+            "Ma sát trượt, ma sát nghỉ",
+            "Hệ số ma sát",
+            "Lực ma sát không phụ thuộc diện tích tiếp xúc"
+          ],
+          "interactiveIdea": "Kéo khối trên các bề mặt, đồ thị lực kéo cho thấy ngưỡng ma sát nghỉ cực đại rồi ma sát trượt."
+        },
+        {
+          "no": 19,
+          "title": "Bài 19. Lực cản và lực nâng",
+          "slug": "bai-19-luc-can-va-luc-nang",
+          "kind": "theory",
+          "keyIdeas": ["Lực cản của chất lưu", "Lực nâng", "Hình dạng khí động học"],
+          "interactiveIdea": "Ống khí động ảo: đổi hình dạng vật và tốc độ gió để thấy lực cản và lực nâng."
+        },
+        {
+          "no": 20,
+          "title": "Bài 20. Một số ví dụ về cách giải các bài toán thuộc phần động lực học",
+          "slug": "bai-20-mot-so-vi-du-ve-cach-giai-cac-bai-toan-thuoc-phan-dong-luc-hoc",
+          "kind": "practice",
+          "keyIdeas": [
+            "Các bước giải bài toán động lực học",
+            "Vẽ giản đồ lực",
+            "Chuyển động trên mặt phẳng nghiêng"
+          ],
+          "interactiveIdea": "Trình giải bài toán theo bước: vẽ lực, chọn trục, viết phương trình, kiểm tra kết quả với mô phỏng."
+        },
+        {
+          "no": 21,
+          "title": "Bài 21. Moment lực. Cân bằng của vật rắn",
+          "slug": "bai-21-moment-luc-can-bang-cua-vat-ran",
+          "kind": "theory",
+          "keyIdeas": ["Moment lực", "Quy tắc moment", "Ngẫu lực, điều kiện cân bằng vật rắn"],
+          "interactiveIdea": "Thanh cân ảo có trục quay, treo quả nặng ở các vị trí để cân bằng moment."
+        },
+        {
+          "no": 22,
+          "title": "Bài 22. Thực hành: Tổng hợp lực",
+          "slug": "bai-22-thuc-hanh-tong-hop-luc",
+          "kind": "activity",
+          "keyIdeas": [
+            "Tổng hợp hai lực đồng quy",
+            "Tổng hợp hai lực song song",
+            "Kiểm nghiệm quy tắc"
+          ],
+          "interactiveIdea": "Bảng lực kế ảo với dây treo, đo và so sánh hợp lực với kết quả quy tắc hình bình hành."
+        }
+      ]
+    },
+    {
+      "no": 4,
+      "label": "Chương IV",
+      "title": "Năng lượng, công, công suất",
+      "slug": "nang-luong-cong-cong-suat",
+      "strand": "nang-luong",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 23,
+          "title": "Bài 23. Năng lượng. Công cơ học",
+          "slug": "bai-23-nang-luong-cong-co-hoc",
+          "kind": "theory",
+          "keyIdeas": [
+            "Năng lượng và các dạng năng lượng",
+            "Công A = F.s.cosα",
+            "Công phát động và công cản"
+          ],
+          "interactiveIdea": "Kéo vật bằng lực xoay góc tùy ý, thanh đo công cập nhật theo cosα."
+        },
+        {
+          "no": 24,
+          "title": "Bài 24. Công suất",
+          "slug": "bai-24-cong-suat",
+          "kind": "theory",
+          "keyIdeas": ["Công suất P = A/t", "P = F.v", "Đơn vị W, mã lực"],
+          "interactiveIdea": "So sánh thang máy và cầu thang bộ cùng đưa người lên cao, công suất tính theo thời gian."
+        },
+        {
+          "no": 25,
+          "title": "Bài 25. Động năng, thế năng",
+          "slug": "bai-25-dong-nang-the-nang",
+          "kind": "theory",
+          "keyIdeas": ["Wđ = ½mv²", "Thế năng trọng trường Wt = mgh", "Định lí động năng"],
+          "interactiveIdea": "Tàu lượn ảo với thanh động năng và thế năng theo vị trí."
+        },
+        {
+          "no": 26,
+          "title": "Bài 26. Cơ năng và định luật bảo toàn cơ năng",
+          "slug": "bai-26-co-nang-va-dinh-luat-bao-toan-co-nang",
+          "kind": "theory",
+          "keyIdeas": ["Cơ năng W = Wđ + Wt", "Bảo toàn cơ năng", "Ứng dụng giải bài toán"],
+          "interactiveIdea": "Con lắc ảo với biểu đồ năng lượng, bật ma sát để thấy cơ năng giảm."
+        },
+        {
+          "no": 27,
+          "title": "Bài 27. Hiệu suất",
+          "slug": "bai-27-hieu-suat",
+          "kind": "theory",
+          "keyIdeas": ["Năng lượng có ích và hao phí", "Hiệu suất H", "Hiệu suất động cơ nhiệt"],
+          "interactiveIdea": "Biểu đồ Sankey cho động cơ xe, quạt, bếp, kéo tỉ lệ hao phí để thấy hiệu suất."
+        }
+      ]
+    },
+    {
+      "no": 5,
+      "label": "Chương V",
+      "title": "Động lượng",
+      "slug": "dong-luong",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 28,
+          "title": "Bài 28. Động lượng",
+          "slug": "bai-28-dong-luong",
+          "kind": "theory",
+          "keyIdeas": [
+            "p = mv là vectơ",
+            "Xung lượng của lực",
+            "Liên hệ lực và độ biến thiên động lượng"
+          ],
+          "interactiveIdea": "Đỡ quả trứng ảo với thời gian va chạm khác nhau, biểu đồ lực theo thời gian giải thích tác dụng đệm."
+        },
+        {
+          "no": 29,
+          "title": "Bài 29. Định luật bảo toàn động lượng",
+          "slug": "bai-29-dinh-luat-bao-toan-dong-luong",
+          "kind": "theory",
+          "keyIdeas": ["Hệ kín", "Bảo toàn động lượng", "Chuyển động bằng phản lực"],
+          "interactiveIdea": "Xe đệm khí ảo va chạm, hiển thị động lượng từng xe và tổng trước sau."
+        },
+        {
+          "no": 30,
+          "title": "Bài 30. Thực hành: Xác định động lượng của vật trước và sau va chạm",
+          "slug": "bai-30-thuc-hanh-xac-dinh-dong-luong-cua-vat-truoc-va-sau-va-cham",
+          "kind": "activity",
+          "keyIdeas": [
+            "Bố trí đệm khí và cổng quang",
+            "Va chạm đàn hồi và mềm",
+            "Kiểm nghiệm bảo toàn động lượng"
+          ],
+          "interactiveIdea": "Thí nghiệm va chạm ảo, chọn loại va chạm và đọc số liệu cổng quang để tính động lượng."
+        }
+      ]
+    },
+    {
+      "no": 6,
+      "label": "Chương VI",
+      "title": "Chuyển động tròn",
+      "slug": "chuyen-dong-tron",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 31,
+          "title": "Bài 31. Động học của chuyển động tròn đều",
+          "slug": "bai-31-dong-hoc-cua-chuyen-dong-tron-deu",
+          "kind": "theory",
+          "keyIdeas": ["Radian và tốc độ góc", "Chu kì, tần số", "Tốc độ dài v = ωr"],
+          "interactiveIdea": "Bánh xe quay ảo, chọn điểm ở các bán kính khác nhau để so sánh tốc độ góc và tốc độ dài."
+        },
+        {
+          "no": 32,
+          "title": "Bài 32. Lực hướng tâm và gia tốc hướng tâm",
+          "slug": "bai-32-luc-huong-tam-va-gia-toc-huong-tam",
+          "kind": "theory",
+          "keyIdeas": [
+            "Gia tốc hướng tâm a = v²/r",
+            "Lực hướng tâm",
+            "Ứng dụng: xe qua khúc cua, vệ tinh"
+          ],
+          "interactiveIdea": "Quay viên đá buộc dây ảo, cắt dây để thấy vật bay theo tiếp tuyến, mũi tên lực hướng tâm."
+        }
+      ]
+    },
+    {
+      "no": 7,
+      "label": "Chương VII",
+      "title": "Biến dạng của vật rắn. Áp suất chất lỏng",
+      "slug": "bien-dang-cua-vat-ran-ap-suat-chat-long",
+      "strand": "co-hoc",
+      "volume": "Sách giáo khoa (1 tập)",
+      "lessons": [
+        {
+          "no": 33,
+          "title": "Bài 33. Biến dạng của vật rắn",
+          "slug": "bai-33-bien-dang-cua-vat-ran",
+          "kind": "theory",
+          "keyIdeas": [
+            "Biến dạng kéo, nén",
+            "Biến dạng đàn hồi và giới hạn đàn hồi",
+            "Định luật Hooke"
+          ],
+          "interactiveIdea": "Kéo lò xo với lực tăng dần, đồ thị lực theo độ dãn và điểm vượt giới hạn đàn hồi."
+        },
+        {
+          "no": 34,
+          "title": "Bài 34. Khối lượng riêng. Áp suất chất lỏng",
+          "slug": "bai-34-khoi-luong-rieng-ap-suat-chat-long",
+          "kind": "theory",
+          "keyIdeas": ["Khối lượng riêng", "Áp suất chất lỏng p = ρgh", "Định luật Pascal"],
+          "interactiveIdea": "Bình chứa chất lỏng có cảm biến áp suất kéo theo độ sâu, kèm máy nén thủy lực ảo."
+        }
+      ]
+    },
+    {
+      "no": 8,
+      "label": "Chuyên đề 1",
+      "title": "Vật lí trong một số ngành nghề",
+      "slug": "cd-vat-li-trong-mot-so-nganh-nghe",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 10",
+      "lessons": [
+        {
+          "no": 1,
+          "title": "Bài 1. Sơ lược về sự phát triển của vật lí học",
+          "slug": "cd-bai-1-so-luoc-ve-su-phat-trien-cua-vat-li-hoc",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Các giai đoạn phát triển của vật lí",
+            "Vật lí cổ điển và hiện đại",
+            "Các nhà vật lí tiêu biểu"
+          ],
+          "interactiveIdea": "Dòng thời gian tương tác các phát minh và nhà khoa học, lọc theo giai đoạn."
+        },
+        {
+          "no": 2,
+          "title": "Bài 2. Giới thiệu các lĩnh vực nghiên cứu trong vật lí học",
+          "slug": "cd-bai-2-gioi-thieu-cac-linh-vuc-nghien-cuu-trong-vat-li-hoc",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Các lĩnh vực của vật lí",
+            "Đối tượng nghiên cứu từng lĩnh vực",
+            "Liên hệ giữa các lĩnh vực"
+          ],
+          "interactiveIdea": "Bản đồ tư duy các lĩnh vực vật lí, bấm mỗi nhánh để xem hiện tượng và ứng dụng."
+        },
+        {
+          "no": 3,
+          "title": "Bài 3. Giới thiệu các ứng dụng của vật lí trong một số ngành nghề",
+          "slug": "cd-bai-3-gioi-thieu-cac-ung-dung-cua-vat-li-trong-mot-so-nganh-nghe",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Vật lí trong y tế, giao thông, thông tin",
+            "Vật lí trong năng lượng, nông nghiệp",
+            "Định hướng nghề nghiệp"
+          ],
+          "interactiveIdea": "Thẻ ngành nghề lật được: mỗi nghề nối với nguyên lí vật lí mà nó dùng."
+        }
+      ]
+    },
+    {
+      "no": 9,
+      "label": "Chuyên đề 2",
+      "title": "Trái Đất và bầu trời",
+      "slug": "cd-trai-dat-va-bau-troi",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 10",
+      "lessons": [
+        {
+          "no": 4,
+          "title": "Bài 4. Xác định phương hướng",
+          "slug": "cd-bai-4-xac-dinh-phuong-huong",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Thiên cầu, hướng Bắc Nam",
+            "Sao Bắc Cực",
+            "Xác định phương hướng bằng thiên thể"
+          ],
+          "interactiveIdea": "Bầu trời sao ảo xoay theo giờ, người học tìm Sao Bắc Cực và xác định hướng."
+        },
+        {
+          "no": 5,
+          "title": "Bài 5. Đặc điểm chuyển động nhìn thấy của một số thiên thể trên nền trời sao",
+          "slug": "cd-bai-5-dac-diem-chuyen-dong-nhin-thay-cua-mot-so-thien-the-tren-nen-troi-sao",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Chuyển động nhìn thấy của Mặt Trời",
+            "Chuyển động của Mặt Trăng và các hành tinh",
+            "Đường hoàng đạo"
+          ],
+          "interactiveIdea": "Mô phỏng bầu trời theo ngày tháng, tua nhanh để thấy quỹ đạo nhìn thấy của Mặt Trời và hành tinh."
+        },
+        {
+          "no": 6,
+          "title": "Bài 6. Nhật thực, nguyệt thực, thủy triều",
+          "slug": "cd-bai-6-nhat-thuc-nguyet-thuc-thuy-trieu",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Điều kiện xảy ra nhật thực, nguyệt thực",
+            "Thủy triều do lực hấp dẫn Mặt Trăng",
+            "Triều cường, triều kém"
+          ],
+          "interactiveIdea": "Kéo Mặt Trăng trên quỹ đạo để tạo nhật thực, nguyệt thực, kèm mô hình nước biển phồng theo lực hấp dẫn."
+        }
+      ]
+    },
+    {
+      "no": 10,
+      "label": "Chuyên đề 3",
+      "title": "Vật lí với giáo dục bảo vệ môi trường",
+      "slug": "cd-vat-li-voi-giao-duc-bao-ve-moi-truong",
+      "strand": "chuyen-de",
+      "volume": "Chuyên đề học tập Vật lí 10",
+      "lessons": [
+        {
+          "no": 7,
+          "title": "Bài 7. Sự cần thiết phải bảo vệ môi trường",
+          "slug": "cd-bai-7-su-can-thiet-phai-bao-ve-moi-truong",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Môi trường và vai trò",
+            "Các vấn đề môi trường toàn cầu",
+            "Trách nhiệm của mỗi người"
+          ],
+          "interactiveIdea": "Bản đồ thế giới ảo hiển thị các điểm nóng môi trường với số liệu và nguyên nhân."
+        },
+        {
+          "no": 8,
+          "title": "Bài 8. Tác động của việc sử dụng năng lượng hiện nay đối với Việt Nam",
+          "slug": "cd-bai-8-tac-dong-cua-viec-su-dung-nang-luong-hien-nay-doi-voi-viet-nam",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Cơ cấu nguồn năng lượng Việt Nam",
+            "Tác động môi trường của nhiệt điện, thủy điện",
+            "Phát thải khí nhà kính"
+          ],
+          "interactiveIdea": "Biểu đồ cơ cấu điện Việt Nam điều chỉnh được, ứng dụng tính lượng phát thải CO₂ tương ứng."
+        },
+        {
+          "no": 9,
+          "title": "Bài 9. Sơ lược về các chất gây ô nhiễm môi trường",
+          "slug": "cd-bai-9-so-luoc-ve-cac-chat-gay-o-nhiem-moi-truong",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Chất ô nhiễm không khí, nước, đất",
+            "Nguồn gốc chất ô nhiễm",
+            "Ảnh hưởng tới sức khỏe"
+          ],
+          "interactiveIdea": "Thành phố ảo chọn nguồn thải để xem chất ô nhiễm lan truyền vào không khí, nước, đất."
+        },
+        {
+          "no": 10,
+          "title": "Bài 10. Năng lượng tái tạo và một số công nghệ thu năng lượng tái tạo",
+          "slug": "cd-bai-10-nang-luong-tai-tao-va-mot-so-cong-nghe-thu-nang-luong-tai-tao",
+          "kind": "chuyen-de",
+          "keyIdeas": [
+            "Pin Mặt Trời, tua bin gió",
+            "Thủy điện, địa nhiệt, sinh khối",
+            "Hiệu suất và triển vọng"
+          ],
+          "interactiveIdea": "Mô phỏng tấm pin Mặt Trời và tua bin gió: chỉnh cường độ sáng, tốc độ gió để xem công suất phát."
+        }
+      ]
+    }
+  ]
+}
