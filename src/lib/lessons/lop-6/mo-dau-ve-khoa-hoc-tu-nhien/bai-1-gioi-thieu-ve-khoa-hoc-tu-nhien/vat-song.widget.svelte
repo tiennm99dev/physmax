@@ -1,6 +1,6 @@
 <script>
-  import CardSorter from '../_shared/card-sorter.svelte';
-  import { shuffled } from '../_shared/sorter.js';
+  import CardSorter from '#lib/core/card-sorter.svelte';
+  import { shuffled } from '#lib/core/card-sorter.js';
 
   const BINS = [
     { id: 'song', label: 'Vật sống' },

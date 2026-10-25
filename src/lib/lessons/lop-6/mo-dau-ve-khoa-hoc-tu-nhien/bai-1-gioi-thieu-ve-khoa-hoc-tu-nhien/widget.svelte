@@ -1,6 +1,6 @@
 <script>
-  import CardSorter from '../_shared/card-sorter.svelte';
-  import { shuffled } from '../_shared/sorter.js';
+  import CardSorter from '#lib/core/card-sorter.svelte';
+  import { shuffled } from '#lib/core/card-sorter.js';
 
   /** The fields of natural science used in this lesson, Earth and sky together. */
   const BINS = [

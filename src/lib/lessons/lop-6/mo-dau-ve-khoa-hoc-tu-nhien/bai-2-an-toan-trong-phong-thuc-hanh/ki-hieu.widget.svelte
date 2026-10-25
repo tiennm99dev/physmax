@@ -1,6 +1,6 @@
 <script>
-  import CardSorter from '../_shared/card-sorter.svelte';
-  import { shuffled } from '../_shared/sorter.js';
+  import CardSorter from '#lib/core/card-sorter.svelte';
+  import { shuffled } from '#lib/core/card-sorter.js';
 
   const BINS = [
     { id: 'cam', label: 'Kí hiệu cảnh báo cấm' },
@@ -92,7 +92,7 @@
   {/if}
 {/snippet}
 
-{#snippet face(/** @type {import('../_shared/sorter.js').SortCard} */ c)}
+{#snippet face(/** @type {import('#lib/core/card-sorter.js').SortCard} */ c)}
   <span class="flex items-center gap-2">
     <svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true">
       {#if c.bin === 'cam'}
