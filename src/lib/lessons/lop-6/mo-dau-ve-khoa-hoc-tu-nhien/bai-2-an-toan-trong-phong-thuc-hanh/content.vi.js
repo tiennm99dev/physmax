@@ -20,7 +20,7 @@ export default {
         },
         {
           type: 'callout',
-          tone: 'theorem',
+          tone: 'note',
           title: 'Những việc cần làm',
           text: 'Mặc trang phục gọn gàng, buộc gọn tóc, đeo đồ bảo hộ (kính bảo vệ mắt, găng tay, áo choàng) khi làm thí nghiệm. Chỉ làm thí nghiệm khi có sự hướng dẫn và giám sát của giáo viên. Thực hiện đúng nguyên tắc khi sử dụng hoá chất, dụng cụ, thiết bị. Thông báo ngay cho giáo viên khi xảy ra sự cố. Sau khi làm xong, thu gom hoá chất, rác thải đúng nơi quy định, lau dọn chỗ làm và rửa tay bằng xà phòng.',
         },
@@ -41,7 +41,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Kí hiệu cảnh báo giúp em nhận ra mối nguy hiểm chỉ bằng một cái nhìn. Mỗi loại biển có hình dạng và màu sắc riêng:',
+          text: 'Kí hiệu cảnh báo giúp em nhận ra mối nguy hiểm chỉ bằng một cái nhìn. Mỗi loại kí hiệu có hình dạng và màu sắc riêng để dễ nhận biết:',
         },
         {
           type: 'table',
@@ -49,25 +49,30 @@ export default {
           head: ['Loại biển', 'Hình dạng và màu sắc', 'Ví dụ'],
           rows: [
             [
-              'Biển cấm',
+              'Kí hiệu cảnh báo cấm',
               'Hình tròn, viền đỏ, nền trắng, hình vẽ màu đen (thường có gạch chéo đỏ)',
               'Cấm lửa, cấm ăn uống, cấm dùng làm nước uống',
             ],
             [
-              'Biển cảnh báo nguy hiểm',
-              'Hình tam giác đều, viền đen hoặc đỏ, nền vàng, hình vẽ màu đen',
-              'Chất dễ cháy, chất độc, chất ăn mòn, điện cao thế',
+              'Kí hiệu cảnh báo các khu vực nguy hiểm',
+              'Hình tam giác đều, viền đen hoặc đỏ, nền vàng',
+              'Điện cao thế, nhiệt độ cao',
             ],
             [
-              'Biển bắt buộc thực hiện',
-              'Hình tròn, nền xanh, hình vẽ màu trắng',
-              'Phải đeo kính bảo vệ mắt, phải đeo găng tay',
+              'Kí hiệu cảnh báo nguy hiểm do hoá chất gây ra',
+              'Hình vuông, viền đen, nền đỏ cam',
+              'Chất dễ cháy, chất độc, chất ăn mòn',
+            ],
+            [
+              'Kí hiệu chỉ dẫn thực hiện',
+              'Hình chữ nhật, nền xanh hoặc đỏ',
+              'Lối thoát hiểm, nơi để bình chữa cháy',
             ],
           ],
         },
         {
           type: 'p',
-          text: 'Xếp các kí hiệu dưới đây vào đúng loại biển. Hãy nhìn hình dạng và màu sắc trước, rồi đọc ý nghĩa.',
+          text: 'Xếp các kí hiệu dưới đây vào đúng loại. Hãy nhìn hình dạng và màu sắc trước, rồi đọc ý nghĩa.',
         },
         { type: 'widget', name: 'ki-hieu' },
         {
@@ -142,10 +147,10 @@ export default {
       problem:
         'Một biển báo hình tam giác đều, viền đen, nền vàng, ở giữa vẽ tia sét màu đen. Biển báo đó thuộc loại nào và có ý nghĩa gì?',
       steps: [
-        'Hình tam giác đều, nền vàng, viền đen là đặc điểm của biển cảnh báo nguy hiểm.',
+        'Hình tam giác đều, nền vàng, viền đen là đặc điểm của kí hiệu cảnh báo các khu vực nguy hiểm.',
         'Hình tia sét biểu thị nguy hiểm về điện.',
       ],
-      answer: 'Đó là biển cảnh báo nguy hiểm: cảnh báo điện cao thế, cẩn thận bị điện giật.',
+      answer: 'Đó là kí hiệu cảnh báo khu vực nguy hiểm: có điện cao thế, cẩn thận bị điện giật.',
     },
   ],
   practice: [
@@ -166,45 +171,54 @@ export default {
     },
     {
       type: 'choice',
-      prompt: 'Biển báo hình tròn, viền đỏ, nền trắng, hình vẽ màu đen có ý nghĩa gì?',
-      options: ['Bắt buộc thực hiện', 'Cảnh báo nguy hiểm', 'Cấm thực hiện', 'Chỉ dẫn lối đi'],
+      prompt: 'Kí hiệu hình tròn, viền đỏ, nền trắng, hình vẽ màu đen có ý nghĩa gì?',
+      options: [
+        'Chỉ dẫn thực hiện',
+        'Cảnh báo khu vực nguy hiểm',
+        'Cấm thực hiện',
+        'Nguy hiểm do hoá chất',
+      ],
       answer: 2,
       hints: ['Viền đỏ, hình tròn thường đi kèm gạch chéo.'],
-      solution: 'Hình tròn, viền đỏ, nền trắng là biển cấm: cho biết điều không được làm.',
+      solution:
+        'Hình tròn, viền đỏ, nền trắng là kí hiệu cảnh báo cấm: cho biết điều không được làm.',
     },
     {
       type: 'choice',
-      prompt: 'Biển báo hình tròn, nền xanh, hình vẽ màu trắng thuộc loại nào?',
+      prompt:
+        'Trên lọ hoá chất có kí hiệu hình vuông, viền đen, nền đỏ cam. Kí hiệu đó thuộc loại nào?',
       options: [
-        'Biển cấm',
-        'Biển cảnh báo nguy hiểm',
-        'Biển bắt buộc thực hiện',
-        'Không phải biển báo',
+        'Kí hiệu cảnh báo cấm',
+        'Kí hiệu cảnh báo các khu vực nguy hiểm',
+        'Kí hiệu cảnh báo nguy hiểm do hoá chất gây ra',
+        'Kí hiệu chỉ dẫn thực hiện',
       ],
       answer: 2,
-      hints: ['Ví dụ: "Phải đeo găng tay" dùng loại biển này.'],
+      hints: ['Kí hiệu này thường thấy trên nhãn lọ hoá chất như chất độc, chất ăn mòn.'],
       solution:
-        'Hình tròn, nền xanh, hình vẽ trắng là biển bắt buộc thực hiện, chẳng hạn phải đeo kính bảo vệ mắt hay găng tay.',
+        'Hình vuông, viền đen, nền đỏ cam là kí hiệu cảnh báo nguy hiểm do hoá chất gây ra, chẳng hạn chất độc, chất ăn mòn, chất dễ cháy.',
     },
     {
       type: 'match',
       prompt: 'Nối mỗi kí hiệu (mô tả bằng lời) với ý nghĩa của nó.',
       left: [
-        'Tam giác vàng, viền đen, hình ngọn lửa',
-        'Tam giác vàng, viền đen, hình đầu lâu',
+        'Hình vuông nền đỏ cam, hình ngọn lửa',
+        'Hình vuông nền đỏ cam, hình đầu lâu',
         'Hình tròn viền đỏ, ngọn lửa bị gạch chéo',
-        'Hình tròn nền xanh, hình kính đeo mắt',
+        'Tam giác vàng viền đen, hình tia sét',
       ],
-      right: ['Chất độc', 'Phải đeo kính bảo vệ mắt', 'Chất dễ cháy', 'Cấm lửa'],
+      right: ['Chất độc', 'Điện cao thế', 'Chất dễ cháy', 'Cấm lửa'],
       pairs: [
         [0, 2],
         [1, 0],
         [2, 3],
         [3, 1],
       ],
-      hints: ['Phân loại theo hình dạng và màu trước: tam giác vàng là cảnh báo, tròn đỏ là cấm.'],
+      hints: [
+        'Phân loại theo hình dạng và màu trước: vuông đỏ cam là hoá chất, tròn viền đỏ là cấm, tam giác vàng là khu vực nguy hiểm.',
+      ],
       solution:
-        'Tam giác vàng có ngọn lửa: chất dễ cháy. Tam giác vàng có đầu lâu: chất độc. Tròn viền đỏ có ngọn lửa gạch chéo: cấm lửa. Tròn nền xanh có kính: phải đeo kính bảo vệ mắt.',
+        'Vuông đỏ cam có ngọn lửa: chất dễ cháy. Vuông đỏ cam có đầu lâu: chất độc. Tròn viền đỏ có ngọn lửa gạch chéo: cấm lửa. Tam giác vàng có tia sét: điện cao thế.',
     },
     {
       type: 'choice',
@@ -265,7 +279,7 @@ export default {
   ],
   takeaways: [
     'Luôn tuân thủ quy định: đồ bảo hộ, có giáo viên hướng dẫn, không ăn uống, không đùa nghịch, không nếm ngửi hoá chất.',
-    'Biển cấm: tròn, viền đỏ, nền trắng. Biển cảnh báo nguy hiểm: tam giác đều, nền vàng, viền đen hoặc đỏ. Biển bắt buộc: tròn, nền xanh, hình vẽ trắng.',
+    'Kí hiệu cấm: tròn, viền đỏ, nền trắng. Khu vực nguy hiểm: tam giác đều, viền đen hoặc đỏ, nền vàng. Nguy hiểm do hoá chất: vuông, viền đen, nền đỏ cam. Chỉ dẫn thực hiện: chữ nhật, nền xanh hoặc đỏ.',
     'Dùng dụng cụ thuỷ tinh, đèn cồn và thiết bị điện đúng cách; tay khô khi dùng điện.',
     'Có sự cố thì báo ngay cho giáo viên.',
   ],

@@ -18,7 +18,7 @@
         bin: 'song',
         why: 'Dù rất nhỏ, vi khuẩn vẫn trao đổi chất, lớn lên và sinh sản.',
       },
-      { id: 'nam-rom', label: 'Cây nấm rơm', bin: 'song', why: LIVING },
+      { id: 'nam-rom', label: 'Nấm rơm', bin: 'song', why: LIVING },
       { id: 'con-ca', label: 'Con cá đang bơi', bin: 'song', why: LIVING },
       {
         id: 'hon-da',

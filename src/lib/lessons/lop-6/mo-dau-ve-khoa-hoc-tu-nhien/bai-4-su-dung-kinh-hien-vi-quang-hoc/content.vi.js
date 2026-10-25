@@ -58,7 +58,7 @@ export default {
       blocks: [
         {
           type: 'callout',
-          tone: 'theorem',
+          tone: 'definition',
           title: 'Độ phóng đại',
           text: 'Độ phóng đại của kính hiển vi bằng tích độ phóng đại của thị kính và độ phóng đại của vật kính đang dùng.',
         },

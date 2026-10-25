@@ -70,7 +70,7 @@ export default {
         },
         {
           type: 'callout',
-          tone: 'theorem',
+          tone: 'note',
           title: 'Chọn thước phù hợp',
           text: 'Ước lượng chiều dài cần đo, rồi chọn thước có GHĐ lớn hơn chiều dài đó (để chỉ đo một lần) và có ĐCNN thích hợp: ĐCNN càng nhỏ thì kết quả đo càng chính xác.',
         },
