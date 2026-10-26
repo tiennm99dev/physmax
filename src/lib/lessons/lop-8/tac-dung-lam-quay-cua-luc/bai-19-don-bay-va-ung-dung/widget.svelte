@@ -114,9 +114,8 @@
   const num = (/** @type {number} */ v, k = 2) => formatNumber(v, k);
   const m = (/** @type {number} */ cm) => num(cm / 100);
   const KIND_TEXT = {
-    1: 'Đòn bẩy loại 1: điểm tựa O nằm giữa O₁ và O₂.',
-    2: 'Đòn bẩy loại 2: điểm tựa O nằm ngoài, vật O₁ ở giữa, lực tác dụng xa điểm tựa hơn vật.',
-    3: 'Đòn bẩy loại 3: điểm tựa O nằm ngoài, lực tác dụng O₂ ở giữa, gần điểm tựa hơn vật.',
+    1: 'Đòn bẩy loại 1: điểm tựa O nằm trong khoảng O₁O₂.',
+    2: 'Đòn bẩy loại 2: điểm tựa O nằm ngoài khoảng O₁O₂.',
   };
   const GAIN_TEXT = {
     loi: 'd₂ > d₁ nên F₂ < F₁: được lợi về lực.',
@@ -323,7 +322,11 @@
         </div>
         <div class="flex justify-between gap-2 rounded-xl bg-indigo-50 px-3 py-2">
           <dt class="text-indigo-700">Loại đòn bẩy</dt>
-          <dd class="font-semibold text-indigo-900">{kind ? `Loại ${kind}` : '—'}</dd>
+          <dd class="font-semibold text-indigo-900">
+            {kind
+              ? `Loại ${kind}${kind === 2 ? (gain === 'loi' ? ', lợi về lực' : ', không lợi về lực') : ''}`
+              : '—'}
+          </dd>
         </div>
       </dl>
       <div class="{card} space-y-2 p-3">

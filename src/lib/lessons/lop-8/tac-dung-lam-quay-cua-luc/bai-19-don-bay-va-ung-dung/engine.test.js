@@ -20,7 +20,7 @@ describe('lever on a bar with holes', () => {
   it('sorts levers by where the fulcrum, load and effort sit', () => {
     expect(leverKind({ o: 4, load: 2, effort: 10 })).toBe(1);
     expect(leverKind({ o: 0, load: 3, effort: 12 })).toBe(2);
-    expect(leverKind({ o: 0, load: 12, effort: 3 })).toBe(3);
+    expect(leverKind({ o: 0, load: 12, effort: 3 })).toBe(2);
     expect(leverKind({ o: 12, load: 9, effort: 0 })).toBe(2);
     expect(leverKind({ o: 5, load: 5, effort: 9 })).toBeNull();
     expect(leverKind({ o: 5, load: 2, effort: 5 })).toBeNull();
@@ -50,6 +50,12 @@ describe('lever on a bar with holes', () => {
     expect(forceGain({ o: 4, load: 2, effort: 10 })).toBe('loi');
     expect(forceGain({ o: 0, load: 12, effort: 3 })).toBe('thiet');
     expect(forceGain({ o: 6, load: 3, effort: 9 })).toBe('bang');
+  });
+
+  it('tells the two cases of a kind 2 lever apart by force gain', () => {
+    const third = TASKS[2];
+    expect(taskDone(third, 20, 80, { o: 0, load: 12, effort: 3 })).toBe(true);
+    expect(taskDone(third, 20, 5, { o: 0, load: 3, effort: 12 })).toBe(false);
   });
 
   it('has a reachable setup for every task', () => {

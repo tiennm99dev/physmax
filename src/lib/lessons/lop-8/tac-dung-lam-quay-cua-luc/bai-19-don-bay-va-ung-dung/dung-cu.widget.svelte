@@ -4,8 +4,8 @@
 
   const BINS = [
     { id: 'loai-1', label: 'Loại 1: điểm tựa ở giữa' },
-    { id: 'loai-2', label: 'Loại 2: vật ở giữa' },
-    { id: 'loai-3', label: 'Loại 3: lực tác dụng ở giữa' },
+    { id: 'loai-2', label: 'Loại 2, lợi về lực: vật ở giữa' },
+    { id: 'loai-2-thiet', label: 'Loại 2, không lợi về lực: lực tác dụng ở giữa' },
   ];
 
   const CARDS = shuffled(
@@ -55,19 +55,19 @@
       {
         id: 'dua',
         label: 'Đôi đũa gắp thức ăn',
-        bin: 'loai-3',
+        bin: 'loai-2-thiet',
         why: 'Điểm tựa ở đầu đũa trong lòng bàn tay, ngón tay đặt lực ở giữa, thức ăn ở đầu đũa: không lợi về lực nhưng gắp nhanh, gọn.',
       },
       {
         id: 'can-cau',
         label: 'Cần câu cá',
-        bin: 'loai-3',
+        bin: 'loai-2-thiet',
         why: 'Tay giữ cuối cán là điểm tựa, tay kia đặt lực ở giữa cần, con cá ở đầu cần: không lợi về lực nhưng con cá được nhấc lên nhanh.',
       },
       {
         id: 'kep-gap',
         label: 'Cái kẹp gắp than',
-        bin: 'loai-3',
+        bin: 'loai-2-thiet',
         why: 'Điểm tựa là chỗ nối hai càng kẹp, tay bóp ở giữa, viên than ở đầu kẹp: không lợi về lực.',
       },
     ],

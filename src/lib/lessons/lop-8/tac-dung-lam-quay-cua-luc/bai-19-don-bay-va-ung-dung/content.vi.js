@@ -1,13 +1,13 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Đòn bẩy là một thanh cứng có thể quay quanh một điểm tựa O; nó có thể làm thay đổi hướng tác dụng của lực và cho lợi về lực khi khoảng cách từ điểm tựa tới lực tác dụng lớn hơn khoảng cách từ điểm tựa tới vật. Có đòn bẩy loại 1 (điểm tựa ở giữa), loại 2 (vật ở giữa) và loại 3 (lực tác dụng ở giữa).',
+    'Đòn bẩy là một thanh cứng có thể quay quanh một điểm tựa O; nó có thể làm thay đổi hướng tác dụng của lực và cho lợi về lực khi khoảng cách từ điểm tựa tới lực tác dụng lớn hơn khoảng cách từ điểm tựa tới vật. Đòn bẩy loại 1 có điểm tựa nằm trong khoảng giữa vật và lực tác dụng; đòn bẩy loại 2 có điểm tựa nằm ngoài khoảng đó.',
   intro:
     'Nhà bác học Archimedes từng nói: "Hãy cho tôi một điểm tựa, tôi sẽ nâng cả Trái Đất". Chỉ với một thanh gỗ chắc và một hòn đá kê làm điểm tựa, một người có thể bẩy được tảng đá nặng gấp nhiều lần sức mình. Đòn bẩy giúp ta như thế nào, và vì sao kéo, đũa, xe cút kít, bập bênh đều là đòn bẩy?',
   objectives: [
     'Nhận biết điểm tựa $O$, điểm đặt của vật $O_1$ và điểm đặt của lực tác dụng $O_2$ trên một đòn bẩy.',
     'Nêu được đòn bẩy có thể làm thay đổi hướng tác dụng của lực và cho lợi về lực khi $OO_2 > OO_1$.',
-    'Phân biệt được các loại đòn bẩy; chỉ ra được loại đòn bẩy trong các dụng cụ đời thường và trong cơ thể người.',
+    'Phân biệt được đòn bẩy loại 1 và loại 2; chỉ ra được loại đòn bẩy trong các dụng cụ đời thường và trong cơ thể người.',
     'Vận dụng $F_1 \\cdot d_1 = F_2 \\cdot d_2$ để tính lực cần dùng khi đòn bẩy cân bằng.',
   ],
   sections: [
@@ -58,7 +58,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Tùy theo vị trí của điểm tựa $O$ và các điểm đặt $O_1$, $O_2$ của các lực $F_1$, $F_2$, đòn bẩy được chia thành các loại sau.',
+          text: 'Tùy theo vị trí của điểm tựa $O$ so với các điểm đặt $O_1$, $O_2$ của các lực $F_1$, $F_2$, đòn bẩy được chia thành hai loại. Đòn bẩy loại 2 lại có hai trường hợp, tùy lực tác dụng xa hay gần điểm tựa hơn vật.',
         },
         {
           type: 'table',
@@ -71,13 +71,13 @@ export default {
               'Bập bênh, kéo cắt giấy, búa nhổ đinh, kìm, xà beng bẩy hòn đá',
             ],
             [
-              'Đòn bẩy loại 2',
+              'Đòn bẩy loại 2, lực tác dụng xa điểm tựa',
               'Điểm tựa $O$ nằm ngoài khoảng $O_1O_2$; lực tác dụng $O_2$ xa điểm tựa hơn vật $O_1$ (vật ở giữa)',
               'Luôn cho lợi về lực, nhưng vật di chuyển chậm, được quãng ngắn',
               'Cái mở nắp chai, xe cút kít, dụng cụ kẹp vỡ hạt',
             ],
             [
-              'Đòn bẩy loại 3',
+              'Đòn bẩy loại 2, lực tác dụng gần điểm tựa',
               'Điểm tựa $O$ nằm ngoài khoảng $O_1O_2$; lực tác dụng $O_2$ gần điểm tựa hơn vật $O_1$ (lực ở giữa)',
               'Không cho lợi về lực, nhưng vật di chuyển nhanh, được quãng dài',
               'Đôi đũa, cần câu cá, cái kẹp gắp',
@@ -88,7 +88,7 @@ export default {
           type: 'callout',
           tone: 'note',
           title: 'Về cách gọi tên',
-          text: 'Sách giáo khoa chia đòn bẩy theo vị trí điểm tựa: điểm tựa ở trong khoảng $O_1O_2$ (loại 1) và ở ngoài khoảng đó (loại 2). Trường hợp điểm tựa ở ngoài nhưng lực tác dụng lại gần điểm tựa hơn vật thì không cho lợi về lực, và được gọi riêng là đòn bẩy loại 3.',
+          text: 'Sách giáo khoa chỉ chia đòn bẩy thành hai loại theo vị trí điểm tựa: điểm tựa ở trong khoảng $O_1O_2$ (loại 1) và ở ngoài khoảng đó (loại 2). Một số tài liệu khác tách trường hợp lực tác dụng ở giữa (như đôi đũa, cần câu) thành "đòn bẩy loại 3"; trong bài này, theo sách giáo khoa, đó là đòn bẩy loại 2 không cho lợi về lực.',
         },
         { type: 'widget', name: 'dung-cu' },
       ],
@@ -146,7 +146,7 @@ export default {
       problem:
         'Khi giật cần câu, tay dưới giữ cuối cán làm điểm tựa, tay trên cách điểm tựa $0{,}5\\ \\text{m}$; con cá có trọng lượng $5\\ \\text{N}$ treo ở đầu cần, cách điểm tựa $2\\ \\text{m}$. Để giữ cần cân bằng nằm ngang, tay trên phải tác dụng lực bao nhiêu? Cần câu cho lợi gì?',
       steps: [
-        'Điểm tựa ở cuối cán, lực của tay trên ở giữa, con cá ở đầu cần: đòn bẩy loại 3.',
+        'Điểm tựa ở cuối cán, nằm ngoài khoảng giữa tay trên và con cá: đòn bẩy loại 2, với lực tác dụng ở giữa, gần điểm tựa hơn vật.',
         '$F_2 = \\dfrac{F_1 \\cdot d_1}{d_2} = \\dfrac{5 \\cdot 2}{0{,}5} = 20\\ \\text{N}$.',
         '$F_2 = 20\\ \\text{N} > F_1 = 5\\ \\text{N}$: không được lợi về lực.',
         'Bù lại, tay chỉ dịch chuyển một đoạn ngắn mà đầu cần (con cá) đi được quãng dài gấp $4$ lần, nên cá được nhấc lên rất nhanh.',
@@ -219,7 +219,7 @@ export default {
       type: 'choice',
       prompt:
         'Cái mở nắp chai (điểm tựa tì lên đỉnh nắp, mép nắp ở giữa, tay ở đầu kia) là đòn bẩy loại mấy?',
-      options: ['Loại 1', 'Loại 2', 'Loại 3', 'Không phải đòn bẩy'],
+      options: ['Loại 1', 'Loại 2', 'Không phải đòn bẩy'],
       answer: 1,
       hints: ['Điểm tựa nằm ở giữa hay ở một đầu? Lực tay xa hay gần điểm tựa hơn vật?'],
       solution:
@@ -227,9 +227,13 @@ export default {
     },
     {
       type: 'match',
-      prompt: 'Nối mỗi dụng cụ với loại đòn bẩy của nó.',
+      prompt: 'Nối mỗi dụng cụ với loại đòn bẩy và trường hợp của nó.',
       left: ['Kéo cắt giấy', 'Xe cút kít', 'Đôi đũa'],
-      right: ['Đòn bẩy loại 1', 'Đòn bẩy loại 2', 'Đòn bẩy loại 3'],
+      right: [
+        'Loại 1: điểm tựa ở giữa',
+        'Loại 2: vật ở giữa, lợi về lực',
+        'Loại 2: lực ở giữa, không lợi về lực',
+      ],
       pairs: [
         [0, 0],
         [1, 1],
@@ -240,7 +244,7 @@ export default {
         'Kéo: chốt ở giữa. Xe cút kít: trục bánh xe ở đầu, hàng ở giữa. Đũa: ngón tay đặt lực ở giữa.',
       ],
       solution:
-        'Kéo: điểm tựa (chốt) ở giữa tay và giấy, loại 1. Xe cút kít: trục bánh xe ở đầu, hàng ở giữa, loại 2. Đôi đũa: điểm tựa ở đầu đũa trong lòng bàn tay, lực ngón tay ở giữa, thức ăn ở đầu kia, loại 3.',
+        'Kéo: điểm tựa (chốt) ở giữa tay và giấy, loại 1. Xe cút kít: trục bánh xe ở đầu, hàng ở giữa, loại 2 cho lợi về lực. Đôi đũa: điểm tựa ở đầu đũa trong lòng bàn tay, lực ngón tay ở giữa, thức ăn ở đầu kia, loại 2 không cho lợi về lực.',
     },
     {
       type: 'multi',
@@ -249,7 +253,7 @@ export default {
       answers: [0, 1, 4],
       hints: ['Lợi về lực khi lực tác dụng xa điểm tựa hơn vật.'],
       solution:
-        'Búa nhổ đinh (loại 1, tay xa điểm tựa hơn đinh), xe cút kít và cái mở nắp chai (loại 2) cho lợi về lực. Đũa và cần câu là đòn bẩy loại 3: lực tác dụng gần điểm tựa hơn vật nên không lợi về lực.',
+        'Búa nhổ đinh (loại 1, tay xa điểm tựa hơn đinh), xe cút kít và cái mở nắp chai (loại 2) cho lợi về lực. Đũa và cần câu là đòn bẩy loại 2 có lực tác dụng gần điểm tựa hơn vật nên không lợi về lực.',
     },
     {
       type: 'choice',
@@ -286,6 +290,6 @@ export default {
     'Đòn bẩy là thanh cứng quay quanh điểm tựa $O$; vật đặt tại $O_1$, lực tác dụng đặt tại $O_2$.',
     'Đòn bẩy có thể làm thay đổi hướng tác dụng của lực, và cho lợi về lực khi $OO_2 > OO_1$.',
     'Đòn bẩy cân bằng khi $F_1 \\cdot d_1 = F_2 \\cdot d_2$.',
-    'Loại 1: điểm tựa ở giữa. Loại 2: vật ở giữa, luôn lợi về lực. Loại 3: lực ở giữa, không lợi về lực nhưng vật di chuyển nhanh, xa.',
+    'Loại 1: điểm tựa nằm trong khoảng $O_1O_2$. Loại 2: điểm tựa nằm ngoài khoảng $O_1O_2$; lợi về lực khi vật ở giữa, không lợi về lực nhưng vật di chuyển nhanh, xa khi lực ở giữa.',
   ],
 };

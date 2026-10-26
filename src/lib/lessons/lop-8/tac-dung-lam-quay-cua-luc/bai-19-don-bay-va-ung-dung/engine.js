@@ -29,18 +29,16 @@ export function arms(s) {
 }
 
 /**
- * The kind of lever, as the textbook sorts them: 1 when O lies between O1 and
- * O2; 2 when O lies outside and the effort is farther from O than the load;
- * 3 when O lies outside and the effort is nearer O than the load. Null when
- * two points coincide or the load sits on the fulcrum.
+ * The kind of lever, as the KNTT textbook sorts them: 1 when O lies between
+ * O1 and O2; 2 when O lies outside the segment O1O2, whichever of the load and
+ * the effort is nearer O (`forceGain` tells those two cases apart). Null when
+ * two points coincide.
  * @param {Setup} s
- * @returns {1 | 2 | 3 | null}
+ * @returns {1 | 2 | null}
  */
 export function leverKind(s) {
   if (s.o === s.load || s.o === s.effort || s.load === s.effort) return null;
-  if ((s.load - s.o) * (s.effort - s.o) < 0) return 1;
-  const { d1, d2 } = arms(s);
-  return d2 > d1 ? 2 : 3;
+  return (s.load - s.o) * (s.effort - s.o) < 0 ? 1 : 2;
 }
 
 /**
@@ -107,28 +105,32 @@ export function forceGain(s) {
 }
 
 /**
- * Tasks for the lever bench: lift a `weight` N load with an effort of at most
- * `maxEffort` N, using a lever of the given kind (any kind when null).
- * @type {Array<{ weight: number, maxEffort: number, kind: 1 | 2 | 3 | null, text: string }>}
+ * Tasks for the lever bench: hold a `weight` N load with an effort of at most
+ * `maxEffort` N, using a lever of the given kind (any kind when null) that
+ * saves or costs force as `gain` says (either when null).
+ * @type {Array<{ weight: number, maxEffort: number, kind: 1 | 2 | null, gain: 'loi' | 'thiet' | null, text: string }>}
  */
 export const TASKS = [
   {
     weight: 60,
     maxEffort: 20,
     kind: 1,
+    gain: null,
     text: 'Dùng đòn bẩy loại 1 giữ cân bằng vật 60 N bằng lực không quá 20 N.',
   },
   {
     weight: 60,
     maxEffort: 30,
     kind: 2,
+    gain: 'loi',
     text: 'Dùng đòn bẩy loại 2 giữ cân bằng vật 60 N bằng lực không quá 30 N.',
   },
   {
     weight: 20,
     maxEffort: 100,
-    kind: 3,
-    text: 'Dựng một đòn bẩy loại 3 (như đôi đũa, cần câu) và giữ cân bằng vật 20 N. Lực cần lớn hơn hay nhỏ hơn trọng lượng vật?',
+    kind: 2,
+    gain: 'thiet',
+    text: 'Dựng một đòn bẩy loại 2 có lực tác dụng gần điểm tựa hơn vật (như đôi đũa, cần câu) và giữ cân bằng vật 20 N. Lực cần lớn hơn hay nhỏ hơn trọng lượng vật?',
   },
 ];
 
@@ -144,6 +146,7 @@ export function taskDone(task, weight, effort, s) {
     weight === task.weight &&
     effort <= task.maxEffort &&
     (task.kind === null || leverKind(s) === task.kind) &&
+    (task.gain === null || forceGain(s) === task.gain) &&
     effort > 0 &&
     balanced(weight, effort, s)
   );
