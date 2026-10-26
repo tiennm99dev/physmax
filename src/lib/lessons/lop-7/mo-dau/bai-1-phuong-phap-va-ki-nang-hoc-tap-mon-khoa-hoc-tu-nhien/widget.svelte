@@ -67,7 +67,8 @@
   const display = $derived.by(() => {
     if (!run || run.done) return shown;
     if (since < run.tA) return shown;
-    const t = Math.min(since, run.tB) - run.tA;
+    // Count up to the time this run will record, so the display never jumps when it stops.
+    const t = Math.min(since - run.tA, run.measured);
     const r = reading(t, scale);
     return r === null ? 'over' : r;
   });

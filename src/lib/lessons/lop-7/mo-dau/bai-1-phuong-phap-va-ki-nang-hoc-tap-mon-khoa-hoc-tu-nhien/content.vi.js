@@ -147,7 +147,7 @@ export default {
           type: 'callout',
           tone: 'warning',
           title: 'Chọn thang đo',
-          text: 'Nếu thời gian cần đo lớn hơn $10\\ \\text{s}$, phải chọn thang đo $99{,}99\\ \\text{s}$ – $0{,}01\\ \\text{s}$, vì thang $9{,}999\\ \\text{s}$ không đo được. Nếu thời gian nhỏ hơn $9{,}999\\ \\text{s}$, chọn thang $9{,}999\\ \\text{s}$ – $0{,}001\\ \\text{s}$ để có kết quả chính xác hơn.',
+          text: 'Nếu thời gian cần đo lớn hơn $9{,}999\\ \\text{s}$ (khoảng $10\\ \\text{s}$ trở lên), phải chọn thang đo $99{,}99\\ \\text{s}$ – $0{,}01\\ \\text{s}$, vì thang $9{,}999\\ \\text{s}$ không đo được. Nếu thời gian không quá $9{,}999\\ \\text{s}$, chọn thang $9{,}999\\ \\text{s}$ – $0{,}001\\ \\text{s}$ để có kết quả chính xác hơn.',
         },
       ],
     },
