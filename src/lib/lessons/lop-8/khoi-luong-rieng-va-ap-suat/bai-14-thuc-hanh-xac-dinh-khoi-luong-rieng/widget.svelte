@@ -125,7 +125,9 @@
     { length: CYLINDER.max / CYLINDER.step + 1 },
     (_, i) => i * CYLINDER.step,
   );
-  const zoomTop = $derived(yOf(level) - 22);
+  // The zoom window: the scale and the left part of the water surface.
+  const ZOOM = { x: LEFT - 26, w: 70, h: 44 };
+  const zoomTop = $derived(yOf(level) - ZOOM.h / 2);
 
   const scaleText = $derived(weighed && !dropped ? `${qty(obj.mass, 1)} g` : '0,0 g');
 </script>
@@ -226,10 +228,10 @@
       >
         {@render cylinder()}
         <rect
-          x={LEFT - 30}
+          x={ZOOM.x}
           y={zoomTop}
-          width={WIDTH + 60}
-          height="44"
+          width={ZOOM.w}
+          height={ZOOM.h}
           fill="none"
           stroke="#f59e0b"
           stroke-dasharray="3 2"
@@ -243,7 +245,7 @@
 
     <figure class="{card} overflow-hidden p-2">
       <svg
-        viewBox="{LEFT - 30} {zoomTop} {WIDTH + 60} 44"
+        viewBox="{ZOOM.x} {zoomTop} {ZOOM.w} {ZOOM.h}"
         class="block w-full overflow-hidden"
         role="img"
         aria-label="Khung phóng to quanh mặt nước trong bình chia độ."

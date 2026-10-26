@@ -110,17 +110,20 @@
     if (released) {
       const why =
         fate.fate === 'chim'
-          ? `P = ${N(fate.P)} lớn hơn lực đẩy khi vật chìm hẳn F_A = ${N(fate.FAFull)}`
+          ? `P = ${N(fate.P)} lớn hơn lực đẩy Archimedes khi vật chìm hẳn (${N(fate.FAFull)})`
           : fate.fate === 'noi'
-            ? `P = ${N(fate.P)} nhỏ hơn F_A khi chìm hẳn (${N(fate.FAFull)}); vật nổi lên tới khi phần chìm cho F_A = P = ${N(fate.P)}`
-            : `P = ${N(fate.P)} bằng F_A khi vật chìm hẳn`;
+            ? `P = ${N(fate.P)} nhỏ hơn lực đẩy Archimedes khi vật chìm hẳn (${N(fate.FAFull)}); vật nổi lên tới khi phần chìm cho lực đẩy bằng P = ${N(fate.P)}`
+            : `P = ${N(fate.P)} bằng lực đẩy Archimedes khi vật chìm hẳn`;
       return `Thả ra, khối ${block.name.toLowerCase()} ${FATE_TEXT[fate.fate]} trong ${liquid.name.toLowerCase()}: ${why}.`;
     }
     if (h.sunk === 0) {
       return `Khối ${block.name.toLowerCase()} treo trong không khí: lực kế chỉ trọng lượng P = ${N(h.P)}. Kéo vật xuống chất lỏng.`;
     }
-    const base = `Phần chìm ${qty(h.volume)} cm³: lực kế chỉ ${N(h.reading)}, lực đẩy F_A = P − số chỉ = ${N(h.P)} − ${N(h.reading)} = ${N(h.FA)}. Chất lỏng tràn ra có trọng lượng ${N(h.FA)}.`;
-    return h.slack ? `${base} Dây chùng: lực đẩy đã bằng trọng lượng, vật tự nổi.` : base;
+    const base = `Phần chìm ${qty(h.volume)} cm³: lực kế chỉ ${N(h.reading)}, lực đẩy Archimedes = P − số chỉ = ${N(h.P)} − ${N(h.reading)} = ${N(h.FA)}. Chất lỏng tràn ra có trọng lượng ${N(h.FA)}.`;
+    if (!h.slack) return base;
+    return fate.fate === 'lo-lung'
+      ? `${base} Dây chùng: vật chìm hẳn mà lực đẩy bằng trọng lượng, vật lơ lửng trong chất lỏng.`
+      : `${base} Dây chùng: lực đẩy đã bằng trọng lượng, vật tự nổi.`;
   });
 </script>
 
@@ -266,7 +269,7 @@
             marker-end="url(#luc-day-mui-ten)"
           />
           <text x={BX + BW / 2 + 14} y={bottomY - 2} class="fill-green-800 text-[9px] font-semibold"
-            >F_A</text
+            >F<tspan dy="2" font-size="7">A</tspan></text
           >
         {/if}
         <defs>
@@ -303,7 +306,7 @@
           <dd class="font-semibold">{qty(shown.volume)} cm³</dd>
         </div>
         <div class="flex justify-between rounded-xl bg-green-50 px-3 py-2">
-          <dt class="text-green-800">Lực đẩy F_A = d · V</dt>
+          <dt class="text-green-800">Lực đẩy F<sub>A</sub> = d · V</dt>
           <dd class="font-semibold text-green-900">{N(FA)}</dd>
         </div>
       </dl>
