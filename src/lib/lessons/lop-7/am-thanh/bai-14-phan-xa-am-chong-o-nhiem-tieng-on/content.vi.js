@@ -78,7 +78,7 @@ export default {
           type: 'callout',
           tone: 'definition',
           title: 'Ô nhiễm tiếng ồn',
-          text: 'Tiếng ồn là những âm thanh to, kéo dài, gây ảnh hưởng xấu đến sức khỏe và hoạt động bình thường của con người. Ô nhiễm tiếng ồn xảy ra khi tiếng ồn to và kéo dài như vậy.',
+          text: 'Tiếng ồn trong môi trường bị coi là ô nhiễm khi nó to, kéo dài, gây ảnh hưởng xấu đến sức khỏe và hoạt động bình thường của con người.',
         },
         {
           type: 'p',

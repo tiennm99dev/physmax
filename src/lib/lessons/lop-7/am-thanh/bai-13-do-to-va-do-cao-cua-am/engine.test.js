@@ -58,6 +58,8 @@ describe('frequency', () => {
     expect(bestTimeBase(50)).toBe(10);
     expect(bestTimeBase(5000)).toBe(0.1);
     expect(bestTimeBase(5)).toBe(100);
+    expect(bestTimeBase(30000)).toBe(0.1);
+    expect(bestTimeBase(40000)).toBe(0.1);
   });
 });
 

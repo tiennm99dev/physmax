@@ -76,22 +76,19 @@ export function cyclesOnScreen(f, msPerDivision) {
 
 /**
  * The time base that shows between 2 and 20 vibrations, preferring the one
- * closest to 5; the largest base when even that shows too few.
+ * closest to 5. When no base shows that many (very low or very high
+ * frequencies), the base whose count is closest to 5.
  * @param {number} f
  */
 export function bestTimeBase(f) {
-  let best = TIME_BASES[TIME_BASES.length - 1];
-  let score = Infinity;
-  for (const base of TIME_BASES) {
+  /** @param {number} base */
+  const score = (base) => Math.abs(Math.log(cyclesOnScreen(f, base) / 5));
+  const inRange = TIME_BASES.filter((base) => {
     const n = cyclesOnScreen(f, base);
-    if (n < 2 || n > 20) continue;
-    const s = Math.abs(Math.log(n / 5));
-    if (s < score) {
-      score = s;
-      best = base;
-    }
-  }
-  return best;
+    return n >= 2 && n <= 20;
+  });
+  const pool = inRange.length > 0 ? inRange : TIME_BASES;
+  return pool.reduce((best, base) => (score(base) < score(best) ? base : best));
 }
 
 /**

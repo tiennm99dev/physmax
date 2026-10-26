@@ -105,6 +105,8 @@
     osc?.stop();
     osc?.disconnect();
     osc = null;
+    gain?.disconnect();
+    gain = null;
     listening = false;
   }
 
