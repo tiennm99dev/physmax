@@ -14,6 +14,8 @@
   const MX = 280;
   const TOP = 60;
   const BOTTOM = 260;
+  /** Nearest x an object point may take: its image must stay on the board. */
+  const OBJ_MIN = 2 * MX - (W - CELL);
 
   let mode = $state('xem');
   let checked = $state(false);
@@ -55,6 +57,13 @@
       },
     };
   }
+
+  /**
+   * A label beside `x`, flipped to the left when it would run off the right edge.
+   * @param {number} x @param {number} gap
+   */
+  const side = (x, gap) =>
+    x + gap + 30 > W ? { x: x - gap, anchor: 'end' } : { x: x + gap, anchor: 'start' };
 
   const cmText = (/** @type {number} */ px) => `${formatNumber(px / CELL, 1)} cm`;
   const sizeAB = $derived(Math.hypot(b.x - a.x, b.y - a.y));
@@ -147,9 +156,20 @@
           stroke-width="3"
           stroke-dasharray="7 5"
         />
+        <circle cx={a2.x} cy={a2.y} r="4" fill="#2563eb" />
         <circle cx={b2.x} cy={b2.y} r="4" fill="#2563eb" />
-        <text x={a2.x + 8} y={a2.y + 16} class="fill-blue-700 text-[17px] font-semibold">A′</text>
-        <text x={b2.x + 8} y={b2.y - 6} class="fill-blue-700 text-[17px] font-semibold">B′</text>
+        <text
+          x={side(a2.x, 8).x}
+          y={a2.y + 16}
+          text-anchor={side(a2.x, 8).anchor}
+          class="fill-blue-700 text-[17px] font-semibold">A′</text
+        >
+        <text
+          x={side(b2.x, 8).x}
+          y={b2.y - 6}
+          text-anchor={side(b2.x, 8).anchor}
+          class="fill-blue-700 text-[17px] font-semibold">B′</text
+        >
       {/if}
 
       {#each rays as ray, i (i)}
@@ -191,7 +211,7 @@
         aria-valuenow={distanceToMirror(a, MX) / CELL}
         aria-valuetext="A cách gương {cmText(distanceToMirror(a, MX))}"
         style="cursor:grab; outline:none"
-        use:draggable={dragOn(a, CELL, MX - CELL)}
+        use:draggable={dragOn(a, OBJ_MIN, MX - CELL)}
       />
       <circle
         class="drag-handle"
@@ -207,7 +227,7 @@
         aria-valuenow={distanceToMirror(b, MX) / CELL}
         aria-valuetext="B cách gương {cmText(distanceToMirror(b, MX))}"
         style="cursor:grab; outline:none"
-        use:draggable={dragOn(b, CELL, MX - CELL)}
+        use:draggable={dragOn(b, OBJ_MIN, MX - CELL)}
       />
       <text x={a.x - 18} y={a.y + 16} class="fill-green-800 text-[17px] font-semibold">A</text>
       <text x={b.x - 18} y={b.y - 6} class="fill-green-800 text-[17px] font-semibold">B</text>
@@ -264,8 +284,11 @@
             style="cursor:grab; outline:none"
             use:draggable={dragOn(g.p, MX + CELL, W - CELL)}
           />
-          <text x={g.p.x + 10} y={g.p.y - 8} class="fill-violet-800 text-[16px] font-semibold"
-            >{g.name}?</text
+          <text
+            x={side(g.p.x, 10).x}
+            y={g.p.y - 8}
+            text-anchor={side(g.p.x, 10).anchor}
+            class="fill-violet-800 text-[16px] font-semibold">{g.name}?</text
           >
         {/each}
       {/if}
