@@ -5,7 +5,7 @@
   import { clamp, linear } from '#lib/core/visuals/svg-math.js';
   import { scaleTicks } from '#lib/domain/temperature.js';
   import { parseNumber } from '#lib/units-engine/format.js';
-  import FeedbackNote from '../_shared/feedback-note.svelte';
+  import FeedbackNote from '#lib/core/feedback-note.svelte';
   import {
     ROOM,
     SAMPLES,

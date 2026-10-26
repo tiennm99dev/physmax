@@ -2,7 +2,7 @@
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import { button, card } from '#lib/core/ui.js';
   import { formatFixed } from '#lib/core/number-format.js';
-  import FeedbackNote from '../_shared/feedback-note.svelte';
+  import FeedbackNote from '#lib/core/feedback-note.svelte';
   import {
     SLOPES,
     ZERO,

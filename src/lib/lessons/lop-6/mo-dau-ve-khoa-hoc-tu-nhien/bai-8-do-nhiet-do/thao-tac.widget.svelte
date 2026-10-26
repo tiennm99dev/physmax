@@ -1,5 +1,5 @@
 <script>
-  import RightWrongSorter from '../_shared/right-wrong-sorter.svelte';
+  import RightWrongSorter from '#lib/core/right-wrong-sorter.svelte';
 
   const ACTIONS = [
     {

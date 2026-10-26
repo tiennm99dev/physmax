@@ -3,7 +3,7 @@
   import { button, card, textInput } from '#lib/core/ui.js';
   import { formatFixed, formatNumber } from '#lib/core/number-format.js';
   import { parseNumber } from '#lib/units-engine/format.js';
-  import FeedbackNote from '../_shared/feedback-note.svelte';
+  import FeedbackNote from '#lib/core/feedback-note.svelte';
   import {
     SCALES,
     THINGS,
