@@ -89,7 +89,7 @@ export const STOPS = [
     id: 'be-ngang',
     name: 'Bề ngang Ngân Hà',
     km: kmFromLy(100000),
-    note: 'đường kính Ngân Hà, khoảng 100 000 năm ánh sáng',
+    note: 'một quãng dài bằng đường kính Ngân Hà, để so sánh; Hệ Mặt Trời nằm bên trong Ngân Hà nên mép xa nhất của nó gần hơn quãng này',
     scene: 'ngan-ha',
   },
   {
