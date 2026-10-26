@@ -50,10 +50,13 @@
   });
   const tone = $derived(flowing && held === target ? 'ok' : flowing ? 'info' : 'warn');
 
+  /** Right tip of the magnet: the end of the core, or of the bare coil. */
+  const tip = $derived(core === 'sat' ? COIL_X1 + 35 : COIL_X1);
+
   /** Positions of the clips hanging from the right tip, two columns. */
   const hanging = $derived(
     Array.from({ length: held }, (_, k) => ({
-      x: COIL_X1 + 42 + (k % 2) * 16,
+      x: tip + 7 + (k % 2) * 16,
       y: CY + 18 + Math.floor(k / 2) * 17,
     })),
   );

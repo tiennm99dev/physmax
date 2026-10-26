@@ -25,6 +25,8 @@
   let gap = $state(120);
   /** @type {Pole | null} */
   let guess = $state(null);
+  /** Whether B was just pushed away by A on release (it then rests out of reach). */
+  let pushed = $state(false);
 
   const shown = new Tween(120, { duration: 380 });
   const handle = $state({ x: A_RIGHT + 120 + L / 2, y: Y });
@@ -48,6 +50,7 @@
   }
 
   function release() {
+    pushed = gap < REACH && kind === 'day';
     moveTo(settle(gap, kind), true);
   }
 
@@ -57,6 +60,7 @@
     viewBox: { w: W, h: H },
     pad: 0,
     projector: (/** @type {{ x: number, y: number }} */ p) => {
+      pushed = false;
       moveTo(p.x - L / 2 - A_RIGHT, false);
       return { x: A_RIGHT + gap + L / 2, y: Y };
     },
@@ -84,6 +88,7 @@
   function newMystery() {
     bLeft = Math.random() < 0.5 ? 'N' : 'S';
     guess = null;
+    pushed = false;
     moveTo(120, true);
   }
 
@@ -103,7 +108,7 @@
           ? `Đúng! Đầu trái của nam châm B là ${name(bLeft)}.`
           : `Chưa đúng. Hãy đưa B lại gần A, quan sát hút hay đẩy rồi so với cực đầu phải của A (${name(aFace)}).`;
       }
-      if (!near && gap > 0) {
+      if (!near && gap > 0 && !pushed) {
         return `Kéo nam châm B lại gần đầu phải của A (đang là ${name(aFace)}) để thử.`;
       }
       return kind === 'hut'
@@ -111,7 +116,7 @@
         : `Hai nam châm đẩy nhau. Đầu phải của A là ${name(aFace)}. Vậy đầu trái của B là cực gì?`;
     }
     const pair = `Đầu phải của A là ${name(aFace)}, đầu trái của B là ${name(bLeft)}`;
-    if (!near && gap > 0) {
+    if (!near && gap > 0 && !pushed) {
       return `${pair}. Hai nam châm còn xa nhau nên lực từ yếu; kéo B lại gần A.`;
     }
     return kind === 'hut'
@@ -120,7 +125,7 @@
   });
 
   const tone = $derived(
-    hidden && guess ? (guess === bLeft ? 'ok' : 'warn') : near || gap === 0 ? 'ok' : 'info',
+    hidden && guess ? (guess === bLeft ? 'ok' : 'warn') : near || pushed ? 'ok' : 'info',
   );
   const bx = $derived(A_RIGHT + shown.current);
 </script>
