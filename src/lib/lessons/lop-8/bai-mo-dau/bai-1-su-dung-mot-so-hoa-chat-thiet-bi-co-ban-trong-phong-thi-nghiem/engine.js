@@ -133,14 +133,6 @@ export function evaluate(mission, setup) {
       text: 'Biến áp nguồn đang ở chức năng xoay chiều (AC). Hướng dẫn yêu cầu nguồn một chiều: ampe kế, vôn kế có chốt (+), (−) chỉ đo đúng dòng điện một chiều. Chọn đúng chức năng DC.',
     });
   }
-  if (setup.volts > BULB_VOLTS) {
-    return out({
-      tone: 'fail',
-      bulb: 'burnt',
-      text: `Bóng đèn ${BULB_VOLTS} V bị cấp ${setup.volts} V, lớn hơn hiệu điện thế định mức: đèn sáng chói rồi đứt dây tóc, mạch hở. Chọn đúng điện áp ${BULB_VOLTS} V.`,
-    });
-  }
-
   if (setup.meter === 'ampe-ke' && setup.position === 'song-song') {
     return out({
       tone: 'fail',
@@ -155,9 +147,17 @@ export function evaluate(mission, setup) {
       bulb: 'off',
       needle: setup.volts / setup.range,
       value: setup.volts,
-      text: `Vôn kế có điện trở rất lớn, mắc nối tiếp làm dòng điện gần như bằng 0: đèn không sáng, vôn kế chỉ khoảng ${volt(setup.volts)} của nguồn chứ không phải hiệu điện thế của đèn. Vôn kế phải mắc song song với đèn.`,
+      text: `Vôn kế có điện trở rất lớn, mắc nối tiếp làm dòng điện gần như bằng 0: đèn không sáng, vôn kế chỉ khoảng ${volt(setup.volts)} của nguồn chứ không phải hiệu điện thế của đèn${setup.volts > setup.range ? `, lại lớn hơn giới hạn đo ${volt(setup.range)} nên kim vượt quá thang đo` : ''}. Vôn kế phải mắc song song với đèn.`,
     });
   }
+  if (setup.volts > BULB_VOLTS) {
+    return out({
+      tone: 'fail',
+      bulb: 'burnt',
+      text: `Bóng đèn ${BULB_VOLTS} V bị cấp ${setup.volts} V, lớn hơn hiệu điện thế định mức: đèn sáng chói rồi đứt dây tóc, mạch hở. Chọn đúng điện áp ${BULB_VOLTS} V.`,
+    });
+  }
+
   if (setup.meter === 'joulemeter' && setup.position === 'song-song') {
     return out({
       tone: 'fail',
@@ -177,6 +177,15 @@ export function evaluate(mission, setup) {
       tone: 'fail',
       needle: -0.15,
       text: `Chốt (+) của ${meter.name.toLowerCase()} đang nối về phía cực (−) của nguồn: kim lệch ngược chiều, có thể cong kim, hỏng ${meter.name.toLowerCase()}. Chốt (+) phải nối về phía cực (+) của nguồn.`,
+    });
+  }
+
+  if (analog && reading(setup.meter) > setup.range) {
+    const value = reading(setup.meter);
+    return out({
+      tone: 'fail',
+      needle: 1.15,
+      text: `Giá trị cần đo khoảng ${unitText(value, meter.unit)}, lớn hơn giới hạn đo ${unitText(setup.range, meter.unit)}: kim vượt quá thang đo, có thể hỏng dụng cụ. Chọn thang đo có giới hạn đo lớn hơn.`,
     });
   }
 
@@ -200,13 +209,6 @@ export function evaluate(mission, setup) {
   }
 
   const value = reading(setup.meter);
-  if (value > setup.range) {
-    return out({
-      tone: 'fail',
-      needle: 1.15,
-      text: `Giá trị cần đo khoảng ${unitText(value, meter.unit)}, lớn hơn giới hạn đo ${unitText(setup.range, meter.unit)}: kim vượt quá thang đo, có thể hỏng dụng cụ. Chọn thang đo có giới hạn đo lớn hơn.`,
-    });
-  }
   const best = bestRange(meter.ranges, value);
   if (best !== setup.range) {
     return out({

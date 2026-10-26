@@ -64,6 +64,24 @@ describe('virtual bench', () => {
     expect(open.tone).toBe('fail');
   });
 
+  it('lets wiring faults that bypass the bulb win over a too-high supply voltage', () => {
+    const short = evaluate(current, setup({ position: 'song-song', volts: 12 }));
+    expect(short.bulb).toBe('off');
+    expect(short.text).toContain('nối tắt');
+    const open = evaluate(voltage, setup({ meter: 'von-ke', range: 6, volts: 12 }));
+    expect(open.bulb).toBe('off');
+    expect(open.value).toBe(12);
+    expect(open.text).toContain('vượt quá thang đo');
+    expect(evaluate(current, setup({ volts: 12 })).bulb).toBe('burnt');
+  });
+
+  it('reports an over-range needle before telling that the device is the wrong one', () => {
+    const r = evaluate(voltage, setup({ range: 0.3 }));
+    expect(r.tone).toBe('fail');
+    expect(r.needle).toBeGreaterThan(1);
+    expect(r.text).toContain('giới hạn đo');
+  });
+
   it('sends the needle backwards on reversed polarity', () => {
     const r = evaluate(current, setup({ polarity: 'nguoc' }));
     expect(r.tone).toBe('fail');
