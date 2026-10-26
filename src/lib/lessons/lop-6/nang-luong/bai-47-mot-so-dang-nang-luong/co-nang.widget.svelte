@@ -185,7 +185,7 @@
           fill="#d97706"
           stroke="#78350f"
         />
-        {#each [0, 10, 20, 30] as cm (cm)}
+        {#each [0, 10, 20, 30, 40] as cm (cm)}
           <line x1={BLOCK_X + cm * 3} y1="160" x2={BLOCK_X + cm * 3} y2="168" stroke="#475569" />
           <text x={BLOCK_X + cm * 3} y="182" text-anchor="middle" class="fill-slate-600 text-[10px]"
             >{cm}</text

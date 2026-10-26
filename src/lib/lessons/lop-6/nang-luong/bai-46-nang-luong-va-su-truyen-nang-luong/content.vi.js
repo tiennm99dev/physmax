@@ -136,12 +136,12 @@ export default {
       type: 'choice',
       prompt: 'Năng lượng đặc trưng cho',
       options: [
-        'khả năng tác dụng lực',
         'khối lượng của vật',
         'kích thước của vật',
+        'khả năng tác dụng lực',
         'màu sắc của vật',
       ],
-      answer: 0,
+      answer: 2,
       hints: ['Nhớ lại thí nghiệm thổi xe: thổi mạnh hơn thì điều gì xảy ra với lực đẩy xe?'],
       solution:
         'Năng lượng đặc trưng cho khả năng tác dụng lực: vật có năng lượng càng lớn thì có thể tác dụng lực càng mạnh, càng lâu.',
@@ -151,12 +151,12 @@ export default {
       prompt:
         'Thổi vào cánh buồm của cùng một xe đồ chơi hai lần: lần 1 thổi nhẹ, lần 2 thổi mạnh và lâu hơn. Kết luận nào đúng?',
       options: [
-        'Lần 2 truyền cho xe nhiều năng lượng hơn nên xe đi xa hơn',
         'Hai lần xe nhận năng lượng như nhau',
+        'Lần 2 truyền cho xe nhiều năng lượng hơn nên xe đi xa hơn',
         'Lần 1 truyền cho xe nhiều năng lượng hơn',
         'Xe đi xa hay gần không liên quan đến năng lượng',
       ],
-      answer: 0,
+      answer: 1,
       hints: ['Năng lượng càng lớn thì lực tác dụng càng mạnh và kéo dài.'],
       solution:
         'Thổi mạnh và lâu hơn thì năng lượng truyền cho xe lớn hơn, lực đẩy mạnh hơn và lâu hơn, nên xe đi xa hơn.',
@@ -219,12 +219,12 @@ export default {
       type: 'choice',
       prompt: 'Vì sao không nhìn thấy năng lượng nhưng ta vẫn biết vật có năng lượng?',
       options: [
-        'Vì ta cảm nhận được tác dụng của nó, như làm vật chuyển động, nóng lên, phát sáng',
         'Vì vật có năng lượng luôn có màu đỏ',
         'Vì vật có năng lượng luôn nặng hơn',
         'Vì vật có năng lượng luôn đứng yên',
+        'Vì ta cảm nhận được tác dụng của nó, như làm vật chuyển động, nóng lên, phát sáng',
       ],
-      answer: 0,
+      answer: 3,
       hints: ['Gió làm cây nghiêng ngả, lửa làm nước sôi: ta thấy điều gì?'],
       solution:
         'Năng lượng không nhìn thấy được, nhưng ta nhận ra nó qua tác dụng: làm vật chuyển động, biến dạng, nóng lên, phát sáng, phát ra âm thanh.',

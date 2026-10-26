@@ -151,8 +151,8 @@ export default {
     {
       type: 'choice',
       prompt: 'Năng lượng hao phí của các thiết bị thường xuất hiện chủ yếu dưới dạng nào?',
-      options: ['Nhiệt năng', 'Quang năng', 'Thế năng hấp dẫn', 'Năng lượng hoá học'],
-      answer: 0,
+      options: ['Quang năng', 'Nhiệt năng', 'Thế năng hấp dẫn', 'Năng lượng hoá học'],
+      answer: 1,
       hints: ['Khi chạy lâu, thân máy, động cơ, bóng đèn thường thế nào?'],
       solution: 'Năng lượng hao phí thường ở dạng nhiệt: các thiết bị nóng lên khi hoạt động.',
     },
@@ -175,12 +175,12 @@ export default {
       type: 'choice',
       prompt: 'Vì sao bóng đèn LED tiết kiệm điện hơn bóng đèn sợi đốt có cùng độ sáng?',
       options: [
-        'Vì đèn LED chuyển hoá phần lớn hơn điện năng thành quang năng, hao phí nhiệt ít hơn',
         'Vì đèn LED không cần điện năng',
         'Vì đèn LED tạo ra năng lượng mới',
+        'Vì đèn LED chuyển hoá phần lớn hơn điện năng thành quang năng, hao phí nhiệt ít hơn',
         'Vì đèn LED nóng hơn đèn sợi đốt',
       ],
-      answer: 0,
+      answer: 2,
       hints: ['So sánh phần có ích và phần hao phí của hai loại đèn.'],
       solution:
         'Đèn LED chuyển hoá phần lớn hơn điện năng thành quang năng, nên cùng độ sáng nó cần ít điện năng hơn và toả ít nhiệt hơn. Không đèn nào tự tạo ra năng lượng.',
@@ -189,12 +189,12 @@ export default {
       type: 'choice',
       prompt: 'Nhận định nào đúng về năng lượng hao phí?',
       options: [
-        'Nó không mất đi mà chuyển thành dạng năng lượng ta không dùng được, chủ yếu là nhiệt',
         'Nó biến mất hoàn toàn',
         'Nó chỉ xuất hiện ở thiết bị bị hỏng',
         'Có thể chế tạo thiết bị không có năng lượng hao phí',
+        'Nó không mất đi mà chuyển thành dạng năng lượng ta không dùng được, chủ yếu là nhiệt',
       ],
-      answer: 0,
+      answer: 3,
       hints: [
         'Nhớ định luật bảo toàn năng lượng.',
         'Hao phí luôn xuất hiện khi năng lượng chuyển hoá.',

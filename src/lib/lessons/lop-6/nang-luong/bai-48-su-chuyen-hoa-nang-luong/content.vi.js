@@ -108,12 +108,12 @@ export default {
       type: 'choice',
       prompt: 'Khi xoa hai bàn tay vào nhau, tay nóng lên. Năng lượng đã chuyển hoá thế nào?',
       options: [
-        'Động năng chuyển hoá thành nhiệt năng',
         'Nhiệt năng chuyển hoá thành động năng',
         'Quang năng chuyển hoá thành nhiệt năng',
         'Điện năng chuyển hoá thành nhiệt năng',
+        'Động năng chuyển hoá thành nhiệt năng',
       ],
-      answer: 0,
+      answer: 3,
       hints: ['Hai bàn tay chuyển động cọ xát vào nhau, rồi nóng lên.'],
       solution:
         'Hai bàn tay chuyển động (có động năng), cọ xát làm tay nóng lên: động năng chuyển hoá thành nhiệt năng.',
@@ -136,12 +136,12 @@ export default {
       type: 'choice',
       prompt: 'Nước từ trên thác cao đổ xuống. Năng lượng chủ yếu đã chuyển hoá thế nào?',
       options: [
-        'Thế năng hấp dẫn chuyển hoá thành động năng',
         'Động năng chuyển hoá thành thế năng hấp dẫn',
+        'Thế năng hấp dẫn chuyển hoá thành động năng',
         'Nhiệt năng chuyển hoá thành động năng',
         'Năng lượng âm chuyển hoá thành thế năng',
       ],
-      answer: 0,
+      answer: 1,
       hints: ['Nước ở trên cao rơi xuống, càng xuống càng nhanh.'],
       solution:
         'Nước mất dần độ cao và chảy ngày càng nhanh: thế năng hấp dẫn chuyển hoá thành động năng.',
@@ -184,12 +184,12 @@ export default {
       prompt:
         'Quả bóng cao su được thả rơi xuống sàn, sau mỗi lần nảy lên lại thấp hơn lần trước rồi nằm yên. Giải thích nào đúng?',
       options: [
-        'Một phần năng lượng đã chuyển hoá thành nhiệt năng và năng lượng âm, không mất đi',
         'Năng lượng của quả bóng đã tự mất đi',
         'Quả bóng nặng dần lên sau mỗi lần nảy',
+        'Một phần năng lượng đã chuyển hoá thành nhiệt năng và năng lượng âm, không mất đi',
         'Thế năng tự sinh ra rồi tự mất đi',
       ],
-      answer: 0,
+      answer: 2,
       hints: ['Khi bóng đập vào sàn, em nghe thấy gì? Bóng và sàn có nóng lên một chút không?'],
       solution:
         'Mỗi lần va chạm, một phần năng lượng của bóng chuyển hoá thành nhiệt năng (bóng và sàn nóng lên chút ít) và năng lượng âm (tiếng bịch). Năng lượng không mất đi mà chuyển sang dạng khác, nên bóng nảy thấp dần.',

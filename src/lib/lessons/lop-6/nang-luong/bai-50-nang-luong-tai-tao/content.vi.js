@@ -39,13 +39,13 @@ export default {
               'Năng lượng Mặt Trời',
               'Ánh sáng và nhiệt của Mặt Trời',
               'Pin Mặt Trời tạo điện; máy nước nóng năng lượng Mặt Trời',
-              'Các cánh đồng điện Mặt Trời ở Ninh Thuận, Bình Thuận',
+              'Các cánh đồng điện Mặt Trời ở duyên hải Nam Trung Bộ',
             ],
             [
               'Năng lượng gió',
               'Không khí chuyển động',
               'Tua bin gió (cối xay gió) quay máy phát điện',
-              'Điện gió ven biển Bạc Liêu',
+              'Điện gió ven biển đồng bằng sông Cửu Long',
             ],
             [
               'Năng lượng nước',
@@ -123,12 +123,12 @@ export default {
       type: 'choice',
       prompt: 'Năng lượng tái tạo là',
       options: [
-        'năng lượng có sẵn trong thiên nhiên, liên tục được bổ sung qua các quá trình tự nhiên',
         'năng lượng lấy từ than đá, dầu mỏ, khí tự nhiên',
+        'năng lượng có sẵn trong thiên nhiên, liên tục được bổ sung qua các quá trình tự nhiên',
         'năng lượng chỉ dùng được một lần rồi hết',
         'năng lượng do con người tự tạo ra từ không có gì',
       ],
-      answer: 0,
+      answer: 1,
       hints: ['"Tái tạo" nghĩa là được tạo lại, bổ sung lại.'],
       solution:
         'Năng lượng tái tạo là năng lượng có sẵn trong thiên nhiên, liên tục được bổ sung qua các quá trình tự nhiên.',
@@ -168,12 +168,12 @@ export default {
       type: 'choice',
       prompt: 'Ưu điểm lớn nhất của năng lượng tái tạo so với nhiên liệu hoá thạch là',
       options: [
-        'không cạn kiệt và ít gây ô nhiễm môi trường',
         'luôn phát điện đều đặn suốt ngày đêm',
         'chỉ có ở một vài nước',
+        'không cạn kiệt và ít gây ô nhiễm môi trường',
         'thải nhiều khí carbon dioxide hơn',
       ],
-      answer: 0,
+      answer: 2,
       hints: ['Than, dầu sẽ cạn và khi đốt thải nhiều khói, khí.'],
       solution:
         'Năng lượng tái tạo được thiên nhiên bổ sung liên tục nên không cạn kiệt, và ít thải khí, bụi gây ô nhiễm như khi đốt than, dầu.',
@@ -182,12 +182,12 @@ export default {
       type: 'choice',
       prompt: 'Vì sao một thành phố không thể chỉ dùng pin Mặt Trời để có điện suốt ngày đêm?',
       options: [
-        'Vì ban đêm và khi trời nhiều mây, pin Mặt Trời không phát hoặc phát rất ít điện',
         'Vì pin Mặt Trời gây ô nhiễm nặng',
         'Vì ánh sáng Mặt Trời sắp cạn kiệt',
         'Vì pin Mặt Trời chỉ tạo ra nhiệt năng',
+        'Vì ban đêm và khi trời nhiều mây, pin Mặt Trời không phát hoặc phát rất ít điện',
       ],
-      answer: 0,
+      answer: 3,
       hints: ['Pin Mặt Trời biến quang năng thành điện năng. Ban đêm có ánh sáng Mặt Trời không?'],
       solution:
         'Pin Mặt Trời cần ánh sáng: ban đêm không phát điện, trời nhiều mây phát ít. Cần kết hợp với nguồn khác và tích trữ điện.',
@@ -219,12 +219,12 @@ export default {
       type: 'choice',
       prompt: 'Nhà máy thuỷ điện khai thác dạng năng lượng nào của nước?',
       options: [
-        'Thế năng của nước giữ trên cao, chuyển hoá thành động năng khi nước chảy xuống',
         'Năng lượng hoá học của nước',
+        'Thế năng của nước giữ trên cao, chuyển hoá thành động năng khi nước chảy xuống',
         'Quang năng của nước',
         'Nhiệt năng của nước nóng',
       ],
-      answer: 0,
+      answer: 1,
       hints: ['Vì sao phải đắp đập để giữ nước ở trên cao?'],
       solution:
         'Đập giữ nước trên cao để nước có thế năng hấp dẫn lớn; khi nước chảy xuống, thế năng chuyển hoá thành động năng làm quay tua bin.',

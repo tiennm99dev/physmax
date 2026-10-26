@@ -135,8 +135,8 @@ export default {
     {
       type: 'choice',
       prompt: 'Năng lượng mà một vật có được do chuyển động gọi là',
-      options: ['động năng', 'thế năng hấp dẫn', 'nhiệt năng', 'quang năng'],
-      answer: 0,
+      options: ['thế năng hấp dẫn', 'động năng', 'nhiệt năng', 'quang năng'],
+      answer: 1,
       hints: ['"Động" trong "chuyển động".'],
       solution: 'Năng lượng vật có được do chuyển động gọi là động năng.',
     },
@@ -175,12 +175,12 @@ export default {
       prompt:
         'Thả hai viên bi bằng sắt có khối lượng $50\\ \\text{g}$ và $100\\ \\text{g}$ từ cùng một độ cao xuống khay cát. Kết quả nào đúng?',
       options: [
-        'Viên bi $100\\ \\text{g}$ làm cát lõm sâu hơn',
         'Viên bi $50\\ \\text{g}$ làm cát lõm sâu hơn',
         'Hai vết lõm sâu như nhau',
         'Không viên nào làm cát lõm',
+        'Viên bi $100\\ \\text{g}$ làm cát lõm sâu hơn',
       ],
-      answer: 0,
+      answer: 3,
       hints: ['Cùng độ cao, vật nặng hơn có thế năng hấp dẫn thế nào?'],
       solution:
         'Cùng độ cao, vật có khối lượng lớn hơn có thế năng hấp dẫn lớn hơn, nên viên bi $100\\ \\text{g}$ làm cát lõm sâu hơn.',
@@ -217,8 +217,8 @@ export default {
     {
       type: 'choice',
       prompt: 'Năng lượng dự trữ trong thức ăn, xăng và pin thuộc dạng nào?',
-      options: ['Năng lượng hoá học', 'Điện năng', 'Quang năng', 'Thế năng đàn hồi'],
-      answer: 0,
+      options: ['Điện năng', 'Năng lượng hoá học', 'Quang năng', 'Thế năng đàn hồi'],
+      answer: 1,
       hints: ['Năng lượng này được giải phóng qua phản ứng hoá học (tiêu hoá, sự cháy).'],
       solution:
         'Thức ăn, xăng, pin dự trữ năng lượng hoá học; nó được giải phóng khi xảy ra phản ứng hoá học.',
@@ -228,12 +228,12 @@ export default {
       prompt:
         'Hai viên bi giống hệt nhau lăn trên sàn, viên A lăn nhanh hơn viên B. Viên nào đẩy một khúc gỗ đi xa hơn khi va vào nó?',
       options: [
-        'Viên A, vì có động năng lớn hơn',
         'Viên B, vì có động năng lớn hơn',
         'Như nhau, vì hai viên bi giống nhau',
+        'Viên A, vì có động năng lớn hơn',
         'Viên B, vì lăn chậm nên đẩy lâu hơn',
       ],
-      answer: 0,
+      answer: 2,
       hints: ['Cùng khối lượng, vật chuyển động nhanh hơn có động năng thế nào?'],
       solution:
         'Hai viên bi cùng khối lượng, viên A nhanh hơn nên có động năng lớn hơn, tác dụng lực mạnh hơn và đẩy khúc gỗ đi xa hơn.',
