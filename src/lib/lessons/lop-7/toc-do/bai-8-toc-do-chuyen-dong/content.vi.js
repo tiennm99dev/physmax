@@ -95,7 +95,7 @@ export default {
   explore: {
     title: 'Cuộc đua ảo',
     instruction:
-      'Chọn từng bạn rồi chỉnh quãng đường $s$ và thời gian $t$ của bạn đó. Bảng xếp hạng tính $v = \\dfrac{s}{t}$ và xếp từ nhanh đến chậm. Nhấn "Xuất phát" để thấy mọi bạn chạy cùng lúc: ở mỗi thời điểm, bạn có tốc độ lớn hơn luôn đi được xa hơn. Thử cho hai bạn cùng quãng đường, hoặc cùng thời gian, rồi đọc nhận xét bên dưới.',
+      'Chọn từng bạn rồi chỉnh quãng đường $s$ và thời gian $t$ của bạn đó. Bảng xếp hạng tính $v = \\dfrac{s}{t}$ và xếp từ nhanh đến chậm. Nhấn "Xuất phát" để thấy mọi bạn chạy cùng lúc: khi các bạn đều đang chạy, bạn có tốc độ lớn hơn luôn đi được xa hơn. Thử cho hai bạn cùng quãng đường, hoặc cùng thời gian, rồi đọc nhận xét bên dưới.',
   },
   examples: [
     {
@@ -196,7 +196,7 @@ export default {
       prompt:
         'Một xe máy chạy với tốc độ không đổi $36\\ \\text{km/h}$ trên quãng đường $9\\ \\text{km}$. Xe đi hết quãng đường đó trong bao nhiêu phút?',
       answer: 15,
-      unit: 'min',
+      unit: 'phút',
       hints: [
         'Dùng $t = \\dfrac{s}{v}$, kết quả tính bằng giờ.',
         'Đổi giờ ra phút: nhân với $60$.',

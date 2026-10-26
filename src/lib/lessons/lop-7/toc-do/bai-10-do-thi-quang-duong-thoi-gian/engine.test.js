@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  BLANK,
   CHALLENGES,
   S_MAX,
   START,
@@ -58,6 +59,10 @@ describe('challenges', () => {
   it('points at the first wrong stage', () => {
     expect(checkChallenge(START, CHALLENGES[1])).toEqual({ ok: false, wrong: 0 });
     expect(checkChallenge(START, CHALLENGES[0]).ok).toBe(true);
+  });
+
+  it('a challenge opens on a graph that solves none of them', () => {
+    for (const c of CHALLENGES) expect(checkChallenge(BLANK, c).ok).toBe(false);
   });
 
   it('the third challenge has a first-hour speed twice the later one', () => {

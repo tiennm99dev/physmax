@@ -20,6 +20,9 @@ export const S_STEP = 10;
 /** Distances after 0, 1, 2, 3, 4 h when the widget opens (the book's car). */
 export const START = [0, 60, 120, 180, 180];
 
+/** Graph a challenge opens with: a steady 30 km/h that matches no challenge. */
+export const BLANK = [0, 30, 60, 90, 120];
+
 /**
  * Speed (km/h) on each stage.
  * @param {number[]} s

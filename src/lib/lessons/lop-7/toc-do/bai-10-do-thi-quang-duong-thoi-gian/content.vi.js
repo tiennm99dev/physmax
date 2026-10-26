@@ -168,7 +168,7 @@ export default {
       prompt:
         'Với người đi xe đạp ở câu trên (đồ thị thẳng, tốc độ không đổi), sau bao nhiêu giờ người đó đi được $45\\ \\text{km}$?',
       answer: 3,
-      unit: 'h',
+      unit: 'giờ',
       hints: ['Kéo dài đồ thị; hoặc dùng $t = \\dfrac{s}{v}$.'],
       solution: '$t = \\dfrac{s}{v} = \\dfrac{45}{15} = 3\\ \\text{(h)}$.',
     },
@@ -192,7 +192,7 @@ export default {
       prompt:
         'Bạn A đi bộ có bảng số liệu $t = 0; 15; 20; 30$ (min) ứng với $s = 0; 1000; 1000; 2000$ (m). Bạn A đứng yên trong bao nhiêu phút?',
       answer: 5,
-      unit: 'min',
+      unit: 'phút',
       hints: ['Tìm khoảng thời gian mà quãng đường không thay đổi.'],
       solution:
         'Từ phút thứ $15$ đến phút thứ $20$, quãng đường vẫn là $1000\\ \\text{m}$: A đứng yên $20 - 15 = 5$ phút.',

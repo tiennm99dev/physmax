@@ -73,13 +73,14 @@
     return 'Xe đã qua vạch B.';
   });
 
+  // The clock ticks only while a car is rolling, so an idle widget does no work.
   $effect(() => {
-    reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!rolling) return;
     let frame = 0;
     const tick = () => {
       now = performance.now();
       if (run && !run.done && frontAt(run.v, (now - run.go) / 1000) + CAR >= TRACK) finish();
-      frame = requestAnimationFrame(tick);
+      else frame = requestAnimationFrame(tick);
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
@@ -87,8 +88,10 @@
 
   function start() {
     if (rolling) return;
+    reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    now = performance.now();
     run = {
-      go: performance.now(),
+      go: now,
       v: CARS[carNo % CARS.length],
       d: distance,
       mode,
@@ -158,7 +161,9 @@
       return;
     }
     rows = rows.map((r, i) => (i === rows.length - 1 ? { ...r, v } : r));
-    const real = measuredSpeed(last.d, last.truth);
+    // What the photogate timer would show for the same run, cut to its 0,001 s division.
+    const gateT = timerReading(last.truth) ?? last.truth;
+    const real = measuredSpeed(last.d, gateT);
     note =
       last.mode === 'cong'
         ? {
@@ -167,7 +172,7 @@
           }
         : {
             tone: 'ok',
-            text: `Đúng: v = ${s} : ${t} ≈ ${formatNumber(v, 2)} m/s. Cổng quang đo được t = ${formatFixed(last.truth, 3)} s, tức v ≈ ${formatNumber(real, 2)} m/s; em bấm lệch ${formatFixed(Math.abs(last.t - last.truth), 2)} s do phản xạ của tay.`,
+            text: `Đúng: v = ${s} : ${t} ≈ ${formatNumber(v, 2)} m/s. Cổng quang đo được t = ${formatFixed(gateT, 3)} s, tức v ≈ ${formatNumber(real, 2)} m/s; em bấm lệch khoảng ${formatFixed(Math.abs(last.t - last.truth), 2)} s do phản xạ của tay.`,
           };
   }
 

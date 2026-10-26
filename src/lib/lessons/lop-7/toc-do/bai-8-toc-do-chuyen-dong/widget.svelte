@@ -56,7 +56,10 @@
   const leaders = $derived(ranked.filter((r) => r.rank === 1));
   const status = $derived.by(() => {
     const top = leaders
-      .map((r) => `${r.name}: v = ${num(r.s)} : ${num(r.t)} = ${num(r.v)} m/s`)
+      .map(
+        (r) =>
+          `${r.name}: v = ${num(r.s)} : ${num(r.t)} ${Math.abs(r.v - Math.round(r.v * 100) / 100) < 1e-9 ? '=' : '≈'} ${num(r.v)} m/s`,
+      )
       .join('; ');
     const head =
       leaders.length > 1
@@ -145,7 +148,7 @@
       aria-label="Đường đua bốn làn. {clockText}. {racers
         .map(
           (r) =>
-            `${r.name} đã chạy ${num(clock < 0 ? 0 : coveredAt(r, clock), 0)} trên ${num(r.s)} m`,
+            `${r.name} đã chạy ${num(clock < 0 ? 0 : coveredAt(r, clock), 0)} m trên ${num(r.s)} m`,
         )
         .join('; ')}"
     >

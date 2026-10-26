@@ -3,7 +3,7 @@ export default {
   summary:
     'Vượt quá tốc độ giới hạn và không giữ khoảng cách an toàn là nguyên nhân chính của nhiều vụ tai nạn giao thông: tốc độ càng lớn thì quãng đường từ lúc thấy nguy hiểm đến lúc xe dừng hẳn càng dài.',
   intro:
-    'Phần lớn các vụ tai nạn giao thông đường bộ có nguyên nhân từ việc chạy quá tốc độ quy định. Vì sao trên đường lại có biển báo tốc độ tối đa, và vì sao xe chạy càng nhanh thì càng phải cách xa xe phía trước?',
+    'Nhiều vụ tai nạn giao thông đường bộ có nguyên nhân từ việc chạy quá tốc độ quy định. Vì sao trên đường lại có biển báo tốc độ tối đa, và vì sao xe chạy càng nhanh thì càng phải cách xa xe phía trước?',
   objectives: [
     'Thảo luận được ảnh hưởng của tốc độ trong an toàn giao thông.',
     'Giải thích được vì sao phải tuân thủ tốc độ giới hạn và giữ khoảng cách an toàn giữa các xe.',

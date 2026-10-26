@@ -5,6 +5,7 @@
   import { button, card } from '#lib/core/ui.js';
   import { formatNumber } from '#lib/core/number-format.js';
   import {
+    BLANK,
     CHALLENGES,
     STAGE,
     STAGES,
@@ -59,6 +60,14 @@
     pts.push(`${X(end)},${Y(distanceAt(s, end))}`);
     return pts.join(' ');
   });
+
+  /**
+   * Starts the graph over: the book's car in free mode, a neutral graph for a challenge.
+   * @param {string | number} [mode]
+   */
+  function redraw(mode = task) {
+    s = mode === 'free' ? [...START] : [...BLANK];
+  }
 
   /** @param {number} i @param {number} target */
   function setCorner(i, target) {
@@ -124,6 +133,7 @@
       ...CHALLENGES.map((c) => ({ value: c.id, label: c.label })),
     ]}
     bind:value={task}
+    onchange={(v) => redraw(v)}
   />
   {#if challenge}
     <p class="rounded-xl bg-indigo-50 px-4 py-3 text-sm text-indigo-900">
@@ -267,7 +277,7 @@
       <button type="button" class={button.primary} onclick={play} disabled={playT !== null}
         >Cho xe chạy</button
       >
-      <button type="button" class={button.quiet} onclick={() => (s = [...START])}>Vẽ lại</button>
+      <button type="button" class={button.quiet} onclick={() => redraw()}>Vẽ lại</button>
     </div>
   </div>
 
