@@ -3,7 +3,7 @@
  * mass change, but the mass of each cubic centimetre, D = m/V, does not.
  * Lengths are in cm, volumes in cm³, masses in g, densities in kg/m³.
  */
-import { material, tidy, toGPerCm3 } from '../_shared/materials.js';
+import { material, tidy, toGPerCm3 } from '#lib/domain/materials.js';
 
 /** Materials offered for the blocks, lightest first. */
 export const BLOCK_MATERIALS = ['go', 'nhom', 'sat', 'dong'].map(material);

@@ -4,7 +4,7 @@
  * the communicating vessels whose levels settle to one height, and the
  * glass of water turned over under a sheet of paper.
  */
-import { specificWeight, tidy } from '../_shared/materials.js';
+import { specificWeight, tidy } from '#lib/domain/materials.js';
 
 /** Depth range of the tank, in cm. */
 export const TANK_DEPTH = 100;

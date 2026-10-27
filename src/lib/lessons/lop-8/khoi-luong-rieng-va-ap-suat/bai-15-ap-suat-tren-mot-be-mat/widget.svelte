@@ -1,7 +1,7 @@
 <script>
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import { button, card } from '#lib/core/ui.js';
-  import { qty } from '../_shared/materials.js';
+  import { qty } from '#lib/domain/materials.js';
   import { BRICK, FACES, MAX_BRICKS, TARGETS, dentMm, face, stack, waysTo } from './engine.js';
 
   /** @typedef {import('./engine.js').FaceId} FaceId */

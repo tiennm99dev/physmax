@@ -1,7 +1,7 @@
 <script>
   import { button, card } from '#lib/core/ui.js';
   import { frameLoop, reducedMotion } from '#lib/core/motion.js';
-  import { qty } from '../_shared/materials.js';
+  import { qty } from '#lib/domain/materials.js';
   import { flowDirection, flowStep, liquidPressure, settledLevel } from './engine.js';
 
   const START = { left: 36, right: 12 };

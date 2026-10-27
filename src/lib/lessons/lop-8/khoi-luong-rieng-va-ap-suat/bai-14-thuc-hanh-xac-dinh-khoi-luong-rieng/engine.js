@@ -4,7 +4,7 @@
  * divisions of 2 mL) gives the water level V1 before and V2 after the object
  * is dropped in, so V = V2 − V1 (1 mL = 1 cm³) and D = m / V.
  */
-import { tidy } from '../_shared/materials.js';
+import { tidy } from '#lib/domain/materials.js';
 
 /** Graduated cylinder: capacity (GHĐ) and smallest division (ĐCNN), in mL. */
 export const CYLINDER = { max: 100, step: 2 };

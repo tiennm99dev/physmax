@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { material } from '../_shared/materials.js';
+import { material } from '#lib/domain/materials.js';
 import {
   CYLINDER,
   D_TOLERANCE,

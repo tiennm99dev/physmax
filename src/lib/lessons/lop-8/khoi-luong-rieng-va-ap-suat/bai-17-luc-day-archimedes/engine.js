@@ -5,7 +5,7 @@
  * reads P − F_A until the string goes slack: then the block floats.
  * Lengths in cm, volumes in cm³, forces in N, densities in kg/m³.
  */
-import { material, specificWeight, tidy } from '../_shared/materials.js';
+import { material, specificWeight, tidy } from '#lib/domain/materials.js';
 
 /** The block: 5 cm × 5 cm base, 4 cm tall, so V = 100 cm³. */
 export const BLOCK = { base: 25, height: 4 };

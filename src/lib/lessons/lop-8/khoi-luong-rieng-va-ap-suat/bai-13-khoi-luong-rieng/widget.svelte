@@ -2,7 +2,7 @@
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
-  import { qty } from '../_shared/materials.js';
+  import { qty } from '#lib/domain/materials.js';
   import { BLOCK_MATERIALS, EDGE, closestMaterial, measure } from './engine.js';
 
   /** @typedef {import('./engine.js').Reading} Reading */

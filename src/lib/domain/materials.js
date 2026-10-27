@@ -1,6 +1,7 @@
 /**
- * Densities of the substances this chapter works with, in kg/m³, as rounded
- * in the textbook table, plus the small number helpers its widgets share.
+ * Densities of common solids and liquids in kg/m³, as rounded in the grade 8
+ * textbook table, the conversions between density, g/cm³ and specific
+ * weight, and `qty` for writing a quantity the book's way (2 697,3).
  */
 import { fmt, formatNumber } from '#lib/core/number-format.js';
 

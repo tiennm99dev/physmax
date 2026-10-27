@@ -3,7 +3,7 @@
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import { clamp } from '#lib/core/visuals/svg-math.js';
   import { card } from '#lib/core/ui.js';
-  import { material, qty } from '../_shared/materials.js';
+  import { material, qty } from '#lib/domain/materials.js';
   import { TANK_DEPTH, liquidPressure } from './engine.js';
 
   const LIQUIDS = ['nuoc', 'dau-hoa', 'nuoc-muoi'].map(material);

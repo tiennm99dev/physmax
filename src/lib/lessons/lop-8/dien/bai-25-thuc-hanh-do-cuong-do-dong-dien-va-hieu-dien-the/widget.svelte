@@ -5,7 +5,7 @@
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import { button, card, focusRing } from '#lib/core/ui.js';
   import CircuitSymbol from '../_shared/circuit-symbol.svelte';
-  import MeterDial from '../_shared/meter-dial.svelte';
+  import MeterDial from '#lib/domain/meter-dial.svelte';
   import {
     AMMETER,
     COLUMNS,

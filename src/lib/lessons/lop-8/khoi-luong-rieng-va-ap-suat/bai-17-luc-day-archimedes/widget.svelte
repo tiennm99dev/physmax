@@ -3,7 +3,7 @@
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import { clamp } from '#lib/core/visuals/svg-math.js';
   import { button, card } from '#lib/core/ui.js';
-  import { qty } from '../_shared/materials.js';
+  import { qty } from '#lib/domain/materials.js';
   import {
     BALANCE_MAX,
     BATH_LIQUIDS,

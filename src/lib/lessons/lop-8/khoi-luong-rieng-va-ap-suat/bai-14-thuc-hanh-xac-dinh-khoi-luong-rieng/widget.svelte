@@ -1,7 +1,7 @@
 <script>
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import { button, card, textInput } from '#lib/core/ui.js';
-  import { qty } from '../_shared/materials.js';
+  import { qty } from '#lib/domain/materials.js';
   import {
     CYLINDER,
     D_TOLERANCE,

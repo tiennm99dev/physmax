@@ -3,7 +3,7 @@
  * F = n · P, the pressed area S is the face the bottom brick stands on, and
  * the pressure is p = F / S in N/m² (Pa). The dent in the sand grows with p.
  */
-import { tidy } from '../_shared/materials.js';
+import { tidy } from '#lib/domain/materials.js';
 
 /** One brick: 20 cm × 10 cm × 5 cm, 2 kg, so P = 10m = 20 N. */
 export const BRICK = { length: 20, width: 10, thick: 5, weight: 20 };
