@@ -15,7 +15,7 @@ export const LAMP_OHMS = 6;
 export const AMMETER = { range: 1, division: 0.05 };
 
 /** Voltmeter range and smallest division, V. */
-export const VOLTMETER = { range: 6, division: 0.1 };
+export const VOLTMETER = { range: 6, division: 0.5 };
 
 /** Source voltages the bench offers, V. */
 export const SOURCES = [1.5, 3, 4.5];

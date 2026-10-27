@@ -142,7 +142,7 @@
     <svg
       viewBox="0 0 360 300"
       class="mx-auto block w-full max-w-md touch-none select-none"
-      role="img"
+      role="group"
       aria-label="{RODS[rod]} có {BASE} điện tích dương và {rodElectrons} electron. {near
         ? `Thanh đang ở gần vụn giấy, hút ${lifted} vụn.`
         : ''}"

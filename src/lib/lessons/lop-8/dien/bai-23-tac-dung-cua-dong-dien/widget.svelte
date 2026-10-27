@@ -61,14 +61,20 @@
     if (!flowing) return;
     if (reducedMotion()) {
       t = 30;
-      if (chosen === 'ma-dien') copper[platedElectrode(leftNegative)] = MAX_COPPER;
+      if (chosen === 'ma-dien') {
+        const side = platedElectrode(leftNegative);
+        copper = side === 'trai' ? { trai: MAX_COPPER, phai: 0 } : { trai: 0, phai: MAX_COPPER };
+      }
       return;
     }
     return frameLoop((dt) => {
       t += dt;
       if (chosen === 'ma-dien') {
         const side = platedElectrode(leftNegative);
+        const other = side === 'trai' ? 'phai' : 'trai';
         copper[side] = Math.min(MAX_COPPER, copper[side] + dt * 0.8);
+        // Copper on the electrode now joined to + goes back into the solution.
+        copper[other] = Math.max(0, copper[other] - dt * 0.8);
       }
     });
   });
@@ -405,7 +411,7 @@
   </figure>
 
   <div class="flex flex-wrap gap-2">
-    <button type="button" class={button.primary} aria-pressed={on} onclick={toggle}>
+    <button type="button" class={button.primary} onclick={toggle}>
       {on ? 'Ngắt mạch' : 'Cho dòng điện chạy qua'}
     </button>
     {#if chosen === 'den-led'}

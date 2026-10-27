@@ -104,7 +104,6 @@
   /** @type {string} */ letter,
   /** @type {number | null} */ value,
   /** @type {{ range: number, division: number }} */ spec,
-  /** @type {number} */ tickStep,
   /** @type {number} */ labelStep,
   /** @type {number} */ digits,
 )}
@@ -113,7 +112,7 @@
   <figure class="{card} p-2 text-center">
     <svg viewBox="0 0 160 112" class="mx-auto block w-full max-w-[220px]" aria-hidden="true">
       <rect x="4" y="4" width="152" height="104" rx="10" fill="#f8fafc" stroke="#94a3b8" />
-      {#each ticks(spec.range, tickStep) as v (v)}
+      {#each ticks(spec.range, spec.division) as v (v)}
         {@const a = -60 + (120 * v) / spec.range}
         {@const major = Math.abs(v / labelStep - Math.round(v / labelStep)) < 1e-6}
         {@const p1 = onDial(a, 68)}
@@ -244,8 +243,8 @@
   </figure>
 
   <div class="grid grid-cols-2 gap-3">
-    {@render dial('A', bench.ammeter, AMMETER, 0.05, 0.2, 2)}
-    {@render dial('V', bench.voltmeter, VOLTMETER, 0.2, 1, 1)}
+    {@render dial('A', bench.ammeter, AMMETER, 0.2, 2)}
+    {@render dial('V', bench.voltmeter, VOLTMETER, 1, 1)}
   </div>
 
   <FeedbackNote tone={feedback.tone} text={feedback.text} />
@@ -261,12 +260,7 @@
       options={SOURCES.map((u) => ({ value: String(u), label: `${formatNumber(u)} V` }))}
       bind:value={source}
     />
-    <button
-      type="button"
-      class={button.secondary}
-      aria-pressed={closed}
-      onclick={() => (closed = !closed)}
-    >
+    <button type="button" class={button.secondary} onclick={() => (closed = !closed)}>
       {closed ? 'Mở công tắc' : 'Đóng công tắc'}
     </button>
   </div>

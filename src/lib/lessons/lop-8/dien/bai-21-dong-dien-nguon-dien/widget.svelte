@@ -239,20 +239,10 @@
   </figure>
 
   <div class="flex flex-wrap gap-2">
-    <button
-      type="button"
-      class={button.secondary}
-      aria-pressed={closed}
-      onclick={() => (closed = !closed)}
-    >
+    <button type="button" class={button.secondary} onclick={() => (closed = !closed)}>
       {closed ? 'Mở công tắc' : 'Đóng công tắc'}
     </button>
-    <button
-      type="button"
-      class={button.quiet}
-      aria-pressed={source}
-      onclick={() => (source = !source)}
-    >
+    <button type="button" class={button.quiet} onclick={() => (source = !source)}>
       {source ? 'Tháo pin ra' : 'Lắp pin vào'}
     </button>
   </div>

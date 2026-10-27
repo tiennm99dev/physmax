@@ -31,6 +31,10 @@ describe('measuring current and voltage on the bench', () => {
         9,
       );
       expect(r.voltmeter).toBeLessThanOrEqual(VOLTMETER.range);
+      expect(Math.round((r.voltmeter ?? 0) / VOLTMETER.division) * VOLTMETER.division).toBeCloseTo(
+        r.voltmeter ?? 0,
+        9,
+      );
     }
   });
 
