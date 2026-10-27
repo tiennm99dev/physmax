@@ -99,7 +99,7 @@ const TUBE_POWER = 1.2;
 /** Mixing rate when the warmer water is below (convection), per second. */
 export const MIX_CONVECTION = 0.5;
 /** Mixing rate when the warmer water is on top (conduction only), per second. */
-export const MIX_CONDUCTION = 0.004;
+export const MIX_CONDUCTION = 0.0005;
 
 /**
  * Advances the tube of water by `dt` seconds. Water cannot pass 100 °C.

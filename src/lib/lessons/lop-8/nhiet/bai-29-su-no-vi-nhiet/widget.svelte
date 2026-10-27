@@ -47,7 +47,12 @@
     if (growth < 0)
       return {
         tone: /** @type {'ok' | 'warn' | 'info'} */ ('info'),
-        text: `Trời lạnh (${formatNumber(railT)} °C): thanh ray co lại ${formatFixed(-growth, 2)} mm, khe hở rộng ra thành ${formatFixed(gapNow, 2)} mm.`,
+        text: `Trời lạnh (${formatNumber(railT)} °C): thanh ray co lại ${formatFixed(-growth, 2)} mm, ${g ? 'khe hở rộng ra' : 'hai đầu ray tách ra, để hở'} ${formatFixed(gapNow, 2)} mm.`,
+      };
+    if (!g)
+      return {
+        tone: /** @type {'ok' | 'warn' | 'info'} */ ('warn'),
+        text: `Ở ${formatNumber(LAID_AT)} °C, hai đầu ray vừa chạm nhau, không có khe hở. Chỉ cần trời nóng hơn một chút, ray nở dài ra sẽ ép vào nhau và bị cong vênh.`,
       };
     return {
       tone: /** @type {'ok' | 'warn' | 'info'} */ ('ok'),

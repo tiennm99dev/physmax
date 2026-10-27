@@ -49,8 +49,13 @@
   let inkB = $state.raw([]);
   let inkClock = $state(0);
 
-  const cupA = $derived({ celsius: tA, grams: Number(mA) });
-  const cupB = $derived({ celsius: tB, grams: Number(mB) });
+  // Masses as plain numbers, so moving a temperature slider does not count as
+  // a new mass of water (which would reshuffle the molecules and pour the ink
+  // away).
+  const gramsA = $derived(Number(mA));
+  const gramsB = $derived(Number(mB));
+  const cupA = $derived({ celsius: tA, grams: gramsA });
+  const cupB = $derived({ celsius: tB, grams: gramsB });
 
   /** @param {number} grams @returns {Box} */
   const waterBox = (grams) => ({
@@ -59,16 +64,16 @@
     y0: FLOOR - (grams / 200) * 150 + 6,
     y1: FLOOR - 6,
   });
-  const boxA = $derived(waterBox(cupA.grams));
-  const boxB = $derived(waterBox(cupB.grams));
+  const boxA = $derived(waterBox(gramsA));
+  const boxB = $derived(waterBox(gramsB));
 
   // A new mass of water means a new set of molecules; the ink is poured away.
   $effect(() => {
-    dotsA = scatter(rand, dotCount(cupA.grams), boxA);
+    dotsA = scatter(rand, dotCount(gramsA), boxA);
     inkA = [];
   });
   $effect(() => {
-    dotsB = scatter(rand, dotCount(cupB.grams), boxB);
+    dotsB = scatter(rand, dotCount(gramsB), boxB);
     inkB = [];
   });
 
@@ -118,7 +123,10 @@
     let inner;
     if (v.internal === 'chua-ro') {
       const hot = v.kinetic;
-      inner = `Cốc ${hot} nóng hơn nhưng ít nước hơn, nên chỉ nhìn nhiệt độ hay khối lượng thì chưa kết luận được cốc nào có nội năng lớn hơn: phải xét cả hai.`;
+      const eA = thermalEnergy(cupA);
+      const eB = thermalEnergy(cupB);
+      const more = eA > eB ? 'A' : 'B';
+      inner = `Cốc ${hot} nóng hơn nhưng ít nước hơn, nên chỉ nhìn nhiệt độ hay chỉ nhìn khối lượng thì chưa kết luận được cốc nào có nội năng lớn hơn: phải xét cả hai. Trong mô hình này, tổng động năng các phân tử (năng lượng nhiệt) của cốc ${more} lớn hơn, xem hai thanh màu cam.`;
     } else if (v.internal === 'bang') {
       inner = 'Cùng nhiệt độ, cùng khối lượng: nội năng của hai cốc bằng nhau.';
     } else if (v.kinetic === 'bang') {

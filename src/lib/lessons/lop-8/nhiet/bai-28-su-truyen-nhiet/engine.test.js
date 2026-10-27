@@ -4,6 +4,7 @@ import {
   PINS,
   ROOM,
   SURFACES,
+  WAX_MELT,
   bottleStep,
   coldRod,
   convecting,
@@ -78,6 +79,14 @@ describe('convection in a tube of water', () => {
     expect(convecting(tube)).toBe(false);
     expect(tube.top).toBeGreaterThan(55);
     expect(tube.bottom).toBeLessThan(30);
+  });
+
+  it('never melts the wax at the bottom when the water is heated at the top', () => {
+    let tube = { top: ROOM, bottom: ROOM };
+    for (let s = 0; s < 20000; s++) tube = tubeStep(tube, 0.1, { heating: true, at: 'mieng' });
+    expect(tube.top).toBeGreaterThan(95);
+    expect(tube.bottom).toBeLessThan(40);
+    expect(tube.bottom).toBeLessThan(WAX_MELT);
   });
 
   it('never heats water past 100 °C', () => {

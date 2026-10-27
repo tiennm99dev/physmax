@@ -207,7 +207,7 @@ export default {
       answer: 2,
       hints: ['Các phân tử nước đá có ngừng chuyển động không?'],
       solution:
-        'Các phân tử của mọi vật, kể cả nước đá, luôn chuyển động hỗn loạn không ngừng, nên mọi vật đều có năng lượng nhiệt. Vật lạnh chỉ có năng lượng nhiệt nhỏ hơn khi nó nóng hơn.',
+        'Các phân tử của mọi vật, kể cả nước đá, luôn chuyển động hỗn loạn không ngừng, nên mọi vật đều có năng lượng nhiệt. Vật lạnh chỉ có năng lượng nhiệt nhỏ hơn so với khi nó nóng hơn.',
     },
     {
       type: 'multi',
