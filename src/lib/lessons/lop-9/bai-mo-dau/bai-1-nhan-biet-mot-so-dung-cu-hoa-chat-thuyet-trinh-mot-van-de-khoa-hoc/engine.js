@@ -2,8 +2,10 @@
  * The virtual tool store of the lesson: every tool and chemical with its use
  * and safety note, and the experiments a learner assembles from them. A kit is
  * checked by roles: each role names what the experiment needs done and the
- * tools that can do it, so a kit passes when every role is filled and nothing
- * unneeded was taken.
+ * tools that can do it, so a kit passes when every role is filled, nothing
+ * unneeded was taken and no tool only repeats a job another taken tool does.
+ * `allowed` lists helpers (power supply, wires) a kit may carry without
+ * needing them.
  */
 
 /** @typedef {'quang' | 'dien' | 'hoa'} Shelf */
@@ -17,7 +19,7 @@
  * }} Tool
  */
 /** @typedef {{ need: string, tools: string[] }} Role */
-/** @typedef {{ id: string, title: string, goal: string, roles: Role[] }} Experiment */
+/** @typedef {{ id: string, title: string, goal: string, roles: Role[], allowed?: string[] }} Experiment */
 
 /** @type {Array<{ id: Shelf, label: string }>} */
 export const SHELVES = [
@@ -242,6 +244,7 @@ export const EXPERIMENTS = [
       { need: 'làm môi trường thuỷ tinh cho tia sáng khúc xạ', tools: ['ban-ban-tru'] },
       { need: 'đọc góc tới và góc khúc xạ', tools: ['bang-chia-do'] },
     ],
+    allowed: ['bien-ap', 'day-noi'],
   },
   {
     id: 'thau-kinh',
@@ -254,6 +257,7 @@ export const EXPERIMENTS = [
       { need: 'hứng ảnh', tools: ['man-chan'] },
       { need: 'giữ các dụng cụ đồng trục và đo khoảng cách', tools: ['gia-quang-hoc'] },
     ],
+    allowed: ['bien-ap', 'day-noi'],
   },
   {
     id: 'cam-ung',
@@ -264,6 +268,7 @@ export const EXPERIMENTS = [
       { need: 'làm mạch kín có dòng điện cảm ứng', tools: ['cuon-day', 'cuon-day-led'] },
       { need: 'phát hiện dòng điện cảm ứng và chiều của nó', tools: ['dien-ke', 'cuon-day-led'] },
     ],
+    allowed: ['day-noi'],
   },
   {
     id: 'do-dien',
@@ -308,28 +313,60 @@ export function toolById(id) {
 }
 
 /**
+ * The needs of an experiment that no tool of a kit fills.
+ * @param {Experiment} exp
+ * @param {Set<string>} taken
+ */
+function missingNeeds(exp, taken) {
+  return exp.roles.filter((r) => !r.tools.some((t) => taken.has(t))).map((r) => r.need);
+}
+
+/**
  * Check a kit against an experiment.
  * @param {Experiment} exp
  * @param {string[]} kit tool ids the learner took
- * @returns {{ ok: boolean, missing: string[], extra: string[], text: string }}
+ * @returns {{ ok: boolean, missing: string[], extra: string[], repeated: string[], text: string }}
  *   `missing` holds the needs no taken tool fills, `extra` the names of the
- *   taken tools no role uses.
+ *   taken tools no role uses, `repeated` (only once nothing is missing) the
+ *   names of role tools the kit could drop and still fill every need.
  */
 export function checkKit(exp, kit) {
   const taken = new Set(kit);
-  const missing = exp.roles.filter((r) => !r.tools.some((t) => taken.has(t))).map((r) => r.need);
-  const useful = new Set(exp.roles.flatMap((r) => r.tools));
-  const extra = TOOLS.filter((t) => taken.has(t.id) && !useful.has(t.id)).map((t) => t.name);
-  const ok = missing.length === 0 && extra.length === 0;
+  const missing = missingNeeds(exp, taken);
+  const roleTools = new Set(exp.roles.flatMap((r) => r.tools));
+  const allowed = new Set(exp.allowed ?? []);
+  const extra = TOOLS.filter(
+    (t) => taken.has(t.id) && !roleTools.has(t.id) && !allowed.has(t.id),
+  ).map((t) => t.name);
+  const repeated = missing.length
+    ? []
+    : TOOLS.filter((t) => {
+        if (!taken.has(t.id) || !roleTools.has(t.id)) return false;
+        const without = new Set(taken);
+        without.delete(t.id);
+        return missingNeeds(exp, without).length === 0;
+      }).map((t) => t.name);
+  const ok = missing.length === 0 && extra.length === 0 && repeated.length === 0;
+  if (kit.length === 0) {
+    return {
+      ok: false,
+      missing,
+      extra,
+      repeated,
+      text: 'Bộ dụng cụ đang trống. Chọn dụng cụ từ kho.',
+    };
+  }
   /** @type {string[]} */
   const parts = [];
-  if (kit.length === 0) {
-    return { ok: false, missing, extra, text: 'Bộ dụng cụ đang trống. Chọn dụng cụ từ kho.' };
-  }
   if (missing.length) parts.push(`Còn thiếu dụng cụ để ${missing.join('; ')}.`);
   if (extra.length) parts.push(`Không cần cho thí nghiệm này: ${extra.join(', ')}.`);
+  if (repeated.length) {
+    parts.push(
+      `Có dụng cụ làm trùng việc với nhau: ${repeated.join(', ')}. Bỏ bớt để mỗi việc chỉ cần một dụng cụ.`,
+    );
+  }
   const text = ok
     ? `Đủ và đúng dụng cụ cho thí nghiệm "${exp.title}". Nhớ đọc lưu ý an toàn của từng dụng cụ trước khi làm.`
     : parts.join(' ');
-  return { ok, missing, extra, text };
+  return { ok, missing, extra, repeated, text };
 }

@@ -183,7 +183,7 @@ export default {
   explore: {
     title: 'Kho dụng cụ ảo',
     instruction:
-      'Chọn một thí nghiệm và đọc mục tiêu. Mở từng kệ trong kho, bấm vào mỗi dụng cụ, hoá chất để xem tên, công dụng và lưu ý an toàn, rồi thêm những thứ cần dùng vào bộ dụng cụ. Nhấn "Kiểm tra bộ dụng cụ": nếu thiếu, kho cho biết còn thiếu dụng cụ để làm việc gì; nếu thừa, kho chỉ ra món không cần. Lắp đúng cả sáu thí nghiệm.',
+      'Chọn một thí nghiệm và đọc mục tiêu. Mở từng kệ trong kho, bấm vào mỗi dụng cụ, hoá chất để xem tên, công dụng và lưu ý an toàn, rồi thêm những thứ cần dùng vào bộ dụng cụ. Nhấn "Kiểm tra bộ dụng cụ": nếu thiếu, kho cho biết còn thiếu dụng cụ để làm việc gì; nếu thừa, kho chỉ ra món không cần hoặc các món làm trùng việc nhau. Lắp đúng cả sáu thí nghiệm.',
   },
   examples: [
     {
@@ -333,7 +333,7 @@ export default {
     {
       type: 'text',
       prompt: 'Kim loại sodium được bảo quản bằng cách ngâm trong chất lỏng nào?',
-      accept: ['dầu hoả', 'dầu hỏa', 'dầu'],
+      accept: ['dầu hoả', 'dầu hỏa', 'dầu', 'kerosene'],
       hints: [
         'Sodium phản ứng mạnh với nước và oxygen, nên chất lỏng này không chứa nước và ngăn không khí.',
       ],

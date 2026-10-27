@@ -64,6 +64,34 @@ describe('checkKit', () => {
     ]);
   });
 
+  it('flags tools that only repeat a job another taken tool does', () => {
+    const both = checkKit(exp('khuc-xa'), ['den', 'laser', 'ban-ban-tru', 'bang-chia-do']);
+    expect(both.ok).toBe(false);
+    expect(both.repeated).toEqual(['Đèn sợi đốt 12 V', 'Nguồn laser']);
+    const coils = checkKit(exp('cam-ung'), ['nam-cham', 'cuon-day-led', 'dien-ke']);
+    expect(coils.ok).toBe(false);
+    expect(coils.repeated).toEqual(['Điện kế (galvanometer)']);
+    expect(coils.text).toContain('trùng việc');
+  });
+
+  it('lets a kit carry the power supply and wires a setup may use', () => {
+    expect(
+      checkKit(exp('thau-kinh'), [
+        'bien-ap',
+        'day-noi',
+        'den',
+        'khe-f',
+        'thau-kinh-hoi-tu',
+        'man-chan',
+        'gia-quang-hoc',
+      ]).ok,
+    ).toBe(true);
+    expect(checkKit(exp('cam-ung'), ['nam-cham', 'cuon-day', 'dien-ke', 'day-noi']).ok).toBe(true);
+    expect(checkKit(exp('dun-coc'), ['coc', 'den-con', 'kieng', 'luoi', 'day-noi']).extra).toEqual([
+      'Dây nối',
+    ]);
+  });
+
   it('needs the gauze to heat a beaker', () => {
     const r = checkKit(exp('dun-coc'), ['coc', 'den-con', 'kieng']);
     expect(r.missing).toEqual(['làm nhiệt phân bố đều ở đáy cốc']);
