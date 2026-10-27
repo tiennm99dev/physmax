@@ -107,12 +107,34 @@
         if (mark === 'sai') wrong++;
       }
       const ok = (/** @type {Column} */ c) => marks[key(lampId, s.id, c)] === 'dung';
-      if (ok('i1') && ok('i2') && !notes.some((n) => n.startsWith('I₁')))
-        notes.push(
-          'I₁ = I₂: cường độ dòng điện trước và sau bóng đèn như nhau, đèn không làm “hao” dòng điện.',
-        );
-      if (ok('uNguon') && ok('uDen') && !notes.some((n) => n.startsWith('U đèn')))
-        notes.push('U đèn nhỏ hơn U nguồn một chút.');
+      // A cell is accepted within one division, so the notes compare what was
+      // actually typed: two accepted cells can still disagree by a division.
+      const val = (/** @type {Column} */ c) =>
+        readNumber((typed[key(lampId, s.id, c)] ?? '').trim());
+      const i1 = val('i1');
+      const i2 = val('i2');
+      if (ok('i1') && ok('i2') && i1 !== null && i2 !== null) {
+        if (Math.abs(i1 - i2) < 1e-9) {
+          if (!notes.some((n) => n.startsWith('I₁ = I₂')))
+            notes.push(
+              'I₁ = I₂: cường độ dòng điện trước và sau bóng đèn như nhau, đèn không làm “hao” dòng điện.',
+            );
+        } else
+          notes.push(
+            `Nguồn ${s.label}: I₁ và I₂ ghi lệch nhau một vạch chia; kim ampe kế ở hai vị trí chỉ cùng một vạch, hãy đọc lại.`,
+          );
+      }
+      const un = val('uNguon');
+      const ud = val('uDen');
+      if (ok('uNguon') && ok('uDen') && un !== null && ud !== null) {
+        if (ud < un - 1e-9) {
+          if (!notes.some((n) => n.startsWith('U đèn')))
+            notes.push('U đèn nhỏ hơn U nguồn một chút.');
+        } else
+          notes.push(
+            `Nguồn ${s.label}: U đèn ghi không nhỏ hơn U nguồn; đọc lại kim vôn kế, U đèn nhỏ hơn U nguồn một chút.`,
+          );
+      }
       if (s.id === 'cu' && ok('uNguon'))
         notes.push(
           `Pin cũ: vôn kế chỉ ${formatNumber(want.uNguon)} V, nhỏ hơn số ${formatNumber(s.nominal)} V ghi trên pin.`,
@@ -124,7 +146,7 @@
       return;
     }
     report = {
-      tone: wrong === 0 ? 'ok' : 'warn',
+      tone: wrong === 0 && !notes.some((n) => n.includes('đọc lại')) ? 'ok' : 'warn',
       text:
         `${right} ô đúng${wrong ? `, ${wrong} ô cần đọc lại (xem lại GHĐ, ĐCNN và vị trí kim)` : ''}${empty ? `, còn ${empty} ô trống` : ', đã điền đủ bảng'}. ` +
         notes.join(' '),
