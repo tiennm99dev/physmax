@@ -7,7 +7,13 @@
   import { numTex } from '#lib/core/number-format.js';
   import { readNumber } from '#lib/core/decimal.js';
   import RayOpticsBench from '#lib/domain/ray-optics-bench.svelte';
+  import { clamp } from '#lib/core/visuals/svg-math.js';
   import { PRESETS, closeEnough, solveLens } from './engine.js';
+
+  const D_MIN = 2;
+  const D_MAX = 48;
+  const H_MIN = 1;
+  const H_MAX = 6;
 
   /** @type {'hoi-tu' | 'phan-ki'} */
   let lens = $state('hoi-tu');
@@ -31,6 +37,17 @@
   function reset() {
     verdict = null;
     shown = false;
+  }
+  /**
+   * Dragging B on the bench can move the object below the axis or past the
+   * slider limits; the problem always states a positive height, so keep the
+   * object upright and inside the slider ranges.
+   * @param {{ distance: number, objectHeight: number }} state
+   */
+  function keepInRange(state) {
+    distance = clamp(state.distance, D_MIN, D_MAX);
+    objectHeight = clamp(Math.abs(state.objectHeight), H_MIN, H_MAX);
+    verdict = null;
   }
   function loadPreset() {
     preset = (preset + 1) % PRESETS.length;
@@ -110,16 +127,16 @@
     <SliderField
       label="Khoảng cách vật d"
       bind:value={distance}
-      min={2}
-      max={48}
+      min={D_MIN}
+      max={D_MAX}
       unit="cm"
       oninput={reset}
     />
     <SliderField
       label="Chiều cao vật h"
       bind:value={objectHeight}
-      min={1}
-      max={6}
+      min={H_MIN}
+      max={H_MAX}
       unit="cm"
       oninput={reset}
     />
@@ -179,7 +196,7 @@
       bind:objectHeight
       interactive
       label="Hình vẽ tia sáng"
-      onchange={() => (verdict = null)}
+      onchange={keepInRange}
     />
     <p class="text-sm text-slate-600">
       <LiveRichText
