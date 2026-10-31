@@ -3,7 +3,7 @@ export default {
   summary:
     'Phản xạ toàn phần là hiện tượng toàn bộ ánh sáng tới bị phản xạ tại mặt phân cách giữa hai môi trường trong suốt; nó xảy ra khi ánh sáng đi từ môi trường có chiết suất lớn sang môi trường có chiết suất nhỏ hơn với góc tới không nhỏ hơn góc tới hạn, sin ith = n2 / n1, và là nguyên tắc hoạt động của cáp quang.',
   intro:
-    'Chiếu tia sáng từ thuỷ tinh ra không khí với góc tới $41^\\circ$, tia khúc xạ gần như là là mặt phân cách. Nếu tăng góc tới lên $60^\\circ$ thì tia khúc xạ sẽ đi đâu? Câu trả lời là nguyên tắc giúp những sợi cáp quang mảnh như sợi tóc mang tín hiệu Internet vượt qua cả đại dương.',
+    'Chiếu tia sáng từ thuỷ tinh ra không khí với góc tới $40^\\circ$ thì góc khúc xạ đã vào khoảng $75^\\circ$, tia khúc xạ gần như là là mặt phân cách. Nếu tăng góc tới lên $60^\\circ$ thì tia khúc xạ sẽ đi đâu? Câu trả lời là nguyên tắc giúp những sợi cáp quang mảnh như sợi tóc mang tín hiệu Internet vượt qua cả đại dương.',
   objectives: [
     'Mô tả được hiện tượng phản xạ toàn phần.',
     'Nêu được điều kiện xảy ra phản xạ toàn phần.',

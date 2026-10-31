@@ -36,6 +36,12 @@
   }
 
   const feedback = $derived.by(() => {
+    if (theta === 0) {
+      return {
+        tone: /** @type {const} */ ('info'),
+        text: 'Tia sáng đi dọc theo trục sợi nên không chạm thành sợi lần nào. Tăng góc giữa tia sáng và trục sợi để thấy tia sáng gặp thành sợi.',
+      };
+    }
     if (critical === null) {
       return {
         tone: /** @type {const} */ ('warn'),

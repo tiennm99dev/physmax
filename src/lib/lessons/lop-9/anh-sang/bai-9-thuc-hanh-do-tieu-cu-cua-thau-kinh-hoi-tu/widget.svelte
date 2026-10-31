@@ -171,7 +171,15 @@
         oninput={moveScreen}
       />
       <label class="flex min-h-11 items-center gap-2 text-sm font-semibold text-slate-700">
-        <input type="checkbox" class="h-5 w-5 {focusRing}" bind:checked={linked} />
+        <input
+          type="checkbox"
+          class="h-5 w-5 {focusRing}"
+          bind:checked={linked}
+          onchange={() => {
+            if (linked) d2 = d;
+            verdict = null;
+          }}
+        />
         Dịch đồng thời vật và màn (giữ d = d′)
       </label>
     </div>
