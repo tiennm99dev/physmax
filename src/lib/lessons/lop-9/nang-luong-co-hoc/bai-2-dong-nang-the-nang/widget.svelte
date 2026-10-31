@@ -158,7 +158,7 @@
       />
       <text
         x={BALL_X + 56}
-        y={(ballY + GROUND) / 2 + 4}
+        y={Math.min((ballY + GROUND) / 2 + 4, GROUND - 6)}
         class="fill-sky-700 text-[12px] font-semibold">h = {formatFixed(s.h, 1)} m</text
       >
       <circle

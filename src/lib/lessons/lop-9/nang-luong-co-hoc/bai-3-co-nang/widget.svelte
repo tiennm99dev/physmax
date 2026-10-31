@@ -3,7 +3,7 @@
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import FeedbackNote from '#lib/core/feedback-note.svelte';
   import { button, card } from '#lib/core/ui.js';
-  import { formatFixed, formatNumber } from '#lib/core/number-format.js';
+  import { formatFixed, formatNumber, roundToTotal } from '#lib/core/number-format.js';
   import { frameLoop, reducedMotion } from '#lib/core/motion.js';
   import { draggable } from '#lib/actions/draggable.svelte.js';
   import {
@@ -123,11 +123,21 @@
     rider.total > 0 ? Math.min(100, (x / rider.total) * 100) : 0;
   const m = (/** @type {number} */ x) => `${formatNumber(x, 2)} m`;
 
+  // Whole joules that still add up on screen: Wđ + Wt = cơ năng and
+  // cơ năng + nhiệt năng = the starting energy.
+  const shown = $derived.by(() => {
+    const [wd, wt, heat] = roundToTotal(
+      [Math.max(0, e.wd), Math.max(0, e.wt), Math.max(0, e.heat)],
+      Math.round(rider.total),
+    );
+    return { wd, wt, w: wd + wt, heat };
+  });
+
   const bars = $derived([
-    { key: 'wd', label: 'Động năng', value: e.wd, color: 'bg-rose-500' },
-    { key: 'wt', label: 'Thế năng', value: e.wt, color: 'bg-sky-500' },
-    { key: 'w', label: 'Cơ năng = động năng + thế năng', value: e.w, color: 'bg-violet-500' },
-    { key: 'heat', label: 'Nhiệt năng do ma sát', value: e.heat, color: 'bg-amber-500' },
+    { key: 'wd', label: 'Động năng', value: shown.wd, color: 'bg-rose-500' },
+    { key: 'wt', label: 'Thế năng', value: shown.wt, color: 'bg-sky-500' },
+    { key: 'w', label: 'Cơ năng = động năng + thế năng', value: shown.w, color: 'bg-violet-500' },
+    { key: 'heat', label: 'Nhiệt năng do ma sát', value: shown.heat, color: 'bg-amber-500' },
   ]);
 
   // Built from the phase only, so a screen reader hears a change of phase,
@@ -137,7 +147,7 @@
       return 'Điểm xuất phát đang nằm ở mặt đất: kéo điểm đầu tiên lên cao để ván trượt có thế năng.';
     const start0 = `Cơ năng ban đầu ${J(rider.total)} (chỉ có thế năng ở độ cao ${m(startHeight(heights))}).`;
     if (rider.resting && rider.heat > 0) {
-      return `Ván trượt đã dừng hẳn. Ma sát đã chuyển hoá ${J(rider.heat)} cơ năng thành nhiệt năng; cơ năng còn lại ${J(e.w)} chỉ là thế năng ở chỗ dừng.`;
+      return `Ván trượt đã dừng hẳn. Ma sát đã chuyển hoá ${J(shown.heat)} cơ năng thành nhiệt năng; cơ năng còn lại ${J(shown.w)} chỉ là thế năng ở chỗ dừng.`;
     }
     if (!running && rider.v === 0 && rider.heat === 0) {
       const wall =
