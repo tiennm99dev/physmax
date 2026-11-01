@@ -55,11 +55,23 @@ export default {
           type: 'p',
           text: 'Năng lượng Mặt Trời được dùng trực tiếp để chiếu sáng, sấy khô nông sản, làm muối; và dùng để tạo điện nhờ pin Mặt Trời, hoặc để đun nước và chạy nhà máy nhiệt điện nhờ thiết bị thu nhiệt.',
         },
+        {
+          type: 'p',
+          text: 'Gió làm quay cánh của tuabin gió, sóng làm các thiết bị nổi trên biển chuyển động. Máy phát nối với chúng biến cơ năng thành điện năng.',
+        },
       ],
     },
     {
       heading: 'Năng lượng dòng sông, sinh khối và địa nhiệt',
       blocks: [
+        {
+          type: 'list',
+          items: [
+            'Năng lượng dòng sông: nước trong hồ chứa trên cao có thế năng; khi chảy xuống, nó làm quay tuabin của nhà máy thuỷ điện.',
+            'Năng lượng sinh khối: năng lượng hoá học lưu trữ trong chất hữu cơ từ thực vật, động vật. Sinh khối được đốt trực tiếp hoặc ủ thành khí sinh học để lấy nhiệt, tạo điện. Cây trồng lại được sau vài tháng hoặc vài năm nên nguồn này được bổ sung liên tục.',
+            'Năng lượng địa nhiệt: nhiệt trong lòng Trái Đất. Nước nóng và hơi nước từ lòng đất được dùng để sưởi ấm hoặc làm quay tuabin tạo điện.',
+          ],
+        },
         {
           type: 'table',
           caption: 'Ưu điểm và nhược điểm',
@@ -138,9 +150,9 @@ export default {
         'Mỗi giây có $20$ tấn nước từ hồ chứa chảy xuống tuabin đặt thấp hơn mặt hồ $50$ m. Coi $85\\%$ thế năng của nước được biến thành điện năng. Tính công suất điện của nhà máy.',
       steps: [
         'Trọng lượng nước mỗi giây: $P = 10m = 10 \\cdot 20\\,000 = 200\\,000$ N.',
-        'Thế năng của lượng nước đó: $W_t = P \\cdot h = 200\\,000 \\cdot 50 = 10\\,000\\,000$ J.',
+        'Thế năng của lượng nước đó: $W_\\text{t} = P \\cdot h = 200\\,000 \\cdot 50 = 10\\,000\\,000$ J.',
         'Điện năng tạo ra trong mỗi giây: $10\\,000\\,000 \\cdot 85\\% = 8\\,500\\,000$ J.',
-        'Công suất điện là điện năng tạo ra trong một giây: $8\\,500\\,000$ W $= 8{,}5$ MW.',
+        'Công suất điện là điện năng tạo ra trong một giây: $8\\,500\\,000$ W $= 8{,}5$ MW (vì $1$ MW $= 1\\,000\\,000$ W).',
       ],
       answer: 'Công suất điện của nhà máy là $8{,}5$ MW.',
     },
@@ -235,6 +247,35 @@ export default {
         'Vùng ven biển, ngoài khơi có gió mạnh, ổn định và ít vật cản. Nhiều vùng biển nước ta có tiềm năng này.',
     },
     {
+      type: 'choice',
+      prompt:
+        'Vì sao năng lượng sinh khối là năng lượng tái tạo, còn năng lượng từ than mỏ thì không?',
+      options: [
+        'Vì đốt sinh khối không thải khói.',
+        'Vì cây trồng lại được sau vài tháng hoặc vài năm, còn than mỏ cần hàng triệu năm để hình thành.',
+        'Vì sinh khối chứa nhiều năng lượng hơn than mỏ.',
+        'Vì sinh khối không có nguồn gốc từ Mặt Trời.',
+      ],
+      answer: 1,
+      hints: ['So sánh thời gian cần để mỗi nguồn được bổ sung trở lại.'],
+      solution:
+        'Nguồn tái tạo được bổ sung liên tục qua các quá trình tự nhiên. Cây lớn lại nhanh, còn than mỏ phải mất hàng triệu năm. Đốt sinh khối vẫn thải khói, và năng lượng của nó cũng bắt nguồn từ Mặt Trời.',
+    },
+    {
+      type: 'choice',
+      prompt: 'Phát biểu nào đúng về năng lượng địa nhiệt?',
+      options: [
+        'Có ở mọi nơi nên xây nhà máy ở đâu cũng được.',
+        'Bắt nguồn từ ánh sáng Mặt Trời chiếu xuống mặt đất.',
+        'Đến từ nhiệt trong lòng Trái Đất, ổn định cả ngày đêm nhưng chỉ khai thác được ở một số vùng.',
+        'Chỉ tạo được điện vào ban ngày.',
+      ],
+      answer: 2,
+      hints: ['Hãy nghĩ tới nơi có suối nước nóng, núi lửa: nhiệt ở đó đến từ đâu?'],
+      solution:
+        'Địa nhiệt là nhiệt trong lòng Trái Đất, không phụ thuộc ngày đêm hay thời tiết, nhưng chỉ một số vùng mới khai thác được và khoan sâu rất tốn kém.',
+    },
+    {
       type: 'number',
       prompt:
         'Một mái nhà lắp $8$ tấm pin Mặt Trời, mỗi tấm công suất $450$ W. Coi mỗi ngày có $4$ giờ nắng tốt. Tính điện năng tạo ra trong một ngày (theo kWh).',
@@ -252,11 +293,11 @@ export default {
       tolerance: 0.001,
       unit: 'J',
       hints: [
-        'Tính thế năng $W_t = 10m \\cdot h$ với $m$ tính theo kilôgam.',
+        'Tính thế năng $W_\\text{t} = 10m \\cdot h$ với $m$ tính theo kilôgam.',
         'Lấy $90\\%$ của thế năng đó.',
       ],
       solution:
-        '$W_t = 10 \\cdot 5\\,000 \\cdot 40 = 2\\,000\\,000$ J. Điện năng: $2\\,000\\,000 \\cdot 90\\% = 1\\,800\\,000$ J.',
+        '$W_\\text{t} = 10 \\cdot 5\\,000 \\cdot 40 = 2\\,000\\,000$ J. Điện năng: $2\\,000\\,000 \\cdot 90\\% = 1\\,800\\,000$ J.',
     },
     {
       type: 'number',

@@ -44,7 +44,7 @@
   />
   <p class="text-sm text-slate-700">{province.about}</p>
 
-  <div class="{card} grid gap-3 p-4" aria-label="Điện cung cấp theo từng tình huống">
+  <div class="{card} grid gap-3 p-4" role="group" aria-label="Điện cung cấp theo từng tình huống">
     <p class="text-sm font-bold text-slate-800">Điện cung cấp so với nhu cầu</p>
     {#each CONDITIONS as condition, c (condition.id)}
       {@const enough = status.out[c] >= DEMAND[c]}

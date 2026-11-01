@@ -63,7 +63,7 @@ export const CYCLES = [
       {
         id: 'hoa-thach',
         lines: ['Than, dầu,', 'khí'],
-        name: 'Than mỏ, dầu mỏ, khí tự nhiên',
+        name: 'Than mỏ, dầu mỏ, khí mỏ dầu, khí thiên nhiên',
         form: 'Năng lượng hoá học',
         store: 'Trong nhiên liệu hoá thạch nằm sâu dưới lòng đất.',
         change:

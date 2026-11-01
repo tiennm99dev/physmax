@@ -1,7 +1,7 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Năng lượng trên Trái Đất chủ yếu bắt nguồn từ Mặt Trời và được truyền, lưu trữ, chuyển hoá qua các vòng năng lượng: giữa các vật sống và trong tuần hoàn nước. Than mỏ, dầu mỏ, khí tự nhiên là năng lượng hoá thạch; chúng có nhiều ưu điểm nhưng gây ô nhiễm môi trường, và giá của chúng phụ thuộc chi phí khai thác, cung cầu thị trường.',
+    'Năng lượng trên Trái Đất chủ yếu bắt nguồn từ Mặt Trời và được truyền, lưu trữ, chuyển hoá qua các vòng năng lượng: giữa các vật sống và trong tuần hoàn nước. Năng lượng hoá thạch lưu trữ trong than mỏ, dầu mỏ, khí mỏ dầu và khí thiên nhiên; nguồn này có nhiều ưu điểm nhưng gây ô nhiễm môi trường, và giá nhiên liệu phụ thuộc chi phí khai thác, cung cầu thị trường.',
   intro:
     'Xăng trong bình xe máy, nước trong hồ thuỷ điện, cơn gió làm quay tuabin ở bờ biển: nhìn thì chẳng liên quan gì nhau. Nếu lần ngược nguồn gốc của những năng lượng ấy, ta sẽ gặp cùng một nơi. Đó là nơi nào, và năng lượng đã đi qua những khâu nào để tới được chiếc xe của em?',
   objectives: [
@@ -134,7 +134,7 @@ export default {
         'Năng lượng Mặt Trời làm nước bốc hơi, bay lên cao rồi ngưng tụ thành mây, mưa xuống vùng núi: nước có thế năng.',
         'Nước tích trong hồ chứa lưu trữ thế năng. Khi chảy xuống, thế năng chuyển hoá thành động năng làm quay tuabin; máy phát biến cơ năng thành điện năng.',
         'Khối lượng $m = 1$ tấn $= 1\\,000$ kg nên trọng lượng $P = 10m = 10\\,000$ N.',
-        'Thế năng $W_t = P \\cdot h = 10\\,000 \\cdot 100 = 1\\,000\\,000$ J.',
+        'Thế năng $W_\\text{t} = P \\cdot h = 10\\,000 \\cdot 100 = 1\\,000\\,000$ J.',
       ],
       answer:
         'Năng lượng Mặt Trời → thế năng của nước → động năng của nước → cơ năng của tuabin → điện năng. Thế năng của $1$ tấn nước là $1\\,000\\,000$ J.',
@@ -251,8 +251,12 @@ export default {
       answer: 1000000,
       tolerance: 0.001,
       unit: 'J',
-      hints: ['Đổi $2$ tấn ra kilôgam rồi tính trọng lượng $P = 10m$.', 'Dùng $W_t = P \\cdot h$.'],
-      solution: '$m = 2\\,000$ kg, $P = 20\\,000$ N, $W_t = 20\\,000 \\cdot 50 = 1\\,000\\,000$ J.',
+      hints: [
+        'Đổi $2$ tấn ra kilôgam rồi tính trọng lượng $P = 10m$.',
+        'Dùng $W_\\text{t} = P \\cdot h$.',
+      ],
+      solution:
+        '$m = 2\\,000$ kg, $P = 20\\,000$ N, $W_\\text{t} = 20\\,000 \\cdot 50 = 1\\,000\\,000$ J.',
     },
     {
       type: 'number',
@@ -287,7 +291,7 @@ export default {
     'Năng lượng trên Trái Đất chủ yếu bắt nguồn từ Mặt Trời, được truyền, lưu trữ và chuyển hoá qua các vòng năng lượng.',
     'Giữa các vật sống: Mặt Trời → thực vật → động vật → xác sinh vật → nhiên liệu hoá thạch.',
     'Tuần hoàn nước: bốc hơi → mây → mưa → chảy ra biển; nước trên cao có thế năng, dùng được để tạo điện. Chênh lệch nhiệt độ sinh ra gió và dòng hải lưu.',
-    'Năng lượng hoá thạch gồm than mỏ, dầu mỏ, khí mỏ dầu, khí thiên nhiên: dễ khai thác, vận chuyển, tích trữ, chi phí thấp, nhưng gây ô nhiễm, hiệu ứng nhà kính và sẽ cạn dần.',
+    'Năng lượng hoá thạch lưu trữ trong than mỏ, dầu mỏ, khí mỏ dầu, khí thiên nhiên: dễ khai thác, vận chuyển, tích trữ, chi phí thấp, nhưng gây ô nhiễm, hiệu ứng nhà kính và sẽ cạn dần.',
     'Giá nhiên liệu hoá thạch phụ thuộc chi phí khai thác, cung cầu thị trường, kinh tế toàn cầu và chính sách của các nước có trữ lượng lớn.',
   ],
 };

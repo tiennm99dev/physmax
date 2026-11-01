@@ -162,7 +162,7 @@
           role="button"
           tabindex="0"
           aria-label="{s.name}{state === 'reached' ? ', đã đi qua' : ''}"
-          aria-pressed={selected === s.id}
+          aria-pressed={state === 'current'}
           onclick={() => press(s.id)}
           onkeydown={(e) => onKey(e, s.id)}
         >
@@ -192,8 +192,8 @@
         class="drag-handle cursor-pointer"
         role="button"
         tabindex="0"
-        aria-label="Mặt Trời"
-        aria-pressed={selected === SUN_ID}
+        aria-label="Mặt Trời{look(SUN_ID) === 'reached' ? ', đã đi qua' : ''}"
+        aria-pressed={look(SUN_ID) === 'current'}
         onclick={() => press(SUN_ID)}
         onkeydown={(e) => onKey(e, SUN_ID)}
       >
