@@ -4,8 +4,8 @@
   import FeedbackNote from '#lib/core/feedback-note.svelte';
   import { button } from '#lib/core/ui.js';
   import { formatFixed, formatNumber } from '#lib/core/number-format.js';
-  import BoundaryView from '../_shared/boundary-view.svelte';
-  import { MEDIA, boundary } from '../_shared/light.js';
+  import BoundaryView from '#lib/domain/boundary-view.svelte';
+  import { MEDIA, boundary } from '#lib/domain/light.js';
   import { lawCheck } from './engine.js';
 
   /** @type {'nuoc' | 'thuy-tinh'} */

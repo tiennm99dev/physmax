@@ -5,7 +5,7 @@
  * loss; below it, part of the light leaks out into the cladding at each hit.
  */
 import { criticalAngle, refractionAngle } from '#lib/domain/optics.js';
-import { reflectance } from '../_shared/light.js';
+import { reflectance } from '#lib/domain/light.js';
 
 const RAD = Math.PI / 180;
 

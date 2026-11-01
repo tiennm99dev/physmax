@@ -5,7 +5,7 @@
  * (Fresnel, unpolarised) so a widget can fade the refracted ray as it should.
  * Angles are in degrees, measured from the normal.
  */
-import { criticalAngle, refractionAngle } from '#lib/domain/optics.js';
+import { criticalAngle, refractionAngle } from './optics.js';
 
 const RAD = Math.PI / 180;
 

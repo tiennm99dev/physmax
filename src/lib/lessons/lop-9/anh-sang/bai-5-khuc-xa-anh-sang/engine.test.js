@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { boundary } from '../_shared/light.js';
+import { boundary } from '#lib/domain/light.js';
 import { MIN_ROWS, indexFromSpeed, lawCheck } from './engine.js';
 
 describe('refraction law check', () => {

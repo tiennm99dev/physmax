@@ -4,7 +4,7 @@
   import FeedbackNote from '#lib/core/feedback-note.svelte';
   import { formatNumber } from '#lib/core/number-format.js';
   import { pointsAttr } from '#lib/utils/svg.js';
-  import { SPECTRUM, prismCorners, traceThrough } from './engine.js';
+  import { SPECTRUM, prismCorners, traceThrough } from '#lib/domain/prism.js';
 
   const W = 380;
   const H = 320;
