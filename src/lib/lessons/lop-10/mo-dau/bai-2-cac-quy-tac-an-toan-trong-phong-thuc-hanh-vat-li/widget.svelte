@@ -35,7 +35,10 @@
     const option = scenario.options[lastPick];
     return option.safe
       ? /** @type {const} */ ({ tone: 'ok', text: option.why })
-      : /** @type {const} */ ({ tone: 'warn', text: `Chưa an toàn: ${option.why} Chọn lại nhé.` });
+      : /** @type {const} */ ({
+          tone: 'warn',
+          text: `Chưa an toàn: ${option.why}${solved ? '' : ' Chọn lại nhé.'}`,
+        });
   });
 
   /** @param {number} index */
@@ -53,12 +56,18 @@
   function restart() {
     run = newRun();
     lastPick = null;
+    queueMicrotask(() => heading?.focus());
   }
 </script>
 
 {#if finished}
   <div class="space-y-3">
-    <p class="font-semibold text-slate-800" aria-live="polite">
+    <p
+      bind:this={heading}
+      tabindex="-1"
+      class="rounded font-semibold text-slate-800 focus:outline-none"
+      aria-live="polite"
+    >
       Em xử lí đúng ngay lần đầu {firstTries}/{SCENARIOS.length} tình huống.
     </p>
     <ul class="grid gap-2 sm:grid-cols-2">

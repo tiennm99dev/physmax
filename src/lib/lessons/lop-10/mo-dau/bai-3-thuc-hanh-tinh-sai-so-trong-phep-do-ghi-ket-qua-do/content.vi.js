@@ -141,8 +141,8 @@ export default {
           ordered: true,
           items: [
             'Dán hai vạch $A$ và $B$ cách nhau khoảng $60$ đến $80$ cm. Đo quãng đường $s$ giữa hai vạch $5$ lần, mỗi lần đặt lại thước.',
-            'Thả xe chạy qua $A$ và $B$, đo thời gian $t$ xe đi từ $A$ đến $B$. Làm $5$ lần.',
-            'Ghi số liệu vào bảng dưới đây, tính $\\overline{s}$, $\\overline{t}$ và các sai số. Lấy sai số dụng cụ $\\Delta s_{dc} = 0{,}5$ mm, $\\Delta t_{dc} = 0{,}005$ s.',
+            'Đặt xe đứng yên ở $A$ rồi cho xe chạy đến $B$, đo thời gian $t$ xe đi từ $A$ đến $B$. Làm $5$ lần.',
+            'Ghi số liệu vào bảng dưới đây, tính $\\overline{s}$, $\\overline{t}$ và các sai số. Lấy sai số dụng cụ $\\Delta s_{dc} = 0{,}0005$ m, $\\Delta t_{dc} = 0{,}005$ s.',
             'Tính $\\overline{v} = \\dfrac{\\overline{s}}{\\overline{t}}$, $\\delta v = \\delta s + \\delta t$ và $\\Delta v$; ghi kết quả dưới dạng $v = \\overline{v} \\pm \\Delta v$.',
           ],
         },

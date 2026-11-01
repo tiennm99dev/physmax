@@ -8,6 +8,7 @@ import {
   resultChoices,
   resultLine,
   roundTo,
+  trueValueNote,
 } from './engine.js';
 
 const [ruler, caliper, micrometer] = INSTRUMENTS;
@@ -93,6 +94,16 @@ describe('random and systematic errors', () => {
       }
     }
     expect(bad).toEqual([]);
+  });
+});
+
+describe('trueValueNote', () => {
+  it('blames the zero mark only when it is off', () => {
+    expect(trueValueNote(false, true).text).toContain('sai số hệ thống');
+    expect(trueValueNote(true, true).text).toContain('hiệu chỉnh');
+    expect(trueValueNote(false, false).text).not.toContain('sai số hệ thống');
+    expect(trueValueNote(false, false).text).toContain('Đo thêm');
+    expect(trueValueNote(true, false).tone).toBe('ok');
   });
 });
 

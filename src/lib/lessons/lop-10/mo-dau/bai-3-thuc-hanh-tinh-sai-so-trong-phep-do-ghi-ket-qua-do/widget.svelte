@@ -12,10 +12,13 @@
     reading,
     resultChoices,
     resultLine,
+    trueValueNote,
   } from './engine.js';
 
   const MAX_READINGS = 10;
   const MIN_FOR_RESULT = 3;
+  // A longer sum in one unbreakable fraction would overflow a phone screen.
+  const MAX_WRITTEN_TERMS = 5;
 
   let instrumentId = $state('kep');
   let ballIndex = $state(0);
@@ -63,7 +66,10 @@
 
   const steps = $derived.by(() => {
     if (!stats) return [];
-    const sum = readings.map((r) => fixed(r)).join(' + ');
+    const sum =
+      stats.n <= MAX_WRITTEN_TERMS
+        ? readings.map((r) => fixed(r)).join(' + ')
+        : 'd_1 + d_2 + \\ldots + d_{' + stats.n + '}';
     return [
       `Trung bình: $\\overline{d} = \\dfrac{${sum}}{${stats.n}} = ${numTex(stats.mean, 4)}$ mm.`,
       `Sai số ngẫu nhiên tuyệt đối trung bình: $\\overline{\\Delta d} = ${numTex(stats.meanDeviation, 4)}$ mm.`,
@@ -102,18 +108,7 @@
         text: 'Các lần đo khác nhau là do sai số ngẫu nhiên. Đo ít nhất $3$ lần để tính kết quả.',
       });
     }
-    if (showTrue && !covers(stats, diameter)) {
-      return /** @type {const} */ ({
-        tone: 'warn',
-        text: 'Giá trị thật nằm ngoài khoảng kết quả. Đây là sai số hệ thống do vạch $0$ bị lệch: đo thêm bao nhiêu lần cũng không hết, phải hiệu chỉnh dụng cụ.',
-      });
-    }
-    if (showTrue) {
-      return /** @type {const} */ ({
-        tone: 'ok',
-        text: 'Giá trị thật nằm trong khoảng kết quả: phép đo đáng tin cậy.',
-      });
-    }
+    if (showTrue) return trueValueNote(covers(stats, diameter), shifted);
     return /** @type {const} */ ({
       tone: 'info',
       text: `Sai số tỉ đối $\\delta d \\approx ${numTex(stats.relative, 2)}\\%$. Thử đổi dụng cụ để xem sai số thay đổi thế nào.`,

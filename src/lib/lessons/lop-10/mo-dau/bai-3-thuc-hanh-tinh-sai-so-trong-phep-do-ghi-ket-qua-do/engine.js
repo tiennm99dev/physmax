@@ -92,6 +92,36 @@ export function covers(stats, diameter) {
 }
 
 /**
+ * What the comparison with the true value means. Only a zero error is
+ * systematic; with a good zero mark, a miss comes from too few readings, and
+ * with a bad one, a hit comes only from a wide band.
+ * @param {boolean} covered whether the band of the result holds the true value
+ * @param {boolean} shifted whether the zero mark is off
+ * @returns {{ tone: 'ok' | 'warn', text: string }}
+ */
+export function trueValueNote(covered, shifted) {
+  if (shifted && !covered) {
+    return {
+      tone: 'warn',
+      text: 'Giá trị thật nằm ngoài khoảng kết quả. Đây là sai số hệ thống do vạch $0$ bị lệch: đo thêm bao nhiêu lần cũng không hết, phải hiệu chỉnh dụng cụ.',
+    };
+  }
+  if (shifted) {
+    return {
+      tone: 'warn',
+      text: 'Lần này khoảng kết quả rộng nên vẫn chứa giá trị thật, nhưng vạch $0$ bị lệch làm mọi số đo lệch về một phía: vẫn phải hiệu chỉnh dụng cụ.',
+    };
+  }
+  if (!covered) {
+    return {
+      tone: 'warn',
+      text: 'Vạch $0$ đúng mà giá trị thật vẫn nằm ngoài khoảng kết quả: với ít lần đo, sai số ngẫu nhiên có thể làm các số đo cùng lệch một phía. Đo thêm vài lần rồi xem lại.',
+    };
+  }
+  return { tone: 'ok', text: 'Giá trị thật nằm trong khoảng kết quả: phép đo đáng tin cậy.' };
+}
+
+/**
  * The correct result line among lines with the usual mistakes: unrounded
  * numbers, or the instrument error left out. The position of the correct line
  * moves with the number of readings.

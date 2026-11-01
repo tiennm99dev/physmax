@@ -223,8 +223,8 @@ export default {
     {
       type: 'choice',
       prompt: 'Biển báo hình tam giác đều, viền đen hoặc đỏ, nền vàng thuộc nhóm nào?',
-      options: ['Biển cấm', 'Biển cảnh báo', 'Biển thông báo', 'Biển chỉ dẫn lối đi'],
-      answer: 1,
+      options: ['Biển cảnh báo', 'Biển cấm', 'Biển thông báo', 'Biển chỉ dẫn lối đi'],
+      answer: 0,
       hints: ['Biển cấm có dạng tròn, biển thông báo có dạng chữ nhật.'],
       solution: 'Tam giác đều, nền vàng là biển cảnh báo khu vực hoặc vật nguy hiểm.',
     },
@@ -249,11 +249,11 @@ export default {
         'Ampe kế có giới hạn đo $3$ A được mắc vào mạch có dòng điện $5$ A. Điều gì có thể xảy ra?',
       options: [
         'Ampe kế chỉ đúng $5$ A.',
-        'Ampe kế có thể hỏng, thậm chí gây chập cháy.',
         'Dòng điện tự giảm xuống $3$ A và ampe kế vẫn an toàn.',
+        'Ampe kế có thể hỏng, thậm chí gây chập cháy.',
         'Không có gì xảy ra vì ampe kế có điện trở rất nhỏ.',
       ],
-      answer: 1,
+      answer: 2,
       hints: ['Giới hạn đo là giá trị lớn nhất mà dụng cụ đo được.'],
       solution:
         'Vì $5$ A $> 3$ A nên dòng điện vượt giới hạn đo; ampe kế có thể hỏng, thậm chí gây chập cháy.',
@@ -272,11 +272,11 @@ export default {
       prompt: 'Vì sao trước khi bật máy biến áp, phải vặn nút chỉnh điện áp về mức thấp nhất?',
       options: [
         'Để tiết kiệm điện năng cho phòng thực hành.',
-        'Để mạch không chịu quá áp đột ngột, rồi tăng dần đến mức cần dùng.',
         'Để máy biến áp đổi được dòng điện xoay chiều thành một chiều.',
         'Vì nút chỉ xoay được khi đang ở mức thấp nhất.',
+        'Để mạch không chịu quá áp đột ngột, rồi tăng dần đến mức cần dùng.',
       ],
-      answer: 1,
+      answer: 3,
       hints: ['Điều gì xảy ra với dụng cụ trong mạch nếu điện áp vượt mức định mức?'],
       solution:
         'Điện áp cao đột ngột có thể làm hỏng dụng cụ trong mạch, nên phải tăng dần từ mức thấp.',
@@ -291,31 +291,31 @@ export default {
     },
     {
       type: 'order',
-      prompt: 'Bộ nguồn đang cắm điện bốc cháy. Sắp xếp các việc cần làm theo đúng thứ tự.',
+      prompt:
+        'Bộ nguồn đang cắm điện bốc cháy và em đã báo cho giáo viên. Sắp xếp các việc tiếp theo đúng thứ tự.',
       items: [
         'Dập lửa bằng bình chữa cháy theo hướng dẫn',
         'Ngắt nguồn điện',
         'Ra ngoài theo lối thoát hiểm nếu lửa lan rộng',
-        'Báo ngay cho giáo viên',
       ],
-      answer: [1, 3, 0, 2],
+      answer: [1, 0, 2],
       hints: [
         'Thiết bị còn điện thì việc dập lửa rất nguy hiểm, nên việc nào phải làm trước?',
         'Thoát hiểm là phương án khi không dập được lửa.',
       ],
       solution:
-        'Ngắt nguồn điện → báo giáo viên → dập lửa bằng bình chữa cháy theo hướng dẫn → ra theo lối thoát hiểm nếu lửa lan rộng.',
+        'Ngắt nguồn điện → dập lửa bằng bình chữa cháy theo hướng dẫn → ra theo lối thoát hiểm nếu lửa lan rộng.',
     },
     {
       type: 'choice',
       prompt: 'Một bạn bị điện giật, tay còn dính vào dây điện hở. Em cần làm gì đầu tiên?',
       options: [
-        'Dùng tay kéo bạn ra thật nhanh.',
         'Ngắt nguồn điện bằng công tắc hoặc cầu dao.',
+        'Dùng tay kéo bạn ra thật nhanh.',
         'Hắt nước vào chỗ dây điện.',
         'Chạy đi tìm thuốc sơ cứu.',
       ],
-      answer: 1,
+      answer: 0,
       hints: ['Chạm vào bạn lúc này, em cũng có thể bị dòng điện đi qua người.'],
       solution:
         'Ngắt nguồn điện trước, rồi gọi giáo viên. Không chạm tay trần vào bạn, không dùng nước vì nước dẫn điện.',
