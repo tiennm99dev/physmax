@@ -1,10 +1,10 @@
 /**
  * A body dropped from rest at height h0 with air resistance ignored, and the
  * comparison of two moving bodies' kinetic energies. Energy formulas come
- * from the chapter's `_shared/energy.js` (P = 10·m, so the fall has
+ * from `#lib/domain/energy.js` (P = 10·m, so the fall has
  * acceleration 10 m/s²).
  */
-import { G, kinetic, potential } from '../_shared/energy.js';
+import { G, kinetic, potential } from '#lib/domain/energy.js';
 import { tidy } from '#lib/core/number-format.js';
 
 /**

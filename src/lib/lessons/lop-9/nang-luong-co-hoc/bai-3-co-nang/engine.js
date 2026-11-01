@@ -7,7 +7,7 @@
  * turns mechanical energy into heat. Short walls at both ends send the rider
  * back.
  */
-import { G, potential, speedFrom } from '../_shared/energy.js';
+import { G, potential, speedFrom } from '#lib/domain/energy.js';
 
 /** Rider and board, kg. */
 export const MASS = 50;

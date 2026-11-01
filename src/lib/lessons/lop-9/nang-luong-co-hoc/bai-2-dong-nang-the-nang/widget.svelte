@@ -6,7 +6,7 @@
   import { button, card } from '#lib/core/ui.js';
   import { formatFixed, formatNumber, numTex } from '#lib/core/number-format.js';
   import { frameLoop, reducedMotion } from '#lib/core/motion.js';
-  import { potential, weight } from '../_shared/energy.js';
+  import { potential, weight } from '#lib/domain/energy.js';
   import { dropAt, fallTime } from './engine.js';
 
   const W = 360;
