@@ -7,6 +7,7 @@
  * random walk whose speed is exaggerated, so 20 °C and 80 °C look clearly
  * different, while the numbers the widget prints are the model's real ratios.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** School offset between °C and K. */
 export const KELVIN = 273;
@@ -18,16 +19,13 @@ export const DOTS_PER_100G = 14;
 /** @typedef {{ x0: number, y0: number, x1: number, y1: number }} Box */
 /** @typedef {{ celsius: number, grams: number }} Cup */
 
-/** Rounds away floating-point noise. */
-const tidy = (/** @type {number} */ v) => Math.round(v * 1e6) / 1e6;
-
 /**
  * Mean kinetic energy of one molecule compared with the same molecule at
  * 0 °C: (t + 273) / 273.
  * @param {number} celsius
  */
 export function kineticRatio(celsius) {
-  return tidy((celsius + KELVIN) / KELVIN);
+  return tidy((celsius + KELVIN) / KELVIN, 6);
 }
 
 /**
@@ -36,7 +34,7 @@ export function kineticRatio(celsius) {
  * @param {Cup} cup
  */
 export function thermalEnergy({ celsius, grams }) {
-  return tidy((grams / 100) * kineticRatio(celsius));
+  return tidy((grams / 100) * kineticRatio(celsius), 6);
 }
 
 /**
@@ -45,7 +43,7 @@ export function thermalEnergy({ celsius, grams }) {
  * @param {number} celsius
  */
 export function screenSpeed(celsius) {
-  return tidy(8 + 0.4 * Math.max(0, celsius));
+  return tidy(8 + 0.4 * Math.max(0, celsius), 6);
 }
 
 /**
@@ -130,7 +128,7 @@ export function spread(points) {
   const cx = points.reduce((s, p) => s + p.x, 0) / points.length;
   const cy = points.reduce((s, p) => s + p.y, 0) / points.length;
   const ms = points.reduce((s, p) => s + (p.x - cx) ** 2 + (p.y - cy) ** 2, 0) / points.length;
-  return tidy(Math.sqrt(ms));
+  return tidy(Math.sqrt(ms), 6);
 }
 
 /** @typedef {'A' | 'B' | 'bang'} Larger */

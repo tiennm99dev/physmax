@@ -12,6 +12,7 @@
  * observer in the Northern Hemisphere, as in Việt Nam, the waxing Moon (first
  * half of the lunar month) is lit on the right and the waning Moon on the left.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** Length of one lunar cycle, in days. */
 export const CYCLE_DAYS = 29.5;
@@ -65,7 +66,7 @@ export function lunarDay(p) {
  */
 export function litFraction(p) {
   const f = (1 - Math.cos((wrap360(p) * Math.PI) / 180)) / 2;
-  return Math.round(f * 1e9) / 1e9;
+  return tidy(f);
 }
 
 /**

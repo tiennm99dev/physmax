@@ -7,6 +7,7 @@
  * source voltage. A meter wired with its terminals reversed swings its needle
  * below zero. The lamp is modelled as a fixed 6 Ω, so the current is U/6.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** Lamp resistance in the model, Ω. */
 export const LAMP_OHMS = 6;
@@ -23,9 +24,6 @@ export const SOURCES = [1.5, 3, 4.5];
 /** @typedef {'noi-tiep' | 'song-song' | 'khong'} Placement */
 /** @typedef {{ at: Placement, plusToPositive: boolean }} Meter */
 /** @typedef {'ak-song-song' | 'vk-noi-tiep' | 'ak-nguoc' | 'vk-nguoc'} BenchError */
-
-/** Rounds away floating-point noise. */
-const tidy = (/** @type {number} */ v) => Math.round(v * 1e6) / 1e6;
 
 /**
  * What the bench shows. Meter readings are signed: negative means the needle
@@ -59,7 +57,7 @@ export function readBench({ voltage, closed, ammeter, voltmeter }) {
       // The ammeter shorts the lamp: a very large current through it.
       aRead = Infinity;
     } else {
-      lampCurrent = tidy(voltage / LAMP_OHMS);
+      lampCurrent = tidy(voltage / LAMP_OHMS, 6);
       aRead = lampCurrent;
       vRead = voltage;
     }
@@ -84,7 +82,7 @@ export function readBench({ voltage, closed, ammeter, voltmeter }) {
  */
 export function needleAngle(reading, range) {
   const f = Math.max(-0.08, Math.min(1.08, reading / range));
-  return tidy(-60 + 120 * f);
+  return tidy(-60 + 120 * f, 6);
 }
 
 /**
@@ -96,5 +94,5 @@ export function needleAngle(reading, range) {
 export function convert(value, from, to) {
   /** @type {Record<string, number>} */
   const base = { A: 1, mA: 0.001, V: 1, mV: 0.001, kV: 1000 };
-  return tidy((value * base[from]) / base[to]);
+  return tidy((value * base[from]) / base[to], 6);
 }

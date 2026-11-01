@@ -14,6 +14,7 @@
  *   voltage, so the I–U graph bends.
  * Meter readings snap to the meter's smallest division (độ chia nhỏ nhất).
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** Ammeter: range (giới hạn đo), smallest division and resistance in Ω. */
 export const AMMETER = { range: 0.6, division: 0.01, ohms: 0.1 };
@@ -44,9 +45,6 @@ export const LAMPS = [
 
 /** Exponent of the lamp's I–U curve. */
 const LAMP_POWER = 0.55;
-
-/** Rounds away floating-point noise. */
-const tidy = (/** @type {number} */ v) => Math.round(v * 1e9) / 1e9;
 
 /** @param {string} id */
 export const sourceById = (id) => SOURCES.find((s) => s.id === id) ?? SOURCES[0];

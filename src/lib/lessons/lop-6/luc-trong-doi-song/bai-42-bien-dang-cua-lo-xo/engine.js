@@ -5,6 +5,7 @@
  * returns to l0 when unloaded. Past the limit it stretches more than in
  * proportion and keeps a permanent set: unloaded, it no longer returns to l0.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {{ id: string, name: string, l0: number, perStep: number, limit: number, set: number }} Spring */
 
@@ -19,9 +20,6 @@ export const SPRINGS = [
   { id: 'cung', name: 'Lò xo cứng hơn', l0: 12, perStep: 1, limit: 300, set: 1 },
 ];
 
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e6) / 1e6;
-
 /**
  * Length of the spring with `mass` grams hanging from it.
  * @param {Spring} spring @param {number} mass @param {boolean} damaged
@@ -29,9 +27,9 @@ const tidy = (x) => Math.round(x * 1e6) / 1e6;
 export function lengthOf(spring, mass, damaged) {
   const rest = spring.l0 + (damaged ? spring.set : 0);
   const k = spring.perStep / STEP_MASS;
-  if (mass <= spring.limit) return tidy(rest + k * mass);
+  if (mass <= spring.limit) return tidy(rest + k * mass, 6);
   // Past the elastic limit the spring gives three times as much per gram.
-  return tidy(rest + k * spring.limit + 3 * k * (mass - spring.limit));
+  return tidy(rest + k * spring.limit + 3 * k * (mass - spring.limit), 6);
 }
 
 /**
@@ -47,7 +45,7 @@ export function overLimit(spring, mass) {
  * @param {number} l @param {number} l0
  */
 export function extension(l, l0) {
-  return tidy(l - l0);
+  return tidy(l - l0, 6);
 }
 
 /**

@@ -10,6 +10,7 @@
  * - Solids, liquids, gases: how much 1 000 cm³ of each grows when warmed,
  *   from the book's table for a 50 °C rise, scaled in proportion.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** Linear expansion per °C. */
 export const ALPHA = { thep: 12e-6, dong: 17e-6, nhom: 23e-6 };
@@ -22,9 +23,6 @@ export const LAID_AT = 20;
 
 /** Joint gap left when laying the rails, mm. */
 export const GAP_MM = 6;
-
-/** Rounds away floating-point noise. */
-const tidy = (/** @type {number} */ v) => Math.round(v * 1e9) / 1e9;
 
 /**
  * How much longer a rail is than when it was laid, mm (negative: shorter).

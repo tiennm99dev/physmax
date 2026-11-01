@@ -6,6 +6,7 @@
  * rises: it keeps the highest reading until it is shaken down.
  */
 import { convert } from '#lib/domain/temperature.js';
+import { tidy } from '#lib/core/number-format.js';
 
 /**
  * @typedef {{
@@ -71,15 +72,12 @@ export const ROOM = 27;
 /** Time constant of the column, in seconds. */
 export const TAU = 1;
 
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e6) / 1e6;
-
 /**
  * Round a temperature to the nearest division.
  * @param {number} t @param {number} division
  */
 export function toDivision(t, division) {
-  return tidy(Math.round(tidy(t / division)) * division);
+  return tidy(Math.round(tidy(t / division)) * division, 6);
 }
 
 /**
@@ -132,7 +130,7 @@ export function judge({ th, sample, level, typed }) {
  */
 export function otherScales(c) {
   return {
-    f: tidy(convert(c, 'C', 'F')),
-    k: tidy(convert(c, 'C', 'K', { exactKelvin: false })),
+    f: tidy(convert(c, 'C', 'F'), 6),
+    k: tidy(convert(c, 'C', 'K', { exactKelvin: false }), 6),
   };
 }

@@ -7,6 +7,7 @@
  * The useful fractions are rounded figures for the lesson: about 10 % for a
  * filament bulb, 25 % for a compact fluorescent and 40 % for an LED.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {'soi-dot' | 'compact' | 'led'} BulbId */
 /** @typedef {{ id: BulbId, name: string, useful: number }} Bulb */
@@ -18,9 +19,6 @@ export const BULBS = [
   { id: 'led', name: 'Đèn LED', useful: 0.4 },
 ];
 
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e6) / 1e6;
-
 /** @param {BulbId} id @returns {Bulb} */
 export function bulb(id) {
   return BULBS.find((b) => b.id === id) ?? BULBS[0];
@@ -31,8 +29,8 @@ export function bulb(id) {
  * @param {BulbId} id @param {number} total
  */
 export function split(id, total) {
-  const useful = tidy(total * bulb(id).useful);
-  return { total, useful, wasted: tidy(total - useful) };
+  const useful = tidy(total * bulb(id).useful, 6);
+  return { total, useful, wasted: tidy(total - useful, 6) };
 }
 
 /**
@@ -40,7 +38,7 @@ export function split(id, total) {
  * @param {BulbId} id @param {number} light
  */
 export function totalFor(id, light) {
-  return tidy(light / bulb(id).useful);
+  return tidy(light / bulb(id).useful, 6);
 }
 
 /**
@@ -48,5 +46,5 @@ export function totalFor(id, light) {
  * @param {number} total @param {number} useful
  */
 export function wasted(total, useful) {
-  return tidy(total - useful);
+  return tidy(total - useful, 6);
 }

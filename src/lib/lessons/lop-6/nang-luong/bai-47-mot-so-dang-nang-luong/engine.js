@@ -10,20 +10,18 @@
  * The scale factors are made up for the lesson so the numbers stay simple;
  * grade 6 compares the results, it does not compute energies.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 export const MASSES = [100, 200]; // grams
 export const HEIGHTS = [10, 20, 30]; // centimetres
 export const SPEEDS = [1, 2, 3]; // chậm, vừa, nhanh
-
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e6) / 1e6;
 
 /**
  * Depth of the dent in centimetres: proportional to mass and to drop height.
  * @param {number} massG @param {number} heightCm
  */
 export function dent(massG, heightCm) {
-  return tidy(0.5 * (massG / 100) * (heightCm / 10));
+  return tidy(0.5 * (massG / 100) * (heightCm / 10), 6);
 }
 
 /**
@@ -32,7 +30,7 @@ export function dent(massG, heightCm) {
  * @param {number} massG @param {number} speed
  */
 export function push(massG, speed) {
-  return tidy(2 * (massG / 100) * speed * speed);
+  return tidy(2 * (massG / 100) * speed * speed, 6);
 }
 
 /**

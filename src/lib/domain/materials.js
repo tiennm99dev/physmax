@@ -4,6 +4,7 @@
  * weight, and `qty` for writing a quantity the book's way (2 697,3).
  */
 import { fmt, formatNumber } from '#lib/core/number-format.js';
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {{ id: string, name: string, density: number }} Material density in kg/m³ */
 
@@ -36,12 +37,6 @@ export function material(id) {
   if (!found) throw new Error(`Unknown material ${id}`);
   return found;
 }
-
-/**
- * Rounds away floating-point noise (0.1 + 0.2 → 0.3).
- * @param {number} x
- */
-export const tidy = (x) => Math.round(x * 1e9) / 1e9;
 
 /**
  * Density in g/cm³ from kg/m³: 1 g/cm³ = 1000 kg/m³.

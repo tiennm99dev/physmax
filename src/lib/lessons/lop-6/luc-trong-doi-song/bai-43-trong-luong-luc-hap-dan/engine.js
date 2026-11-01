@@ -4,6 +4,7 @@
  * (N), read on a spring balance, is the pull of the planet or moon it is on:
  * the weight of 1 kg there.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {'trai-dat' | 'mat-trang' | 'sao-hoa'} PlaceId */
 /** @typedef {{ id: PlaceId, name: string, perKg: number }} Place */
@@ -27,9 +28,6 @@ export const THINGS = [
 /** Range of the spring balance, in newtons. */
 export const RANGE = 20;
 
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e6) / 1e6;
-
 /**
  * @param {PlaceId} id
  * @returns {Place}
@@ -43,7 +41,7 @@ export function place(id) {
  * @param {number} mass @param {PlaceId} where
  */
 export function weightAt(mass, where) {
-  return tidy(mass * place(where).perKg);
+  return tidy(mass * place(where).perKg, 6);
 }
 
 /**
@@ -64,5 +62,5 @@ export function trendFromEarth(where) {
  * @param {PlaceId} where
  */
 export function timesLighter(where) {
-  return tidy(place('trai-dat').perKg / place(where).perKg);
+  return tidy(place('trai-dat').perKg / place(where).perKg, 6);
 }

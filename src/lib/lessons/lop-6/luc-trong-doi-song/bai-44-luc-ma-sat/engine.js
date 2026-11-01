@@ -12,6 +12,7 @@
  * The surface factors are made up for the lesson; grade 6 compares them, it
  * does not compute with them.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {'kinh' | 'go' | 'nham' | 'banh-xe'} SurfaceId */
 /** @typedef {{ id: SurfaceId, name: string, grip: number, slide: number, rolling: boolean }} Surface */
@@ -32,9 +33,6 @@ export const EXTRA_MASS = 0.5;
 export const RANGE = 10;
 export const PULL_STEP = 0.05;
 
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e6) / 1e6;
-
 /**
  * @param {SurfaceId} id
  * @returns {Surface}
@@ -51,8 +49,8 @@ export function surface(id) {
 export function limits(id, loaded) {
   const s = surface(id);
   const mass = BLOCK_MASS + (loaded ? EXTRA_MASS : 0);
-  const weight = tidy(10 * mass);
-  return { mass, weight, maxStatic: tidy(s.grip * weight), sliding: tidy(s.slide * weight) };
+  const weight = tidy(10 * mass, 6);
+  return { mass, weight, maxStatic: tidy(s.grip * weight, 6), sliding: tidy(s.slide * weight, 6) };
 }
 
 /**
@@ -60,7 +58,7 @@ export function limits(id, loaded) {
  * @param {number} f
  */
 export function snapPull(f) {
-  return tidy(Math.min(RANGE, Math.max(0, Math.round(f / PULL_STEP) * PULL_STEP)));
+  return tidy(Math.min(RANGE, Math.max(0, Math.round(f / PULL_STEP) * PULL_STEP)), 6);
 }
 
 /**
@@ -75,7 +73,7 @@ export function step(m, f, lim, dt) {
   if (!m.moving) {
     return f > lim.maxStatic ? { moving: true, v: 0 } : { moving: false, v: 0 };
   }
-  const v = tidy(m.v + ((f - lim.sliding) / lim.mass) * dt);
+  const v = tidy(m.v + ((f - lim.sliding) / lim.mass) * dt, 6);
   if (v > 0) return { moving: true, v };
   // Stopped: it stays at rest unless the pull beats static friction again.
   return { moving: f > lim.maxStatic, v: 0 };
@@ -87,7 +85,7 @@ export function step(m, f, lim, dt) {
  * @param {Motion} m @param {number} f @param {{ sliding: number }} lim
  */
 export function friction(m, f, lim) {
-  return m.moving ? lim.sliding : tidy(f);
+  return m.moving ? lim.sliding : tidy(f, 6);
 }
 
 /**
@@ -101,7 +99,7 @@ export function friction(m, f, lim) {
  */
 export function motionKind(m, f, lim) {
   if (!m.moving) return f > lim.maxStatic ? 'bat-dau' : 'dung-yen';
-  const d = tidy(f - lim.sliding);
+  const d = tidy(f - lim.sliding, 6);
   if (d === 0) return 'deu';
   return d > 0 ? 'nhanh-dan' : 'cham-dan';
 }

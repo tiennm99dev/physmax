@@ -5,15 +5,13 @@
  * The bar balances when the moments match: F1 · d1 = F2 · d2, where d1 = OO1
  * and d2 = OO2 are the lever arms of the vertical forces.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** Number of holes on the bar, numbered 0 to HOLES − 1. */
 export const HOLES = 13;
 
 /** Distance between two neighbouring holes, in cm. */
 export const SPACING_CM = 10;
-
-/** Rounds away floating-point noise (0.1 + 0.2 → 0.3). */
-export const tidy = (/** @type {number} */ v) => Math.round(v * 1e6) / 1e6;
 
 /**
  * @typedef {{ o: number, load: number, effort: number }} Setup hole numbers of
@@ -60,7 +58,7 @@ export function effortDirection(s) {
 export function balancingEffort(weight, s) {
   const { d1, d2 } = arms(s);
   if (d2 === 0) return null;
-  return tidy((weight * d1) / d2);
+  return tidy((weight * d1) / d2, 6);
 }
 
 /**
@@ -75,7 +73,7 @@ export function netMoment(weight, effort, s) {
   const x1 = ((s.load - s.o) * SPACING_CM) / 100;
   const x2 = ((s.effort - s.o) * SPACING_CM) / 100;
   const sign = effortDirection(s) === 'xuong' ? 1 : -1;
-  const m = tidy(weight * x1 + sign * effort * x2);
+  const m = tidy(weight * x1 + sign * effort * x2, 6);
   return m === 0 ? 0 : m;
 }
 

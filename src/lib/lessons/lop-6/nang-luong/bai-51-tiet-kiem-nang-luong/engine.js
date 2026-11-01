@@ -10,6 +10,7 @@
  * Electrical energy: E (kWh) = P (W) × t (h) ÷ 1 000. The bill is the monthly
  * energy (30 days) times one illustrative price per kWh.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {'soi-dot' | 'led'} BulbId */
 /**
@@ -119,15 +120,12 @@ export const DEVICES = [
   },
 ];
 
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e6) / 1e6;
-
 /**
  * Electrical energy in kWh used by `watts` running for `hours`.
  * @param {number} watts @param {number} hours
  */
 export function kWh(watts, hours) {
-  return tidy((watts * hours) / 1000);
+  return tidy((watts * hours) / 1000, 6);
 }
 
 /** @param {number} energyKWh */
@@ -151,7 +149,7 @@ export function deviceDay(d, s) {
   const hours = d.needHours + (s.offWhenIdle[d.id] ? 0 : d.extraHours);
   const run = kWh(powerOf(d, s), hours);
   const standby = s.unplug ? 0 : kWh(d.standbyW, 24 - hours);
-  return { hours, run, standby, total: tidy(run + standby) };
+  return { hours, run, standby, total: tidy(run + standby, 6) };
 }
 
 /**
@@ -160,8 +158,11 @@ export function deviceDay(d, s) {
  */
 export function houseUsage(s) {
   const byDevice = DEVICES.map((d) => ({ device: d, ...deviceDay(d, s) }));
-  const day = tidy(byDevice.reduce((sum, r) => sum + r.total, 0));
-  const month = tidy(day * DAYS);
+  const day = tidy(
+    byDevice.reduce((sum, r) => sum + r.total, 0),
+    6,
+  );
+  const month = tidy(day * DAYS, 6);
   return { byDevice, day, month, bill: cost(month) };
 }
 
@@ -195,7 +196,7 @@ export function bestTip(s) {
   let best = null;
   /** @param {string} text @param {Settings} next */
   const consider = (text, next) => {
-    const savedMonth = tidy(base - houseUsage(next).month);
+    const savedMonth = tidy(base - houseUsage(next).month, 6);
     if (savedMonth > 0 && (!best || savedMonth > best.savedMonth)) best = { text, savedMonth };
   };
   for (const d of DEVICES) {

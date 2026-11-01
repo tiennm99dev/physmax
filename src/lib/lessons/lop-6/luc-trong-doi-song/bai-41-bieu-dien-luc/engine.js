@@ -5,6 +5,7 @@
  * it lies along the force's line (phương), points the force's way (chiều) and
  * its length in squares times the scale equals the force's size (độ lớn).
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {{ c: number, r: number }} Node */
 /**
@@ -95,7 +96,7 @@ export function checkArrow(task, tail, tip) {
   const dr = tip.r - tail.r;
   const u = UNIT[task.angle];
   const length = Math.hypot(dc, dr);
-  const value = Math.round(length * task.scale * 1e6) / 1e6;
+  const value = tidy(length * task.scale, 6);
   const empty = length === 0;
   const point = tail.c === task.at.c && tail.r === task.at.r;
   const line = !empty && dc * u.dr - dr * u.dc === 0;

@@ -5,6 +5,7 @@
  * little, the calorimeter, stirrer and wire themselves. Heat lost to the room
  * is left out, so the temperature rise is proportional to the energy.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** Power of the heating wire on the 12 V source, W. */
 export const POWER = 24;
@@ -20,15 +21,12 @@ export const ROOM = 25;
 
 /** @typedef {{ celsius: number, joules: number }} Reading */
 
-/** Rounds away floating-point noise. */
-const tidy = (/** @type {number} */ v) => Math.round(v * 1e6) / 1e6;
-
 /**
  * Energy the bench needs for each 1 °C of temperature rise, J.
  * @param {number} grams mass of water
  */
 export function joulesPerDegree(grams) {
-  return tidy(WATER_J_PER_G * grams + VESSEL_J_PER_DEGREE);
+  return tidy(WATER_J_PER_G * grams + VESSEL_J_PER_DEGREE, 6);
 }
 
 /**
@@ -38,7 +36,7 @@ export function joulesPerDegree(grams) {
  * @param {number} [start]
  */
 export function temperatureAfter(joules, grams, start = ROOM) {
-  return tidy(start + joules / joulesPerDegree(grams));
+  return tidy(start + joules / joulesPerDegree(grams), 6);
 }
 
 /**
@@ -47,7 +45,7 @@ export function temperatureAfter(joules, grams, start = ROOM) {
  * @param {number} grams
  */
 export function energyFor(rise, grams) {
-  return tidy(rise * joulesPerDegree(grams));
+  return tidy(rise * joulesPerDegree(grams), 6);
 }
 
 /**
@@ -56,7 +54,7 @@ export function energyFor(rise, grams) {
  * @param {number} [power]
  */
 export function energyIn(seconds, power = POWER) {
-  return tidy(seconds * power);
+  return tidy(seconds * power, 6);
 }
 
 /**
@@ -69,8 +67,8 @@ export function increments(rows) {
   if (rows.length === 0) return [];
   const [first] = rows;
   return rows.map((r) => ({
-    rise: tidy(r.celsius - first.celsius),
-    energy: tidy(r.joules - first.joules),
+    rise: tidy(r.celsius - first.celsius, 6),
+    energy: tidy(r.joules - first.joules, 6),
   }));
 }
 
@@ -82,5 +80,5 @@ export function increments(rows) {
 export function slope(points) {
   const xx = points.reduce((s, p) => s + p.rise * p.rise, 0);
   if (!(xx > 0)) return NaN;
-  return tidy(points.reduce((s, p) => s + p.rise * p.energy, 0) / xx);
+  return tidy(points.reduce((s, p) => s + p.rise * p.energy, 0) / xx, 6);
 }

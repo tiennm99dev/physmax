@@ -8,6 +8,7 @@
  * body) and v the speed. Grade 6 only compares the results; it never
  * computes with the formula.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {'nuoc' | 'khong-khi'} MediumId */
 /** @typedef {'thuon' | 'cau' | 'hop' | 'tam'} ShapeId */
@@ -17,9 +18,6 @@
 export const DENSITY = { nuoc: 1000, 'khong-khi': 1.2 };
 
 export const G = 10;
-
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e9) / 1e9;
 
 /**
  * Resistance coefficient k in F = k · v².

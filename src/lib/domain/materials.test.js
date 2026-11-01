@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { LIQUIDS, SOLIDS, material, qty, specificWeight, tidy, toGPerCm3 } from './materials.js';
+import { tidy } from '#lib/core/number-format.js';
+import { LIQUIDS, SOLIDS, material, qty, specificWeight, toGPerCm3 } from './materials.js';
 
 describe('chapter materials', () => {
   it('finds a material by id and rejects an unknown one', () => {

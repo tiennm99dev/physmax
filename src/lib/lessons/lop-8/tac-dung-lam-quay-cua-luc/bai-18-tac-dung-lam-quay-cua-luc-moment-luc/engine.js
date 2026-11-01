@@ -6,15 +6,13 @@
  * The door has a closer spring: it only starts to turn once M reaches
  * OPEN_MOMENT, and it swings faster the larger M is (a model, not a law).
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** Width of the door leaf, in cm. */
 export const DOOR_CM = 80;
 
 /** Smallest moment, in N·m, that starts the door turning against its closer. */
 export const OPEN_MOMENT = 4;
-
-/** Rounds away floating-point noise (0.1 + 0.2 → 0.3). */
-export const tidy = (/** @type {number} */ v) => Math.round(v * 1e6) / 1e6;
 
 /**
  * Lever arm in cm: the distance from the hinge to the line of action of a
@@ -23,7 +21,7 @@ export const tidy = (/** @type {number} */ v) => Math.round(v * 1e6) / 1e6;
  * @param {number} angle degrees, 0 to 180
  */
 export function leverArm(r, angle) {
-  return Math.abs(tidy(r * Math.sin((angle * Math.PI) / 180)));
+  return Math.abs(tidy(r * Math.sin((angle * Math.PI) / 180), 6));
 }
 
 /**
@@ -32,7 +30,7 @@ export function leverArm(r, angle) {
  * @param {number} arm m
  */
 export function moment(force, arm) {
-  return tidy(force * arm);
+  return tidy(force * arm, 6);
 }
 
 /**
@@ -65,7 +63,7 @@ export function doorPush({ force, r, angle, vertical = false }) {
  */
 export function swingSpeed(m) {
   if (m < OPEN_MOMENT) return 0;
-  return tidy(Math.min(180, 20 + 15 * (m - OPEN_MOMENT)));
+  return tidy(Math.min(180, 20 + 15 * (m - OPEN_MOMENT)), 6);
 }
 
 /**
@@ -75,7 +73,7 @@ export function swingSpeed(m) {
  */
 export function openTime(m) {
   const v = swingSpeed(m);
-  return v === 0 ? null : tidy(90 / v);
+  return v === 0 ? null : tidy(90 / v, 6);
 }
 
 /**
@@ -86,5 +84,5 @@ export function openTime(m) {
  */
 export function leastForce(r, angle) {
   const arm = leverArm(r, angle);
-  return arm === 0 ? null : tidy(OPEN_MOMENT / (arm / 100));
+  return arm === 0 ? null : tidy(OPEN_MOMENT / (arm / 100), 6);
 }

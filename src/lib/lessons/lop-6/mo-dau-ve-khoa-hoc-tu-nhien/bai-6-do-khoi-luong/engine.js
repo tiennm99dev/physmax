@@ -6,6 +6,7 @@
  * `zero` is what the scale shows with an empty pan; the learner turns the
  * adjusting screw (dial) or presses the zero key (electronic) to make it 0.
  */
+import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {'dong-ho' | 'dien-tu'} ScaleId */
 /** @typedef {{ id: ScaleId, name: string, range: number, division: number, startZero: number }} Scale */
@@ -40,15 +41,12 @@ export const THINGS = [
 /** Adjusting-screw step of the dial scale, in grams. */
 export const SCREW_STEP = 20;
 
-/** @param {number} x */
-const tidy = (x) => Math.round(x * 1e6) / 1e6;
-
 /**
  * Round a mass to the nearest division of a scale.
  * @param {number} mass @param {number} division
  */
 export function toDivision(mass, division) {
-  return tidy(Math.round(tidy(mass / division)) * division);
+  return tidy(Math.round(tidy(mass / division)) * division, 6);
 }
 
 /**
@@ -71,7 +69,7 @@ export function suitability(scale, mass, all = SCALES) {
  * @returns {number | null}
  */
 export function shown(scale, load, zero) {
-  const value = tidy(load + zero);
+  const value = tidy(load + zero, 6);
   return value > scale.range ? null : value;
 }
 
@@ -82,7 +80,7 @@ export function shown(scale, load, zero) {
  * @param {number} zero @param {number} turns
  */
 export function turnScrew(zero, turns) {
-  return tidy(Math.max(-200, Math.min(200, zero + turns * SCREW_STEP)));
+  return tidy(Math.max(-200, Math.min(200, zero + turns * SCREW_STEP)), 6);
 }
 
 /**
@@ -90,7 +88,7 @@ export function turnScrew(zero, turns) {
  * @param {number} zero @param {number} load
  */
 export function pressZero(zero, load) {
-  return tidy(zero - (load + zero));
+  return tidy(zero - (load + zero), 6);
 }
 
 /** @typedef {'chua-dat' | 'qua-tai' | 'chua-chinh-0' | 'sai-so' | 'tho' | 'dung'} Verdict */
