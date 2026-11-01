@@ -125,26 +125,14 @@ export function rotorLines(deg) {
 /**
  * The quarter turn the spinning magnet is in, for the feedback text: which
  * pole is nearer the coil, whether it is coming closer, and whether the field
- * lines through the coil are growing.
- * @param {number} deg
+ * lines through the coil are growing. `dir` is the way it turns: +1 as the
+ * angle grows, −1 back.
+ * @param {number} deg @param {1 | -1} [dir]
  * @returns {{ pole: 'N' | 'S', closer: boolean, more: boolean }}
  */
-export function rotorQuarter(deg) {
+export function rotorQuarter(deg, dir = 1) {
   const a = ((deg % 360) + 360) % 360;
-  if (a < 90) return { pole: 'N', closer: false, more: false };
-  if (a < 180) return { pole: 'S', closer: true, more: true };
-  if (a < 270) return { pole: 'S', closer: false, more: false };
-  return { pole: 'N', closer: true, more: true };
-}
-
-/**
- * Appends a sample to a trace and drops samples older than `span` seconds.
- * @param {Array<{ t: number, i: number }>} trace
- * @param {number} t @param {number} i @param {number} [span]
- */
-export function pushSample(trace, t, i, span = 6) {
-  const next = [...trace, { t, i }];
-  let from = 0;
-  while (from < next.length && next[from].t < t - span) from++;
-  return from ? next.slice(from) : next;
+  const pole = a < 90 || a >= 270 ? 'N' : 'S';
+  const closer = (a >= 90 && a < 180) || a >= 270 ? dir > 0 : dir < 0;
+  return { pole, closer, more: closer };
 }

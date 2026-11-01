@@ -19,13 +19,13 @@ export default {
         },
         {
           type: 'p',
-          text: 'Dòng điện xoay chiều chạy qua bóng đèn sợi đốt làm dây tóc nóng lên tới mức phát sáng; chạy qua đèn LED, đèn huỳnh quang cũng làm đèn sáng: dòng điện xoay chiều có tác dụng phát sáng.',
+          text: 'Dòng điện xoay chiều chạy qua bóng đèn sợi đốt làm dây tóc nóng lên tới mức phát sáng; chạy qua đèn huỳnh quang, bóng đèn LED dùng trong gia đình cũng làm đèn sáng: dòng điện xoay chiều có tác dụng phát sáng.',
         },
         {
           type: 'callout',
           tone: 'note',
-          title: 'Không phụ thuộc chiều dòng điện',
-          text: 'Tác dụng nhiệt và tác dụng phát sáng không phụ thuộc chiều của dòng điện: dòng điện chạy theo chiều nào thì vật dẫn cũng nóng lên, đèn cũng sáng. Vì vậy bàn là hay bóng đèn sợi đốt dùng được cả dòng điện một chiều lẫn xoay chiều.',
+          title: 'Tác dụng nhiệt không phụ thuộc chiều dòng điện',
+          text: 'Dòng điện chạy theo chiều nào thì vật dẫn cũng nóng lên, dây tóc đèn sợi đốt cũng sáng. Vì vậy bàn là hay bóng đèn sợi đốt dùng được cả dòng điện một chiều lẫn xoay chiều. Riêng một đèn LED đơn lẻ chỉ sáng khi dòng điện chạy qua nó theo một chiều; bóng đèn LED dùng trong gia đình có mạch điện tử bên trong nên cắm được vào mạng điện xoay chiều.',
         },
       ],
     },
@@ -76,7 +76,7 @@ export default {
           type: 'callout',
           tone: 'warning',
           title: 'Nguy hiểm đến tính mạng',
-          text: 'Dòng điện xoay chiều $220$ V của mạng điện gia đình có thể gây nguy hiểm đến tính mạng. Chỉ những thí nghiệm dùng hiệu điện thế dưới $40$ V mới được coi là an toàn đối với cơ thể người.',
+          text: 'Dòng điện xoay chiều $220$ V của mạng điện gia đình có thể gây nguy hiểm đến tính mạng. Học sinh chỉ làm thí nghiệm với nguồn điện có hiệu điện thế dưới $40$ V.',
         },
         {
           type: 'p',
@@ -93,7 +93,7 @@ export default {
             'Ngắt cầu dao (aptomat) hoặc rút phích cắm trước khi sửa chữa, thay bóng đèn, lau chùi thiết bị điện.',
             'Không chạm vào dây điện trần, dây bị hở vỏ cách điện; thay ngay dây và ổ cắm bị hỏng.',
             'Không cắm, rút phích điện khi tay ướt; không cho trẻ nhỏ chọc vật kim loại vào ổ cắm.',
-            'Không lại gần trạm biến áp, không trèo cột điện, không thả diều gần đường dây điện.',
+            'Không lại gần trạm biến thế, không trèo cột điện, không thả diều gần đường dây điện.',
             'Thấy người bị điện giật: ngắt nguồn điện ngay; nếu chưa ngắt được, dùng vật cách điện khô (gậy gỗ, ống nhựa) tách người đó khỏi dây điện, không chạm tay trực tiếp vào người bị giật.',
           ],
         },
@@ -104,7 +104,7 @@ export default {
   explore: {
     title: 'Nam châm điện với dòng một chiều và xoay chiều',
     instruction:
-      'Đóng công tắc với nguồn một chiều rồi với nguồn xoay chiều. Quan sát cực từ ở đầu cuộn dây, kim nam châm và đồ thị dòng điện; bấm "Đổi chiều nguồn" khi dùng nguồn một chiều. Thay kim nam châm bằng đinh sắt và so sánh. Để ý đèn trong mạch sáng với cả hai loại nguồn.',
+      'Đóng công tắc với nguồn một chiều rồi với nguồn xoay chiều. Quan sát cực từ ở đầu cuộn dây, kim nam châm và đồ thị dòng điện; bấm "Đổi chiều nguồn" khi dùng nguồn một chiều. Thay kim nam châm bằng đinh sắt và so sánh. Để ý đèn sợi đốt trong mạch sáng với cả hai loại nguồn.',
   },
   examples: [
     {
@@ -176,12 +176,12 @@ export default {
       prompt:
         'Đặt kim nam châm gần một đầu nam châm điện nối với nguồn điện xoay chiều. Khi đóng mạch, kim nam châm thế nào?',
       options: [
-        'Kim rung qua lại.',
         'Kim lệch hẳn về một phía rồi đứng yên.',
         'Kim đứng yên, không có tác dụng gì.',
+        'Kim rung qua lại.',
         'Kim quay tròn liên tục theo một chiều.',
       ],
-      answer: 0,
+      answer: 2,
       hints: ['Khi dòng điện đổi chiều, cực từ ở đầu nam châm điện có đổi không?'],
       solution:
         'Dòng điện xoay chiều luân phiên đổi chiều nên cực từ ở đầu nam châm điện đổi N, S luân phiên; cực của kim lần lượt bị hút, bị đẩy nên kim rung. Kim lệch hẳn về một phía là trường hợp dòng điện một chiều.',
@@ -191,12 +191,12 @@ export default {
       prompt:
         'Treo một đinh sắt gần đầu một nam châm điện dùng dòng điện xoay chiều. Khi đóng mạch thì đinh sắt thế nào?',
       options: [
-        'Bị hút về phía nam châm điện.',
         'Bị đẩy ra xa nam châm điện.',
+        'Bị hút về phía nam châm điện.',
         'Lần lượt bị hút rồi bị đẩy.',
         'Đứng yên vì cực từ đổi liên tục.',
       ],
-      answer: 0,
+      answer: 1,
       hints: ['Sắt bị cực nào của nam châm hút: cực Bắc, cực Nam hay cả hai?'],
       solution:
         'Sắt bị hút bởi cả cực Bắc lẫn cực Nam. Dù cực từ ở đầu nam châm điện đổi liên tục, đinh sắt vẫn luôn bị hút.',
@@ -206,12 +206,12 @@ export default {
       prompt:
         'Nam châm điện nối với nguồn điện một chiều đang hút kim nam châm lệch sang trái. Đổi chiều dòng điện qua nam châm điện thì kim nam châm thế nào?',
       options: [
-        'Lệch sang phải và đứng yên.',
         'Vẫn lệch sang trái.',
         'Rung qua lại.',
         'Trở về hướng Bắc – Nam và đứng yên.',
+        'Lệch sang phải và đứng yên.',
       ],
-      answer: 0,
+      answer: 3,
       hints: ['Đổi chiều dòng điện thì cực từ ở đầu nam châm điện đổi; lực lên kim đổi chiều.'],
       solution:
         'Đổi chiều dòng điện một chiều thì cực từ ở đầu nam châm điện đổi, cực của kim đang bị hút nay bị đẩy: kim lệch sang phía ngược lại (sang phải) và đứng yên, vì dòng điện không đổi chiều nữa.',
@@ -237,11 +237,11 @@ export default {
     {
       type: 'choice',
       prompt: 'Để an toàn, học sinh chỉ được làm thí nghiệm với nguồn điện có hiệu điện thế:',
-      options: ['Dưới $40$ V', 'Dưới $220$ V', 'Đúng $220$ V', 'Bất kì, nếu đứng trên nền khô'],
-      answer: 0,
+      options: ['Dưới $220$ V', 'Dưới $40$ V', 'Đúng $220$ V', 'Bất kì, nếu đứng trên nền khô'],
+      answer: 1,
       hints: ['Hiệu điện thế mạng điện gia đình đã đủ để gây nguy hiểm đến tính mạng.'],
       solution:
-        'Chỉ hiệu điện thế dưới $40$ V mới được coi là an toàn đối với cơ thể người. $220$ V của mạng điện gia đình có thể gây chết người.',
+        'Học sinh chỉ làm thí nghiệm với nguồn điện có hiệu điện thế dưới $40$ V. $220$ V của mạng điện gia đình có thể gây chết người.',
     },
     {
       type: 'multi',
@@ -262,12 +262,12 @@ export default {
       type: 'choice',
       prompt: 'Thấy một người đang bị điện giật, việc nên làm đầu tiên là gì?',
       options: [
-        'Ngắt nguồn điện ngay (ngắt cầu dao, rút phích cắm).',
         'Dùng tay kéo người đó ra khỏi dây điện.',
         'Dội nước vào người bị điện giật.',
+        'Ngắt nguồn điện ngay (ngắt cầu dao, rút phích cắm).',
         'Dùng thanh sắt gạt dây điện ra.',
       ],
-      answer: 0,
+      answer: 2,
       hints: ['Người cứu không được để dòng điện chạy qua chính mình.'],
       solution:
         'Phải ngắt nguồn điện ngay. Nếu chưa ngắt được, dùng vật cách điện khô (gậy gỗ, ống nhựa) để tách người bị giật khỏi dây điện. Tay, nước, thanh sắt đều dẫn điện, người cứu sẽ bị giật theo.',
@@ -275,8 +275,8 @@ export default {
   ],
   takeaways: [
     'Dòng điện xoay chiều có tác dụng nhiệt, tác dụng phát sáng, tác dụng từ và tác dụng sinh lí.',
-    'Tác dụng nhiệt và phát sáng không phụ thuộc chiều dòng điện.',
+    'Tác dụng nhiệt, và sự phát sáng của đèn sợi đốt, không phụ thuộc chiều dòng điện.',
     'Nam châm điện dùng dòng điện xoay chiều có cực từ đổi liên tục: kim nam châm đặt gần nó rung, còn sắt vẫn bị hút.',
-    'Dòng điện xoay chiều $220$ V có thể gây nguy hiểm đến tính mạng: ngắt điện trước khi sửa chữa, không chạm vào dây hở, không lại gần trạm biến áp; chỉ thí nghiệm với hiệu điện thế dưới $40$ V.',
+    'Dòng điện xoay chiều $220$ V có thể gây nguy hiểm đến tính mạng: ngắt điện trước khi sửa chữa, không chạm vào dây hở, không lại gần trạm biến thế; chỉ thí nghiệm với hiệu điện thế dưới $40$ V.',
   ],
 };

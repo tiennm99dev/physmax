@@ -10,7 +10,6 @@ import {
   nailPull,
   needleTilt,
   poleChangesPerSecond,
-  pushSample,
 } from './engine.js';
 
 const dc = { source: /** @type {const} */ ('mot-chieu'), closed: true, reversed: false, freq: 1 };
@@ -87,11 +86,5 @@ describe('needle with inertia', () => {
     };
     expect(peak(0.5)).toBeGreaterThan(55);
     expect(peak(8)).toBeLessThan(25);
-  });
-
-  it('keeps only the recent part of the trace', () => {
-    let trace = /** @type {Array<{ t: number, i: number }>} */ ([]);
-    for (let k = 0; k <= 60; k++) trace = pushSample(trace, k * 0.1, 0);
-    expect(trace[0].t).toBeCloseTo(2, 9);
   });
 });

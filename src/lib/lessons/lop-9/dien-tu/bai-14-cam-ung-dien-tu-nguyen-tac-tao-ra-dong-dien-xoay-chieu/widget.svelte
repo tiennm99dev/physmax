@@ -12,7 +12,6 @@
     approach,
     inducedCurrent,
     lineCount,
-    pushSample,
     rotorCurrent,
     rotorFlux,
     rotorLines,
@@ -21,6 +20,7 @@
     signedFlux,
     swing,
   } from './engine.js';
+  import { pushSample } from '../_shared/trace.js';
 
   const W = 360;
   const H = 190;
@@ -174,7 +174,7 @@
       return 'Nam châm quay đều: số đường sức từ xuyên qua cuộn dây luân phiên tăng, giảm, nên dòng điện cảm ứng luân phiên đổi chiều — hai đèn LED thay nhau sáng, đồ thị dòng điện lúc ở trên, lúc ở dưới trục thời gian. Đó là dòng điện xoay chiều.';
     }
     if (angle !== angleTarget) {
-      const q = rotorQuarter(angle);
+      const q = rotorQuarter(angle, angleTarget > angle ? 1 : -1);
       return `${poleName(q.pole)} đang quay ${q.closer ? 'lại gần' : 'ra xa'} cuộn dây: số đường sức từ xuyên qua cuộn dây ${q.more ? 'tăng' : 'giảm'}, kim điện kế ${swingText(reading)}.`;
     }
     return `Nam châm đứng yên ở góc ${formatNumber(angle, 0)}°: số đường sức từ qua cuộn dây không đổi (${lines} đường), không có dòng điện cảm ứng. Nhấn "Quay nam châm" hoặc kéo thanh "Góc quay".`;
@@ -380,9 +380,7 @@
           >
         </g>
         <circle cx="120" cy={AXIS} r="3" fill="#0f172a" />
-        <text x="120" y={H - 8} text-anchor="middle" class="fill-slate-500 text-[10px]"
-          >trục quay</text
-        >
+        <text x="8" y={H - 8} class="fill-slate-500 text-[10px]">chấm đen: trục quay</text>
       {/if}
     </svg>
     <figcaption class="px-2 text-center text-xs text-slate-600">

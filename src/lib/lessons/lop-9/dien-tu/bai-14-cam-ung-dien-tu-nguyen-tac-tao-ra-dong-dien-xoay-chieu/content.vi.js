@@ -37,7 +37,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Nam châm vĩnh cửu hay nam châm điện đều có thể dùng để tạo ra dòng điện cảm ứng. Thay điện kế bằng một đèn LED, ta thấy đèn loé sáng khi nam châm chuyển động nhanh lại gần hoặc ra xa cuộn dây.',
+          text: 'Nam châm vĩnh cửu hay nam châm điện đều có thể dùng để tạo ra dòng điện cảm ứng. Thay điện kế bằng một đèn LED, ta thấy đèn loé sáng khi nam châm chuyển động nhanh theo một chiều (lại gần hoặc ra xa cuộn dây), còn khi nam châm chuyển động theo chiều ngược lại đèn không sáng, vì đèn LED chỉ sáng khi dòng điện chạy qua nó theo một chiều.',
         },
       ],
     },
@@ -87,7 +87,7 @@ export default {
           type: 'callout',
           tone: 'definition',
           title: 'Dòng điện xoay chiều',
-          text: 'Dòng điện luân phiên đổi chiều gọi là dòng điện xoay chiều. Dòng điện do pin, acquy tạo ra chỉ chạy theo một chiều, gọi là dòng điện một chiều.',
+          text: 'Dòng điện luân phiên đổi chiều gọi là dòng điện xoay chiều. Cường độ của nó tăng, giảm tuần tự và chiều của nó luân phiên thay đổi theo thời gian. Dòng điện do pin, acquy tạo ra chỉ chạy theo một chiều, gọi là dòng điện một chiều.',
         },
         {
           type: 'p',
@@ -160,12 +160,12 @@ export default {
       type: 'choice',
       prompt: 'Điều kiện để xuất hiện dòng điện cảm ứng trong một cuộn dây dẫn kín là gì?',
       options: [
-        'Số đường sức từ xuyên qua tiết diện của cuộn dây biến thiên.',
         'Số đường sức từ xuyên qua tiết diện của cuộn dây rất lớn.',
         'Đặt cuộn dây trong từ trường của một nam châm mạnh.',
+        'Số đường sức từ xuyên qua tiết diện của cuộn dây biến thiên.',
         'Nối cuộn dây với hai cực của một viên pin.',
       ],
-      answer: 0,
+      answer: 2,
       hints: [
         'Trong thí nghiệm, nam châm đứng yên sát cuộn dây (rất nhiều đường sức từ) thì kim điện kế chỉ số mấy?',
       ],
@@ -210,8 +210,8 @@ export default {
       type: 'choice',
       prompt:
         'Đưa cực Bắc của nam châm lại gần một cuộn dây kín thì kim điện kế lệch sang phải. Kéo cực Bắc đó ra xa cuộn dây thì kim điện kế thế nào?',
-      options: ['Lệch sang trái', 'Lệch sang phải', 'Chỉ số 0', 'Lệch sang phải nhiều hơn'],
-      answer: 0,
+      options: ['Lệch sang phải', 'Lệch sang trái', 'Chỉ số 0', 'Lệch sang phải nhiều hơn'],
+      answer: 1,
       hints: ['Số đường sức từ lúc này tăng hay giảm, ngược với lúc đưa lại gần không?'],
       solution:
         'Khi kéo ra xa, số đường sức từ qua cuộn dây giảm (ngược với lúc đưa lại gần là tăng), nên dòng điện cảm ứng đổi chiều: kim lệch sang trái.',
@@ -258,12 +258,12 @@ export default {
       prompt:
         'Mắc hai đèn LED song song, ngược chiều nhau vào hai đầu cuộn dây rồi cho nam châm quay đều trước cuộn dây. Hiện tượng nào xảy ra?',
       options: [
-        'Hai đèn LED thay nhau sáng.',
         'Chỉ một đèn LED sáng liên tục.',
         'Hai đèn LED cùng sáng liên tục.',
         'Không đèn nào sáng vì không có pin.',
+        'Hai đèn LED thay nhau sáng.',
       ],
-      answer: 0,
+      answer: 3,
       hints: [
         'Mỗi đèn LED chỉ sáng khi dòng điện chạy qua nó theo một chiều.',
         'Khi nam châm quay, dòng điện cảm ứng có giữ nguyên chiều không?',
@@ -275,12 +275,12 @@ export default {
       type: 'choice',
       prompt: 'Đinamô xe đạp hoạt động dựa trên hiện tượng nào và tạo ra dòng điện gì?',
       options: [
-        'Hiện tượng cảm ứng điện từ; dòng điện xoay chiều.',
         'Hiện tượng cảm ứng điện từ; dòng điện một chiều không đổi.',
         'Tác dụng nhiệt của dòng điện; dòng điện xoay chiều.',
+        'Hiện tượng cảm ứng điện từ; dòng điện xoay chiều.',
         'Phản ứng hoá học như pin; dòng điện một chiều.',
       ],
-      answer: 0,
+      answer: 2,
       hints: ['Trong đinamô, nam châm quay trước cuộn dây đứng yên.'],
       solution:
         'Bánh xe làm nam châm của đinamô quay trước cuộn dây; số đường sức từ qua cuộn dây luân phiên tăng, giảm (cảm ứng điện từ), nên đinamô tạo ra dòng điện xoay chiều.',
@@ -289,7 +289,7 @@ export default {
   takeaways: [
     'Hiện tượng cảm ứng điện từ là hiện tượng xuất hiện dòng điện cảm ứng trong cuộn dây dẫn kín.',
     'Dòng điện cảm ứng xuất hiện khi số đường sức từ xuyên qua tiết diện $S$ của cuộn dây dẫn kín biến thiên; với cùng một cực nam châm, số đường sức từ tăng hay giảm cho dòng điện cảm ứng ngược chiều nhau.',
-    'Dòng điện xoay chiều là dòng điện luân phiên đổi chiều.',
+    'Dòng điện xoay chiều là dòng điện luân phiên đổi chiều; cường độ của nó tăng, giảm tuần tự theo thời gian.',
     'Cho nam châm quay trước cuộn dây (hoặc cuộn dây quay trong từ trường) thì số đường sức từ luân phiên tăng, giảm và trong cuộn dây có dòng điện xoay chiều: đó là nguyên tắc của máy phát điện xoay chiều.',
   ],
 };

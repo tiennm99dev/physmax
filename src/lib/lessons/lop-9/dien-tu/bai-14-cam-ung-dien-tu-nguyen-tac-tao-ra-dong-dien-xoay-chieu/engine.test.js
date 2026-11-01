@@ -7,7 +7,6 @@ import {
   inducedCurrent,
   lineCount,
   motionOf,
-  pushSample,
   rotorCurrent,
   rotorFlux,
   rotorLines,
@@ -80,13 +79,6 @@ describe('motion helpers', () => {
     expect(motionOf(4, 5)).toBe('ra');
     expect(motionOf(4, 4)).toBe('yen');
   });
-
-  it('keeps only the recent part of the trace', () => {
-    let trace = /** @type {Array<{ t: number, i: number }>} */ ([]);
-    for (let k = 0; k <= 80; k++) trace = pushSample(trace, k * 0.1, 0);
-    expect(trace[0].t).toBeCloseTo(2, 9);
-    expect(trace.at(-1)?.t).toBeCloseTo(8, 9);
-  });
 });
 
 describe('spinning magnet', () => {
@@ -117,5 +109,11 @@ describe('spinning magnet', () => {
     expect(rotorQuarter(45)).toEqual({ pole: 'N', closer: false, more: false });
     expect(rotorQuarter(135).more).toBe(true);
     expect(rotorQuarter(-45).pole).toBe('N');
+  });
+
+  it('reads the turn the other way as the opposite change', () => {
+    expect(rotorQuarter(45, -1)).toEqual({ pole: 'N', closer: true, more: true });
+    expect(rotorCurrent(45) * -1).toBeLessThan(0);
+    expect(rotorQuarter(300, -1)).toEqual({ pole: 'N', closer: false, more: false });
   });
 });

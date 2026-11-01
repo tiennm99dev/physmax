@@ -80,18 +80,6 @@ export function follow(shown, target, dt, tau = 0.06) {
 }
 
 /**
- * Appends a sample and drops samples older than `span` seconds.
- * @param {Array<{ t: number, i: number }>} trace
- * @param {number} t @param {number} i @param {number} [span]
- */
-export function pushSample(trace, t, i, span = 4) {
-  const next = [...trace, { t, i }];
-  let from = 0;
-  while (from < next.length && next[from].t < t - span) from++;
-  return from ? next.slice(from) : next;
-}
-
-/**
  * What the object in front of the coil does, for the feedback text.
  * @param {{ source: 'mot-chieu' | 'xoay-chieu', closed: boolean }} s
  * @param {'kim' | 'dinh'} object

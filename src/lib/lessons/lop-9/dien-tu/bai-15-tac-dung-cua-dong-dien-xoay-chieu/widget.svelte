@@ -12,8 +12,8 @@
     lampGlow,
     nailPull,
     needleTilt,
-    pushSample,
   } from './engine.js';
+  import { pushSample } from '../_shared/trace.js';
 
   const SPAN = 4;
   const SPEEDS = [
@@ -110,7 +110,7 @@
 
   const feedback = $derived.by(() => {
     const lamp =
-      ' Đèn trong mạch sáng với cả hai loại dòng điện: tác dụng phát sáng và tác dụng nhiệt không phụ thuộc chiều dòng điện.';
+      ' Đèn sợi đốt trong mạch sáng với cả hai loại dòng điện: dây tóc nóng lên dù dòng điện chạy theo chiều nào.';
     switch (what) {
       case 'yen':
         return object === 'kim'
@@ -160,14 +160,20 @@
       <!-- circuit: coil, source, lamp and switch -->
       <g fill="none" stroke="#475569" stroke-width="1.5">
         <polyline points="64,128 64,172 104,172" />
-        <polyline points="136,172 160,172" />
-        <polyline points="184,172 214,172" />
-        <polyline points="244,172 260,172 260,186 176,186 176,128" />
+        <polyline points="136,172 163,172" />
+        <polyline points="181,172 214,172" />
+        <polyline points="244,172 256,172 256,148 176,148 176,128" />
       </g>
       {#if source === 'mot-chieu'}
         <g stroke="#0f172a" stroke-width="2">
-          <line x1="114" y1="162" x2="114" y2="182" />
-          <line x1="124" y1="166" x2="124" y2="178" stroke-width="4" />
+          <line x1={reversed ? 124 : 114} y1="162" x2={reversed ? 124 : 114} y2="182" />
+          <line
+            x1={reversed ? 114 : 124}
+            y1="166"
+            x2={reversed ? 114 : 124}
+            y2="178"
+            stroke-width="4"
+          />
         </g>
         <line x1="104" y1="172" x2="114" y2="172" stroke="#475569" stroke-width="1.5" />
         <line x1="124" y1="172" x2="136" y2="172" stroke="#475569" stroke-width="1.5" />
@@ -237,7 +243,7 @@
       {#if object === 'kim'}
         <!-- compass needle: north tip red, pointing north at rest -->
         <circle cx="282" cy="110" r="40" fill="#f8fafc" stroke="#94a3b8" />
-        <text x="282" y="80" text-anchor="middle" class="fill-slate-400 text-[8px]">Bắc</text>
+        <text x="282" y="66" text-anchor="middle" class="fill-slate-500 text-[9px]">Bắc</text>
         <g transform="rotate({tilt} 282 110)">
           <path d="M282,76 L290,110 L274,110 Z" fill="#dc2626" />
           <path d="M282,144 L290,110 L274,110 Z" fill="#2563eb" />

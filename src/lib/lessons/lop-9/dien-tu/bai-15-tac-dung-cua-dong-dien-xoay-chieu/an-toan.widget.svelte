@@ -22,9 +22,9 @@
     },
     {
       id: 'tram-bien-ap',
-      label: 'Trèo vào trạm biến áp để nhặt quả bóng.',
+      label: 'Trèo vào trạm biến thế để nhặt quả bóng.',
       ok: false,
-      why: 'Không được lại gần trạm biến áp: hiệu điện thế rất cao, có thể phóng điện qua người dù chưa chạm vào.',
+      why: 'Không được lại gần trạm biến thế: hiệu điện thế rất cao, có thể phóng điện qua người dù chưa chạm vào.',
     },
     {
       id: 'tha-dieu',
