@@ -1,7 +1,7 @@
 <script>
   import FeedbackNote from '#lib/core/feedback-note.svelte';
   import SegmentedControl from '#lib/core/segmented-control.svelte';
-  import { formatNumber, numTex } from '#lib/core/number-format.js';
+  import { formatNumber, numTex, tidy } from '#lib/core/number-format.js';
   import { card } from '#lib/core/ui.js';
   import CircuitBoard from '#lib/domain/circuit-board.svelte';
   import MeterDial from '#lib/domain/meter-dial.svelte';
@@ -31,6 +31,12 @@
   const aPos = $derived(positions.includes(ammeterAt) ? ammeterAt : 'main');
   const vPos = $derived(positions.includes(voltmeterAt) ? voltmeterAt : 'main');
   const at = (/** @type {string} */ pos) => (pos === 'main' ? r.main : r.parts[Number(pos)]);
+  // A removed resistor takes its meter position with it: move the meter back
+  // to the main circuit so its control always shows where it is.
+  $effect(() => {
+    if (!positions.includes(ammeterAt)) ammeterAt = 'main';
+    if (!positions.includes(voltmeterAt)) voltmeterAt = 'main';
+  });
   const aValue = $derived(at(aPos).i);
   const vValue = $derived(at(vPos).u);
   const aScale = $derived(pickScale(AMMETER_SCALES, aValue));
@@ -70,23 +76,37 @@
 
   const f = (/** @type {number} */ v) => formatNumber(v, 3);
   const t = (/** @type {number} */ v) => numTex(v, 3);
+  /** `=` when the rounded parts add up to the rounded total as shown, else `\approx`. */
+  const sumSign = (/** @type {number} */ total, /** @type {number[]} */ parts) =>
+    tidy(
+      parts.reduce((s, p) => s + tidy(p, 3), 0),
+      6,
+    ) === tidy(total, 3)
+      ? '='
+      : '\\approx';
   const n = $derived(resistors.length);
   const idx = $derived(resistors.map((_, i) => i + 1));
 
   const currentLaw = $derived(
     mode === 'series'
       ? `$I = ${idx.map((i) => `I_${i}`).join(' = ')} = ${t(r.main.i)}$ A: cường độ dòng điện như nhau tại mọi điểm.`
-      : `$I = ${idx.map((i) => `I_${i}`).join(' + ')}$: $${t(r.main.i)} = ${r.parts.map((p) => t(p.i)).join(' + ')}$ (A). Dòng điện mạch chính bằng tổng các dòng điện mạch rẽ.`,
+      : `$I = ${idx.map((i) => `I_${i}`).join(' + ')}$: $${t(r.main.i)} ${sumSign(
+          r.main.i,
+          r.parts.map((p) => p.i),
+        )} ${r.parts.map((p) => t(p.i)).join(' + ')}$ (A). Dòng điện mạch chính bằng tổng các dòng điện mạch rẽ.`,
   );
   const voltageLaw = $derived(
     mode === 'series'
-      ? `$U = ${idx.map((i) => `U_${i}`).join(' + ')}$: $${t(r.main.u)} = ${r.parts.map((p) => t(p.u)).join(' + ')}$ (V). Hiệu điện thế giữa hai đầu đoạn mạch bằng tổng các hiệu điện thế thành phần.`
+      ? `$U = ${idx.map((i) => `U_${i}`).join(' + ')}$: $${t(r.main.u)} ${sumSign(
+          r.main.u,
+          r.parts.map((p) => p.u),
+        )} ${r.parts.map((p) => t(p.u)).join(' + ')}$ (V). Hiệu điện thế giữa hai đầu đoạn mạch bằng tổng các hiệu điện thế thành phần.`
       : `$U = ${idx.map((i) => `U_${i}`).join(' = ')} = ${t(r.main.u)}$ V: hiệu điện thế hai đầu mỗi mạch rẽ bằng hiệu điện thế hai đầu đoạn mạch.`,
   );
   const resistanceLaw = $derived(
     mode === 'series'
-      ? `$R_{\\text{tđ}} = ${idx.map((i) => `R_${i}`).join(' + ')} = ${t(equivalent(mode, resistors))}\\ \\Omega$.`
-      : `$\\dfrac{1}{R_{\\text{tđ}}} = ${idx.map((i) => `\\dfrac{1}{R_${i}}`).join(' + ')}$, nên $R_{\\text{tđ}} = ${t(equivalent(mode, resistors))}\\ \\Omega$, nhỏ hơn mỗi điện trở thành phần.`,
+      ? `$R_{\\text{tđ}} = ${idx.map((i) => `R_${i}`).join(' + ')} = ${numTex(equivalent(mode, resistors), 2)}\\ \\Omega$.`
+      : `$\\dfrac{1}{R_{\\text{tđ}}} = ${idx.map((i) => `\\dfrac{1}{R_${i}}`).join(' + ')}$, nên $R_{\\text{tđ}} = ${numTex(equivalent(mode, resistors), 2)}\\ \\Omega$, nhỏ hơn mỗi điện trở thành phần.`,
   );
 
   const feedback = $derived.by(() => {

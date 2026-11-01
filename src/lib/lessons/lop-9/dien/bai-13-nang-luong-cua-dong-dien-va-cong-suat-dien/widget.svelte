@@ -2,7 +2,7 @@
   import FeedbackNote from '#lib/core/feedback-note.svelte';
   import SliderField from '#lib/core/slider-field.svelte';
   import Stepper from '#lib/core/stepper.svelte';
-  import { formatNumber, numTex } from '#lib/core/number-format.js';
+  import { GROUP, formatNumber, numTex } from '#lib/core/number-format.js';
   import { card } from '#lib/core/ui.js';
   import { APPLIANCES, DAYS, METER_START, meterDigits, monthlyBill } from './engine.js';
 
@@ -19,8 +19,12 @@
   const start = meterDigits(METER_START);
   const end = $derived(meterDigits(bill.meterEnd));
 
-  const kwh = (/** @type {number} */ v) => formatNumber(v, 2);
-  const hoursText = (/** @type {number} */ half) => formatNumber(half / 2);
+  /** @typedef {ReturnType<typeof monthlyBill>['rows'][number]} Row */
+
+  /** A number grouped the book's way, by a narrow space: 1 282,2; 74 400. */
+  const num = (/** @type {number} */ v, d = 2) => formatNumber(v, d).replaceAll('.', GROUP);
+  const kwh = (/** @type {number} */ v) => num(v, 2);
+  const hoursText = (/** @type {number} */ half) => num(half / 2);
 
   const feedback = $derived.by(() => {
     if (!bill.top) {
@@ -28,12 +32,18 @@
     }
     const top = bill.top;
     const share = Math.round((top.month / bill.total) * 100);
-    let text = `Trong ${DAYS} ngày, công tơ tăng từ ${formatNumber(METER_START)} lên ${formatNumber(bill.meterEnd, 1)}: gia đình dùng ${kwh(bill.total)} kWh, trả ${formatNumber(bill.cost)} đồng. ${top.name} tốn điện nhất: $W = \\mathcal{P} \\cdot t = ${numTex(top.power / 1000, 3)}\\ \\text{kW} \\cdot ${numTex(top.hours)}\\ \\text{h}$ mỗi ngày, chiếm khoảng ${share}% số điện.`;
+    let text = `Trong ${DAYS} ngày, công tơ tăng từ ${num(METER_START)} lên ${num(bill.meterEnd, 1)}: gia đình dùng ${kwh(bill.total)} kWh, trả ${num(bill.cost)} đồng. ${top.name} tốn điện nhất: $W = \\mathcal{P} \\cdot t = ${numTex(top.power / 1000, 3)}\\ \\text{kW} \\cdot ${numTex(top.hours)}\\ \\text{h}$ mỗi ngày, chiếm khoảng ${share}% số điện.`;
     const rows = bill.rows.filter((r) => r.month > 0);
-    const big = rows.find((r) => r.power >= 500);
-    const small = rows.find((r) => r.power < 500 && r.day > (big?.day ?? Infinity));
-    if (big && small) {
-      text += ` Chú ý: ${small.name} công suất nhỏ (${formatNumber(small.power)} W) nhưng dùng lâu nên tốn điện hơn ${big.name.toLowerCase()} (${formatNumber(big.power)} W): năng lượng điện phụ thuộc cả công suất lẫn thời gian dùng.`;
+    // The starkest pair: the low-power device used most against the
+    // high-power device used least.
+    const big = rows
+      .filter((r) => r.power >= 500)
+      .reduce((m, r) => (m === null || r.day < m.day ? r : m), /** @type {Row | null} */ (null));
+    const small = rows
+      .filter((r) => r.power < 500)
+      .reduce((m, r) => (m === null || r.day > m.day ? r : m), /** @type {Row | null} */ (null));
+    if (big && small && small.day > big.day) {
+      text += ` Chú ý: ${small.name} công suất nhỏ (${num(small.power)} W) nhưng dùng lâu nên tốn điện hơn ${big.name.toLowerCase()} (${num(big.power)} W): năng lượng điện phụ thuộc cả công suất lẫn thời gian dùng.`;
     }
     return text;
   });
@@ -49,7 +59,7 @@
           : 'opacity-70'}"
       >
         <Stepper
-          label="{a.name} ({formatNumber(a.power)} W), số giờ/ngày"
+          label="{a.name} ({num(a.power)} W), số giờ/ngày"
           bind:value={halves[i]}
           min={0}
           max={48}
@@ -69,7 +79,7 @@
     max={3500}
     step={100}
     unit="đồng"
-    format={(v) => formatNumber(v)}
+    format={(v) => num(v)}
   />
 
   <div class="grid gap-3 sm:grid-cols-2">
@@ -85,7 +95,7 @@
           {/each}
           <span class="w-6 rounded bg-rose-700 py-1">{m.d.tenths}</span>
         </div>
-        <p class="sr-only">{formatNumber(m.v, 1)} kWh</p>
+        <p class="sr-only">{num(m.v, 1)} kWh</p>
       </figure>
     {/each}
   </div>
@@ -97,7 +107,7 @@
     </div>
     <div>
       <p class="text-sm text-slate-600">Tiền điện</p>
-      <p class="text-lg font-bold text-indigo-700 tabular-nums">{formatNumber(bill.cost)} đồng</p>
+      <p class="text-lg font-bold text-indigo-700 tabular-nums">{num(bill.cost)} đồng</p>
     </div>
   </div>
 
