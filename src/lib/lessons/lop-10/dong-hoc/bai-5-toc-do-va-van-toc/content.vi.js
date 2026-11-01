@@ -145,6 +145,20 @@ export default {
         'Vận tốc $\\vec{v} = \\dfrac{\\vec{d}}{t}$ là vectơ, cùng hướng với độ dịch chuyển. Tốc độ được tính từ quãng đường và là đại lượng vô hướng.',
     },
     {
+      type: 'choice',
+      prompt: 'Số chỉ trên tốc kế của một xe máy đang chạy cho biết',
+      options: [
+        'tốc độ trung bình của xe trên cả hành trình',
+        'tốc độ tức thời của xe tại thời điểm đọc',
+        'độ dịch chuyển của xe',
+        'vận tốc trung bình của xe',
+      ],
+      answer: 1,
+      hints: ['Kim tốc kế thay đổi ngay khi xe tăng ga hay phanh.'],
+      solution:
+        'Tốc kế cho biết xe chạy nhanh hay chậm đúng lúc đọc, nên số chỉ là tốc độ tức thời.',
+    },
+    {
       type: 'number',
       prompt:
         'Một người đi quãng đường $5$ km trong $20$ phút. Tính tốc độ trung bình theo m/s (làm tròn đến hai chữ số thập phân).',

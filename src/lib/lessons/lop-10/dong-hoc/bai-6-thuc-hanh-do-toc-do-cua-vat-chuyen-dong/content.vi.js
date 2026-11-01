@@ -58,7 +58,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Sai số được tính như đã học ở bài trước: $\\delta v = \\delta s + \\delta t$ và $\\Delta v = \\delta v \\cdot \\overline{v}$. Sai số dụng cụ được lấy bằng nửa độ chia nhỏ nhất: $\\Delta s_{dc} = 0{,}0005$ m với thước có ĐCNN $1$ mm, $\\Delta t_{dc} = 0{,}0005$ s với đồng hồ hiện số.',
+          text: 'Sai số được tính như đã học ở bài trước: $\\delta v = \\delta s + \\delta t$ và $\\Delta v = \\delta v \\cdot \\overline{v}$; với tốc độ tức thời, thay $\\delta s$ bằng $\\delta d$. Sai số dụng cụ được lấy bằng nửa độ chia nhỏ nhất: $\\Delta s_{dc} = 0{,}0005$ m với thước có ĐCNN $1$ mm, $\\Delta d_{dc} = 0{,}01$ mm với thước kẹp có ĐCNN $0{,}02$ mm, $\\Delta t_{dc} = 0{,}0005$ s với đồng hồ hiện số.',
         },
       ],
     },
@@ -134,7 +134,7 @@ export default {
     },
     {
       problem:
-        'Viên bi đường kính $d = 0{,}02000$ m (sai số $\\Delta d = 0{,}00001$ m) chắn cổng $F$ ở MODE B trong $0{,}033$ s; $0{,}032$ s; $0{,}031$ s. Tính tốc độ tức thời của bi tại $F$.',
+        'Viên bi đường kính $d = 0{,}02000$ m (sai số $\\Delta d = 0{,}00001$ m) chắn cổng $E$ ở MODE A trong $0{,}033$ s; $0{,}032$ s; $0{,}031$ s. Tính tốc độ tức thời của bi tại $E$.',
       steps: [
         'Thời gian trung bình: $\\overline{t} = 0{,}032$ s.',
         'Tốc độ tức thời: $\\overline{v} = \\dfrac{0{,}02}{0{,}032} = 0{,}625$ m/s.',
@@ -248,6 +248,6 @@ export default {
     'Đồng hồ hiện số kết hợp cổng quang điện đo được thời gian đến $0{,}001$ s.',
     'MODE A↔B đo thời gian đi giữa hai cổng, dùng để tính tốc độ trung bình $v = \\dfrac{s}{t}$.',
     'MODE A hoặc B đo thời gian bi chắn cổng, dùng để tính tốc độ tức thời $v = \\dfrac{d}{t}$.',
-    'Viết kết quả dưới dạng $v = \\overline{v} \\pm \\Delta v$, với $\\delta v = \\delta s + \\delta t$.',
+    'Viết kết quả dưới dạng $v = \\overline{v} \\pm \\Delta v$, với $\\delta v = \\delta s + \\delta t$ (tốc độ tức thời: $\\delta d + \\delta t$).',
   ],
 };

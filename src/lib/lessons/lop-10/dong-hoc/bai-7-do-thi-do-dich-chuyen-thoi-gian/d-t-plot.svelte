@@ -2,10 +2,12 @@
   import { formatNumber } from '#lib/core/number-format.js';
 
   /**
-   * A displacement-time graph: an optional dashed line to copy, a drawn line,
-   * a cursor and a highlighted segment with its slope triangle.
+   * A displacement-time graph: an optional dashed line to copy, a drawn line
+   * with optional point names, a cursor and a highlighted segment with its
+   * slope triangle.
    * @type {{
    *   points?: Array<{ t: number, d: number }>;
+   *   names?: string[];
    *   target?: Array<{ t: number, d: number }>;
    *   tMax: number;
    *   tStep: number;
@@ -19,6 +21,7 @@
    */
   let {
     points = [],
+    names = [],
     target = [],
     tMax,
     tStep,
@@ -116,6 +119,18 @@
       stroke-dasharray="5 3"
     />
   {/if}
+  {#each names as name, i (name)}
+    <text
+      x={x(points[i].t)}
+      y={y(points[i].d) - 8}
+      font-size="12"
+      font-weight="700"
+      fill="#334155"
+      text-anchor="middle"
+    >
+      {name}
+    </text>
+  {/each}
   {#if cursor !== null}
     <line
       x1={x(cursor)}

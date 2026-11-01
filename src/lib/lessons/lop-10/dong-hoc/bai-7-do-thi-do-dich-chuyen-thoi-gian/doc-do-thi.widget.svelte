@@ -32,6 +32,7 @@
   />
   <DtPlot
     points={POINTS}
+    names={['A', 'B', 'C', 'D']}
     tMax={8}
     tStep={1}
     dMin={0}

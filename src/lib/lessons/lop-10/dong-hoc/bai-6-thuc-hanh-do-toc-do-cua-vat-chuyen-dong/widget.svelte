@@ -41,6 +41,7 @@
   let draw = $state(0);
   let t = $state(0);
   let running = $state(false);
+  let clockCleared = $state(true);
   /** @type {SVGSVGElement | null} */
   let board = $state(null);
   /** @type {(() => void) | null} */
@@ -60,7 +61,7 @@
   const stats = $derived(current.length > 0 ? analyze(current, length.length, length.error) : null);
   const ready = $derived(stats !== null && stats.n >= MIN_FOR_RESULT);
   const clock = $derived.by(() => {
-    if (!running) return current.at(-1) ?? 0;
+    if (!running) return clockCleared ? 0 : (current.at(-1) ?? 0);
     const tE = timeAt(mode === 'B' ? gateF : gateE, tilt);
     return Math.min(Math.max(0, t - tE), idealTime(mode, gateE, gateF, tilt));
   });
@@ -98,6 +99,7 @@
     stopLoop = null;
     running = false;
     t = 0;
+    clockCleared = true;
     readings = { AB: [], A: [], B: [] };
   }
 
@@ -126,6 +128,7 @@
 
   function record() {
     draw += 1;
+    clockCleared = false;
     readings[mode] = [...readings[mode], reading(draw, mode, gateE, gateF, tilt)];
   }
 
@@ -278,7 +281,17 @@
     >
       Thả bi
     </button>
-    <button type="button" class={button.quiet} disabled={running} onclick={clearAll}>RESET</button>
+    <button
+      type="button"
+      class={button.quiet}
+      disabled={running}
+      onclick={() => (clockCleared = true)}
+    >
+      RESET
+    </button>
+    <button type="button" class={button.quiet} disabled={running} onclick={clearAll}>
+      Xoá số liệu
+    </button>
   </div>
 
   {#if stats}

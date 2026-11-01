@@ -18,7 +18,7 @@ export default {
           type: 'callout',
           tone: 'definition',
           title: 'Chuyển động biến đổi',
-          text: 'Chuyển động biến đổi là chuyển động có vận tốc thay đổi theo thời gian. Vận tốc tăng dần là chuyển động nhanh dần; vận tốc giảm dần là chuyển động chậm dần.',
+          text: 'Chuyển động biến đổi là chuyển động có vận tốc thay đổi theo thời gian. Độ lớn vận tốc tăng dần là chuyển động nhanh dần; độ lớn vận tốc giảm dần là chuyển động chậm dần.',
         },
         {
           type: 'p',

@@ -21,7 +21,7 @@ export default {
           type: 'list',
           items: [
             'Vật chuyển động thẳng theo một chiều và chọn chiều đó làm chiều dương: độ dịch chuyển bằng quãng đường, $d = s$; vận tốc bằng tốc độ, $v = \\dfrac{d}{t}$.',
-            'Vật đổi chiều: quãng đường và tốc độ vẫn luôn dương, còn độ dịch chuyển và vận tốc trên đoạn đi ngược chiều dương có giá trị âm.',
+            'Vật đổi chiều: quãng đường và tốc độ vẫn không âm, còn độ dịch chuyển và vận tốc trên đoạn đi ngược chiều dương có giá trị âm.',
           ],
         },
       ],
@@ -199,6 +199,6 @@ export default {
     'Đồ thị $d - t$ của chuyển động thẳng đều là đường thẳng.',
     'Đoạn đi lên: $v > 0$; đoạn nằm ngang: đứng yên; đoạn đi xuống: $v < 0$.',
     'Vận tốc bằng độ dốc của đồ thị: $v = \\dfrac{\\Delta d}{\\Delta t}$; đồ thị càng dốc, vật càng nhanh.',
-    'Quãng đường và tốc độ luôn dương; độ dịch chuyển và vận tốc có thể âm.',
+    'Quãng đường và tốc độ không âm; độ dịch chuyển và vận tốc có thể âm.',
   ],
 };
