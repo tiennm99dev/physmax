@@ -5,6 +5,7 @@
  * on the object's side. Bench coordinates: the lens at x = 0, the object at
  * x = −d, heights up.
  */
+import { formatNumber } from '#lib/units-engine/format.js';
 import { clean } from './vector.js';
 
 const RAD = Math.PI / 180;
@@ -68,6 +69,23 @@ export function describeImage(image) {
   const k = Math.abs(image.magnification);
   const size = Math.abs(k - 1) < 1e-9 ? 'bằng vật' : k > 1 ? 'lớn hơn vật' : 'nhỏ hơn vật';
   return `${kind}, ${way}, ${size}`;
+}
+
+/**
+ * The one-line summary of a lens bench. The grade 11 form signs d′ and
+ * prints the magnification k ("d = 25 cm, d′ = −10 cm, k = 0,4."); with
+ * `unsigned`, the grade 9 form gives d and d′ as plain distances and no k.
+ * @param {ReturnType<typeof thinLensImage>} image
+ * @param {number} distance object distance d in cm
+ * @param {boolean} [unsigned]
+ */
+export function benchSummary(image, distance, unsigned = false) {
+  if (image.atInfinity) return describeImage(image);
+  const fmt = (/** @type {number} */ v) => formatNumber(v, 1);
+  const lengths = unsigned
+    ? `d = ${fmt(distance)} cm, d′ = ${fmt(Math.abs(image.distance))} cm`
+    : `d = ${fmt(distance)} cm, d′ = ${fmt(image.distance)} cm, k = ${formatNumber(image.magnification, 2)}`;
+  return `${lengths}. ${describeImage(image)}.`;
 }
 
 /** @typedef {{ x: number, y: number }} Pt */

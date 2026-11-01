@@ -78,6 +78,7 @@
     />
   </div>
   <RayOpticsBench
+    unsigned
     {focal}
     bind:distance
     bind:objectHeight

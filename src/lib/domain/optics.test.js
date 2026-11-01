@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  benchSummary,
   criticalAngle,
   describeImage,
   principalRays,
@@ -98,5 +99,24 @@ describe('principal rays', () => {
 
   it('drop the focal ray when the object sits at the focus', () => {
     expect(principalRays(10, 10, 3, 40)).toHaveLength(2);
+  });
+});
+
+describe('bench summary', () => {
+  it('signs d′ and prints k for grade 11', () => {
+    const image = thinLensImage(10, 5);
+    expect(benchSummary(image, 5)).toBe(
+      'd = 5 cm, d′ = −10 cm, k = 2. Ảnh ảo, cùng chiều, lớn hơn vật.',
+    );
+  });
+
+  it('gives plain distances and no k in the grade 9 form', () => {
+    expect(benchSummary(thinLensImage(10, 5), 5, true)).toBe(
+      'd = 5 cm, d′ = 10 cm. Ảnh ảo, cùng chiều, lớn hơn vật.',
+    );
+    expect(benchSummary(thinLensImage(10, 30), 30, true)).toBe(
+      'd = 30 cm, d′ = 15 cm. Ảnh thật, ngược chiều, nhỏ hơn vật.',
+    );
+    expect(benchSummary(thinLensImage(10, 10), 10, true)).toContain('vô cực');
   });
 });

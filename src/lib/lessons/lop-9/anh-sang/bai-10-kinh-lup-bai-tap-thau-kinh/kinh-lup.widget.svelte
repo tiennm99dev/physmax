@@ -56,6 +56,7 @@
     giác càng lớn thì tiêu cự càng ngắn.
   </p>
   <RayOpticsBench
+    unsigned
     {focal}
     bind:distance
     bind:objectHeight

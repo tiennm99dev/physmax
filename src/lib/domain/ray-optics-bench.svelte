@@ -3,7 +3,7 @@
   import { clamp, linear, snap } from '#lib/core/visuals/svg-math.js';
   import { formatNumber } from '#lib/units-engine/format.js';
   import { arrowHead } from './arrow.js';
-  import { describeImage, principalRays, thinLensImage } from './optics.js';
+  import { benchSummary, principalRays, thinLensImage } from './optics.js';
 
   /**
    * An optical bench with a thin lens at O, its foci F and F′, an object
@@ -19,6 +19,9 @@
    *   (bindable): object height h in cm.
    * - `range`: half the bench length in cm; the lens sits in the middle.
    * - `step`: snap step in cm.
+   * - `unsigned`: the grade 9 convention for the caption: d and d′ are plain
+   *   distances and no magnification k is printed (grade 11 signs d′ and
+   *   prints k).
    *
    * @type {{
    *   focal?: number;
@@ -28,6 +31,7 @@
    *   range?: number;
    *   step?: number;
    *   showRays?: boolean;
+   *   unsigned?: boolean;
    *   label?: string;
    *   width?: number;
    *   onchange?: (state: { distance: number, objectHeight: number }) => void;
@@ -41,6 +45,7 @@
     range = 50,
     step = 1,
     showRays = true,
+    unsigned = false,
     label = 'Băng quang học',
     width = 520,
     onchange,
@@ -104,11 +109,7 @@
     return arrowHead(x, tip + out * 12, x, tip, 10);
   };
 
-  const summary = $derived(
-    image.atInfinity
-      ? describeImage(image)
-      : `d = ${fmt(distance)} cm, d′ = ${fmt(image.distance)} cm, k = ${formatNumber(image.magnification, 2)}. ${describeImage(image)}.`,
-  );
+  const summary = $derived(benchSummary(image, distance, unsigned));
 </script>
 
 <figure class="space-y-2">

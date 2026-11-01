@@ -191,6 +191,7 @@
 
   {#if shown}
     <RayOpticsBench
+      unsigned
       {focal}
       bind:distance
       bind:objectHeight
