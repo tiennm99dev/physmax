@@ -48,3 +48,14 @@ export function arcPath(cx, cy, radius, start, end) {
   const to = pointAt(cx, cy, radius, end);
   return `M ${from.x} ${from.y} A ${radius} ${radius} 0 ${sweep > Math.PI ? 1 : 0} 0 ${to.x} ${to.y}`;
 }
+
+/**
+ * SVG path of the pie slice between angles `start` and `end`, counter-clockwise.
+ * An empty sweep gives '', since a path must not begin with a line.
+ * @param {number} cx @param {number} cy @param {number} radius
+ * @param {number} start @param {number} end
+ */
+export function slicePath(cx, cy, radius, start, end) {
+  const arc = arcPath(cx, cy, radius, start, end);
+  return arc && `${arc} L ${cx} ${cy} Z`;
+}

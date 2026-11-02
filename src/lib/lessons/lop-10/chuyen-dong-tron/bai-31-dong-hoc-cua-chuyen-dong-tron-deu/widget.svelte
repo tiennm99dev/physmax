@@ -5,7 +5,7 @@
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
   import ForceArrow from '#lib/domain/force-arrow.svelte';
-  import { TAU, arcPath, pointAt, tangentAt, toDeg } from '../_shared/circular.js';
+  import { TAU, arcPath, pointAt, slicePath, tangentAt, toDeg } from '../_shared/circular.js';
   import {
     SPEED_GOALS,
     WHEEL_RADIUS,
@@ -20,9 +20,9 @@
   const H = 300;
   const CX = 180;
   const CY = 150;
-  const R_PX = 80;
+  const R_PX = 110;
   /** Pixels per m/s for the velocity arrows. */
-  const ARROW = 40;
+  const ARROW = 50;
   const A_COLOR = '#be123c';
   const B_COLOR = '#0f766e';
   const SPOKES = [0, 60, 120, 180, 240, 300];
@@ -95,11 +95,7 @@
       aria-label={`Bánh xe quay đều với tốc độ góc ${formatNumber(omega, 1)} radian trên giây. Điểm A cách tâm ${formatNumber(rA, 2)} mét, điểm B cách tâm ${formatNumber(rB, 2)} mét, cùng nằm trên một nan hoa.`}
     >
       <circle cx={CX} cy={CY} r={R_PX + 4} fill="#f1f5f9" stroke="#94a3b8" stroke-width="4" />
-      <path
-        d={`${arcPath(CX, CY, R_PX, 0, within)} L ${CX} ${CY} Z`}
-        fill="#fde68a"
-        fill-opacity={within > 1e-6 ? 0.55 : 0}
-      />
+      <path d={slicePath(CX, CY, R_PX, 0, within)} fill="#fde68a" fill-opacity="0.55" />
       <g transform={`rotate(${-toDeg(within)} ${CX} ${CY})`}>
         {#each SPOKES as deg (deg)}
           {@const end = pointAt(CX, CY, R_PX, (deg * Math.PI) / 180)}

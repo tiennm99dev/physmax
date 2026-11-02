@@ -46,7 +46,7 @@
   const help = $derived(
     tilt === 0
       ? 'Trên đường phẳng, lực ma sát đóng vai trò lực hướng tâm.'
-      : 'Trên đường nghiêng, hợp lực của phản lực và lực ma sát đóng vai trò lực hướng tâm.',
+      : 'Trên đường nghiêng, các thành phần nằm ngang của phản lực và của lực ma sát đóng vai trò lực hướng tâm.',
   );
 
   const note = $derived(

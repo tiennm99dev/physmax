@@ -76,7 +76,7 @@ export default {
           items: [
             'Xe chạy trên đường phẳng nằm ngang ở khúc cua: lực ma sát giữa bánh xe và mặt đường đóng vai trò lực hướng tâm.',
             'Khi tốc độ lớn, lực hướng tâm cần thiết có thể vượt quá lực ma sát lớn nhất, xe sẽ trượt ra ngoài khúc cua. Vì vậy xe phải giảm tốc khi vào cua.',
-            'Mặt đường ở khúc cua được làm nghiêng về phía tâm để hợp lực của phản lực và lực ma sát tạo ra lực hướng tâm lớn hơn, giúp xe an toàn hơn.',
+            'Mặt đường ở khúc cua được làm nghiêng về phía tâm. Khi đó, các thành phần nằm ngang của phản lực và của lực ma sát cùng đóng vai trò lực hướng tâm, tạo được lực hướng tâm lớn hơn, giúp xe an toàn hơn.',
           ],
         },
         { type: 'widget', name: 'khuc-cua' },
@@ -260,7 +260,7 @@ export default {
       type: 'choice',
       prompt: 'Vì sao mặt đường ở khúc cua thường được làm nghiêng về phía tâm?',
       options: [
-        'Để hợp lực của phản lực và lực ma sát tạo được lực hướng tâm lớn hơn',
+        'Để thành phần nằm ngang của phản lực góp thêm vào lực hướng tâm',
         'Để giảm khối lượng của xe',
         'Để triệt tiêu lực hướng tâm tác dụng lên xe',
         'Để xe tăng tốc khi vào cua',
@@ -268,7 +268,7 @@ export default {
       answer: 0,
       hints: ['Xe đi trên đường cong cần lực gì? Mặt đường nghiêng thì phản lực có hướng thế nào?'],
       solution:
-        'Xe vẫn cần lực hướng tâm để đi theo đường cong. Trên mặt nghiêng, phản lực có thành phần hướng vào tâm, cùng lực ma sát tạo lực hướng tâm lớn hơn so với mặt phẳng.',
+        'Xe vẫn cần lực hướng tâm để đi theo đường cong. Trên mặt nghiêng, phản lực có thành phần nằm ngang hướng vào tâm; thành phần này cùng thành phần nằm ngang của lực ma sát tạo lực hướng tâm lớn hơn so với mặt phẳng.',
     },
   ],
   takeaways: [
@@ -276,6 +276,6 @@ export default {
     'Gia tốc hướng tâm: $a_{ht} = \\dfrac{v^2}{r} = \\omega^2 r$, hướng vào tâm, vuông góc với vận tốc.',
     'Lực hướng tâm: $F_{ht} = m\\dfrac{v^2}{r} = m\\omega^2 r$.',
     'Khi không còn lực hướng tâm, vật bay thẳng theo tiếp tuyến với quỹ đạo.',
-    'Xe qua khúc cua: lực ma sát, cùng phản lực khi đường nghiêng, tạo lực hướng tâm; tốc độ càng lớn thì lực cần càng lớn, nên phải giảm tốc.',
+    'Xe qua khúc cua: lực ma sát, cùng thành phần nằm ngang của phản lực khi đường nghiêng, tạo lực hướng tâm; tốc độ càng lớn thì lực cần càng lớn, nên phải giảm tốc.',
   ],
 };

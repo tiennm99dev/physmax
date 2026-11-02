@@ -4,7 +4,7 @@
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
   import DragPoint from '#lib/core/visuals/drag-point.svelte';
-  import { TAU, arcPath, pointAt, toDeg, toRad } from '../_shared/circular.js';
+  import { TAU, arcPath, pointAt, slicePath, toDeg, toRad } from '../_shared/circular.js';
   import { angleFrom } from './engine.js';
 
   const W = 360;
@@ -12,6 +12,8 @@
   const CX = 180;
   const CY = 140;
   const R_PX = 100;
+  /** How far inside the circle M's name sits, clear of the marks around the rim. */
+  const NAME_INSET = 22;
   const VIEW = { w: W, h: H };
   const MARKS = [1, 2, 3, 4, 5, 6];
   const PRESETS = [
@@ -54,11 +56,7 @@
       aria-label={`Đường tròn bán kính ${formatNumber(radius, 1)} mét. Góc ở tâm ${formatNumber(angle, 2)} radian.`}
     >
       <circle cx={CX} cy={CY} r={R_PX} fill="#f8fafc" stroke="#94a3b8" stroke-width="2" />
-      <path
-        d={`${arcPath(CX, CY, R_PX, 0, angle)} L ${CX} ${CY} Z`}
-        fill="#fde68a"
-        fill-opacity={angle > 1e-6 ? 0.5 : 0}
-      />
+      <path d={slicePath(CX, CY, R_PX, 0, angle)} fill="#fde68a" fill-opacity="0.5" />
       <path d={arcPath(CX, CY, R_PX, 0, angle)} fill="none" stroke="#be123c" stroke-width="5" />
       {#each MARKS as mark (mark)}
         {@const inner = pointAt(CX, CY, R_PX - 5, mark)}
@@ -100,6 +98,8 @@
         r={10}
         color="#be123c"
         name="M"
+        nameDx={-5 - NAME_INSET * Math.cos(angle)}
+        nameDy={5 + NAME_INSET * Math.sin(angle)}
       />
     </svg>
     <p class="px-2 pb-1 text-sm text-slate-600">

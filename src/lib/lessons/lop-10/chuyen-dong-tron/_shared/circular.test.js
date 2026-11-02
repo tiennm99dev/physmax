@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { TAU, arcPath, pointAt, tangentAt, toDeg, toRad } from './circular.js';
+import { TAU, arcPath, pointAt, slicePath, tangentAt, toDeg, toRad } from './circular.js';
 
 describe('points on the circle', () => {
   it('goes counter-clockwise on screen, so up comes a quarter turn after right', () => {
@@ -36,5 +36,15 @@ describe('arcPath', () => {
 
   it('draws a full turn as two arcs', () => {
     expect(arcPath(0, 0, 5, 0, TAU).match(/A/g)).toHaveLength(2);
+  });
+});
+
+describe('slicePath', () => {
+  it('closes the arc at the centre', () => {
+    expect(slicePath(3, 4, 5, 0, 1)).toMatch(/^M .* L 3 4 Z$/);
+  });
+
+  it('gives an empty path for an empty sweep, never a path that begins with a line', () => {
+    expect(slicePath(3, 4, 5, 0, 0)).toBe('');
   });
 });

@@ -1,7 +1,7 @@
 <script>
   import FeedbackNote from '#lib/core/feedback-note.svelte';
   import { frameLoop, reducedMotion } from '#lib/core/motion.js';
-  import { formatFixed, formatNumber, numTex } from '#lib/core/number-format.js';
+  import { formatFixed, formatNumber, numTex, tidy } from '#lib/core/number-format.js';
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
   import ForceArrow from '#lib/domain/force-arrow.svelte';
@@ -116,11 +116,17 @@
     return stop;
   });
 
+  /**
+   * The sign before a value shown to two decimals: equal only when nothing was rounded.
+   * @param {number} v
+   */
+  const relation = (v) => (tidy(v, 2) === tidy(v) ? '=' : '\\approx');
+
   const note = $derived.by(() => {
     if (phase === 'spin') {
       return {
         tone: /** @type {const} */ ('info'),
-        text: `Lực căng dây là lực hướng tâm: $F_{ht} = m\\dfrac{v^2}{r} = ${numTex(mass, 1)} \\cdot \\dfrac{${numTex(speed, 1)}^2}{${numTex(radius, 1)}} = ${numTex(force, 2)}$ N, gây ra gia tốc $a_{ht} = ${numTex(acc, 2)}$ m/s². Tốc độ góc $\\omega = ${numTex(omega, 2)}$ rad/s. Canh lúc mũi tên $\\vec{v}$ chỉ vào bia rồi cắt dây.`,
+        text: `Lực căng dây là lực hướng tâm: $F_{ht} = m\\dfrac{v^2}{r} = ${numTex(mass, 1)} \\cdot \\dfrac{${numTex(speed, 1)}^2}{${numTex(radius, 1)}} ${relation(force)} ${numTex(force, 2)}$ N, gây ra gia tốc $a_{ht} ${relation(acc)} ${numTex(acc, 2)}$ m/s². Tốc độ góc $\\omega ${relation(omega)} ${numTex(omega, 2)}$ rad/s. Canh lúc mũi tên $\\vec{v}$ chỉ vào bia rồi cắt dây.`,
       };
     }
     if (phase === 'fly') {

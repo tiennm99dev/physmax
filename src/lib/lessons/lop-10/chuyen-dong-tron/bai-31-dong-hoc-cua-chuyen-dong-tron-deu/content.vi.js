@@ -35,8 +35,9 @@ export default {
         },
         {
           type: 'tex',
-          tex: '360^\\circ = 2\\pi\\ \\text{rad}, \\qquad 180^\\circ = \\pi\\ \\text{rad}, \\qquad 1\\ \\text{rad} \\approx 57{,}3^\\circ',
+          tex: '360^\\circ = 2\\pi\\ \\text{rad}, \\qquad 180^\\circ = \\pi\\ \\text{rad}',
         },
+        { type: 'tex', tex: '1\\ \\text{rad} \\approx 57{,}3^\\circ' },
         { type: 'widget', name: 'radian' },
       ],
     },
