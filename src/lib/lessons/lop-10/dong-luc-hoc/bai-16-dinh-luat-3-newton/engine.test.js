@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { RUN_TIME, outcome, rinkExtent, skatersAt } from './engine.js';
+import { PUSH_TIME, RUN_TIME, outcome, rinkExtent, skatersAt, stillTime } from './engine.js';
 
 describe('two skaters pushing off', () => {
   it('gives each an acceleration set by their own mass', () => {
@@ -9,6 +9,13 @@ describe('two skaters pushing off', () => {
   it('keeps mass times speed equal on both sides', () => {
     const { vA, vB } = outcome(150, 40, 75);
     expect(40 * vA).toBeCloseTo(75 * vB, 6);
+  });
+
+  it('stops a run without animation in the push first, so the meters show the force', () => {
+    const first = stillTime(0);
+    expect(skatersAt(150, 50, 75, first).reading).toBe(150);
+    expect(stillTime(first)).toBe(RUN_TIME);
+    expect(stillTime(RUN_TIME)).toBeLessThan(PUSH_TIME);
   });
 
   it('shows the force on both meters only during the push', () => {

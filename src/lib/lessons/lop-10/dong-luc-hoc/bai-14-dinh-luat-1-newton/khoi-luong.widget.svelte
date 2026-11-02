@@ -14,7 +14,7 @@
   const RUN = 3;
   const LIGHT = 1;
 
-  const rx = linear(0, 5, 40, W - 40);
+  const rx = linear(0, 5, 64, W - 36);
 
   let heavy = $state(4);
   let time = $state(0);
@@ -110,7 +110,7 @@
     <SliderField
       label="Khối lượng xe thứ hai"
       value={heavy}
-      min={1}
+      min={2}
       max={10}
       step={1}
       unit="kg"

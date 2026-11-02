@@ -7,7 +7,7 @@
   import { button, card } from '#lib/core/ui.js';
   import { linear } from '#lib/core/visuals/svg-math.js';
   import { arrowHead, shaftEnd } from '#lib/domain/arrow.js';
-  import { PUSH_TIME, RUN_TIME, outcome, rinkExtent, skatersAt } from './engine.js';
+  import { PUSH_TIME, RUN_TIME, outcome, rinkExtent, skatersAt, stillTime } from './engine.js';
 
   const W = 360;
   const H = 150;
@@ -55,7 +55,7 @@
   function run() {
     halt();
     if (reducedMotion()) {
-      time = RUN_TIME;
+      time = stillTime(time);
       return;
     }
     time = 0;

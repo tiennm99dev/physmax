@@ -39,6 +39,15 @@ export function skatersAt(force, massA, massB, t) {
 }
 
 /**
+ * Where a run with no animation stands after a press of the button: first in
+ * the middle of the push, so the force meters can be read, then at the end.
+ * @param {number} t
+ */
+export function stillTime(t) {
+  return t > 0 && t < PUSH_TIME ? RUN_TIME : PUSH_TIME / 2;
+}
+
+/**
  * Half the width of the rink, in metres, so a whole run stays in view.
  * @param {number} force @param {number} massA @param {number} massB
  */

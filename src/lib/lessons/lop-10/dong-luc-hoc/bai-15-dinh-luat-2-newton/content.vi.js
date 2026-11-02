@@ -60,7 +60,7 @@ export default {
         {
           type: 'callout',
           tone: 'definition',
-          title: 'Một niutơn',
+          title: 'Một newton',
           text: '$1$ N là độ lớn của lực truyền cho vật có khối lượng $1$ kg gia tốc $1$ m/s².',
         },
       ],

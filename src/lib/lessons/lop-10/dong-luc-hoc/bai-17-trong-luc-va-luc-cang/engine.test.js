@@ -24,6 +24,10 @@ describe('tension in two ropes', () => {
     expect(t1).toBeCloseTo(16.97, 2);
   });
 
+  it('leaves a slanted rope slack when the other hangs straight up', () => {
+    expect(tensions(49, 0, 45)).toEqual({ t1: 49, t2: 0 });
+  });
+
   it('equals the weight at 60 degrees each side', () => {
     expect(tensions(49, 60, 60).t1).toBeCloseTo(49, 9);
   });

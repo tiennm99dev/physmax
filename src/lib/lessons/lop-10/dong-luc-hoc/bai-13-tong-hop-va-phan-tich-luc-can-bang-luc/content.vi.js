@@ -75,7 +75,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Điều kiện cân bằng của một vật được coi là chất điểm: hợp lực của các lực tác dụng lên vật bằng không.',
+          text: 'Điều kiện cân bằng của một vật được coi là chất điểm: hợp lực của các lực tác dụng lên vật bằng không. Khi đó vật đang đứng yên sẽ đứng yên mãi, vật đang chuyển động sẽ chuyển động thẳng đều.',
         },
         { type: 'tex', tex: '\\vec{F} = \\vec{F_1} + \\vec{F_2} + \\dots + \\vec{F_n} = \\vec{0}' },
         {

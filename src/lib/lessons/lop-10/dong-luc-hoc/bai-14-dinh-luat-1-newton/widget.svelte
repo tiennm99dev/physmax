@@ -40,7 +40,7 @@
   const marks = $derived(
     roadMarks(Math.max(0, offset - START / PX_PER_M), (W + START) / PX_PER_M, MARK_STEP),
   );
-  const dragLen = $derived(cart.v > 0 && surface.drag > 0 ? 14 + surface.drag * 14 : 0);
+  const dragLen = $derived(cart.v > 0 && surface.drag > 0 ? 12 + surface.drag * 6 : 0);
 
   /** @param {number} metres */
   const markX = (metres) => START + (metres - offset) * PX_PER_M;

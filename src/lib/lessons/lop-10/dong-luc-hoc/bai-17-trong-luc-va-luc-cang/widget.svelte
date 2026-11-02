@@ -93,6 +93,7 @@
   /** @type {string} */ color,
   /** @type {string} */ name,
   dashed = false,
+  labelLeft = tip.x < KNOT.x,
 )}
   {#if Math.hypot(tip.x - KNOT.x, tip.y - KNOT.y) > 1}
     {@const end = shaftEnd(KNOT.x, KNOT.y, tip.x, tip.y, 10)}
@@ -107,7 +108,7 @@
     />
     <polygon points={arrowHead(KNOT.x, KNOT.y, tip.x, tip.y, 10)} fill={color} />
     <text
-      x={tip.x + (tip.x >= KNOT.x ? 8 : -24)}
+      x={tip.x + (labelLeft ? -24 : 8)}
       y={tip.y + (tip.y > KNOT.y ? 14 : -4)}
       font-size="14"
       font-weight="700"
@@ -172,7 +173,7 @@
         fill="#fde68a"
         stroke="#b45309"
       />
-      {@render arrow(tipL, '#4f46e5', mode === 'mot' ? 'T' : 'T₁')}
+      {@render arrow(tipL, '#4f46e5', mode === 'mot' ? 'T' : 'T₁', false, mode !== 'mot')}
       {#if mode !== 'mot'}
         {@render arrow(tipR, '#0891b2', 'T₂')}
       {/if}
@@ -187,7 +188,7 @@
       <SliderField
         label={mode === 'lech' ? 'Góc dây trái với phương đứng' : 'Góc mỗi dây với phương đứng α'}
         bind:value={alpha}
-        min={mode === 'lech' ? 5 : 0}
+        min={0}
         max={70}
         step={5}
         unit="°"

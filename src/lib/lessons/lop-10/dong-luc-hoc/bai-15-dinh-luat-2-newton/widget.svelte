@@ -22,7 +22,7 @@
   const W = 360;
   const H = 110;
   const GROUND = 84;
-  const rx = linear(0, TRACK, 70, W - 40);
+  const rx = linear(0, TRACK, 40, W - 70);
 
   let force = $state(2);
   let mass = $state(1);
@@ -37,6 +37,8 @@
   const x = $derived(Math.min(TRACK, (a * time * time) / 2));
   const cartX = $derived(rx.map(x));
   const blocks = $derived(Math.round(mass / 0.5));
+  const forceTip = $derived(cartX + 22 + force * 7);
+  const forceEnd = $derived(shaftEnd(cartX + 22, GROUND - 15, forceTip, GROUND - 15, 8));
 
   const byForce = $derived(forceSeries(readings, mass));
   const byMass = $derived(massSeries(readings, force));
@@ -110,10 +112,10 @@
       return 'Chọn lực và khối lượng rồi cho xe chạy. Đồng hồ đo thời gian xe đi hết $1$ m, từ đó tính $a = \\dfrac{2d}{t^2}$.';
     }
     if (byForce.length >= 3 && slopeF !== null) {
-      return `Với $m = ${numTex(mass, 1)}$ kg, các điểm $a - F$ nằm trên đường thẳng qua gốc toạ độ, độ dốc $\\approx ${numTex(slopeF, 2)}$ đúng bằng $\\dfrac{1}{m}$: $a$ tỉ lệ thuận với $F$.`;
+      return `Với $m = ${numTex(mass, 1)}$ kg, các điểm $a - F$ nằm trên đường thẳng qua gốc toạ độ, độ dốc $\\approx ${numTex(slopeF, 2)}$, xấp xỉ $\\dfrac{1}{m}$: $a$ tỉ lệ thuận với $F$.`;
     }
     if (byMass.length >= 3 && slopeM !== null) {
-      return `Với $F = ${formatNumber(force)}$ N, các điểm $a - \\dfrac{1}{m}$ nằm trên đường thẳng qua gốc toạ độ, độ dốc $\\approx ${numTex(slopeM, 2)}$ đúng bằng $F$: $a$ tỉ lệ nghịch với $m$.`;
+      return `Với $F = ${formatNumber(force)}$ N, các điểm $a - \\dfrac{1}{m}$ nằm trên đường thẳng qua gốc toạ độ, độ dốc $\\approx ${numTex(slopeM, 2)}$, xấp xỉ $F$: $a$ tỉ lệ nghịch với $m$.`;
     }
     return 'Cần ít nhất ba điểm trên một đồ thị: giữ nguyên khối lượng và đổi lực, hoặc giữ nguyên lực và đổi khối lượng.';
   });
@@ -167,21 +169,19 @@
         />
       {/each}
 
-      {#if true}
-        {@const tip = cartX + 22 + force * 7}
-        {@const end = shaftEnd(cartX + 22, GROUND - 15, tip, GROUND - 15, 8)}
-        <line
-          x1={cartX + 22}
-          y1={GROUND - 15}
-          x2={end.x}
-          y2={end.y}
-          stroke="#e11d48"
-          stroke-width="3"
-        />
-        <polygon points={arrowHead(cartX + 22, GROUND - 15, tip, GROUND - 15, 8)} fill="#e11d48" />
-        <text x={cartX + 24} y={GROUND - 24} font-size="12" font-weight="700" fill="#e11d48">F</text
-        >
-      {/if}
+      <line
+        x1={cartX + 22}
+        y1={GROUND - 15}
+        x2={forceEnd.x}
+        y2={forceEnd.y}
+        stroke="#e11d48"
+        stroke-width="3"
+      />
+      <polygon
+        points={arrowHead(cartX + 22, GROUND - 15, forceTip, GROUND - 15, 8)}
+        fill="#e11d48"
+      />
+      <text x={cartX + 24} y={GROUND - 24} font-size="12" font-weight="700" fill="#e11d48">F</text>
     </svg>
   </div>
 

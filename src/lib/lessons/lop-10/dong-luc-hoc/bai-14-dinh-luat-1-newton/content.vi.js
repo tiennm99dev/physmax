@@ -63,7 +63,7 @@ export default {
           type: 'callout',
           tone: 'definition',
           title: 'Quán tính',
-          text: 'Quán tính là tính chất của mọi vật có xu hướng bảo toàn vận tốc cả về hướng và độ lớn.',
+          text: 'Quán tính là tính chất của mọi vật có xu hướng bảo toàn vận tốc cả về hướng và độ lớn, tức là bảo toàn trạng thái đứng yên hay chuyển động của vật.',
         },
         {
           type: 'p',

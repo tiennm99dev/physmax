@@ -18,7 +18,7 @@ export default {
           type: 'callout',
           tone: 'definition',
           title: 'Trọng lực',
-          text: 'Trọng lực là lực của Trái Đất tác dụng lên vật, gây ra cho vật gia tốc rơi tự do. Trọng lực có phương thẳng đứng, chiều từ trên xuống và điểm đặt tại trọng tâm của vật.',
+          text: 'Trọng lực là lực hấp dẫn do Trái Đất tác dụng lên vật, gây ra cho vật gia tốc rơi tự do. Trọng lực có phương thẳng đứng, chiều từ trên xuống và điểm đặt tại trọng tâm của vật.',
         },
         {
           type: 'p',

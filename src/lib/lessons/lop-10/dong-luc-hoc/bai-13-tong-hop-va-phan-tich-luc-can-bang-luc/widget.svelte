@@ -79,7 +79,7 @@
       const f = forces[key];
       forces[key] = snapForce(
         f.magnitude - dy * (big ? 5 : 1),
-        f.angle - dx * (big ? 15 : 5),
+        f.angle - dx * (big ? 15 : 1),
         maxOf(key),
       );
     },
@@ -236,8 +236,8 @@
       aria-label="Bảng vẽ lực. Kéo đầu mũi tên hoặc dùng phím mũi tên để đổi độ lớn và hướng của lực."
     >
       {#if mode === 'phan-tich'}
-        {@const x = { a: along(-85, axis), b: along(85, axis) }}
-        {@const y = { a: along(-85, axis + 90), b: along(85, axis + 90) }}
+        {@const x = { a: along(-80, axis), b: along(80, axis) }}
+        {@const y = { a: along(-80, axis + 90), b: along(80, axis + 90) }}
         <line x1={x.a.x} y1={x.a.y} x2={x.b.x} y2={x.b.y} stroke="#cbd5e1" />
         <line x1={y.a.x} y1={y.a.y} x2={y.b.x} y2={y.b.y} stroke="#cbd5e1" />
         <text x={x.b.x - 16} y={x.b.y - 6} font-size="12" fill="#64748b">x</text>
