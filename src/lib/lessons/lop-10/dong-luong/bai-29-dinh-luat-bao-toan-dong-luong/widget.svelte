@@ -5,7 +5,7 @@
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
-  import { linear } from '#lib/core/visuals/svg-math.js';
+  import { clamp, linear } from '#lib/core/visuals/svg-math.js';
   import ForceArrow from '#lib/domain/force-arrow.svelte';
   import AirCart from '../_shared/air-cart.svelte';
   import { collide, kineticSum, momentum } from '../_shared/collision.js';
@@ -29,6 +29,8 @@
   const P_SCALE = 110;
   /** Pixels per m/s on the velocity arrows. */
   const V_SCALE = 60;
+  /** Room kept for the arrow tip and its name at each side of the board. */
+  const V_EDGE = 26;
 
   const px = linear(0, TRACK, 12, W - 12);
 
@@ -55,6 +57,17 @@
   const totalAfter = $derived(pAfter.a + pAfter.b);
   const wBefore = $derived(kineticSum(m1, v1, m2, v2));
   const wAfter = $derived(kineticSum(m1, after.v1, m2, after.v2));
+
+  /**
+   * A velocity arrow above a cart, moved along so its tip stays on the board when
+   * the cart nears an end of the track.
+   * @param {number} x centre of the cart, in pixels @param {number} v m/s
+   */
+  function velocityArrow(x, v) {
+    const length = v * V_SCALE;
+    const tip = clamp(x + length, V_EDGE, W - V_EDGE);
+    return { x1: tip - length, x2: tip };
+  }
 
   function changed() {
     running = false;
@@ -88,7 +101,7 @@
     if (meet === null) {
       return {
         tone: /** @type {const} */ ('warn'),
-        text: 'Với các vận tốc này, hai xe không gặp nhau trên đệm khí. Hãy cho xe 1 chạy nhanh hơn xe 2 theo chiều dương.',
+        text: 'Với các vận tốc này, hai xe không gặp nhau trên đệm khí. Hãy tăng vận tốc xe 1 hoặc giảm vận tốc xe 2.',
       };
     }
     if (!now.collided) {
@@ -128,18 +141,16 @@
       <AirCart x={px.map(now.x1)} y={RAIL} width={px.map(CART) - px.map(0)} name="1" color={BLUE} />
       <AirCart x={px.map(now.x2)} y={RAIL} width={px.map(CART) - px.map(0)} name="2" color={TEAL} />
       <ForceArrow
-        x1={px.map(now.x1)}
+        {...velocityArrow(px.map(now.x1), now.v1)}
         y1={RAIL - 32}
-        x2={px.map(now.x1) + now.v1 * V_SCALE}
         y2={RAIL - 32}
         color={BLUE}
         label="v₁"
         labelDy={-6}
       />
       <ForceArrow
-        x1={px.map(now.x2)}
+        {...velocityArrow(px.map(now.x2), now.v2)}
         y1={RAIL - 32}
-        x2={px.map(now.x2) + now.v2 * V_SCALE}
         y2={RAIL - 32}
         color={TEAL}
         label="v₂"

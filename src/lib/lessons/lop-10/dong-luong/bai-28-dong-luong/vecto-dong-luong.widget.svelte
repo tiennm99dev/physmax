@@ -23,7 +23,7 @@
   const r = $derived(bounce(mass, v1, v2, ms));
 
   const note = $derived.by(() => {
-    const working = `Chọn chiều dương hướng vào tường: $p_1 = ${numTex(r.p1, 2)}$, $p_2 = ${numTex(r.p2, 2)}$, nên $\\Delta p = p_2 - p_1 = ${numTex(r.change, 2)}$ kg.m/s. Lực của tường lên bóng $F = \\dfrac{\\Delta p}{\\Delta t} = ${numTex(r.force, 1)}$ N.`;
+    const working = `Chọn chiều dương hướng vào tường: $p_1 = ${numTex(r.p1, 2)}$, $p_2 = ${numTex(r.p2, 2)}$, nên $\\Delta p = p_2 - p_1 = ${numTex(r.change, 2)}$ kg.m/s. Lực của tường lên bóng $F = \\dfrac{\\Delta p}{\\Delta t} = ${numTex(r.force, 1)}$ N. Dấu âm cho biết lực hướng ra khỏi tường.`;
     return v2 === 0
       ? {
           tone: /** @type {const} */ ('info'),
@@ -31,7 +31,7 @@
         }
       : {
           tone: /** @type {const} */ ('ok'),
-          text: `${working} Vì động lượng là vectơ nên khi bóng bật ngược, $|\\Delta p|$ bằng tổng hai độ lớn chứ không phải hiệu của chúng. Dấu âm cho biết lực hướng ra khỏi tường.`,
+          text: `${working} Vì động lượng là vectơ nên khi bóng bật ngược, $|\\Delta p|$ bằng tổng hai độ lớn chứ không phải hiệu của chúng.`,
         };
   });
 </script>

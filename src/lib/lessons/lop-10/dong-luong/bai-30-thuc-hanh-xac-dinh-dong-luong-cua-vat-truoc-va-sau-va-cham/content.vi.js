@@ -40,7 +40,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Mục tiêu: xác định tổng động lượng của hai xe trước và sau va chạm rồi so sánh. Dụng cụ: đệm khí và bơm khí, hai xe có tấm cản quang, hai cổng quang điện, đồng hồ đo thời gian hiện số, cân điện tử, phụ kiện gắn ở đầu xe để hai xe dính vào nhau hoặc bật ra.',
+          text: 'Mục tiêu: xác định tổng động lượng của hai xe trước và sau va chạm rồi so sánh. Dụng cụ: băng đệm khí và bơm nén khí, hai xe trượt, hai tấm cản quang, hai cổng quang điện, đồng hồ đo thời gian hiện số, cân điện tử, phụ kiện gắn ở đầu xe để hai xe dính vào nhau hoặc bật ra.',
         },
         {
           type: 'list',

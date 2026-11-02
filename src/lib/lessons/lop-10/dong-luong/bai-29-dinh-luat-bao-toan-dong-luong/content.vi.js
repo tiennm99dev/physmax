@@ -39,7 +39,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Xét hệ kín gồm hai vật tương tác trong thời gian $\\Delta t$. Theo định luật 3 Newton, $\\vec{F_{12}} = -\\vec{F_{21}}$. Theo mối liên hệ giữa lực và động lượng:',
+          text: 'Xét hệ kín gồm hai vật tương tác trong thời gian $\\Delta t$. Gọi $\\vec{F_{12}}$ là lực vật $1$ tác dụng lên vật $2$, $\\vec{F_{21}}$ là lực vật $2$ tác dụng lên vật $1$. Theo định luật 3 Newton, $\\vec{F_{12}} = -\\vec{F_{21}}$. Theo mối liên hệ giữa lực và động lượng:',
         },
         {
           type: 'tex',
@@ -106,7 +106,7 @@ export default {
           type: 'callout',
           tone: 'definition',
           title: 'Chuyển động bằng phản lực',
-          text: 'Trong một hệ kín, khi một phần của hệ chuyển động theo một hướng thì phần còn lại chuyển động theo hướng ngược lại. Đó là chuyển động bằng phản lực: súng giật khi bắn, tên lửa bay nhờ khí phụt ra phía sau, máy bay phản lực, pháo thăng thiên.',
+          text: 'Trong một hệ kín ban đầu đứng yên, khi một phần của hệ chuyển động theo một hướng thì phần còn lại chuyển động theo hướng ngược lại. Đó là chuyển động bằng phản lực: súng giật khi bắn, tên lửa bay nhờ khí phụt ra phía sau, máy bay phản lực, pháo thăng thiên.',
         },
         {
           type: 'callout',
@@ -273,6 +273,6 @@ export default {
     'Hệ kín: không có ngoại lực, hoặc các ngoại lực cân bằng nhau; nội lực rất lớn so với ngoại lực thì coi hệ là kín.',
     'Định luật: động lượng toàn phần của hệ kín không đổi, $m_1\\vec{v_1} + m_2\\vec{v_2} = m_1\\vec{v_1^{\\prime}} + m_2\\vec{v_2^{\\prime}}$.',
     'Va chạm đàn hồi giữ nguyên động năng của hệ; va chạm mềm làm động năng giảm, và hai vật có chung vận tốc $V = \\dfrac{m_1v_1 + m_2v_2}{m_1 + m_2}$.',
-    'Chuyển động bằng phản lực: một phần của hệ chuyển động theo một hướng thì phần còn lại chuyển động theo hướng ngược lại.',
+    'Chuyển động bằng phản lực: trong hệ kín ban đầu đứng yên, một phần của hệ chuyển động theo một hướng thì phần còn lại chuyển động theo hướng ngược lại.',
   ],
 };
