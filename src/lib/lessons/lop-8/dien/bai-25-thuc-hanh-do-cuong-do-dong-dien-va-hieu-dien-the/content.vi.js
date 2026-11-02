@@ -309,7 +309,7 @@ export default {
       answers: [0, 1, 2, 3],
       hints: ['Một phương án mâu thuẫn với kết quả $I_1 = I_2$.'],
       solution:
-        'Bốn nguyên nhân đầu đều gây sai khác giữa các nhóm. Phương án cuối sai: cường độ dòng điện trước và sau bóng đèn bằng nhau.',
+        'Nguồn lệch số ghi, mối nối lỏng, đặt mắt đọc chưa đúng và dây nối, dụng cụ cản trở khác nhau đều gây sai khác giữa các nhóm. Ý nói cường độ dòng điện giảm dần sau bóng đèn thì sai: cường độ dòng điện trước và sau bóng đèn bằng nhau.',
     },
     {
       type: 'match',

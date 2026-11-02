@@ -207,7 +207,7 @@ export default {
       answer: 2,
       hints: ['Biến áp nguồn được cắm vào ổ điện trong phòng thí nghiệm.'],
       solution:
-        'Biến áp nguồn chuyển điện áp xoay chiều 220 V của lưới điện thành điện áp xoay chiều hoặc một chiều nhỏ, an toàn cho thí nghiệm. Hai phương án đầu là ampe kế và vôn kế, phương án cuối là joulemeter.',
+        'Biến áp nguồn chuyển điện áp xoay chiều 220 V của lưới điện thành điện áp xoay chiều hoặc một chiều nhỏ, an toàn cho thí nghiệm. Đo cường độ dòng điện là việc của ampe kế, đo hiệu điện thế là việc của vôn kế, đo cả dòng điện, điện áp, công suất và năng lượng là việc của joulemeter.',
     },
     {
       type: 'match',
