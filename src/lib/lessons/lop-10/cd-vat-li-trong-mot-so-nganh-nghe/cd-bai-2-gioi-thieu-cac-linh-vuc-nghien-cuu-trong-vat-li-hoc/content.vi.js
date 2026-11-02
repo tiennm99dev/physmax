@@ -3,7 +3,7 @@ export default {
   summary:
     'Giới thiệu các lĩnh vực chính của vật lí hiện đại: thiên văn và vũ trụ học, hạt cơ bản và năng lượng cao, nano, laser, bán dẫn, y sinh, với đối tượng nghiên cứu, mô hình lí thuyết, phương pháp thực nghiệm và mối liên hệ giữa chúng.',
   intro:
-    'Tàu thăm dò đáp xuống Sao Hoả, chùm laser dẫn đường cho dao mổ, con chip trong điện thoại có hàng tỉ transistor. Những thành tựu ấy đến từ các lĩnh vực khác nhau của vật lí hiện đại. Các nhà khoa học trong từng lĩnh vực nghiên cứu điều gì, và họ làm việc như thế nào?',
+    'Tàu thăm dò đáp xuống Sao Hoả, chùm laser thay cho dao mổ, con chip trong điện thoại có hàng tỉ transistor. Những thành tựu ấy đến từ các lĩnh vực khác nhau của vật lí hiện đại. Các nhà khoa học trong từng lĩnh vực nghiên cứu điều gì, và họ làm việc như thế nào?',
   objectives: [
     'Nêu được đối tượng nghiên cứu của một số lĩnh vực chính của vật lí hiện đại.',
     'Liệt kê được một số mô hình lí thuyết đơn giản và phương pháp thực nghiệm của các lĩnh vực đó.',
@@ -112,7 +112,7 @@ export default {
           items: [
             'Chẩn đoán: chụp X-quang, siêu âm, cộng hưởng từ, đo điện tim.',
             'Phục hồi chức năng: thiết bị dùng laser, điện, từ, quang, siêu âm, sóng ngắn trị liệu.',
-            'Nghiên cứu: kĩ thuật khuếch đại PCR giúp quan sát kết quả và nghiên cứu các tương tác phức tạp trong tiến trình sống.',
+            'Nghiên cứu: kĩ thuật PCR khuếch đại một đoạn DNA thành rất nhiều bản sao, giúp quan sát kết quả và nghiên cứu các tương tác phức tạp trong tiến trình sống.',
           ],
         },
       ],
@@ -182,7 +182,7 @@ export default {
         'Lập tỉ số: $\\dfrac{8 \\cdot 10^{-5}}{2 \\cdot 10^{-8}} = 4 \\cdot 10^{3} = 4\\,000$.',
       ],
       answer:
-        'Đường kính sợi tóc gấp $4\\,000$ lần đường kính hạt nano, nên phải dùng kính hiển vi điện tử mới quan sát được hạt này.',
+        'Đường kính sợi tóc gấp $4\\,000$ lần đường kính hạt nano. Hạt này còn nhỏ hơn bước sóng ánh sáng nhìn thấy (cỡ $500$ nm) nên kính hiển vi quang học không phân biệt được, phải dùng kính hiển vi điện tử.',
     },
     {
       problem:
@@ -251,7 +251,7 @@ export default {
       prompt: 'Hạt nào dưới đây là hạt tổ hợp, được cấu thành từ các hạt khác?',
       options: ['Proton', 'Electron', 'Quark', 'Photon'],
       answer: 0,
-      hints: ['Hạt cần chọn nằm trong hạt nhân nguyên tử.'],
+      hints: ['Hạt cần chọn là một trong hai loại hạt tạo nên hạt nhân nguyên tử.'],
       solution:
         'Proton được cấu thành từ các quark. Electron, quark và photon được coi là hạt cơ bản.',
     },

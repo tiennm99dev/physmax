@@ -37,6 +37,28 @@ describe('links', () => {
     expect(ids.filter((id) => linksOf(id).length < 2)).toEqual([]);
   });
 
+  it('never run under a third field, so a line only ever joins the two it names', () => {
+    // Half a node's size in map units: 29% wide, at most 66 px tall on the 320 px map.
+    const halfWidth = 14.5;
+    const halfHeight = 10.5;
+    const crossed = [];
+    for (const { a, b } of LINKS) {
+      const [p, q] = [fieldOf(a), fieldOf(b)];
+      for (const node of FIELDS) {
+        if (node === p || node === q) continue;
+        for (let t = 0; t <= 1; t += 0.01) {
+          const x = p.x + (q.x - p.x) * t;
+          const y = p.y + (q.y - p.y) * t;
+          if (Math.abs(x - node.x) < halfWidth && Math.abs(y - node.y) < halfHeight) {
+            crossed.push(`${a}-${b} under ${node.id}`);
+            break;
+          }
+        }
+      }
+    }
+    expect(crossed).toEqual([]);
+  });
+
   it('are seen from both ends', () => {
     expect(linksOf('nano').map((l) => l.other)).toContain('ban-dan');
     expect(linksOf('ban-dan').map((l) => l.other)).toContain('nano');

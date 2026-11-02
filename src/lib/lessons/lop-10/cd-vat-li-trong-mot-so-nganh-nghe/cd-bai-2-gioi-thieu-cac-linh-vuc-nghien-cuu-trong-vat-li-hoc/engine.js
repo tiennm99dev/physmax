@@ -35,7 +35,7 @@ export const FIELDS = [
     experiment:
       'Kính thiên văn trên mặt đất và ngoài không gian, tàu thăm dò, phân tích ánh sáng từ các sao.',
     uses: 'Vệ tinh nhân tạo, định vị GPS, thông tin vũ trụ.',
-    x: 25,
+    x: 35,
     y: 14,
   },
   {
@@ -48,7 +48,7 @@ export const FIELDS = [
     model: 'Mô hình chuẩn của các hạt cơ bản.',
     experiment: 'Máy gia tốc (như LHC) cho các hạt va chạm và các đầu dò ghi lại sản phẩm va chạm.',
     uses: 'Chùm hạt xạ trị ung thư, chụp cắt lớp PET.',
-    x: 75,
+    x: 65,
     y: 14,
   },
   {
@@ -87,7 +87,7 @@ export const FIELDS = [
     experiment:
       'Môi trường hoạt chất đặt trong buồng cộng hưởng được cấp năng lượng để phát laser.',
     uses: 'Cắt kim loại, dao mổ, cáp quang, đo khoảng cách trong nghiên cứu vũ trụ.',
-    x: 25,
+    x: 35,
     y: 86,
   },
   {
@@ -100,7 +100,7 @@ export const FIELDS = [
     model: 'Mô hình cơ học của dòng máu, mô hình điện của tế bào thần kinh.',
     experiment: 'Chụp X-quang, siêu âm, cộng hưởng từ, đo điện tim, kĩ thuật khuếch đại PCR.',
     uses: 'Máy chẩn đoán hình ảnh, thiết bị phục hồi chức năng, xạ trị.',
-    x: 75,
+    x: 65,
     y: 86,
   },
 ];

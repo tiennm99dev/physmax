@@ -1,12 +1,12 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Vật lí được ứng dụng trong quân sự, công nghiệp hạt nhân, điện tử, cơ khí và tự động hoá, thông tin truyền thông, khí tượng thuỷ văn, nông nghiệp, lâm nghiệp, y tế, giao thông và cả tài chính; từ đó em có thể tìm ngành nghề phù hợp với mình.',
+    'Vật lí được ứng dụng trong quân sự, công nghiệp hạt nhân, điện tử, cơ khí và tự động hoá, thông tin truyền thông, năng lượng, y tế, giao thông, khí tượng thuỷ văn, nông nghiệp, lâm nghiệp và cả tài chính; từ đó em có thể tìm ngành nghề phù hợp với mình.',
   intro:
     'Bác sĩ đọc ảnh X-quang, kĩ sư lắp pin mặt trời, người dự báo bão theo dõi ảnh vệ tinh, chuyên viên tài chính lập mô hình thị trường. Họ làm những công việc rất khác nhau, nhưng đều dùng kiến thức vật lí. Vật lí có vai trò như thế nào với các ngành nghề trong xã hội?',
   objectives: [
     'Mô tả được ví dụ thực tế về ứng dụng vật lí trong quân sự, công nghiệp hạt nhân, kĩ thuật điện tử, cơ khí và tự động hoá, thông tin truyền thông.',
-    'Mô tả được ví dụ thực tế về ứng dụng vật lí trong khí tượng thuỷ văn, nông nghiệp, lâm nghiệp, y tế, giao thông, tài chính.',
+    'Mô tả được ví dụ thực tế về ứng dụng vật lí trong năng lượng, y tế, giao thông, khí tượng thuỷ văn, nông nghiệp, lâm nghiệp, tài chính.',
     'Giải thích được nguyên lí vật lí đơn giản đứng sau một số thiết bị.',
     'Nhận ra được một số ngành nghề phù hợp với thiên hướng của bản thân.',
   ],
@@ -41,6 +41,19 @@ export default {
       ],
     },
     {
+      heading: 'Năng lượng',
+      blocks: [
+        {
+          type: 'p',
+          text: 'Vật lí cho biết năng lượng được chuyển hoá như thế nào, từ đó kĩ sư thiết kế các nhà máy điện. Thuỷ điện chuyển thế năng của nước thành điện năng qua tua-bin và máy phát. Điện gió chuyển động năng của gió thành điện năng. Pin mặt trời chuyển quang năng trực tiếp thành điện năng nhờ hiệu ứng quang điện trong chất bán dẫn.',
+        },
+        {
+          type: 'p',
+          text: 'Trong mọi nhà máy, chỉ một phần năng lượng đầu vào trở thành điện năng. Hiệu suất là tỉ số giữa công suất có ích và công suất toàn phần; nhiều tấm pin mặt trời hiện nay có hiệu suất cỡ $20\\%$.',
+        },
+      ],
+    },
+    {
       heading: 'Kĩ thuật điện tử, cơ khí và tự động hoá',
       blocks: [
         {
@@ -54,15 +67,24 @@ export default {
       ],
     },
     {
-      heading: 'Thông tin, truyền thông, y tế và giao thông',
+      heading: 'Thông tin và truyền thông',
       blocks: [
         {
           type: 'p',
           text: 'Định vị GPS, điện thoại thông minh, mạng không dây, vệ tinh nhân tạo đều dựa trên dao động điện từ và sóng vô tuyến; laser và cáp quang truyền lượng thông tin rất lớn đi xa.',
         },
+      ],
+    },
+    {
+      heading: 'Y tế và giao thông',
+      blocks: [
         {
           type: 'p',
-          text: 'Trong y tế, bác sĩ dùng tia X, siêu âm, cộng hưởng từ để chẩn đoán, dùng laser để phẫu thuật và bức xạ để xạ trị. Trong giao thông, kĩ sư dùng cơ học để thiết kế đường cong, cầu và phanh xe; ô tô tự lái dùng radar và cảm biến.',
+          text: 'Trong y tế, bác sĩ dùng nhiều hiện tượng vật lí để chẩn đoán: tia X bị xương hấp thụ mạnh hơn mô mềm; siêu âm dùng sóng âm tần số cao phản xạ ở ranh giới giữa các mô; cộng hưởng từ dùng từ trường mạnh và sóng vô tuyến. Laser được dùng để phẫu thuật, bức xạ được dùng để xạ trị.',
+        },
+        {
+          type: 'p',
+          text: 'Trong giao thông, kĩ sư dùng cơ học để thiết kế cầu, phanh xe và khúc cua: xe đi trên đường cong cần lực hướng tâm $F_{ht} = \\dfrac{mv^2}{r}$, nên mặt đường được làm nghiêng và có biển giới hạn tốc độ. Ô tô tự lái dùng radar và cảm biến để nhận biết vật cản.',
         },
       ],
     },
@@ -254,6 +276,39 @@ export default {
         '$E = 10^{-3} \\cdot (3 \\cdot 10^{8})^2 = 9 \\cdot 10^{13}$ J. Trong lò phản ứng, chỉ một phần nhỏ khối lượng nhiên liệu chuyển thành năng lượng, nhưng năng lượng thu được vẫn rất lớn.',
     },
     {
+      type: 'number',
+      prompt:
+        'Một tấm pin mặt trời diện tích $2\\ \\text{m}^2$ nhận ánh sáng Mặt Trời với công suất $1\\,000$ W trên mỗi mét vuông. Hiệu suất của tấm pin là $20\\%$. Công suất điện của tấm pin là bao nhiêu oát?',
+      answer: 400,
+      tolerance: 0.5,
+      unit: 'W',
+      hints: [
+        'Tính công suất ánh sáng chiếu lên cả tấm pin.',
+        'Công suất có ích bằng hiệu suất nhân công suất toàn phần.',
+      ],
+      solution:
+        '$P_{tp} = 1\\,000 \\cdot 2 = 2\\,000$ W, nên $P_{ci} = 0{,}2 \\cdot 2\\,000 = 400$ W.',
+    },
+    {
+      type: 'choice',
+      prompt: 'Kĩ thuật chẩn đoán nào dùng sóng âm tần số cao phản xạ ở ranh giới giữa các mô?',
+      options: ['Siêu âm', 'Chụp X-quang', 'Chụp cộng hưởng từ', 'Đo điện tim'],
+      answer: 0,
+      hints: ['Tên của kĩ thuật này gợi ngay đến loại sóng nó dùng.'],
+      solution:
+        'Đó là siêu âm. Chụp X-quang dùng tia X, cộng hưởng từ dùng từ trường và sóng vô tuyến, đo điện tim ghi tín hiệu điện của tim.',
+    },
+    {
+      type: 'number',
+      prompt:
+        'Một ô tô khối lượng $1\\,200$ kg đi qua khúc cua tròn bán kính $60$ m với tốc độ $10$ m/s. Lực hướng tâm cần thiết là bao nhiêu niutơn?',
+      answer: 2000,
+      tolerance: 0.5,
+      unit: 'N',
+      hints: ['Dùng $F_{ht} = \\dfrac{mv^2}{r}$ với $m$ tính bằng kg, $v$ tính bằng m/s.'],
+      solution: '$F_{ht} = \\dfrac{1\\,200 \\cdot 10^2}{60} = 2\\,000$ N.',
+    },
+    {
       type: 'choice',
       prompt: 'Trong nông nghiệp, chiếu xạ nông sản nhằm mục đích chính nào?',
       options: [
@@ -314,7 +369,7 @@ export default {
     },
   ],
   takeaways: [
-    'Vật lí có ứng dụng trong rất nhiều ngành, từ quân sự, hạt nhân, điện tử, cơ khí đến nông nghiệp, lâm nghiệp, y tế và tài chính.',
+    'Vật lí có ứng dụng trong rất nhiều ngành, từ quân sự, hạt nhân, năng lượng, điện tử, cơ khí đến y tế, giao thông, nông nghiệp, lâm nghiệp và tài chính.',
     'Mỗi thiết bị nghề nghiệp đều dựa trên những nguyên lí vật lí cụ thể.',
     'Công nghiệp hạt nhân có lợi ích lớn nhưng cũng có rủi ro phải kiểm soát.',
     'Một số phương pháp và mô hình của vật lí còn được dùng trong kinh tế, tài chính.',

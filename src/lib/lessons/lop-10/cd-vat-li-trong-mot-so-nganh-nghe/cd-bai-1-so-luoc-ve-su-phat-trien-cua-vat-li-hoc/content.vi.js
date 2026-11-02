@@ -132,7 +132,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Trên nền tảng lượng tử và tương đối, vật lí hiện đại phát triển thành nhiều lĩnh vực: vật lí nguyên tử và hạt nhân, vật lí thiên văn và vũ trụ học, vật lí hạt cơ bản và năng lượng cao, vật lí chất rắn và bán dẫn, vật lí nano, vật lí laser, vật lí y sinh. Bài học sau sẽ giới thiệu các lĩnh vực này.',
+          text: 'Trên nền tảng lượng tử và tương đối, vật lí hiện đại phát triển thành nhiều lĩnh vực: vật lí nguyên tử và hạt nhân, vật lí thiên văn và vũ trụ học, vật lí hạt cơ bản và năng lượng cao, vật lí chất rắn và bán dẫn, vật lí nano, vật lí laser, vật lí y sinh. Bài học sau sẽ giới thiệu kĩ hơn một số lĩnh vực trong đó.',
         },
         {
           type: 'table',
@@ -347,7 +347,7 @@ export default {
         'Tìm $k$ từ dữ kiện sau $1$ s.',
         'Thời gian tăng $3$ lần thì quãng đường tăng $3^2$ lần.',
       ],
-      solution: '$k = 0{,}2$ m/s². Sau $3$ s: $s = 0{,}2 \\cdot 3^2 = 1{,}8$ m.',
+      solution: '$k = 0{,}2\\ \\text{m/s}^2$. Sau $3$ s: $s = 0{,}2 \\cdot 3^2 = 1{,}8$ m.',
     },
     {
       type: 'number',

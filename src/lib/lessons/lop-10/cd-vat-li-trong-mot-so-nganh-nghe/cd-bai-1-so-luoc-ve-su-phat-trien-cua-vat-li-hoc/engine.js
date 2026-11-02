@@ -88,10 +88,11 @@ export const MILESTONES = [
   {
     id: 'kepler',
     year: 1619,
-    when: '1609–1619',
+    when: '1619',
     who: 'Kepler',
     title: 'Ba định luật về chuyển động của hành tinh',
-    detail: 'Mô tả bằng toán học quỹ đạo các hành tinh, từ số liệu quan sát rất chính xác.',
+    detail:
+      'Mô tả bằng toán học quỹ đạo các hành tinh, từ số liệu quan sát rất chính xác. Hai định luật đầu công bố năm $1609$, định luật thứ ba năm $1619$.',
     stage: 'co-dien',
   },
   {
