@@ -218,7 +218,7 @@ export default {
     {
       type: 'number',
       prompt:
-        'Đặt một vật trên mặt phẳng nghiêng $30^\\circ$. Khi thả cho trượt, vật đi xuống thẳng đều. Tính hệ số ma sát trượt.',
+        'Đẩy nhẹ một vật trên mặt phẳng nghiêng $30^\\circ$ cho vật bắt đầu đi xuống, sau đó vật trượt xuống thẳng đều. Tính hệ số ma sát trượt.',
       answer: 0.577,
       tolerance: 0.005,
       hints: [

@@ -57,7 +57,7 @@ export default {
           type: 'callout',
           tone: 'theorem',
           title: 'Công thức',
-          text: '$F_{mst} = \\mu N$, trong đó $\\mu$ là hệ số ma sát trượt (không có đơn vị), phụ thuộc vào vật liệu và tình trạng của hai mặt tiếp xúc; $N$ là độ lớn áp lực, tính bằng niutơn.',
+          text: '$F_{mst} = \\mu N$ (nhiều tài liệu viết gọn là $F_{ms}$). Tỉ số $\\mu = \\dfrac{F_{mst}}{N}$ là hệ số ma sát trượt, không có đơn vị, phụ thuộc vào vật liệu và tình trạng của hai mặt tiếp xúc; $N$ là độ lớn áp lực, tính bằng niutơn.',
         },
         {
           type: 'p',
@@ -84,7 +84,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Muốn giảm ma sát có thể làm nhẵn bề mặt, tra dầu mỡ, thay vật liệu tiếp xúc, giảm áp lực, hoặc đổi ma sát trượt thành ma sát lăn bằng con lăn và ổ bi. Muốn tăng ma sát có thể làm nhám bề mặt, như tạo gai lốp xe hay xoa phấn vào tay trước khi nâng tạ.',
+          text: 'Muốn giảm ma sát có thể làm nhẵn bề mặt, tra dầu mỡ, thay vật liệu tiếp xúc, giảm áp lực, hoặc đổi ma sát trượt thành ma sát lăn bằng con lăn và ổ bi: lực ma sát lăn xuất hiện khi vật lăn trên một bề mặt và thường nhỏ hơn nhiều so với lực ma sát trượt. Muốn tăng ma sát có thể làm nhám bề mặt, như tạo gai lốp xe hay xoa phấn vào tay trước khi nâng tạ.',
         },
         {
           type: 'callout',

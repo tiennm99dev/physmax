@@ -10,8 +10,8 @@
   import { PROBLEMS, checkForces, isRightAnswer, simulate } from './engine.js';
 
   const W = 360;
-  const H = 230;
-  const START = { x: 80, y: 80 };
+  const H = 250;
+  const START = { x: 80, y: 100 };
   /** Longest path the body travels on the board, in pixels. */
   const TRACK = 140;
   const STEPS = ['Vẽ lực', 'Chọn trục', 'Viết phương trình', 'Tính', 'Kiểm tra'];

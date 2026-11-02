@@ -20,9 +20,10 @@
   const d1 = $derived(Math.min(toLeft, gap));
   const d2 = $derived(tidy(gap - d1));
   const moments = $derived(coupleMoments(force, d1, d2));
-  const axisX = 180;
-  const leftX = $derived(axisX - d1 * PX_M);
-  const rightX = $derived(axisX + d2 * PX_M);
+  /** The bar stays centred on the board and the axis moves along it. */
+  const leftX = $derived(W / 2 - (gap * PX_M) / 2);
+  const rightX = $derived(W / 2 + (gap * PX_M) / 2);
+  const axisX = $derived(leftX + d1 * PX_M);
   const length = $derived(force * PX_N);
 </script>
 
@@ -87,6 +88,7 @@
       step={0.05}
       unit="m"
       format={(v) => formatNumber(v, 2)}
+      oninput={() => (toLeft = Math.min(toLeft, gap))}
     />
     <SliderField
       label="Trục cách lực F₁"

@@ -249,7 +249,7 @@ export default {
     {
       type: 'text',
       prompt: 'Khoảng cách từ trục quay đến giá của lực gọi là gì?',
-      accept: ['cánh tay đòn', 'canh tay don'],
+      accept: ['cánh tay đòn', 'cánh tay đòn của lực'],
       hints: ['Cụm từ gợi đến chiếc đòn bẩy.'],
       solution: 'Đó là cánh tay đòn của lực, kí hiệu $d$.',
     },

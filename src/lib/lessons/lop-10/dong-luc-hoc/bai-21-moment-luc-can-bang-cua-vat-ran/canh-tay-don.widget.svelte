@@ -9,10 +9,10 @@
 
   const W = 360;
   const H = 210;
-  const AXIS = { x: 60, y: 150 };
+  const AXIS = { x: 45, y: 150 };
   /** Pixels per metre along the rod, and per newton along the force. */
-  const PX_M = 480;
-  const PX_N = 9;
+  const PX_M = 440;
+  const PX_N = 5;
 
   let force = $state(10);
   let reach = $state(0.4);
@@ -76,7 +76,15 @@
           fill="#059669">d</text
         >
       {/if}
-      <ForceArrow x1={point.x} y1={point.y} x2={tip.x} y2={tip.y} color="#4f46e5" label="F" />
+      <ForceArrow
+        x1={point.x}
+        y1={point.y}
+        x2={tip.x}
+        y2={tip.y}
+        color="#4f46e5"
+        label="F"
+        labelDx={tip.x < point.x ? -12 : 6}
+      />
       <circle cx={AXIS.x} cy={AXIS.y} r="6" fill="#0f172a" />
       <text x={AXIS.x - 14} y={AXIS.y + 22} font-size="13" font-weight="700" fill="#0f172a">O</text>
     </svg>

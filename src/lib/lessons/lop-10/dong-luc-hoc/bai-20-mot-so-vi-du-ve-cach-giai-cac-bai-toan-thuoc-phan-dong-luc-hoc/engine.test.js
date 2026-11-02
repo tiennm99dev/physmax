@@ -83,6 +83,12 @@ describe('the solver problems', () => {
     expect(result.extra).toEqual([p.decoys[0]]);
   });
 
+  it('does not always list the right choice first', () => {
+    const firstIsRight = (/** @type {Array<{ right?: boolean }>} */ list) => list[0].right === true;
+    expect(PROBLEMS.every((p) => firstIsRight(p.axes))).toBe(false);
+    expect(PROBLEMS.every((p) => firstIsRight(p.equations))).toBe(false);
+  });
+
   it('stops a braking car and leaves it stopped', () => {
     const p = problem('ham');
     const end = simulate(p, 5);

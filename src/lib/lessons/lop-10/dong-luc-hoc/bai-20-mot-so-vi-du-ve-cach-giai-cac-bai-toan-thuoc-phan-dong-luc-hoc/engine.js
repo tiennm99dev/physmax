@@ -119,24 +119,24 @@ export const PROBLEMS = [
     decoys: [INERTIA, ON_FLOOR],
     axes: [
       {
+        text: '$Ox$ dọc theo dây kéo, $Oy$ vuông góc với dây.',
+        why: 'Khi đó gia tốc có thành phần trên cả hai trục, phương trình phức tạp hơn. Hãy chọn $Ox$ theo hướng chuyển động.',
+      },
+      {
         text: '$Ox$ nằm ngang theo chiều chuyển động, $Oy$ thẳng đứng hướng lên.',
         right: true,
         why: 'Đúng: gia tốc nằm dọc theo $Ox$, nên theo $Oy$ các lực cân bằng.',
       },
-      {
-        text: '$Ox$ dọc theo dây kéo, $Oy$ vuông góc với dây.',
-        why: 'Khi đó gia tốc có thành phần trên cả hai trục, phương trình phức tạp hơn. Hãy chọn $Ox$ theo hướng chuyển động.',
-      },
     ],
     equations: [
+      {
+        tex: '$F\\cos 30^\\circ - \\mu mg = ma$',
+        why: 'Dây kéo chếch lên làm áp lực giảm: chiếu lên $Oy$ để tìm $N$, không phải $N = mg$.',
+      },
       {
         tex: '$F\\cos 30^\\circ - \\mu(mg - F\\sin 30^\\circ) = ma$',
         right: true,
         why: 'Đúng: từ $Oy$ ta có $N = mg - F\\sin 30^\\circ$, thay vào $F_{mst} = \\mu N$.',
-      },
-      {
-        tex: '$F\\cos 30^\\circ - \\mu mg = ma$',
-        why: 'Dây kéo chếch lên làm áp lực giảm: chiếu lên $Oy$ để tìm $N$, không phải $N = mg$.',
       },
       {
         tex: '$F - \\mu(mg - F\\sin 30^\\circ) = ma$',
@@ -174,21 +174,16 @@ export const PROBLEMS = [
     ],
     axes: [
       {
+        text: '$Ox$ nằm ngang, $Oy$ thẳng đứng.',
+        why: 'Vật chuyển động xiên so với các trục này, gia tốc có cả hai thành phần. Hãy chọn $Ox$ theo hướng chuyển động.',
+      },
+      {
         text: '$Ox$ dọc theo mặt nghiêng hướng xuống, $Oy$ vuông góc với mặt nghiêng.',
         right: true,
         why: 'Đúng: gia tốc dọc theo mặt nghiêng, chỉ cần phân tích $\\vec{P}$.',
       },
-      {
-        text: '$Ox$ nằm ngang, $Oy$ thẳng đứng.',
-        why: 'Vật chuyển động xiên so với các trục này, gia tốc có cả hai thành phần. Hãy chọn $Ox$ theo hướng chuyển động.',
-      },
     ],
     equations: [
-      {
-        tex: '$mg\\sin\\alpha - \\mu mg\\cos\\alpha = ma$',
-        right: true,
-        why: 'Đúng: từ $Oy$ có $N = mg\\cos\\alpha$.',
-      },
       {
         tex: '$mg\\sin\\alpha + \\mu mg\\cos\\alpha = ma$',
         why: 'Lực ma sát ngược chiều chuyển động, nên mang dấu trừ khi chiếu lên $Ox$.',
@@ -196,6 +191,11 @@ export const PROBLEMS = [
       {
         tex: '$mg\\cos\\alpha - \\mu mg\\sin\\alpha = ma$',
         why: 'Hãy kiểm tra lại góc: với $\\alpha = 0$ (mặt phẳng ngang), thành phần của $\\vec{P}$ dọc mặt phải bằng $0$, tức $mg\\sin\\alpha$.',
+      },
+      {
+        tex: '$mg\\sin\\alpha - \\mu mg\\cos\\alpha = ma$',
+        right: true,
+        why: 'Đúng: từ $Oy$ có $N = mg\\cos\\alpha$.',
       },
     ],
     answer: inclineAccel(SLIDE.alpha, SLIDE.mu),
@@ -240,17 +240,17 @@ export const PROBLEMS = [
     ],
     equations: [
       {
-        tex: '$-\\mu mg = ma$',
-        right: true,
-        why: 'Đúng: chỉ có lực ma sát nằm dọc $Ox$, ngược chiều dương, và $N = mg$.',
+        tex: '$mg - \\mu mg = ma$',
+        why: 'Trọng lực vuông góc với $Ox$, không có thành phần theo $Ox$.',
       },
       {
         tex: '$\\mu mg = ma$',
         why: 'Lực ma sát ngược chiều dương đã chọn, phải mang dấu trừ.',
       },
       {
-        tex: '$mg - \\mu mg = ma$',
-        why: 'Trọng lực vuông góc với $Ox$, không có thành phần theo $Ox$.',
+        tex: '$-\\mu mg = ma$',
+        right: true,
+        why: 'Đúng: chỉ có lực ma sát nằm dọc $Ox$, ngược chiều dương, và $N = mg$.',
       },
     ],
     answer: tidy(-BRAKE.mu * G),

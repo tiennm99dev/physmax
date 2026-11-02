@@ -13,7 +13,7 @@
   const CX = 160;
   const CY = 130;
   /** Pixels per newton of force. */
-  const K = 0.8;
+  const K = 0.6;
   /** How far the back edge of each shape sits from its centre, where the arrows start. */
   const EDGE = { tam: 5, cau: 28, giot: 52, canh: 60 };
   const LEVELS = [-90, -60, -30, 30, 60, 90];
@@ -52,7 +52,7 @@
     if (shape === 'giot') {
       return {
         tone: /** @type {const} */ ('ok'),
-        text: 'Đầu tròn, đuôi thon, dòng khí bám theo thân vật: lực cản rất nhỏ. Đây là hình dạng khí động học.',
+        text: 'Thân vật thon dần về phía sau, dòng khí bám theo thân: lực cản rất nhỏ. Đây là hình dạng khí động học.',
       };
     }
     return {
@@ -149,7 +149,7 @@
     {/if}
   </div>
 
-  <dl class="grid grid-cols-2 gap-2 text-center text-sm">
+  <dl class="grid grid-cols-2 gap-2 text-center text-sm" aria-live="polite">
     <div class="rounded-xl bg-red-50 px-2 py-2">
       <dt class="font-semibold text-red-800">Lực cản</dt>
       <dd class="tabular-nums">{`${formatNumber(forces.drag, 1)} N`}</dd>

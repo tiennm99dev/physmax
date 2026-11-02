@@ -225,7 +225,7 @@ export default {
       type: 'text',
       prompt:
         'Hình dạng có đầu thon, nhỏ, làm giảm lực cản của chất lưu gọi là hình dạng gì? (Trả lời bằng cụm từ.)',
-      accept: ['khí động học', 'hình dạng khí động học', 'khi dong hoc'],
+      accept: ['khí động học', 'hình dạng khí động học', 'dạng khí động học'],
       hints: ['Cụm từ thường gắn với thiết kế máy bay và ô tô đua.'],
       solution: 'Đó là hình dạng khí động học.',
     },

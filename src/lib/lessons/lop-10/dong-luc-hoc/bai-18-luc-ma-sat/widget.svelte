@@ -194,7 +194,7 @@
     />
   </div>
 
-  <dl class="grid grid-cols-3 gap-2 text-center text-sm">
+  <dl class="grid grid-cols-3 gap-2 text-center text-sm" aria-live="polite">
     <div class="rounded-xl bg-slate-100 px-2 py-2">
       <dt class="font-semibold text-slate-700">Áp lực N</dt>
       <dd class="tabular-nums">{`${formatNumber(limits.normal, 1)} N`}</dd>
