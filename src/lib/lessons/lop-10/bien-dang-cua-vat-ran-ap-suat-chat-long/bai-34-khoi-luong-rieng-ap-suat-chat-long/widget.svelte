@@ -42,6 +42,8 @@
   const RULER = [0, 2, 4, 6, 8, 10];
   const Y_MAX = 250;
 
+  const tankClip = $props.id();
+
   /** @type {SVGSVGElement | undefined} */
   let board = $state();
   let liquidId = $state('nuoc');
@@ -117,6 +119,7 @@
       role="group"
       aria-label={`Bình đựng ${liquid.name.toLowerCase()}, cảm biến ở độ sâu ${formatNumber(depth, 1)} mét, áp suất ${qty(total)} paxcan.`}
     >
+      <clipPath id={tankClip}><polygon points={tank} /></clipPath>
       <polygon points={tank} fill={COLORS[liquid.id]} stroke="#475569" stroke-width="2" />
       <text x={CX} y={SURFACE - 14} font-size="11" fill="#475569" text-anchor="middle">
         Mặt thoáng, áp suất khí quyển pa
@@ -136,34 +139,37 @@
         stroke="#475569"
         stroke-dasharray="5 4"
       />
-      <ForceArrow
-        x1={sensorX - SENSOR_R - arrow}
-        y1={sensorY}
-        x2={sensorX - SENSOR_R}
-        y2={sensorY}
-        color="#be123c"
-      />
-      <ForceArrow
-        x1={sensorX + SENSOR_R + arrow}
-        y1={sensorY}
-        x2={sensorX + SENSOR_R}
-        y2={sensorY}
-        color="#be123c"
-      />
-      <ForceArrow
-        x1={sensorX}
-        y1={sensorY - SENSOR_R - arrow}
-        x2={sensorX}
-        y2={sensorY - SENSOR_R}
-        color="#be123c"
-      />
-      <ForceArrow
-        x1={sensorX}
-        y1={sensorY + SENSOR_R + arrow}
-        x2={sensorX}
-        y2={sensorY + SENSOR_R}
-        color="#be123c"
-      />
+      <!-- Pressure acts within the liquid, so the arrows stop at the walls. -->
+      <g clip-path="url(#{tankClip})">
+        <ForceArrow
+          x1={sensorX - SENSOR_R - arrow}
+          y1={sensorY}
+          x2={sensorX - SENSOR_R}
+          y2={sensorY}
+          color="#be123c"
+        />
+        <ForceArrow
+          x1={sensorX + SENSOR_R + arrow}
+          y1={sensorY}
+          x2={sensorX + SENSOR_R}
+          y2={sensorY}
+          color="#be123c"
+        />
+        <ForceArrow
+          x1={sensorX}
+          y1={sensorY - SENSOR_R - arrow}
+          x2={sensorX}
+          y2={sensorY - SENSOR_R}
+          color="#be123c"
+        />
+        <ForceArrow
+          x1={sensorX}
+          y1={sensorY + SENSOR_R + arrow}
+          x2={sensorX}
+          y2={sensorY + SENSOR_R}
+          color="#be123c"
+        />
+      </g>
       <g
         class="drag-handle cursor-move outline-none"
         role="slider"

@@ -230,7 +230,8 @@
       />
       <p class="px-2 pt-1 pb-1 text-sm text-slate-600">
         Thử đủ ba lò xo: đồ thị của các lò xo đã kéo vẫn được giữ lại, đường nào dốc hơn thì lò xo
-        đó cứng hơn.
+        đó cứng hơn. Độ cứng và giới hạn của ba lò xo là số giả định; phần sau giới hạn đàn hồi là
+        mô hình đơn giản hoá, lò xo thật có thể khác.
       </p>
     </div>
   </div>

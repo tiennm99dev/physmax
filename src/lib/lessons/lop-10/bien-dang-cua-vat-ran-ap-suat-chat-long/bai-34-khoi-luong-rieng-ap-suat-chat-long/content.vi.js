@@ -1,14 +1,14 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Khối lượng riêng ρ = m/V, áp lực và áp suất p = F/S, áp suất chất lỏng p = pa + ρgh, độ chênh áp suất Δp = ρgΔh, định luật Pascal và máy nén thủy lực.',
+    'Khối lượng riêng ρ = m/V, áp lực và áp suất p = F/S, áp suất chất lỏng p = pa + ρgh, độ chênh áp suất Δp = ρgΔh, định luật Pascal và máy nén thuỷ lực.',
   intro:
-    'Xuống càng sâu dưới nước, thợ lặn càng thấy tai bị ép, nên lặn sâu phải có trang bị riêng. Một người chỉ cần nhấn tay lên kích thủy lực cũng nâng được cả chiếc ô tô. Áp suất trong chất lỏng phụ thuộc vào những gì, và nó được truyền đi ra sao?',
+    'Xuống càng sâu dưới nước, thợ lặn càng thấy tai bị ép, nên lặn sâu phải có trang bị riêng. Một người chỉ cần nhấn tay lên kích thuỷ lực cũng nâng được cả chiếc ô tô. Áp suất trong chất lỏng phụ thuộc vào những gì, và nó được truyền đi ra sao?',
   objectives: [
     'Nêu được định nghĩa khối lượng riêng; tính được $\\rho = \\dfrac{m}{V}$ và đổi được đơn vị.',
     'Phân biệt được áp lực và áp suất; vận dụng được $p = \\dfrac{F}{S}$.',
     'Vận dụng được $p = p_a + \\rho g h$ và $\\Delta p = \\rho g \\Delta h$ cho chất lỏng đứng yên.',
-    'Phát biểu được định luật Pascal và giải thích được nguyên tắc của máy nén thủy lực.',
+    'Phát biểu được định luật Pascal và giải thích được nguyên tắc của máy nén thuỷ lực.',
   ],
   sections: [
     {
@@ -25,9 +25,9 @@ export default {
           caption: 'Khối lượng riêng của một số chất (giá trị làm tròn)',
           head: ['Chất', '$\\rho$ (kg/m³)', 'Chất', '$\\rho$ (kg/m³)'],
           rows: [
-            ['Sắt', '$7\\,800$', 'Thủy ngân', '$13\\,600$'],
+            ['Sắt', '$7\\,800$', 'Thuỷ ngân', '$13\\,600$'],
             ['Nhôm', '$2\\,700$', 'Nước', '$1\\,000$'],
-            ['Đồng', '$8\\,900$', 'Dầu hỏa', '$800$'],
+            ['Đồng', '$8\\,900$', 'Dầu hoả', '$800$'],
           ],
         },
         {
@@ -79,7 +79,7 @@ export default {
           type: 'callout',
           tone: 'theorem',
           title: 'Phương trình cơ bản của chất lưu đứng yên',
-          text: 'Độ chênh lệch áp suất giữa hai điểm cách nhau độ cao $\\Delta h$ trong chất lỏng đứng yên là $\\Delta p = \\rho g \\Delta h$.',
+          text: 'Chất lưu gồm chất lỏng và chất khí. Độ chênh lệch áp suất giữa hai điểm cách nhau độ cao $\\Delta h$ trong chất lỏng đứng yên là $\\Delta p = \\rho g \\Delta h$.',
         },
         {
           type: 'list',
@@ -92,7 +92,7 @@ export default {
       ],
     },
     {
-      heading: 'Định luật Pascal và máy nén thủy lực',
+      heading: 'Định luật Pascal và máy nén thuỷ lực',
       blocks: [
         {
           type: 'p',
@@ -106,7 +106,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Máy nén thủy lực gồm hai xilanh có pít-tông diện tích $S_1 < S_2$, nối thông nhau và chứa đầy chất lỏng. Lực $F_1$ trên pít-tông nhỏ tạo độ tăng áp suất $\\dfrac{F_1}{S_1}$, được truyền đến pít-tông lớn:',
+          text: 'Máy nén thuỷ lực gồm hai xilanh có pít-tông diện tích $S_1 < S_2$, nối thông nhau và chứa đầy chất lỏng. Lực $F_1$ trên pít-tông nhỏ tạo độ tăng áp suất $\\dfrac{F_1}{S_1}$, được truyền đến pít-tông lớn:',
         },
         {
           type: 'tex',
@@ -114,7 +114,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Chất lỏng gần như không nén được nên thể tích đi khỏi xilanh nhỏ bằng thể tích vào xilanh lớn: $S_1 d_1 = S_2 d_2$. Lợi bao nhiêu lần về lực thì thiệt bấy nhiêu lần về đường đi, công không thay đổi. Kích thủy lực, phanh thủy lực và máy ép thủy lực đều dựa trên nguyên tắc này.',
+          text: 'Chất lỏng gần như không nén được nên thể tích đi khỏi xilanh nhỏ bằng thể tích vào xilanh lớn: $S_1 d_1 = S_2 d_2$. Lợi bao nhiêu lần về lực thì thiệt bấy nhiêu lần về đường đi, công không thay đổi. Kích thuỷ lực, phanh thuỷ lực và máy ép thuỷ lực đều dựa trên nguyên tắc này.',
         },
         { type: 'widget', name: 'may-nen' },
       ],
@@ -149,7 +149,7 @@ export default {
     },
     {
       problem:
-        'Kích thủy lực có $\\dfrac{S_2}{S_1} = 50$ dùng để nâng ô tô khối lượng $1\\,500$ kg. Lấy $g = 9{,}8$ m/s². Tính lực nhỏ nhất đặt lên pít-tông nhỏ, và quãng đường pít-tông lớn đi lên khi pít-tông nhỏ đi xuống $20$ cm.',
+        'Kích thuỷ lực có $\\dfrac{S_2}{S_1} = 50$ dùng để nâng ô tô khối lượng $1\\,500$ kg. Lấy $g = 9{,}8$ m/s². Tính lực nhỏ nhất đặt lên pít-tông nhỏ, và quãng đường pít-tông lớn đi lên khi pít-tông nhỏ đi xuống $20$ cm.',
       steps: [
         'Pít-tông lớn phải nâng được trọng lượng xe: $F_2 = P = 1\\,500 \\cdot 9{,}8 = 14\\,700$ N.',
         '$F_1 = F_2 \\dfrac{S_1}{S_2} = \\dfrac{14\\,700}{50} = 294$ N.',
@@ -168,6 +168,14 @@ export default {
       unit: 'kg',
       hints: ['Từ $\\rho = \\dfrac{m}{V}$ suy ra $m$.'],
       solution: '$m = \\rho V = 7\\,800 \\cdot 0{,}002 = 15{,}6$ kg.',
+    },
+    {
+      type: 'number',
+      prompt: 'Nhôm có khối lượng riêng $2{,}7$ g/cm³. Đổi giá trị này ra kg/m³.',
+      answer: 2700,
+      unit: 'kg/m³',
+      hints: ['$1$ g/cm³ bằng bao nhiêu kg/m³?'],
+      solution: '$1$ g/cm³ $= 1\\,000$ kg/m³ nên $2{,}7$ g/cm³ $= 2\\,700$ kg/m³.',
     },
     {
       type: 'choice',
@@ -221,7 +229,7 @@ export default {
     {
       type: 'number',
       prompt:
-        'Tính độ chênh lệch áp suất giữa hai điểm trong dầu hỏa ($\\rho = 800$ kg/m³) thuộc hai mặt phẳng nằm ngang cách nhau $50$ cm, lấy $g = 9{,}8$ m/s².',
+        'Tính độ chênh lệch áp suất giữa hai điểm trong dầu hoả ($\\rho = 800$ kg/m³) thuộc hai mặt phẳng nằm ngang cách nhau $50$ cm, lấy $g = 9{,}8$ m/s².',
       answer: 3920,
       tolerance: 1,
       unit: 'Pa',
@@ -256,7 +264,7 @@ export default {
     {
       type: 'number',
       prompt:
-        'Máy nén thủy lực có $S_1 = 10$ cm², $S_2 = 400$ cm². Lực $250$ N đặt lên pít-tông nhỏ tạo ra lực nâng bao nhiêu ở pít-tông lớn?',
+        'Máy nén thuỷ lực có $S_1 = 10$ cm², $S_2 = 400$ cm². Lực $250$ N đặt lên pít-tông nhỏ tạo ra lực nâng bao nhiêu ở pít-tông lớn?',
       answer: 10000,
       tolerance: 1,
       unit: 'N',
@@ -268,7 +276,7 @@ export default {
     {
       type: 'number',
       prompt:
-        'Máy nén thủy lực có $\\dfrac{S_2}{S_1} = 60$ nâng một ô tô khối lượng $1\\,200$ kg. Lấy $g = 10$ m/s². Tính lực nhỏ nhất đặt lên pít-tông nhỏ.',
+        'Máy nén thuỷ lực có $\\dfrac{S_2}{S_1} = 60$ nâng một ô tô khối lượng $1\\,200$ kg. Lấy $g = 10$ m/s². Tính lực nhỏ nhất đặt lên pít-tông nhỏ.',
       answer: 200,
       tolerance: 0.5,
       unit: 'N',
@@ -278,7 +286,7 @@ export default {
     {
       type: 'number',
       prompt:
-        'Trong máy nén thủy lực có $\\dfrac{S_2}{S_1} = 50$, pít-tông nhỏ đi xuống $20$ cm. Pít-tông lớn đi lên bao nhiêu xentimét?',
+        'Trong máy nén thuỷ lực có $\\dfrac{S_2}{S_1} = 50$, pít-tông nhỏ đi xuống $20$ cm. Pít-tông lớn đi lên bao nhiêu xentimét?',
       answer: 0.4,
       tolerance: 0.01,
       unit: 'cm',
@@ -290,6 +298,6 @@ export default {
     'Khối lượng riêng $\\rho = \\dfrac{m}{V}$, đơn vị kg/m³, phụ thuộc vào nhiệt độ.',
     'Áp lực là lực ép vuông góc với mặt bị ép; áp suất $p = \\dfrac{F}{S}$, đơn vị Pa.',
     'Trong chất lỏng đứng yên: $p = p_a + \\rho g h$ và $\\Delta p = \\rho g \\Delta h$. Cùng mặt phẳng ngang thì cùng áp suất.',
-    'Định luật Pascal: độ tăng áp suất được truyền nguyên vẹn trong chất lỏng ở bình kín. Máy nén thủy lực: $\\dfrac{F_1}{S_1} = \\dfrac{F_2}{S_2}$, lợi về lực thì thiệt về đường đi.',
+    'Định luật Pascal: độ tăng áp suất được truyền nguyên vẹn trong chất lỏng ở bình kín. Máy nén thuỷ lực: $\\dfrac{F_1}{S_1} = \\dfrac{F_2}{S_2}$, lợi về lực thì thiệt về đường đi.',
   ],
 };

@@ -124,7 +124,7 @@
       viewBox="0 0 {W} {H}"
       class="mx-auto block w-full max-w-md select-none"
       role="img"
-      aria-label={`Máy nén thủy lực: pít-tông nhỏ ${small} xentimét vuông, pít-tông lớn ${large} xentimét vuông. Vật đã được nâng ${formatNumber(lift, 2)} xentimét.`}
+      aria-label={`Máy nén thuỷ lực: pít-tông nhỏ ${small} xentimét vuông, pít-tông lớn ${large} xentimét vuông. Vật đã được nâng ${formatNumber(lift, 2)} xentimét.`}
     >
       <rect
         x={SMALL_X - smallHalf}
