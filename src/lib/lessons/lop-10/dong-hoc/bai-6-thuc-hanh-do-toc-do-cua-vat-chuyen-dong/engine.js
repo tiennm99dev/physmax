@@ -4,6 +4,7 @@
  * the release point. Measured times carry a small seeded scatter, so the same
  * draw number always gives the same reading.
  */
+import { scatter } from '#lib/domain/scatter.js';
 import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {'AB' | 'A' | 'B'} Mode */
@@ -54,15 +55,6 @@ export function idealTime(mode, e, f, tilt) {
   if (mode === 'AB') return timeAt(f, tilt) - timeAt(e, tilt);
   const gate = mode === 'A' ? e : f;
   return timeAt(gate + BALL, tilt) - timeAt(gate, tilt);
-}
-
-/**
- * Seeded scatter in [-1, 1].
- * @param {number} draw
- */
-function scatter(draw) {
-  const v = Math.sin(draw * 127.1 + 11.7) * 43758.5453;
-  return (v - Math.floor(v)) * 2 - 1;
 }
 
 /**

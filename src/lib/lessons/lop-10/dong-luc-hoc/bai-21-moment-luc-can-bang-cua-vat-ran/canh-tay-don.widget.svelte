@@ -4,7 +4,7 @@
   import SliderField from '#lib/core/slider-field.svelte';
   import { card } from '#lib/core/ui.js';
   import { foot } from '#lib/geom-engine/plane.js';
-  import ForceArrow from '../_shared/force-arrow.svelte';
+  import ForceArrow from '#lib/domain/force-arrow.svelte';
   import { leverArm, moment } from './engine.js';
 
   const W = 360;

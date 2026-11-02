@@ -6,7 +6,7 @@
   import { formatNumber, numTex } from '#lib/core/number-format.js';
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import { button, card, textInput } from '#lib/core/ui.js';
-  import ForceArrow from '../_shared/force-arrow.svelte';
+  import ForceArrow from '#lib/domain/force-arrow.svelte';
   import { PROBLEMS, checkForces, isRightAnswer, simulate } from './engine.js';
 
   const W = 360;

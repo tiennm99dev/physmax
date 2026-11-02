@@ -3,7 +3,7 @@
  * push, in opposite directions, whoever does the pushing.
  */
 import { tidy } from '#lib/core/number-format.js';
-import { pushState } from '../_shared/push-motion.js';
+import { pushState } from '#lib/domain/push-motion.js';
 
 /** How long the push lasts, in seconds. */
 export const PUSH_TIME = 1;

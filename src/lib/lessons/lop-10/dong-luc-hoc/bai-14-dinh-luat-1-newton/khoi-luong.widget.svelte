@@ -5,7 +5,7 @@
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
   import { linear } from '#lib/core/visuals/svg-math.js';
-  import { pushState } from '../_shared/push-motion.js';
+  import { pushState } from '#lib/domain/push-motion.js';
 
   const W = 360;
   const H = 150;

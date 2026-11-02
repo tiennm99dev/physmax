@@ -3,7 +3,7 @@
   import { formatNumber, numTex, tidy } from '#lib/core/number-format.js';
   import SliderField from '#lib/core/slider-field.svelte';
   import { card } from '#lib/core/ui.js';
-  import ForceArrow from '../_shared/force-arrow.svelte';
+  import ForceArrow from '#lib/domain/force-arrow.svelte';
   import { coupleMoments } from './engine.js';
 
   const W = 360;

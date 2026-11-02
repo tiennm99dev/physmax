@@ -3,6 +3,7 @@
  * one photogate placed `s` metres below the release point. Measured times carry
  * a small seeded scatter, so the same draw number always gives the same reading.
  */
+import { scatter } from '#lib/domain/scatter.js';
 import { tidy } from '#lib/core/number-format.js';
 
 export const LOCAL_G = 9.78; // the true value the rig falls with, m/s²
@@ -25,15 +26,6 @@ export function idealTime(s) {
  */
 export function fallenAt(t) {
   return Math.min(COLUMN, (LOCAL_G * t * t) / 2);
-}
-
-/**
- * Seeded scatter in [-1, 1].
- * @param {number} draw
- */
-function scatter(draw) {
-  const v = Math.sin(draw * 127.1 + 11.7) * 43758.5453;
-  return (v - Math.floor(v)) * 2 - 1;
 }
 
 /**

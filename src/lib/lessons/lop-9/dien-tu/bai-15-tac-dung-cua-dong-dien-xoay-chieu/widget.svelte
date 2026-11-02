@@ -13,7 +13,8 @@
     nailPull,
     needleTilt,
   } from './engine.js';
-  import { pushSample } from '../_shared/trace.js';
+  import CurrentTrace from '#lib/domain/current-trace.svelte';
+  import { pushSample } from '#lib/domain/current-trace.js';
 
   const SPAN = 4;
   const SPEEDS = [
@@ -94,15 +95,6 @@
     t = Math.round((t + 1 / (4 * freq)) * 4 * freq) / (4 * freq);
     wake();
   }
-
-  const traceLine = $derived(
-    trace
-      .map((s) => {
-        const x = 24 + ((s.t - (clock - SPAN)) / SPAN) * 328;
-        return `${Math.round(x * 10) / 10},${Math.round((45 - 32 * s.i) * 10) / 10}`;
-      })
-      .join(' '),
-  );
 
   const poleText = $derived(
     pole === 'N' ? 'cực Bắc (N)' : pole === 'S' ? 'cực Nam (S)' : 'không có cực từ',
@@ -301,20 +293,14 @@
     <p class="mb-1 text-sm text-slate-700">
       Đầu cuộn dây gần {object === 'kim' ? 'kim nam châm' : 'đinh sắt'}: <b>{poleText}</b>
     </p>
-    <svg
-      viewBox="0 0 360 90"
-      class="block w-full"
-      role="img"
-      aria-label="Đồ thị cường độ dòng điện qua cuộn dây theo thời gian"
-    >
-      <line x1="24" y1="45" x2="354" y2="45" stroke="#94a3b8" />
-      <line x1="24" y1="6" x2="24" y2="84" stroke="#94a3b8" />
-      <text x="4" y="14" class="fill-slate-600 text-[11px] italic">I</text>
-      <text x="346" y="58" class="fill-slate-600 text-[11px] italic">t</text>
-      {#if trace.length > 1}
-        <polyline points={traceLine} fill="none" stroke="#4f46e5" stroke-width="2" />
-      {/if}
-    </svg>
+    <CurrentTrace
+      {trace}
+      {clock}
+      span={SPAN}
+      height={90}
+      amp={32}
+      label="Đồ thị cường độ dòng điện qua cuộn dây theo thời gian"
+    />
   </div>
 
   <FeedbackNote tone={closed ? 'ok' : 'info'} text={feedback} />

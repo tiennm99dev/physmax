@@ -4,9 +4,9 @@
   import SegmentedControl from '#lib/core/segmented-control.svelte';
   import SliderField from '#lib/core/slider-field.svelte';
   import { card } from '#lib/core/ui.js';
-  import ForceArrow from '../_shared/force-arrow.svelte';
-  import { ticksUpTo } from '../_shared/ticks.js';
-  import XyPlot from '../_shared/xy-plot.svelte';
+  import ForceArrow from '#lib/domain/force-arrow.svelte';
+  import { ticksUpTo } from '#lib/domain/ticks.js';
+  import XyPlot from '#lib/domain/xy-plot.svelte';
   import { DRAG_FACTOR, G, fallSpeed, terminalSpeed } from './engine.js';
 
   const T_MAX = 20;

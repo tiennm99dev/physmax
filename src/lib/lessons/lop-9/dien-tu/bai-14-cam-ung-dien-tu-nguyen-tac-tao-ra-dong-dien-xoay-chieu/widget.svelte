@@ -20,7 +20,9 @@
     signedFlux,
     swing,
   } from './engine.js';
-  import { pushSample } from '../_shared/trace.js';
+  import CurrentTrace from '#lib/domain/current-trace.svelte';
+  import Galvanometer from '#lib/domain/galvanometer.svelte';
+  import { pushSample } from '#lib/domain/current-trace.js';
 
   const W = 360;
   const H = 190;
@@ -142,18 +144,8 @@
     })),
   );
 
-  const needleDeg = $derived(50 * needle);
   const ledUp = $derived(Math.max(0, needle));
   const ledDown = $derived(Math.max(0, -needle));
-
-  const traceLine = $derived(
-    trace
-      .map((s) => {
-        const x = 24 + ((s.t - (clock - SPAN)) / SPAN) * 328;
-        return `${Math.round(x * 10) / 10},${Math.round((50 - 38 * s.i) * 10) / 10}`;
-      })
-      .join(' '),
-  );
 
   const swingText = (/** @type {number} */ i) => {
     const s = swing(i);
@@ -232,32 +224,7 @@
         />
       {/each}
 
-      <!-- centre-zero galvanometer -->
-      <rect x="214" y="22" width="72" height="74" rx="8" fill="#f8fafc" stroke="#94a3b8" />
-      {#each [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5] as k (k)}
-        {@const a = ((k * 10 - 90) * Math.PI) / 180}
-        <line
-          x1={250 + 46 * Math.cos(a)}
-          y1={86 + 46 * Math.sin(a)}
-          x2={250 + (k % 5 === 0 ? 38 : 42) * Math.cos(a)}
-          y2={86 + (k % 5 === 0 ? 38 : 42) * Math.sin(a)}
-          stroke="#334155"
-        />
-      {/each}
-      <text x="250" y="34" text-anchor="middle" class="fill-slate-600 text-[9px]">0</text>
-      <text x="275" y="92" text-anchor="middle" class="fill-slate-500 text-[10px] font-bold">G</text
-      >
-      <line
-        x1="250"
-        y1="86"
-        x2="250"
-        y2="44"
-        stroke="#dc2626"
-        stroke-width="2"
-        stroke-linecap="round"
-        transform="rotate({needleDeg} 250 86)"
-      />
-      <circle cx="250" cy="86" r="3" fill="#334155" />
+      <Galvanometer x={214} y={22} value={needle} />
 
       <!-- coil -->
       <rect
@@ -438,22 +405,15 @@
       <span>Đường sức từ qua cuộn dây: <b class="tabular-nums text-sky-700">{lines}</b></span>
       <span>Kim điện kế: <b class="text-slate-900">{swingText(needle)}</b></span>
     </div>
-    <svg
-      viewBox="0 0 360 100"
-      class="block w-full"
-      role="img"
-      aria-label="Đồ thị cường độ dòng điện cảm ứng theo thời gian trong {SPAN} giây gần nhất"
+    <CurrentTrace
+      {trace}
+      {clock}
+      span={SPAN}
+      label="Đồ thị cường độ dòng điện cảm ứng theo thời gian trong {SPAN} giây gần nhất"
     >
-      <line x1="24" y1="50" x2="354" y2="50" stroke="#94a3b8" />
-      <line x1="24" y1="8" x2="24" y2="92" stroke="#94a3b8" />
-      <text x="4" y="14" class="fill-slate-600 text-[11px] italic">I</text>
-      <text x="346" y="64" class="fill-slate-600 text-[11px] italic">t</text>
       <text x="28" y="18" class="fill-rose-600 text-[9px]">chiều 1 (LED đỏ)</text>
       <text x="28" y="90" class="fill-green-700 text-[9px]">chiều 2 (LED xanh)</text>
-      {#if trace.length > 1}
-        <polyline points={traceLine} fill="none" stroke="#4f46e5" stroke-width="2" />
-      {/if}
-    </svg>
+    </CurrentTrace>
   </div>
 
   <FeedbackNote tone={moving ? 'ok' : 'info'} text={feedback} />

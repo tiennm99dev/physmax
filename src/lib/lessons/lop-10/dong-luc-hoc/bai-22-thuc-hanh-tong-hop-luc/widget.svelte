@@ -4,7 +4,7 @@
   import { formatFixed, formatNumber, numTex } from '#lib/core/number-format.js';
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card, textInput } from '#lib/core/ui.js';
-  import ForceArrow from '../_shared/force-arrow.svelte';
+  import ForceArrow from '#lib/domain/force-arrow.svelte';
   import { balanceReading, percentGap, resultant, splitAngles } from './engine.js';
 
   const W = 360;

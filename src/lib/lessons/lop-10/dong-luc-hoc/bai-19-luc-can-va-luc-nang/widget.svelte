@@ -5,7 +5,7 @@
   import SliderField from '#lib/core/slider-field.svelte';
   import { card } from '#lib/core/ui.js';
   import { pointsAttr } from '#lib/utils/svg.js';
-  import ForceArrow from '../_shared/force-arrow.svelte';
+  import ForceArrow from '#lib/domain/force-arrow.svelte';
   import { SHAPES, STALL, airForces, streamline } from './engine.js';
 
   const W = 360;
