@@ -27,11 +27,11 @@
   );
 
   const note = $derived.by(() => {
-    const sum = `$F = \\dfrac{P}{v} = \\dfrac{${numTex(power * 1000)}}{${speed}} \\approx ${numTex(pull, 0)}$ N`;
+    const sum = `$F = \\dfrac{P}{v} = \\dfrac{${numTex(power * 1000)}}{${speed}} ${Number.isInteger(pull) ? '=' : '\\approx'} ${numTex(pull, 0)}$ N`;
     if (pull < need) {
       return {
         tone: /** @type {const} */ ('warn'),
-        text: `${sum}, chưa đủ lực $${numTex(need)}$ N mà đoạn đường này cần: xe sẽ chậm dần. ${best ? 'Hãy về số thấp hơn để đổi tốc độ lấy lực.' : 'Công suất này quá nhỏ cho dốc đứng, kể cả ở số 1.'}`,
+        text: `${sum}, chưa đủ lực $${numTex(need)}$ N mà đoạn đường này cần: xe sẽ chậm dần. ${best ? 'Hãy về số thấp hơn để đổi tốc độ lấy lực.' : 'Công suất này quá nhỏ cho đoạn đường này, kể cả ở số 1.'}`,
       };
     }
     if (best && best.value === gear) {

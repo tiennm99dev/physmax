@@ -8,7 +8,7 @@
 
   const W = 360;
   const H = 230;
-  const TOP = 14;
+  const TOP = 36;
   const GROUND = 214;
   const SHAFT_X = 268;
   const STAIR_X = 40;
@@ -51,17 +51,13 @@
       name: 'Đi bộ',
       power: stairPower,
       fill: 'bg-amber-500',
-      time: stairTime,
       speed: stairSpeed,
-      y: stairY,
     },
     {
       name: 'Thang máy',
       power: liftPower,
       fill: 'bg-indigo-500',
-      time: liftTime,
       speed: liftSpeed,
-      y: liftY,
     },
   ]);
 

@@ -4,6 +4,9 @@
  * constant force along a straight road.
  */
 import { tidy } from '#lib/core/number-format.js';
+import { kinetic } from '#lib/domain/energy.js';
+
+export { kinetic };
 
 /** The book's free-fall acceleration, in m/s². */
 export const G = 9.8;
@@ -76,12 +79,6 @@ export function advance(x, dt) {
 export function nextPoint(x) {
   return (TRACK.find((p) => p.x > x + 1e-6) ?? TRACK[TRACK.length - 1]).x;
 }
-
-/**
- * Kinetic energy in joules.
- * @param {number} m kg @param {number} v m/s
- */
-export const kinetic = (m, v) => tidy(0.5 * m * v * v);
 
 /**
  * Gravitational potential energy in joules, with `h` measured from the zero level.

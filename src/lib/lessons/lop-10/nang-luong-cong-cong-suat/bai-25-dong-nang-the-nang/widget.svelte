@@ -29,7 +29,7 @@
     { value: LOWEST, label: 'Đáy dốc sâu nhất' },
   ];
 
-  const px = linear(0, TRACK_LENGTH, 12, W - 12);
+  const px = linear(0, TRACK_LENGTH, 16, W - 16);
   const py = linear(0, TRACK[0].h, GROUND, 24);
   const trackLine = Array.from({ length: 121 }, (_, i) => {
     const x = (i * TRACK_LENGTH) / 120;
@@ -145,11 +145,13 @@
         stroke-dasharray="3 3"
       />
       <text
-        x={carX + 5}
+        x={carX > W - 70 ? carX - 5 : carX + 5}
         y={(py.map(level) + carY) / 2}
         font-size="11"
         font-weight="600"
-        fill="#475569">{`h = ${formatNumber(height - level, 1)} m`}</text
+        fill="#475569"
+        text-anchor={carX > W - 70 ? 'end' : 'start'}
+        >{`h = ${formatNumber(height - level, 1)} m`}</text
       >
       <g
         class="drag-handle cursor-move outline-none"

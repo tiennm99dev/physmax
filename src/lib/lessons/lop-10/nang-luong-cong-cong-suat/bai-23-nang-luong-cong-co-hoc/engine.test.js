@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { aimAt, arcPath, cosOf, kindOf, workOf } from './engine.js';
+import { aimAt, cosOf, kindOf, workOf } from './engine.js';
 
 describe('work of a force', () => {
   it('follows A = F.s.cos α', () => {
@@ -40,12 +40,5 @@ describe('aiming the force', () => {
     expect(aimAt(100, 100, { x: 40, y: 140 }, 1)).toEqual({ alpha: 180, force: 60 });
     expect(aimAt(100, 100, { x: 300, y: 130 }, 1)).toEqual({ alpha: 0, force: 100 });
     expect(aimAt(100, 100, { x: 102, y: 100 }, 1).force).toBe(20);
-  });
-});
-
-describe('the angle mark', () => {
-  it('ends on the circle at the angle', () => {
-    expect(arcPath(10, 10, 5, 90)).toBe('M 15 10 A 5 5 0 0 0 10 5');
-    expect(arcPath(10, 10, 5, 180)).toBe('M 15 10 A 5 5 0 0 0 5 10');
   });
 });

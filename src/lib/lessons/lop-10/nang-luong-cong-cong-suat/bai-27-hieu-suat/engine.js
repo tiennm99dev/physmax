@@ -13,7 +13,7 @@ export const DEVICES = [
     value: 'xe',
     label: 'Động cơ xe',
     source: 'Hoá năng của xăng',
-    useful: 'Cơ năng làm quay bánh xe',
+    useful: 'Cơ năng quay bánh xe',
     waste: 'Nhiệt thoát ra ngoài',
     typical: 30,
   },

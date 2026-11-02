@@ -4,6 +4,7 @@
   import { MINUS, formatNumber, numTex } from '#lib/core/number-format.js';
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
+  import { arcPath } from '#lib/core/visuals/angle-math.js';
   import { clamp } from '#lib/core/visuals/svg-math.js';
   import ForceArrow from '#lib/domain/force-arrow.svelte';
   import {
@@ -13,7 +14,6 @@
     FORCE_STEP,
     KEY_ANGLES,
     aimAt,
-    arcPath,
     cosOf,
     kindOf,
     workOf,
@@ -103,7 +103,12 @@
         fill="#fde68a"
         stroke="#b45309"
       />
-      <path d={arcPath(CX, CY, 22, alpha)} fill="none" stroke="#7c3aed" stroke-width="2" />
+      <path
+        d={arcPath({ x: CX, y: CY }, 0, alpha, 22)}
+        fill="none"
+        stroke="#7c3aed"
+        stroke-width="2"
+      />
       <text
         x={CX + 32 * Math.cos(rad / 2)}
         y={CY - 32 * Math.sin(rad / 2) + 4}
@@ -134,7 +139,7 @@
       <ForceArrow x1={CX} y1={CY} x2={tipX} y2={tipY} color="#4f46e5" />
       <text
         x={tipX + (Math.cos(rad) >= 0 ? 12 : -22)}
-        y={tipY - 8}
+        y={Math.max(tipY - 8, 13)}
         font-size="13"
         font-weight="700"
         fill="#4f46e5">F</text
@@ -220,10 +225,10 @@
       ></div>
       <div class="absolute inset-y-0 left-1/2 w-0.5 bg-slate-600"></div>
     </div>
-    <div class="mt-1 flex justify-between text-xs text-slate-600 tabular-nums">
+    <div class="mt-1 grid grid-cols-[1fr_auto_1fr] gap-2 text-xs text-slate-600 tabular-nums">
       <span>{`${MINUS}${formatNumber(BAR_MAX)} J (công cản)`}</span>
       <span>0</span>
-      <span>{`${formatNumber(BAR_MAX)} J (công phát động)`}</span>
+      <span class="text-right">{`${formatNumber(BAR_MAX)} J (công phát động)`}</span>
     </div>
   </div>
 

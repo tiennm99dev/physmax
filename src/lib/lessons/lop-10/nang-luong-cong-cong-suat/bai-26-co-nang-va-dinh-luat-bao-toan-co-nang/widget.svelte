@@ -21,7 +21,7 @@
   const STEP_SECONDS = 0.2;
   const SAMPLE_EVERY = 0.1;
   const MODES = [
-    { value: 'khong', label: 'Không ma sát' },
+    { value: 'khong', label: 'Không lực cản' },
     { value: 'co', label: 'Có lực cản' },
   ];
 

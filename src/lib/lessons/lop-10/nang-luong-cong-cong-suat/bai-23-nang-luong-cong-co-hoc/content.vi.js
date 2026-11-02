@@ -36,7 +36,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Một lực sinh công khi điểm đặt của nó dịch chuyển. Sinh công là một cách truyền năng lượng: động cơ điện kéo thang máy đi lên đã truyền năng lượng cho thang máy bằng cách thực hiện công.',
+          text: 'Một lực sinh công khi điểm đặt của nó dịch chuyển theo hướng không vuông góc với lực. Sinh công là một cách truyền năng lượng: động cơ điện kéo thang máy đi lên đã truyền năng lượng cho thang máy bằng cách thực hiện công.',
         },
         {
           type: 'callout',

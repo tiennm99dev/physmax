@@ -57,15 +57,3 @@ export function aimAt(cx, cy, p, pxPerNewton) {
     force: clamp(snap(force, FORCE_STEP), FORCE_MIN, FORCE_MAX),
   };
 }
-
-/**
- * SVG path of the small arc marking the angle, swept counter-clockwise on
- * screen from the displacement direction.
- * @param {number} cx @param {number} cy @param {number} r @param {number} deg
- */
-export function arcPath(cx, cy, r, deg) {
-  const a = (deg * Math.PI) / 180;
-  const x = tidy(cx + r * Math.cos(a), 2);
-  const y = tidy(cy - r * Math.sin(a), 2);
-  return `M ${cx + r} ${cy} A ${r} ${r} 0 0 0 ${x} ${y}`;
-}
