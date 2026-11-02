@@ -59,9 +59,10 @@
   const pieces = $derived(areaPieces(v0, a, time));
   const kind = $derived(classify(v, a));
 
-  // The road below the graph runs from −extent to +extent metres.
+  // The road below the graph runs from −extent to +extent metres, inset far
+  // enough that the longest velocity arrow (44 units) stays on the drawing.
   const extent = $derived(roadExtent(v0, a, T));
-  const rx = $derived(linear(-extent, extent, 22, W - 22));
+  const rx = $derived(linear(-extent, extent, 60, W - 60));
 
   /** @param {number} value */
   const term = (value) => (value < 0 ? `(${numTex(value, 2)})` : numTex(value, 2));
@@ -163,7 +164,7 @@
           stroke={tick === 0 ? '#334155' : '#e2e8f0'}
           stroke-width={tick === 0 ? 1.5 : 1}
         />
-        <text x={LEFT - 6} y={py.map(tick) + 4} font-size="11" fill="#475569" text-anchor="end">
+        <text x={LEFT - 10} y={py.map(tick) + 4} font-size="11" fill="#475569" text-anchor="end">
           {formatNumber(tick)}
         </text>
       {/each}
@@ -180,7 +181,7 @@
         </text>
       {/each}
       <line x1={LEFT} x2={LEFT} y1={TOP} y2={H - BOTTOM} stroke="#334155" stroke-width="1.5" />
-      <text x={4} y={12} font-size="12" font-weight="600" fill="#334155">v (m/s)</text>
+      <text x={4} y={10} font-size="12" font-weight="600" fill="#334155">v (m/s)</text>
       <text
         x={W - RIGHT}
         y={H - 2}

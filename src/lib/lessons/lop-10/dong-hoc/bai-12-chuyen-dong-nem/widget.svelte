@@ -8,6 +8,7 @@
   import { button, card } from '#lib/core/ui.js';
   import { arrowHead, shaftEnd } from '#lib/domain/arrow.js';
   import {
+    HIT_MARGIN,
     TARGETS,
     droppedHeight,
     flightTime,
@@ -50,7 +51,7 @@
   const target = $derived(TARGETS[targetIndex]);
   const range = $derived(rangeOf(shot));
   const peak = $derived(peakOf(shot));
-  const landing = $derived(landingNote(range, target));
+  const landing = $derived(landingNote(range, target, horizontal));
 
   /** @param {number} x */
   const sx = (x) => X0 + x * SCALE;
@@ -76,7 +77,7 @@
   );
   const note = $derived.by(() => {
     if (!landed) {
-      return `Mục tiêu: đặt bóng rơi cách điểm ném $${target}$ m (sai lệch dưới $2$ m). Chỉnh rồi nhấn "Ném", hoặc kéo thanh thời gian để xem hai thành phần vận tốc.`;
+      return `Mục tiêu: đặt bóng rơi cách điểm ném $${target}$ m (sai lệch không quá $${HIT_MARGIN}$ m). Chỉnh rồi nhấn "Ném", hoặc kéo thanh thời gian để xem hai thành phần vận tốc.`;
     }
     return `${landing.text} Tầm xa $L = ${numTex(range, 1)}$ m, bia ở $${target}$ m.`;
   });

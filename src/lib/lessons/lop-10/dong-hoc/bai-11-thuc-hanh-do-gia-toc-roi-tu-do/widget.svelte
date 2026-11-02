@@ -19,7 +19,7 @@
   } from './engine.js';
 
   const MAX_READINGS = 5;
-  const RIG_W = 130;
+  const RIG_W = 142;
   const RIG_H = 280;
   const RAIL_X = 60;
   const RAIL_TOP = 30;
@@ -143,13 +143,13 @@
       <line
         x1={RAIL_X - 14}
         x2={RAIL_X - 14}
-        y1={RAIL_TOP - 16}
+        y1={RAIL_TOP - 24}
         y2={RAIL_BOTTOM + 8}
         stroke="#94a3b8"
         stroke-width="6"
       />
-      <rect x={RAIL_X - 12} y={RAIL_TOP - 16} width="24" height="10" fill="#dc2626" />
-      <text x={RAIL_X + 16} y={RAIL_TOP - 7} font-size="11" fill="#334155">Nam châm</text>
+      <rect x={RAIL_X - 12} y={RAIL_TOP - 24} width="24" height="10" fill="#dc2626" />
+      <text x={RAIL_X + 15} y={RAIL_TOP - 15} font-size="10" fill="#334155">Nam châm</text>
       {#each S_TICKS as tick (tick)}
         <line
           x1={RAIL_X - 22}
@@ -162,7 +162,8 @@
           {formatNumber(tick)}
         </text>
       {/each}
-      <rect x={RAIL_X - 5} y={cylinderY - 4} width="10" height="16" rx="2" fill="#334155" />
+      <!-- s is measured to the cylinder's lower edge, so that edge sits on the scale. -->
+      <rect x={RAIL_X - 5} y={cylinderY - 14} width="10" height="14" rx="2" fill="#334155" />
       <g
         class="drag-handle cursor-ns-resize outline-none"
         role="slider"

@@ -86,11 +86,15 @@ export function droppedHeight(shot, t) {
 /**
  * How a finished throw landed against the target, as rich text.
  * @param {number} range @param {number} target
+ * @param {boolean} horizontal a horizontal throw is set by its height, not an angle
  */
-export function landingNote(range, target) {
+export function landingNote(range, target, horizontal) {
   const miss = range - target;
   if (Math.abs(miss) <= HIT_MARGIN) return { hit: true, text: 'Trúng bia!' };
-  return miss > 0
-    ? { hit: false, text: 'Bóng bay quá bia. Giảm $v_0$ hoặc đổi góc ném.' }
-    : { hit: false, text: 'Bóng rơi trước bia. Tăng $v_0$ hoặc đưa góc ném lại gần $45^\\circ$.' };
+  if (miss > 0) {
+    const fix = horizontal ? 'giảm độ cao ném' : 'đổi góc ném';
+    return { hit: false, text: `Bóng bay quá bia. Giảm $v_0$ hoặc ${fix}.` };
+  }
+  const fix = horizontal ? 'tăng độ cao ném' : 'đưa góc ném lại gần $45^\\circ$';
+  return { hit: false, text: `Bóng rơi trước bia. Tăng $v_0$ hoặc ${fix}.` };
 }

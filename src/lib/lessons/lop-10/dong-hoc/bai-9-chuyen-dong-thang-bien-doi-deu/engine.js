@@ -121,11 +121,11 @@ export function pieceArea(piece) {
 /**
  * The kind of motion at an instant, from the signs of v and a.
  * @param {number} v @param {number} a
- * @returns {'dung-yen' | 'deu' | 'nhanh-dan' | 'cham-dan'}
+ * @returns {'dung-yen' | 'deu' | 'nhanh-dan' | 'cham-dan' | 'dung-tuc-thoi'}
  */
 export function classify(v, a) {
   if (a === 0) return v === 0 ? 'dung-yen' : 'deu';
-  if (v === 0) return 'nhanh-dan';
+  if (v === 0) return 'dung-tuc-thoi';
   return a * v > 0 ? 'nhanh-dan' : 'cham-dan';
 }
 
@@ -134,10 +134,12 @@ export const KIND_TEXT = /** @type {const} */ ({
   deu: 'Đồ thị nằm ngang nên $a = 0$: vật chuyển động thẳng đều, không phải biến đổi đều.',
   'nhanh-dan': 'Lúc này vật nhanh dần đều: $a$ và $v$ cùng dấu, $|v|$ tăng theo thời gian.',
   'cham-dan': 'Lúc này vật chậm dần đều: $a$ và $v$ trái dấu, $|v|$ giảm theo thời gian.',
+  'dung-tuc-thoi':
+    'Lúc này $v = 0$ nhưng $a \\ne 0$: vận tốc của vật bằng $0$ ngay tại thời điểm này, còn gia tốc vẫn giữ nguyên.',
 });
 
 /**
- * Half a car-road width in metres that keeps the whole motion on the drawing.
+ * Half the length of the drawn road, in metres, that keeps the whole motion on it.
  * @param {number} v0 @param {number} a @param {number} T
  */
 export function roadExtent(v0, a, T) {

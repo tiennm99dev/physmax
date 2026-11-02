@@ -74,8 +74,15 @@ describe('the drawn path and the target', () => {
   });
 
   it('calls a landing within the margin a hit and says which way it missed', () => {
-    expect(landingNote(31, 30).hit).toBe(true);
-    expect(landingNote(40, 30).text).toContain('quá bia');
-    expect(landingNote(20, 30).text).toContain('trước bia');
+    expect(landingNote(31, 30, false).hit).toBe(true);
+    expect(landingNote(40, 30, false).text).toContain('quá bia');
+    expect(landingNote(20, 30, false).text).toContain('trước bia');
+  });
+
+  it('never advises changing the angle of a horizontal throw', () => {
+    expect(landingNote(40, 30, true).text).toContain('giảm độ cao ném');
+    expect(landingNote(20, 30, true).text).toContain('tăng độ cao ném');
+    expect(landingNote(40, 30, true).text).not.toContain('góc');
+    expect(landingNote(20, 30, true).text).not.toContain('góc');
   });
 });

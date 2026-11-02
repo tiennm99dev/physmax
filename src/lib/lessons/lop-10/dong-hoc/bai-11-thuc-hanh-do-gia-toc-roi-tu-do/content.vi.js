@@ -62,9 +62,9 @@ export default {
           ordered: true,
           items: [
             'Đặt máng đứng, chỉnh vít ở chân đế để dây dọi song song với máng. Lắp nam châm điện ở đỉnh máng, nối đồng hồ, hộp công tắc và cổng $E$.',
-            'Đặt cổng $E$ cách điểm thả một quãng $s = 0{,}2$ m; đo và ghi lại $s$.',
+            'Đặt cổng $E$ cách điểm thả một quãng $s = 0{,}4$ m; đo và ghi lại $s$.',
             'Cho trụ thép hút vào nam châm, nhấn RESET để đồng hồ về $0{,}000$. Ngắt điện để thả trụ, rồi ghi thời gian $t$. Lặp lại ít nhất $3$ lần.',
-            'Dời cổng $E$ đến các vị trí khác ($s = 0{,}4$; $0{,}6$; $0{,}8$; $1{,}0$ m) và lặp lại bước trên.',
+            'Dời cổng $E$ đến các vị trí khác ($s = 0{,}6$; $0{,}8$; $1{,}0$; $1{,}2$ m) và lặp lại bước trên.',
             'Tính $\\overline{t}$, $\\overline{t}^2$ và $g = \\dfrac{2s}{\\overline{t}^2}$ cho từng vị trí; tính $\\overline{g}$ và $\\Delta g$.',
             'Vẽ đồ thị $s$ theo $t^2$, nhận xét dạng đồ thị và tính $g$ từ hệ số góc.',
           ],
@@ -82,11 +82,11 @@ export default {
             '$g$ (m/s²)',
           ],
           rows: [
-            ['$0{,}2$', '…', '…', '…', '…', '…', '…'],
             ['$0{,}4$', '…', '…', '…', '…', '…', '…'],
             ['$0{,}6$', '…', '…', '…', '…', '…', '…'],
             ['$0{,}8$', '…', '…', '…', '…', '…', '…'],
             ['$1{,}0$', '…', '…', '…', '…', '…', '…'],
+            ['$1{,}2$', '…', '…', '…', '…', '…', '…'],
           ],
         },
         {

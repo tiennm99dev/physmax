@@ -102,6 +102,10 @@ describe('classify', () => {
     expect(classify(-5, -2)).toBe('nhanh-dan');
     expect(classify(5, -2)).toBe('cham-dan');
     expect(classify(-5, 2)).toBe('cham-dan');
-    expect(classify(0, 2)).toBe('nhanh-dan');
+  });
+
+  it('calls neither speeding up nor slowing down at the instant v is zero', () => {
+    expect(classify(0, 2)).toBe('dung-tuc-thoi');
+    expect(classify(velocityAt(15, -2.5, 6), -2.5)).toBe('dung-tuc-thoi');
   });
 });
