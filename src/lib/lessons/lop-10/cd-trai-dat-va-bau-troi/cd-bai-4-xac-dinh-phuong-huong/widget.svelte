@@ -13,6 +13,7 @@
     FIGURES,
     GUIDES,
     STARS,
+    clockText,
     guideMeasure,
     guidePath,
     horizontal,
@@ -118,11 +119,7 @@
     });
   });
 
-  const hourText = $derived.by(() => {
-    const whole = Math.floor(hour) % 24;
-    const minutes = Math.round((hour - Math.floor(hour)) * 60);
-    return `${whole} giờ ${minutes ? `${minutes} phút` : ''}`.trim();
-  });
+  const hourText = $derived(clockText(hour));
   const altText = $derived(formatNumber(polarisAt.alt, 0));
   const verdict = $derived(tapped ? judgeStar(tapped) : null);
   const facing = $derived(FACING[question % FACING.length]);

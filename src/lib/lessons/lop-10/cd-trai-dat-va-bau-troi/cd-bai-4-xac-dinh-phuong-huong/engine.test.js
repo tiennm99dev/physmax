@@ -6,6 +6,7 @@ import {
   FIGURES,
   GUIDES,
   STARS,
+  clockText,
   guideMeasure,
   guidePath,
   horizontal,
@@ -102,5 +103,15 @@ describe('the data', () => {
 
   it('answers each facing question with a real direction', () => {
     expect(FACING.filter((q) => !DIRECTIONS.includes(q.answer))).toEqual([]);
+  });
+});
+
+describe('clockText', () => {
+  it('never writes sixty minutes and wraps at midnight', () => {
+    expect(clockText(21)).toBe('21 giờ');
+    expect(clockText(5.25)).toBe('5 giờ 15 phút');
+    expect(clockText(5.999)).toBe('6 giờ');
+    expect(clockText(23.999)).toBe('0 giờ');
+    expect(clockText(24)).toBe('0 giờ');
   });
 });

@@ -90,6 +90,9 @@ export function eclipseText(d, s, near) {
   const fullMoon = Math.abs(wrap180(d - 180)) < 3;
   if (kind === 'none') {
     if (newMoon || fullMoon) {
+      if (Math.abs(newMoon ? e : wrap180(d - 180)) >= 1) {
+        return `Gần thẳng hàng rồi. Kéo Mặt Trăng thêm một chút đến đúng vị trí ${newMoon ? 'trăng non' : 'trăng tròn'}.`;
+      }
       const side = moonLatitude(d, s) > 0 ? 'phía trên' : 'phía dưới';
       const what = newMoon
         ? 'bóng của Mặt Trăng đi lệch khỏi Trái Đất'
@@ -104,15 +107,15 @@ export function eclipseText(d, s, near) {
     'solar-partial':
       'Trăng non, gần đường nút: Mặt Trăng che một phần đĩa Mặt Trời ở một vùng trên Trái Đất.',
     'solar-total':
-      'Trăng non, ngay đường nút, Mặt Trăng ở gần: vùng tối của Mặt Trăng chạm tới Trái Đất, ở đó Mặt Trời bị che kín.',
+      'Trăng non, rất gần đường nút, Mặt Trăng ở gần: vùng tối của Mặt Trăng chạm tới Trái Đất, ở đó Mặt Trời bị che kín.',
     'solar-annular':
-      'Trăng non, ngay đường nút, nhưng Mặt Trăng ở xa: đĩa Mặt Trăng trông nhỏ hơn đĩa Mặt Trời, để lộ một vòng sáng.',
+      'Trăng non, rất gần đường nút, nhưng Mặt Trăng ở xa: đĩa Mặt Trăng trông nhỏ hơn đĩa Mặt Trời, để lộ một vòng sáng.',
     'lunar-penumbral':
       'Trăng tròn đi vào vùng nửa tối của Trái Đất: trăng hơi mờ đi, mắt khó nhận ra.',
     'lunar-partial':
       'Trăng tròn gần đường nút: một phần Mặt Trăng đi vào vùng bóng tối của Trái Đất.',
     'lunar-total':
-      'Trăng tròn ngay đường nút: toàn bộ Mặt Trăng nằm trong vùng bóng tối của Trái Đất, trăng có màu đỏ sậm.',
+      'Trăng tròn rất gần đường nút: toàn bộ Mặt Trăng nằm trong vùng bóng tối của Trái Đất, trăng có màu đỏ sậm.',
   };
   return said[kind];
 }

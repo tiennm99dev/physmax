@@ -3,7 +3,7 @@ export default {
   summary:
     'Nhật thực xảy ra lúc trăng non, nguyệt thực lúc trăng tròn, khi Mặt Trời, Trái Đất, Mặt Trăng gần thẳng hàng; thủy triều do lực hấp dẫn của Mặt Trăng và Mặt Trời, với triều cường và triều kém theo tuần trăng.',
   intro:
-    'Giữa ban ngày, trời bỗng tối như đêm, gà lên chuồng; rồi một đêm trăng rằm, Mặt Trăng dần chuyển màu đỏ sậm. Người xưa coi đó là điềm lạ, còn ngày nay ta tính trước được từng phút. Trong cùng một cơ chế, nước biển dâng rút mỗi ngày. Vì sao, và vì sao không phải tháng nào cũng có nhật thực?',
+    'Giữa ban ngày, trời bỗng tối như đêm, gà lên chuồng; rồi một đêm trăng rằm, Mặt Trăng dần chuyển màu đỏ sậm. Người xưa coi đó là điềm lạ, còn ngày nay ta tính trước được từng phút. Cũng Mặt Trăng và Mặt Trời ấy, bằng lực hấp dẫn, làm nước biển dâng rút mỗi ngày. Vì sao có những hiện tượng này, và vì sao không phải tháng nào cũng có nhật thực?',
   objectives: [
     'Giải thích được định tính hiện tượng nhật thực, nguyệt thực và nêu được điều kiện xảy ra.',
     'Phân biệt được nhật thực toàn phần, một phần, hình khuyên; nguyệt thực toàn phần, một phần.',
@@ -146,7 +146,7 @@ export default {
           items: [
             'Đặt đèn pin và quả bóng đá cách nhau vài mét. Chiếu đèn vào quả bóng đá, cao ngang tâm bóng.',
             'Đặt quả bóng tennis giữa đèn và quả bóng đá. Tìm vùng tối và vùng nửa tối trên quả bóng đá. Thay đổi khoảng cách giữa quả tennis và quả bóng đá để thấy vùng tối to nhỏ thế nào.',
-            'Đặt quả tennis ở phía sau quả bóng đá. Tìm vị trí mà quả tennis nằm trong bóng của quả bóng đá; so sánh với thời gian quả tennis đi qua bóng này khi dịch đều.',
+            'Đặt quả tennis ở phía sau quả bóng đá. Dịch đều quả tennis qua bóng của quả bóng đá và đo thời gian nó đi hết vùng bóng, rồi so sánh độ rộng vùng bóng này với vùng tối trên quả bóng đá ở bước trước.',
             'Nâng quả tennis cao hơn đường thẳng nối đèn và quả bóng đá, để chỉ ra vì sao không phải tháng nào cũng có nhật thực.',
             'Tra lịch của lần nhật thực hoặc nguyệt thực tiếp theo thấy được ở Việt Nam, lập kế hoạch quan sát an toàn.',
           ],
@@ -192,7 +192,7 @@ export default {
       problem:
         'Biết khối lượng Mặt Trời gấp khoảng $2{,}7 \\cdot 10^7$ lần khối lượng Mặt Trăng; khoảng cách đến Mặt Trời gấp $390$ lần khoảng cách đến Mặt Trăng. Lực hút của Mặt Trời lên một vật ở Trái Đất gấp bao nhiêu lần của Mặt Trăng? Vì sao triều do Mặt Trời lại thấp hơn?',
       steps: [
-        'Theo định luật vạn vật hấp dẫn, $F \\sim \\dfrac{M}{d^2}$, nên $\\dfrac{F_S}{F_T} = \\dfrac{2{,}7 \\cdot 10^7}{390^2} \\approx 178$.',
+        'Theo định luật vạn vật hấp dẫn, $F \\sim \\dfrac{M}{d^2}$, nên $\\dfrac{F_{\\text{Mặt Trời}}}{F_{\\text{Mặt Trăng}}} = \\dfrac{2{,}7 \\cdot 10^7}{390^2} \\approx 178$.',
         'Thủy triều phụ thuộc vào chênh lệch lực hút giữa hai phía của Trái Đất, mà chênh lệch này tỉ lệ với $\\dfrac{M}{d^3}$.',
         '$\\dfrac{2{,}7 \\cdot 10^7}{390^3} \\approx 0{,}46$, nên triều do Mặt Trời chỉ cao khoảng $0{,}46$ lần triều do Mặt Trăng.',
       ],
@@ -243,7 +243,7 @@ export default {
         'Mặt Trăng ở xa, đĩa của nó nhỏ hơn đĩa Mặt Trời',
         'Người quan sát ở trong vùng bóng nửa tối của Mặt Trăng',
         'Mặt Trăng nằm trọn trong vùng bóng tối của Trái Đất',
-        'Mặt Trăng nằm giữa Trái Đất và Sao Hỏa',
+        'Mặt Trăng nằm giữa Trái Đất và Hỏa tinh',
       ],
       pairs: [
         [0, 0],

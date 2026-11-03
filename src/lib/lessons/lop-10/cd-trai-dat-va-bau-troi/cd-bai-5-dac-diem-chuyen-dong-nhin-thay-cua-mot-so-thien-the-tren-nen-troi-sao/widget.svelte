@@ -271,8 +271,9 @@
         đường đi của hành tinh trong 300 ngày vừa qua.
       </p>
       <p class="text-slate-600">
-        Thử nhìn Hỏa tinh ở khung "Nền sao đứng yên": vệt vẽ nên một vòng nút khi Trái Đất vượt qua
-        nó. Mô hình dùng quỹ đạo tròn, nên các góc chỉ gần đúng.
+        Thử nhìn Hỏa tinh ở khung "Nền sao đứng yên": khi Trái Đất vượt qua nó, vệt quặt lại rồi đi
+        tiếp, vẽ nên một vòng nút (có lần chỉ là một nếp gấp hình chữ Z). Mô hình dùng quỹ đạo tròn,
+        nên các góc chỉ gần đúng.
       </p>
     </div>
   </div>

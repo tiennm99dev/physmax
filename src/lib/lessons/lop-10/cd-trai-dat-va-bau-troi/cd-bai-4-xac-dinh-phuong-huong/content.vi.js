@@ -68,7 +68,7 @@ export default {
           items: [
             'Qua Gấu Lớn: nối hai sao $\\beta$ và $\\alpha$ ở thành gàu, xa cán nhất, rồi kéo dài về phía $\\alpha$ một đoạn khoảng $5$ lần đoạn $\\alpha\\beta$.',
             'Qua Thiên Hậu: từ trung điểm của đoạn nối hai sao $\\gamma$ và $\\delta$, kẻ đường vuông góc với đoạn đó về phía chữ W mở ra, lấy một đoạn khoảng $7$ lần $\\gamma\\delta$.',
-            'Qua Thiên Nga: kéo dài đoạn $ab$ nối sao ở cánh với sao ở đuôi (Deneb) về phía đuôi, thêm khoảng $4$ lần $ab$.',
+            'Qua Thiên Nga: kéo dài đoạn $ab$ nối sao ở cánh phải với sao ở đuôi (Deneb) về phía đuôi, thêm khoảng $4$ lần $ab$.',
           ],
         },
         {

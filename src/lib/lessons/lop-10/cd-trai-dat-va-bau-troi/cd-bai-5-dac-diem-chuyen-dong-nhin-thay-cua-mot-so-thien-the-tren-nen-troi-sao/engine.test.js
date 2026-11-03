@@ -7,6 +7,7 @@ import {
   dateText,
   dayLength,
   declination,
+  durationText,
   elongation,
   isRetrograde,
   maxElongation,
@@ -158,5 +159,13 @@ describe('the daily path of the Sun', () => {
     expect(noonSun(21, 23.5)).toEqual({ alt: 87.5, side: 'Bắc' });
     expect(noonSun(21, 21).side).toBe('đỉnh đầu');
     expect(sunPosition(21, 0, 12).alt).toBeCloseTo(69, 6);
+  });
+});
+
+describe('durationText', () => {
+  it('never writes sixty minutes', () => {
+    expect(durationText(12)).toBe('12 giờ 0 phút');
+    expect(durationText(10.5)).toBe('10 giờ 30 phút');
+    expect(durationText(11.999)).toBe('12 giờ 0 phút');
   });
 });

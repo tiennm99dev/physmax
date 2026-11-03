@@ -250,6 +250,16 @@ export function project(alt, az, center) {
   };
 }
 
+/**
+ * A time of day from fractional hours, rounded to the minute.
+ * @param {number} hour
+ */
+export function clockText(hour) {
+  const total = Math.round(hour * 60) % 1440;
+  const minutes = total % 60;
+  return `${Math.floor(total / 60)} giờ${minutes ? ` ${minutes} phút` : ''}`;
+}
+
 /** @param {string} id */
 export function starById(id) {
   return BY_ID[id];

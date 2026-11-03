@@ -124,8 +124,13 @@ export default {
             ['Trái Đất', 'Không chuyển động', 'Vừa tự quay vừa quay quanh Mặt Trời'],
             ['Mặt Trăng', 'Quay quanh Trái Đất', 'Quay quanh Trái Đất'],
             [
+              'Các sao',
+              'Gắn trên thiên cầu, quay quanh Trái Đất',
+              'Rất xa, đứng yên trên thiên cầu',
+            ],
+            [
               'Giải thích vòng nút',
-              'Thêm vòng tròn nhỏ cho mỗi hành tinh',
+              'Hành tinh đi trên vòng tròn nhỏ (nội luân), tâm của nó đi trên vòng tròn lớn (ngoại luân)',
               'Do Trái Đất vượt qua hành tinh',
             ],
           ],
@@ -327,13 +332,17 @@ export default {
     },
     {
       type: 'match',
-      prompt: 'Nối mỗi nội dung với mô hình tương ứng.',
+      prompt: 'Nối mỗi mô hình với nội dung tương ứng.',
       left: [
-        'Trái Đất đứng yên ở trung tâm',
-        'Mặt Trời ở trung tâm, Trái Đất tự quay và quay quanh Mặt Trời',
-        'Mỗi hành tinh chuyển động trên vòng tròn nhỏ có tâm đi trên vòng tròn lớn',
+        'Mô hình địa tâm của Ptolemy',
+        'Mô hình nhật tâm của Copernicus',
+        'Hiểu biết ngày nay',
       ],
-      right: ['Mô hình địa tâm', 'Mô hình nhật tâm', 'Mô hình địa tâm, để giải thích vòng nút'],
+      right: [
+        'Trái Đất đứng yên ở trung tâm, hành tinh đi trên nội luân và ngoại luân',
+        'Mặt Trời ở trung tâm, $6$ hành tinh đi trên quỹ đạo tròn',
+        'Hệ Mặt Trời có $8$ hành tinh, quỹ đạo là các elip gần tròn',
+      ],
       pairs: [
         [0, 0],
         [1, 1],
@@ -341,7 +350,7 @@ export default {
       ],
       hints: ['"Địa" là đất, "nhật" là Mặt Trời.'],
       solution:
-        'Trái Đất đứng yên ở trung tâm là mô hình địa tâm; Mặt Trời ở trung tâm là mô hình nhật tâm; các vòng tròn nhỏ được thêm vào mô hình địa tâm để giải thích vòng nút.',
+        'Ptolemy đặt Trái Đất đứng yên ở trung tâm và dùng nội luân, ngoại luân để giải thích vòng nút. Copernicus đặt Mặt Trời ở trung tâm, với $6$ hành tinh trên quỹ đạo tròn. Ngày nay ta biết có $8$ hành tinh, quỹ đạo là các elip gần tròn.',
     },
     {
       type: 'choice',

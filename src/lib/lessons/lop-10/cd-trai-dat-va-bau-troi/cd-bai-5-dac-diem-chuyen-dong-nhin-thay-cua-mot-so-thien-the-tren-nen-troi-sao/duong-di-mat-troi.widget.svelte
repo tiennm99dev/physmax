@@ -9,6 +9,7 @@
     dateText,
     dayLength,
     declination,
+    durationText,
     noonSun,
     riseOffset,
     sunPosition,
@@ -64,9 +65,7 @@
       ? 'Giữa trưa Mặt Trời ở gần đúng đỉnh đầu.'
       : `Giữa trưa Mặt Trời cao ${formatNumber(noon.alt, 1)}°, ở phía ${noon.side} đỉnh đầu.`,
   );
-  const whole = $derived(Math.floor(hours));
-  const minutes = $derived(Math.round((hours - whole) * 60));
-  const lengthText = $derived(`Ban ngày dài ${whole} giờ ${minutes} phút.`);
+  const lengthText = $derived(`Ban ngày dài ${durationText(hours)}.`);
   const hourText = $derived(
     `${Math.floor(hour)} giờ${hour % 1 ? ` ${Math.round((hour % 1) * 60)} phút` : ''}`,
   );

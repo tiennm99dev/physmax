@@ -291,6 +291,15 @@ export function dayLength(lat, dec) {
 }
 
 /**
+ * A length of time from fractional hours, rounded to the minute.
+ * @param {number} hours
+ */
+export function durationText(hours) {
+  const total = Math.round(hours * 60);
+  return `${Math.floor(total / 60)} giờ ${total % 60} phút`;
+}
+
+/**
  * How far north of due east the Sun rises (negative: south of it), in degrees.
  * @param {number} lat @param {number} dec
  */

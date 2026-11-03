@@ -71,6 +71,13 @@ describe('eclipses', () => {
     expect(said.filter((t) => t.length < 20)).toEqual([]);
     expect(eclipseText(0, 40, true)).toContain('đường nút');
   });
+
+  it('asks for a little more dragging when the Sun is on the node and the Moon just off line', () => {
+    for (const d of [2, 358, 178, 182]) {
+      expect(eclipseAt(d, 0, true).kind).toBe('none');
+      expect(eclipseText(d, 0, true)).not.toContain('đường nút');
+    }
+  });
 });
 
 describe('the drawing', () => {
