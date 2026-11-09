@@ -3,7 +3,7 @@
  * textbook table, the conversions between density, g/cm³ and specific
  * weight, and `qty` for writing a quantity the book's way (2 697,3).
  */
-import { fmt, formatNumber } from '#lib/core/number-format.js';
+import { formatNumber } from '#lib/core/number-format.js';
 import { tidy } from '#lib/core/number-format.js';
 
 /** @typedef {{ id: string, name: string, density: number }} Material density in kg/m³ */
@@ -57,9 +57,5 @@ export const specificWeight = (density) => tidy(10 * density);
  * @param {number} [maxDecimals]
  */
 export function qty(value, maxDecimals = 2) {
-  const text = formatNumber(Math.abs(value), maxDecimals);
-  const [int, frac] = text.split(',');
-  const grouped = fmt(Number(int.replace(/\./g, '')));
-  const sign = value < 0 && text !== '0' ? '−' : '';
-  return frac ? `${sign}${grouped},${frac}` : `${sign}${grouped}`;
+  return formatNumber(value, maxDecimals);
 }
