@@ -58,7 +58,7 @@
   let flow = $state(200);
   let head = $state(80);
   const hydroW = $derived(hydroPower(flow, head, 0.9));
-  const hoaBinhShare = $derived((hydroW / 1.92e9) * 100);
+  const sonLaShare = $derived((hydroW / 2.4e9) * 100);
 
   /** @param {number} w */
   function powerText(w) {
@@ -221,17 +221,17 @@
       <div
         class="h-4 w-full overflow-hidden rounded-full bg-slate-200"
         role="meter"
-        aria-label="So với thuỷ điện Hoà Bình"
+        aria-label="So với thuỷ điện Sơn La"
         aria-valuemin={0}
         aria-valuemax={100}
-        aria-valuenow={Math.min(100, Math.round(hoaBinhShare))}
-        aria-valuetext="{formatNumber(hoaBinhShare, 0)}% công suất thuỷ điện Hoà Bình"
+        aria-valuenow={Math.min(100, Math.round(sonLaShare))}
+        aria-valuetext="{formatNumber(sonLaShare, 0)}% công suất thuỷ điện Sơn La"
       >
-        <div class="h-full bg-sky-500" style:width="{Math.min(100, hoaBinhShare)}%"></div>
+        <div class="h-full bg-sky-500" style:width="{Math.min(100, sonLaShare)}%"></div>
       </div>
       <p>
-        Bằng khoảng {formatNumber(hoaBinhShare, 0)}% công suất nhà máy thuỷ điện Hoà Bình ({formatNumber(
-          1920,
+        Bằng khoảng {formatNumber(sonLaShare, 0)}% công suất nhà máy thuỷ điện Sơn La ({formatNumber(
+          2400,
         )} MW).
       </p>
     </div>

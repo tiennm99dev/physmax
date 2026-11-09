@@ -19,7 +19,8 @@
   let round = $state(0);
   /** @type {null | { ok: boolean, missing: string[], extra: string[] }} */
   let verdict = $state(null);
-  let solved = $state(0);
+  /** @type {string[]} ids of the challenges solved so far */
+  let solved = $state([]);
 
   const reach = $derived(byMedium(active));
   const challenge = $derived(CHALLENGES[round % CHALLENGES.length]);
@@ -32,7 +33,7 @@
 
   function check() {
     verdict = checkChallenge(active, challenge);
-    if (verdict.ok) solved += 1;
+    if (verdict.ok && !solved.includes(challenge.id)) solved = [...solved, challenge.id];
   }
 
   function nextRound() {
@@ -154,7 +155,7 @@
   {#if mode === 'thu-thach'}
     <div class="{card} space-y-3 p-4">
       <p class="text-sm font-semibold text-indigo-700">
-        Thử thách {(round % CHALLENGES.length) + 1}/{CHALLENGES.length} · đã giải {solved}
+        Thử thách {(round % CHALLENGES.length) + 1}/{CHALLENGES.length} · đã giải {solved.length}/{CHALLENGES.length}
       </p>
       <p class="font-semibold text-slate-900">{challenge.prompt}</p>
       <div class="flex flex-wrap gap-2">

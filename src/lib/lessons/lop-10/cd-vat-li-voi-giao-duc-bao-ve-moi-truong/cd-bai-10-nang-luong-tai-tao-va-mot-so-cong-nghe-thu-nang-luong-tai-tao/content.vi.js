@@ -50,7 +50,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Các nhà máy thuỷ điện lớn của nước ta: Sơn La ($2\\,400$ MW), Hoà Bình ($1\\,920$ MW), Lai Châu ($1\\,200$ MW). Thuỷ điện tích năng bơm nước lên hồ cao khi thừa điện và xả nước phát điện khi thiếu, giống như một "cục pin" khổng lồ.',
+          text: 'Các nhà máy thuỷ điện lớn của nước ta: Sơn La ($2\\,400$ MW), Hoà Bình ($1\\,920$ MW, được mở rộng lên $2\\,400$ MW vào năm 2025), Lai Châu ($1\\,200$ MW). Thuỷ điện tích năng bơm nước lên hồ cao khi thừa điện và xả nước phát điện khi thiếu, giống như một "cục pin" khổng lồ.',
         },
         {
           type: 'p',
