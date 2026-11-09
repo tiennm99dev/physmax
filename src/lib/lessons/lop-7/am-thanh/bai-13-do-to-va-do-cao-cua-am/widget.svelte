@@ -275,7 +275,7 @@
       type="button"
       class={button.quiet}
       onclick={() => (reference = null)}
-      disabled={!reference}>Xóa âm mẫu</button
+      disabled={!reference}>Xoá âm mẫu</button
     >
   </div>
   {#if listening && range !== 'nghe-duoc'}

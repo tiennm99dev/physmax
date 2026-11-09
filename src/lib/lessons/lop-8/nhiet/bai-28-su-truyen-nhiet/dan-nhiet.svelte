@@ -76,7 +76,7 @@
         : `Đã rơi ${count}/${PINS.length} đinh`;
     const why = m.metal
       ? `${m.label} là kim loại, dẫn nhiệt tốt.`
-      : 'Thủy tinh dẫn nhiệt kém: năng lượng nhiệt truyền đi rất chậm, chỉ phần gần ngọn lửa nóng lên.';
+      : 'Thuỷ tinh dẫn nhiệt kém: năng lượng nhiệt truyền đi rất chậm, chỉ phần gần ngọn lửa nóng lên.';
     return {
       tone: /** @type {'ok' | 'info'} */ ('ok'),
       text: `${order}, lần lượt từ đầu A (gần ngọn lửa) tới đầu B: năng lượng nhiệt được truyền từ phần nóng sang phần lạnh hơn của thanh nhờ va chạm giữa các hạt (sự dẫn nhiệt). ${why}`,

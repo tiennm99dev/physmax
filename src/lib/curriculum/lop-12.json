@@ -18,7 +18,7 @@
           "keyIdeas": [
             "Mô hình động học phân tử",
             "Cấu trúc chất rắn, lỏng, khí",
-            "Sự nóng chảy, hóa hơi"
+            "Sự nóng chảy, hoá hơi"
           ],
           "interactiveIdea": "Hộp phân tử ảo: tăng nhiệt độ để thấy chất chuyển từ rắn sang lỏng và khí."
         },
@@ -64,10 +64,10 @@
         },
         {
           "no": 6,
-          "title": "Bài 6. Nhiệt hóa hơi riêng",
+          "title": "Bài 6. Nhiệt hoá hơi riêng",
           "slug": "bai-6-nhiet-hoa-hoi-rieng",
           "kind": "theory",
-          "keyIdeas": ["Q = Lm", "Sự sôi và bay hơi", "Đo nhiệt hóa hơi riêng"],
+          "keyIdeas": ["Q = Lm", "Sự sôi và bay hơi", "Đo nhiệt hoá hơi riêng"],
           "interactiveIdea": "Ấm nước ảo trên cân với joulemeter, đo khối lượng bay hơi để tính L."
         },
         {
@@ -208,7 +208,7 @@
           "slug": "bai-19-dien-tu-truong-mo-hinh-song-dien-tu",
           "kind": "theory",
           "keyIdeas": ["Điện trường xoáy", "Điện từ trường", "Mô hình sóng điện từ"],
-          "interactiveIdea": "Hoạt họa 3D sóng điện từ với vectơ E và B vuông góc, xoay góc nhìn được."
+          "interactiveIdea": "Hoạt hoạ 3D sóng điện từ với vectơ E và B vuông góc, xoay góc nhìn được."
         },
         {
           "no": 20,
@@ -419,7 +419,7 @@
           "title": "Bài 12. Vùng năng lượng của tinh thể chất rắn",
           "slug": "cd-bai-12-vung-nang-luong-cua-tinh-the-chat-ran",
           "kind": "chuyen-de",
-          "keyIdeas": ["Vùng hóa trị, vùng dẫn", "Vùng cấm", "Kim loại, bán dẫn, điện môi"],
+          "keyIdeas": ["Vùng hoá trị, vùng dẫn", "Vùng cấm", "Kim loại, bán dẫn, điện môi"],
           "interactiveIdea": "Sơ đồ vùng năng lượng chọn vật liệu, tăng nhiệt độ hoặc chiếu sáng để electron nhảy qua vùng cấm."
         }
       ]

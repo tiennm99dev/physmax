@@ -333,7 +333,7 @@ export default {
     {
       type: 'text',
       prompt: 'Kim loại sodium được bảo quản bằng cách ngâm trong chất lỏng nào?',
-      accept: ['dầu hoả', 'dầu hỏa', 'dầu', 'kerosene'],
+      accept: ['dầu hoả', 'dầu hoả', 'dầu', 'kerosene'],
       hints: [
         'Sodium phản ứng mạnh với nước và oxygen, nên chất lỏng này không chứa nước và ngăn không khí.',
       ],

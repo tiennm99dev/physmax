@@ -53,11 +53,11 @@
     const levels = `Nhánh A: ${qty(left, 1)} cm, nhánh B: ${qty(right, 1)} cm.`;
     if (!open) {
       return flow === 'dung-yen'
-        ? `Khóa K đóng. ${levels} Hai mực nước đang ngang nhau.`
-        : `Khóa K đóng. ${levels} Áp suất nước ở đáy nhánh A là ${qty(pA)} Pa, nhánh B là ${qty(pB)} Pa. Mở khóa K, em dự đoán nước sẽ chảy thế nào?`;
+        ? `Khoá K đóng. ${levels} Hai mực nước đang ngang nhau.`
+        : `Khoá K đóng. ${levels} Áp suất nước ở đáy nhánh A là ${qty(pA)} Pa, nhánh B là ${qty(pB)} Pa. Mở khoá K, em dự đoán nước sẽ chảy thế nào?`;
     }
     if (flow === 'dung-yen') {
-      return `Khóa K mở, nước đứng yên. ${levels} Trong bình thông nhau chứa cùng một chất lỏng đứng yên, mực chất lỏng ở các nhánh ở cùng một độ cao.`;
+      return `Khoá K mở, nước đứng yên. ${levels} Trong bình thông nhau chứa cùng một chất lỏng đứng yên, mực chất lỏng ở các nhánh ở cùng một độ cao.`;
     }
     return `Nước đang chảy từ nhánh ${flow === 'trai-sang-phai' ? 'A sang nhánh B' : 'B sang nhánh A'}, từ nơi mực nước cao (áp suất ở đáy lớn) sang nơi mực nước thấp.`;
   });
@@ -69,7 +69,7 @@
       viewBox="0 0 300 270"
       class="mx-auto block w-full max-w-sm"
       role="img"
-      aria-label="Bình thông nhau hai nhánh A và B nối ở đáy qua khóa K {open
+      aria-label="Bình thông nhau hai nhánh A và B nối ở đáy qua khoá K {open
         ? 'đang mở'
         : 'đang đóng'}. Mực nước nhánh A {qty(left, 1)} cm, nhánh B {qty(right, 1)} cm."
     >
@@ -129,7 +129,7 @@
 
   <div class="flex flex-wrap gap-2">
     <button type="button" class={button.primary} onclick={() => (open = !open)}>
-      {open ? 'Đóng khóa K' : 'Mở khóa K'}
+      {open ? 'Đóng khoá K' : 'Mở khoá K'}
     </button>
     <button type="button" class={button.secondary} onclick={() => pour('left')} disabled={full}>
       Rót thêm nước vào nhánh A

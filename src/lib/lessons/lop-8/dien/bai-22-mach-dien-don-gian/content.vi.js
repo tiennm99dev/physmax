@@ -139,7 +139,7 @@ export default {
     },
     {
       problem:
-        'Gia đình bạn An dùng cùng lúc bếp điện, bình nóng lạnh, máy giặt và điều hòa thì "mất điện" cả nhà; ra xem thì thấy cầu dao tự động đã bật xuống. Vì sao, và nên làm gì?',
+        'Gia đình bạn An dùng cùng lúc bếp điện, bình nóng lạnh, máy giặt và điều hoà thì "mất điện" cả nhà; ra xem thì thấy cầu dao tự động đã bật xuống. Vì sao, và nên làm gì?',
       steps: [
         'Dùng cùng lúc nhiều thiết bị công suất lớn làm dòng điện trong mạch tăng quá mức.',
         'Cầu dao tự động có công dụng tự ngắt mạch khi dòng điện tăng quá mức, để dây dẫn và các thiết bị không bị hỏng, tránh cháy nổ.',

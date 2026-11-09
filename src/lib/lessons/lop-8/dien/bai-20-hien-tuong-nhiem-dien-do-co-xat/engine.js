@@ -18,7 +18,7 @@
 export const GIVE_RANK = { 'thuy-tinh': 3, len: 2, lua: 1, nhua: 0 };
 
 /** @type {Record<RodId, string>} */
-export const RODS = { nhua: 'Thước nhựa', 'thuy-tinh': 'Thanh thủy tinh' };
+export const RODS = { nhua: 'Thước nhựa', 'thuy-tinh': 'Thanh thuỷ tinh' };
 
 /** @type {Record<ClothId, string>} */
 export const CLOTHS = { len: 'Mảnh len (dạ)', lua: 'Mảnh lụa' };

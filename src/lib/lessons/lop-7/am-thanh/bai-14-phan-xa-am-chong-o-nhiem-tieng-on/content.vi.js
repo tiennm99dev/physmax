@@ -8,7 +8,7 @@ export default {
     'Lấy được ví dụ về phản xạ âm, tiếng vang; giải thích được khi nào nghe được tiếng vang.',
     'Phân biệt được vật phản xạ âm tốt và vật phản xạ âm kém.',
     'Vận dụng được sự truyền và phản xạ âm để tính khoảng cách ($s = v \\cdot t$).',
-    'Nêu được ô nhiễm tiếng ồn là gì và đề xuất được phương án đơn giản để hạn chế tiếng ồn ảnh hưởng đến sức khỏe.',
+    'Nêu được ô nhiễm tiếng ồn là gì và đề xuất được phương án đơn giản để hạn chế tiếng ồn ảnh hưởng đến sức khoẻ.',
   ],
   sections: [
     {
@@ -67,7 +67,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Vật phản xạ âm kém hấp thụ phần lớn âm truyền tới nó. Vì vậy trong rạp hát, phòng hòa nhạc, phòng thu âm, người ta làm tường sần sùi, treo rèm nhung, lót thảm và ốp vật liệu xốp để giảm tiếng vang, giúp âm nghe rõ hơn.',
+          text: 'Vật phản xạ âm kém hấp thụ phần lớn âm truyền tới nó. Vì vậy trong rạp hát, phòng hoà nhạc, phòng thu âm, người ta làm tường sần sùi, treo rèm nhung, lót thảm và ốp vật liệu xốp để giảm tiếng vang, giúp âm nghe rõ hơn.',
         },
       ],
     },
@@ -78,7 +78,7 @@ export default {
           type: 'callout',
           tone: 'definition',
           title: 'Ô nhiễm tiếng ồn',
-          text: 'Tiếng ồn trong môi trường bị coi là ô nhiễm khi nó to, kéo dài, gây ảnh hưởng xấu đến sức khỏe và hoạt động bình thường của con người.',
+          text: 'Tiếng ồn trong môi trường bị coi là ô nhiễm khi nó to, kéo dài, gây ảnh hưởng xấu đến sức khoẻ và hoạt động bình thường của con người.',
         },
         {
           type: 'p',
@@ -219,12 +219,12 @@ export default {
       answer: 2,
       hints: ['Tường cách người nói chỉ vài mét. Tính thử thời gian âm đi và về.'],
       solution:
-        'Tường gần nên âm phản xạ đến tai chậm hơn âm trực tiếp chưa tới $\\dfrac{1}{15}\\ \\text{s}$: nó hòa vào âm trực tiếp, làm âm to hơn chứ không thành tiếng vang riêng.',
+        'Tường gần nên âm phản xạ đến tai chậm hơn âm trực tiếp chưa tới $\\dfrac{1}{15}\\ \\text{s}$: nó hoà vào âm trực tiếp, làm âm to hơn chứ không thành tiếng vang riêng.',
     },
     {
       type: 'choice',
       prompt:
-        'Trong phòng hòa nhạc, người ta làm tường sần sùi và treo rèm nhung. Mục đích chính là gì?',
+        'Trong phòng hoà nhạc, người ta làm tường sần sùi và treo rèm nhung. Mục đích chính là gì?',
       options: [
         'Để trang trí cho đẹp.',
         'Để hấp thụ âm, giảm tiếng vang giúp nghe rõ hơn.',
@@ -246,9 +246,9 @@ export default {
         'Tiếng nói chuyện nhỏ trong thư viện.',
       ],
       answer: 1,
-      hints: ['Tiếng ồn gây ô nhiễm là âm to, kéo dài, ảnh hưởng đến sức khỏe và sinh hoạt.'],
+      hints: ['Tiếng ồn gây ô nhiễm là âm to, kéo dài, ảnh hưởng đến sức khoẻ và sinh hoạt.'],
       solution:
-        'Tiếng máy khoan to, kéo dài cả ngày, ảnh hưởng đến sức khỏe và sinh hoạt của người dân: đó là ô nhiễm tiếng ồn. Các âm còn lại nhỏ hoặc ngắn.',
+        'Tiếng máy khoan to, kéo dài cả ngày, ảnh hưởng đến sức khoẻ và sinh hoạt của người dân: đó là ô nhiễm tiếng ồn. Các âm còn lại nhỏ hoặc ngắn.',
     },
     {
       type: 'match',

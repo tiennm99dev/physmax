@@ -16,13 +16,13 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Đưa một thanh nam châm lại gần các vật nhỏ làm bằng sắt, thép, nhôm, đồng, nhựa, gỗ, thủy tinh,... ta thấy nam châm chỉ hút các vật bằng sắt, thép và không hút các vật còn lại.',
+          text: 'Đưa một thanh nam châm lại gần các vật nhỏ làm bằng sắt, thép, nhôm, đồng, nhựa, gỗ, thuỷ tinh,... ta thấy nam châm chỉ hút các vật bằng sắt, thép và không hút các vật còn lại.',
         },
         {
           type: 'callout',
           tone: 'definition',
           title: 'Vật liệu từ',
-          text: 'Nam châm hút được các vật làm bằng sắt, thép, niken, coban và một số hợp kim của chúng. Những vật liệu bị nam châm hút gọi là vật liệu có tính chất từ (vật liệu từ). Nam châm không hút nhôm, đồng, nhựa, gỗ, thủy tinh,...',
+          text: 'Nam châm hút được các vật làm bằng sắt, thép, niken, coban và một số hợp kim của chúng. Những vật liệu bị nam châm hút gọi là vật liệu có tính chất từ (vật liệu từ). Nam châm không hút nhôm, đồng, nhựa, gỗ, thuỷ tinh,...',
         },
         {
           type: 'p',

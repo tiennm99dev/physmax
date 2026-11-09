@@ -1,14 +1,14 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Ánh sáng là một dạng của năng lượng, có thể chuyển hóa thành nhiệt năng, điện năng, hóa năng. Tia sáng là đường thẳng có mũi tên chỉ hướng truyền ánh sáng; có ba loại chùm sáng: song song, hội tụ, phân kì. Sau vật cản sáng có vùng tối; nguồn sáng rộng còn tạo thêm vùng nửa tối.',
+    'Ánh sáng là một dạng của năng lượng, có thể chuyển hoá thành nhiệt năng, điện năng, hoá năng. Tia sáng là đường thẳng có mũi tên chỉ hướng truyền ánh sáng; có ba loại chùm sáng: song song, hội tụ, phân kì. Sau vật cản sáng có vùng tối; nguồn sáng rộng còn tạo thêm vùng nửa tối.',
   intro:
-    'Tấm pin trên mái nhà biến ánh nắng thành điện, chậu nước phơi nắng ấm lên. Buổi tối, bóng bàn tay dưới ngọn đèn nhỏ có viền sắc nét, còn dưới bóng đèn ống dài thì viền bóng lại nhòe. Ánh sáng mang năng lượng gì, nó truyền đi như thế nào, và vì sao bóng tối lại có hai kiểu như vậy?',
+    'Tấm pin trên mái nhà biến ánh nắng thành điện, chậu nước phơi nắng ấm lên. Buổi tối, bóng bàn tay dưới ngọn đèn nhỏ có viền sắc nét, còn dưới bóng đèn ống dài thì viền bóng lại nhoè. Ánh sáng mang năng lượng gì, nó truyền đi như thế nào, và vì sao bóng tối lại có hai kiểu như vậy?',
   objectives: [
-    'Nêu được ánh sáng là một dạng của năng lượng và lấy được ví dụ về sự chuyển hóa năng lượng ánh sáng.',
+    'Nêu được ánh sáng là một dạng của năng lượng và lấy được ví dụ về sự chuyển hoá năng lượng ánh sáng.',
     'Biểu diễn được đường truyền của ánh sáng bằng tia sáng; phân biệt được chùm sáng song song, hội tụ, phân kì.',
     'Vẽ được hình biểu diễn vùng tối do nguồn sáng hẹp và vùng tối, vùng nửa tối do nguồn sáng rộng.',
-    'Giải thích được một số hiện tượng như bóng nhòe, nhật thực bằng sự truyền thẳng của ánh sáng.',
+    'Giải thích được một số hiện tượng như bóng nhoè, nhật thực bằng sự truyền thẳng của ánh sáng.',
   ],
   sections: [
     {
@@ -16,22 +16,22 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Thí nghiệm: nối một pin quang điện (pin mặt trời) với một quạt điện nhỏ hoặc một điện kế. Khi chiếu ánh sáng đèn vào pin, cánh quạt quay (kim điện kế lệch). Tắt đèn, cánh quạt dừng lại. Pin quang điện đã nhận năng lượng ánh sáng và chuyển hóa thành điện năng.',
+          text: 'Thí nghiệm: nối một pin quang điện (pin mặt trời) với một quạt điện nhỏ hoặc một điện kế. Khi chiếu ánh sáng đèn vào pin, cánh quạt quay (kim điện kế lệch). Tắt đèn, cánh quạt dừng lại. Pin quang điện đã nhận năng lượng ánh sáng và chuyển hoá thành điện năng.',
         },
         {
           type: 'callout',
           tone: 'definition',
           title: 'Năng lượng ánh sáng',
-          text: 'Ánh sáng là một dạng của năng lượng. Năng lượng ánh sáng có thể chuyển hóa thành các dạng năng lượng khác như nhiệt năng, điện năng, hóa năng.',
+          text: 'Ánh sáng là một dạng của năng lượng. Năng lượng ánh sáng có thể chuyển hoá thành các dạng năng lượng khác như nhiệt năng, điện năng, hoá năng.',
         },
         {
           type: 'table',
-          caption: 'Một số ví dụ về chuyển hóa năng lượng ánh sáng',
-          head: ['Thiết bị, hiện tượng', 'Năng lượng ánh sáng chuyển hóa thành'],
+          caption: 'Một số ví dụ về chuyển hoá năng lượng ánh sáng',
+          head: ['Thiết bị, hiện tượng', 'Năng lượng ánh sáng chuyển hoá thành'],
           rows: [
             ['Pin quang điện (pin mặt trời), máy tính cầm tay dùng pin mặt trời', 'Điện năng'],
             ['Bình nước nóng năng lượng mặt trời, phơi quần áo, phơi thóc', 'Nhiệt năng'],
-            ['Cây xanh quang hợp tạo ra chất hữu cơ', 'Hóa năng (năng lượng hóa học)'],
+            ['Cây xanh quang hợp tạo ra chất hữu cơ', 'Hoá năng (năng lượng hoá học)'],
           ],
         },
       ],
@@ -123,13 +123,13 @@ export default {
   examples: [
     {
       problem:
-        'Nêu sự chuyển hóa năng lượng ánh sáng trong ba trường hợp: tấm pin mặt trời thắp sáng đèn đường, bình nước nóng năng lượng mặt trời trên mái nhà, lá cây quang hợp.',
+        'Nêu sự chuyển hoá năng lượng ánh sáng trong ba trường hợp: tấm pin mặt trời thắp sáng đèn đường, bình nước nóng năng lượng mặt trời trên mái nhà, lá cây quang hợp.',
       steps: [
-        'Tấm pin mặt trời nhận ánh sáng và tạo ra dòng điện: năng lượng ánh sáng chuyển hóa thành điện năng.',
-        'Bình nước nóng hấp thụ ánh sáng, nước trong bình nóng lên: năng lượng ánh sáng chuyển hóa thành nhiệt năng.',
-        'Lá cây dùng ánh sáng để tạo ra chất hữu cơ: năng lượng ánh sáng chuyển hóa thành hóa năng.',
+        'Tấm pin mặt trời nhận ánh sáng và tạo ra dòng điện: năng lượng ánh sáng chuyển hoá thành điện năng.',
+        'Bình nước nóng hấp thụ ánh sáng, nước trong bình nóng lên: năng lượng ánh sáng chuyển hoá thành nhiệt năng.',
+        'Lá cây dùng ánh sáng để tạo ra chất hữu cơ: năng lượng ánh sáng chuyển hoá thành hoá năng.',
       ],
-      answer: 'Lần lượt thành điện năng, nhiệt năng và hóa năng.',
+      answer: 'Lần lượt thành điện năng, nhiệt năng và hoá năng.',
     },
     {
       problem:
@@ -143,14 +143,14 @@ export default {
     },
     {
       problem:
-        'Đặt bàn tay dưới một bóng đèn ống dài thì bóng của bàn tay trên mặt bàn có viền nhòe. Thay bằng một bóng đèn LED nhỏ thì viền bóng sắc nét. Giải thích.',
+        'Đặt bàn tay dưới một bóng đèn ống dài thì bóng của bàn tay trên mặt bàn có viền nhoè. Thay bằng một bóng đèn LED nhỏ thì viền bóng sắc nét. Giải thích.',
       steps: [
         'Đèn ống dài là nguồn sáng rộng: sau bàn tay có vùng tối (không nhận được ánh sáng từ cả đèn) và vùng nửa tối (nhận được ánh sáng từ một phần của đèn).',
-        'Vùng nửa tối sáng dần từ phía vùng tối ra ngoài, nên ranh giới bóng bị nhòe.',
+        'Vùng nửa tối sáng dần từ phía vùng tối ra ngoài, nên ranh giới bóng bị nhoè.',
         'Đèn LED nhỏ là nguồn sáng hẹp: sau bàn tay chỉ có vùng tối, ánh sáng hoặc tới được, hoặc không, nên viền bóng sắc nét.',
       ],
       answer:
-        'Nguồn sáng rộng tạo thêm vùng nửa tối làm viền bóng nhòe; nguồn sáng hẹp chỉ tạo vùng tối.',
+        'Nguồn sáng rộng tạo thêm vùng nửa tối làm viền bóng nhoè; nguồn sáng hẹp chỉ tạo vùng tối.',
     },
   ],
   practice: [
@@ -161,12 +161,12 @@ export default {
       answer: 1,
       hints: ['Pin quang điện nhận ánh sáng thì làm quạt quay được.'],
       solution:
-        'Ánh sáng là một dạng của năng lượng: nó có thể chuyển hóa thành điện năng, nhiệt năng, hóa năng.',
+        'Ánh sáng là một dạng của năng lượng: nó có thể chuyển hoá thành điện năng, nhiệt năng, hoá năng.',
     },
     {
       type: 'multi',
       prompt:
-        'Trường hợp nào sau đây có năng lượng ánh sáng chuyển hóa thành dạng năng lượng khác?',
+        'Trường hợp nào sau đây có năng lượng ánh sáng chuyển hoá thành dạng năng lượng khác?',
       options: [
         'Máy tính cầm tay chạy bằng pin mặt trời',
         'Phơi thóc ngoài nắng cho khô',
@@ -177,7 +177,7 @@ export default {
       answers: [0, 1, 2],
       hints: ['Tìm những trường hợp cần có ánh sáng chiếu vào mới hoạt động được.'],
       solution:
-        'Pin mặt trời: ánh sáng thành điện năng; phơi thóc: ánh sáng thành nhiệt năng; quang hợp: ánh sáng thành hóa năng. Quạt điện dùng điện năng, bếp gas dùng hóa năng của khí đốt, không dùng năng lượng ánh sáng.',
+        'Pin mặt trời: ánh sáng thành điện năng; phơi thóc: ánh sáng thành nhiệt năng; quang hợp: ánh sáng thành hoá năng. Quạt điện dùng điện năng, bếp gas dùng hoá năng của khí đốt, không dùng năng lượng ánh sáng.',
     },
     {
       type: 'text',
@@ -213,7 +213,7 @@ export default {
       answer: 2,
       hints: ['Đi càng xa ngọn nến, vùng được chiếu sáng càng rộng hay càng hẹp?'],
       solution:
-        'Ánh sáng từ ngọn nến tỏa ra mọi phía, các tia loe rộng ra: đó là chùm sáng phân kì.',
+        'Ánh sáng từ ngọn nến toả ra mọi phía, các tia loe rộng ra: đó là chùm sáng phân kì.',
     },
     {
       type: 'choice',
@@ -275,9 +275,9 @@ export default {
     },
   ],
   takeaways: [
-    'Ánh sáng là một dạng của năng lượng, có thể chuyển hóa thành điện năng, nhiệt năng, hóa năng.',
+    'Ánh sáng là một dạng của năng lượng, có thể chuyển hoá thành điện năng, nhiệt năng, hoá năng.',
     'Tia sáng là đường thẳng có mũi tên chỉ hướng truyền ánh sáng. Có ba loại chùm sáng: song song, hội tụ, phân kì.',
     'Vùng tối không nhận được ánh sáng từ nguồn; vùng nửa tối nhận được ánh sáng từ một phần nguồn.',
-    'Nguồn sáng hẹp chỉ tạo vùng tối, bóng rõ nét; nguồn sáng rộng tạo vùng tối và vùng nửa tối, bóng có viền nhòe.',
+    'Nguồn sáng hẹp chỉ tạo vùng tối, bóng rõ nét; nguồn sáng rộng tạo vùng tối và vùng nửa tối, bóng có viền nhoè.',
   ],
 };

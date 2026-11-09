@@ -56,7 +56,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Ưu điểm của nam châm điện so với nam châm vĩnh cửu: bật, tắt được từ trường bằng công tắc; làm từ trường mạnh lên hay yếu đi được; đổi cực được. Nam châm điện có trong cần cẩu điện nâng sắt thép, chuông điện, rơ-le, khóa cửa điện từ, loa điện.',
+          text: 'Ưu điểm của nam châm điện so với nam châm vĩnh cửu: bật, tắt được từ trường bằng công tắc; làm từ trường mạnh lên hay yếu đi được; đổi cực được. Nam châm điện có trong cần cẩu điện nâng sắt thép, chuông điện, rơ-le, khoá cửa điện từ, loa điện.',
         },
         {
           type: 'callout',

@@ -70,10 +70,10 @@ export default {
           caption: 'Khối lượng riêng của một số chất (giá trị gần đúng, ở nhiệt độ phòng)',
           head: ['Chất rắn', '$D$ ($\\text{kg/m}^3$)', 'Chất lỏng', '$D$ ($\\text{kg/m}^3$)'],
           rows: [
-            ['Chì', '$11\\,300$', 'Thủy ngân', '$13\\,600$'],
+            ['Chì', '$11\\,300$', 'Thuỷ ngân', '$13\\,600$'],
             ['Đồng', '$8900$', 'Nước', '$1000$'],
             ['Sắt, thép', '$7800$', 'Dầu ăn', '$\\approx 800$'],
-            ['Nhôm', '$2700$', 'Dầu hỏa', '$\\approx 800$'],
+            ['Nhôm', '$2700$', 'Dầu hoả', '$\\approx 800$'],
             ['Đá', '$\\approx 2600$', 'Rượu, cồn', '$\\approx 790$'],
             ['Nước đá', '$900$', 'Xăng', '$\\approx 700$'],
             ['Gỗ tốt', '$\\approx 800$', 'Không khí (chất khí)', '$\\approx 1{,}29$'],
@@ -126,7 +126,7 @@ export default {
     },
     {
       problem:
-        'Cần một can có dung tích ít nhất bao nhiêu lít để chứa $1{,}6\\ \\text{kg}$ dầu hỏa? Biết khối lượng riêng của dầu hỏa là $800\\ \\text{kg/m}^3$.',
+        'Cần một can có dung tích ít nhất bao nhiêu lít để chứa $1{,}6\\ \\text{kg}$ dầu hoả? Biết khối lượng riêng của dầu hoả là $800\\ \\text{kg/m}^3$.',
       steps: [
         'Từ $D = \\dfrac{m}{V}$ suy ra $V = \\dfrac{m}{D}$.',
         '$V = \\dfrac{1{,}6}{800} = 0{,}002\\ \\text{m}^3$.',

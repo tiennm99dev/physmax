@@ -58,7 +58,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Tùy theo vị trí của điểm tựa $O$ so với các điểm đặt $O_1$, $O_2$ của các lực $F_1$, $F_2$, đòn bẩy được chia thành hai loại. Đòn bẩy loại 2 lại có hai trường hợp, tùy lực tác dụng xa hay gần điểm tựa hơn vật.',
+          text: 'Tuỳ theo vị trí của điểm tựa $O$ so với các điểm đặt $O_1$, $O_2$ của các lực $F_1$, $F_2$, đòn bẩy được chia thành hai loại. Đòn bẩy loại 2 lại có hai trường hợp, tuỳ lực tác dụng xa hay gần điểm tựa hơn vật.',
         },
         {
           type: 'table',

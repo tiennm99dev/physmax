@@ -173,7 +173,7 @@ export default {
     {
       type: 'choice',
       prompt:
-        'Lực tác dụng vào vật phải thỏa mãn điều kiện nào thì có thể làm vật quay quanh một trục?',
+        'Lực tác dụng vào vật phải thoả mãn điều kiện nào thì có thể làm vật quay quanh một trục?',
       options: [
         'Chỉ cần vật có trục quay.',
         'Lực có giá đi qua trục quay.',

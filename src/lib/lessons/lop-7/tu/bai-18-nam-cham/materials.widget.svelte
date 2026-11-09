@@ -35,9 +35,9 @@
       { id: 'go', label: 'Bút chì gỗ', bin: 'khong', why: 'Gỗ không bị nam châm hút.' },
       {
         id: 'thuytinh',
-        label: 'Cốc thủy tinh',
+        label: 'Cốc thuỷ tinh',
         bin: 'khong',
-        why: 'Thủy tinh không bị nam châm hút.',
+        why: 'Thuỷ tinh không bị nam châm hút.',
       },
     ],
     7,

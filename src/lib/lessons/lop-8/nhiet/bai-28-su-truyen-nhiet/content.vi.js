@@ -40,7 +40,7 @@ export default {
             ],
             [
               'Dẫn nhiệt kém (cách nhiệt tốt)',
-              'Gỗ, nhựa, cao su, sứ, thủy tinh, bông, len, không khí, chất lỏng',
+              'Gỗ, nhựa, cao su, sứ, thuỷ tinh, bông, len, không khí, chất lỏng',
               'Làm tay cầm nồi, lót nồi, áo ấm, vỏ hộp giữ nhiệt, lớp cách nhiệt tường nhà',
             ],
           ],
@@ -75,7 +75,7 @@ export default {
           items: [
             'Đun nước, phải đặt ấm, nồi lên trên ngọn lửa (đun từ dưới lên).',
             'Đốt nến dưới một chong chóng giấy: không khí nóng bốc lên tạo dòng đối lưu làm chong chóng quay.',
-            'Điều hòa thường lắp trên cao: không khí lạnh nặng hơn đi xuống, không khí nóng nhẹ hơn đi lên, nhờ đó cả phòng mát đều.',
+            'Điều hoà thường lắp trên cao: không khí lạnh nặng hơn đi xuống, không khí nóng nhẹ hơn đi lên, nhờ đó cả phòng mát đều.',
             'Gió biển, gió đất; ống khói nhà máy cao để tạo dòng đối lưu hút khói lên.',
           ],
         },
@@ -86,7 +86,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Thí nghiệm: một bình thủy tinh phủ đen, bên trong có nhiệt kế, đặt gần một ngọn đèn (nguồn nhiệt). Bật đèn, nhiệt kế chỉ nhiệt độ tăng dần. Đặt tấm gỗ chắn giữa đèn và bình, nhiệt độ không tăng nữa. Năng lượng nhiệt từ đèn tới bình không nhờ dẫn nhiệt (không khí dẫn nhiệt kém) cũng không nhờ đối lưu (không khí nóng đi lên, không đi ngang).',
+          text: 'Thí nghiệm: một bình thuỷ tinh phủ đen, bên trong có nhiệt kế, đặt gần một ngọn đèn (nguồn nhiệt). Bật đèn, nhiệt kế chỉ nhiệt độ tăng dần. Đặt tấm gỗ chắn giữa đèn và bình, nhiệt độ không tăng nữa. Năng lượng nhiệt từ đèn tới bình không nhờ dẫn nhiệt (không khí dẫn nhiệt kém) cũng không nhờ đối lưu (không khí nóng đi lên, không đi ngang).',
         },
         {
           type: 'callout',
@@ -104,7 +104,7 @@ export default {
           type: 'list',
           items: [
             'Mùa hè nên mặc áo màu trắng hoặc sáng màu để hấp thụ ít tia nhiệt của Mặt Trời; mùa đông nên mặc áo sẫm màu.',
-            'Phích (bình thủy) có hai lớp thủy tinh, giữa là chân không để ngăn dẫn nhiệt và đối lưu; mặt trong tráng bạc để phản xạ tia nhiệt trở lại nước; nút đậy kín ngăn đối lưu ra ngoài.',
+            'Phích (bình thuỷ) có hai lớp thuỷ tinh, giữa là chân không để ngăn dẫn nhiệt và đối lưu; mặt trong tráng bạc để phản xạ tia nhiệt trở lại nước; nút đậy kín ngăn đối lưu ra ngoài.',
             'Mái nhà, bồn chứa nước, xe chở xăng dầu thường sơn màu sáng, bóng để ít hấp thụ tia nhiệt.',
           ],
         },
@@ -162,9 +162,9 @@ export default {
     },
     {
       problem:
-        'Phích giữ nước nóng có hai lớp thủy tinh, giữa hai lớp là chân không, mặt trong tráng bạc, nút đậy kín. Mỗi bộ phận ngăn hình thức truyền nhiệt nào?',
+        'Phích giữ nước nóng có hai lớp thuỷ tinh, giữa hai lớp là chân không, mặt trong tráng bạc, nút đậy kín. Mỗi bộ phận ngăn hình thức truyền nhiệt nào?',
       steps: [
-        'Lớp chân không giữa hai lớp thủy tinh: không có hạt vật chất nên không có dẫn nhiệt và đối lưu qua lớp này.',
+        'Lớp chân không giữa hai lớp thuỷ tinh: không có hạt vật chất nên không có dẫn nhiệt và đối lưu qua lớp này.',
         'Mặt tráng bạc sáng bóng phản xạ các tia nhiệt trở lại nước, hạn chế bức xạ nhiệt ra ngoài.',
         'Nút đậy kín ngăn không khí nóng đi ra ngoài theo dòng đối lưu ở miệng phích (và nút làm bằng chất dẫn nhiệt kém).',
       ],
@@ -245,7 +245,7 @@ export default {
         'Đun nước trong ống nghiệm ở gần miệng ống, viên sáp gắn ở đáy ống không chảy dù nước ở miệng ống đã sôi. Nguyên nhân là',
       options: [
         'nước dẫn nhiệt kém và nước nóng ở trên không đi xuống được nên không có dòng đối lưu xuống đáy',
-        'thủy tinh dẫn nhiệt quá tốt',
+        'thuỷ tinh dẫn nhiệt quá tốt',
         'sáp không bao giờ chảy trong nước',
         'bức xạ nhiệt không đi qua được nước',
       ],
@@ -256,7 +256,7 @@ export default {
     },
     {
       type: 'choice',
-      prompt: 'Muốn làm mát cả phòng nhanh nhất, nên lắp máy điều hòa ở đâu?',
+      prompt: 'Muốn làm mát cả phòng nhanh nhất, nên lắp máy điều hoà ở đâu?',
       options: [
         'Sát sàn nhà',
         'Ở trên cao, gần trần nhà',
@@ -266,7 +266,7 @@ export default {
       answer: 1,
       hints: ['Không khí lạnh nặng hơn hay nhẹ hơn không khí nóng?'],
       solution:
-        'Không khí lạnh từ điều hòa nặng hơn nên đi xuống, không khí nóng nhẹ hơn đi lên tới máy, tạo dòng đối lưu làm mát cả phòng. Vì vậy điều hòa nên lắp trên cao.',
+        'Không khí lạnh từ điều hoà nặng hơn nên đi xuống, không khí nóng nhẹ hơn đi lên tới máy, tạo dòng đối lưu làm mát cả phòng. Vì vậy điều hoà nên lắp trên cao.',
     },
     {
       type: 'choice',

@@ -12,11 +12,11 @@
       "lessons": [
         {
           "no": 1,
-          "title": "Bài 1. Sử dụng một số hóa chất, thiết bị cơ bản trong phòng thí nghiệm",
+          "title": "Bài 1. Sử dụng một số hoá chất, thiết bị cơ bản trong phòng thí nghiệm",
           "slug": "bai-1-su-dung-mot-so-hoa-chat-thiet-bi-co-ban-trong-phong-thi-nghiem",
           "kind": "theory",
           "keyIdeas": [
-            "Hóa chất và dụng cụ thí nghiệm",
+            "Hoá chất và dụng cụ thí nghiệm",
             "Thiết bị điện: biến áp nguồn, ampe kế, vôn kế, joulemeter",
             "Quy tắc sử dụng an toàn"
           ],
@@ -165,7 +165,7 @@
           "title": "Bài 23. Tác dụng của dòng điện",
           "slug": "bai-23-tac-dung-cua-dong-dien",
           "kind": "theory",
-          "keyIdeas": ["Tác dụng nhiệt, phát sáng", "Tác dụng từ, hóa học", "Tác dụng sinh lí"],
+          "keyIdeas": ["Tác dụng nhiệt, phát sáng", "Tác dụng từ, hoá học", "Tác dụng sinh lí"],
           "interactiveIdea": "Thẻ thiết bị: bấm vào bàn là, đèn LED, chuông điện để thấy tác dụng của dòng điện tương ứng."
         },
         {
@@ -228,7 +228,7 @@
           "slug": "bai-28-su-truyen-nhiet",
           "kind": "theory",
           "keyIdeas": ["Dẫn nhiệt", "Đối lưu", "Bức xạ nhiệt"],
-          "interactiveIdea": "Ba kịch bản đun nóng thanh kim loại, ấm nước, sưởi bằng đèn với mũi tên dòng nhiệt hoạt họa."
+          "interactiveIdea": "Ba kịch bản đun nóng thanh kim loại, ấm nước, sưởi bằng đèn với mũi tên dòng nhiệt hoạt hoạ."
         },
         {
           "no": 29,

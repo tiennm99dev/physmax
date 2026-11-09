@@ -16,7 +16,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Thí nghiệm: đưa một đũa nhựa lại gần các vụn giấy, vụn giấy không bị hút. Cọ xát đũa nhựa vào mảnh len (dạ) vài lần rồi đưa lại gần vụn giấy: đũa nhựa hút các vụn giấy. Làm tương tự với đũa thủy tinh cọ xát vào mảnh lụa: đũa thủy tinh cũng hút vụn giấy.',
+          text: 'Thí nghiệm: đưa một đũa nhựa lại gần các vụn giấy, vụn giấy không bị hút. Cọ xát đũa nhựa vào mảnh len (dạ) vài lần rồi đưa lại gần vụn giấy: đũa nhựa hút các vụn giấy. Làm tương tự với đũa thuỷ tinh cọ xát vào mảnh lụa: đũa thuỷ tinh cũng hút vụn giấy.',
         },
         {
           type: 'callout',
@@ -26,7 +26,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Thước nhựa, đũa thủy tinh, mảnh polyethylene (túi ni lông), lược nhựa, bóng bay cao su… đều dễ nhiễm điện khi cọ xát. Vật nhiễm điện có thể hút vụn giấy, sợi tóc, mẩu xốp, bụi, hoặc làm dòng nước chảy nhỏ từ vòi bị lệch về phía nó.',
+          text: 'Thước nhựa, đũa thuỷ tinh, mảnh polyethylene (túi ni lông), lược nhựa, bóng bay cao su… đều dễ nhiễm điện khi cọ xát. Vật nhiễm điện có thể hút vụn giấy, sợi tóc, mẩu xốp, bụi, hoặc làm dòng nước chảy nhỏ từ vòi bị lệch về phía nó.',
         },
       ],
     },
@@ -35,7 +35,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Thí nghiệm: treo một đũa nhựa đã cọ xát vào len bằng sợi chỉ. Đưa một đũa nhựa khác cũng đã cọ xát vào len lại gần: hai đũa đẩy nhau. Đưa một đũa thủy tinh đã cọ xát vào lụa lại gần đũa nhựa treo: chúng hút nhau. Vậy điện tích trên đũa thủy tinh và trên đũa nhựa là khác loại.',
+          text: 'Thí nghiệm: treo một đũa nhựa đã cọ xát vào len bằng sợi chỉ. Đưa một đũa nhựa khác cũng đã cọ xát vào len lại gần: hai đũa đẩy nhau. Đưa một đũa thuỷ tinh đã cọ xát vào lụa lại gần đũa nhựa treo: chúng hút nhau. Vậy điện tích trên đũa thuỷ tinh và trên đũa nhựa là khác loại.',
         },
         {
           type: 'callout',
@@ -47,7 +47,7 @@ export default {
           type: 'callout',
           tone: 'note',
           title: 'Quy ước',
-          text: 'Điện tích của đũa thủy tinh cọ xát vào lụa là điện tích dương. Điện tích của đũa nhựa cọ xát vào len (dạ) là điện tích âm.',
+          text: 'Điện tích của đũa thuỷ tinh cọ xát vào lụa là điện tích dương. Điện tích của đũa nhựa cọ xát vào len (dạ) là điện tích âm.',
         },
         {
           type: 'table',
@@ -68,7 +68,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Mọi vật đều được cấu tạo từ các nguyên tử. Mỗi nguyên tử gồm hạt nhân mang điện tích dương ở giữa và các electron mang điện tích âm chuyển động xung quanh hạt nhân. Bình thường, tổng điện tích âm của các electron có độ lớn bằng điện tích dương của hạt nhân: nguyên tử trung hòa về điện, vật chưa nhiễm điện.',
+          text: 'Mọi vật đều được cấu tạo từ các nguyên tử. Mỗi nguyên tử gồm hạt nhân mang điện tích dương ở giữa và các electron mang điện tích âm chuyển động xung quanh hạt nhân. Bình thường, tổng điện tích âm của các electron có độ lớn bằng điện tích dương của hạt nhân: nguyên tử trung hoà về điện, vật chưa nhiễm điện.',
         },
         {
           type: 'callout',
@@ -80,7 +80,7 @@ export default {
           type: 'list',
           items: [
             'Cọ xát đũa nhựa vào len: electron chuyển từ len sang đũa nhựa. Đũa nhựa thừa electron nên nhiễm điện âm; mảnh len thiếu electron nên nhiễm điện dương.',
-            'Cọ xát đũa thủy tinh vào lụa: electron chuyển từ đũa thủy tinh sang lụa. Đũa thủy tinh thiếu electron nên nhiễm điện dương; mảnh lụa nhiễm điện âm.',
+            'Cọ xát đũa thuỷ tinh vào lụa: electron chuyển từ đũa thuỷ tinh sang lụa. Đũa thuỷ tinh thiếu electron nên nhiễm điện dương; mảnh lụa nhiễm điện âm.',
           ],
         },
         {
@@ -130,18 +130,18 @@ export default {
     },
   ],
   explore: {
-    title: 'Cọ xát thanh nhựa, thanh thủy tinh',
+    title: 'Cọ xát thanh nhựa, thanh thuỷ tinh',
     instruction:
-      'Chọn thanh và mảnh vải, rồi kéo mảnh vải qua lại trên thanh (hoặc bấm "Cọ xát"). Quan sát electron (chấm xanh) chuyển từ vật nào sang vật nào, rồi đưa thanh lại gần vụn giấy. So sánh: thước nhựa cọ len và thanh thủy tinh cọ lụa nhiễm điện loại gì?',
+      'Chọn thanh và mảnh vải, rồi kéo mảnh vải qua lại trên thanh (hoặc bấm "Cọ xát"). Quan sát electron (chấm xanh) chuyển từ vật nào sang vật nào, rồi đưa thanh lại gần vụn giấy. So sánh: thước nhựa cọ len và thanh thuỷ tinh cọ lụa nhiễm điện loại gì?',
   },
   examples: [
     {
       problem:
-        'Cọ xát một thước nhựa vào mảnh len rồi treo thước bằng sợi chỉ. Đưa lần lượt lại gần thước: (a) một thước nhựa khác cũng vừa cọ xát vào len; (b) một thanh thủy tinh vừa cọ xát vào lụa. Thước treo bị hút hay bị đẩy?',
+        'Cọ xát một thước nhựa vào mảnh len rồi treo thước bằng sợi chỉ. Đưa lần lượt lại gần thước: (a) một thước nhựa khác cũng vừa cọ xát vào len; (b) một thanh thuỷ tinh vừa cọ xát vào lụa. Thước treo bị hút hay bị đẩy?',
       steps: [
-        'Theo quy ước, thước nhựa cọ xát vào len nhiễm điện âm; thanh thủy tinh cọ xát vào lụa nhiễm điện dương.',
+        'Theo quy ước, thước nhựa cọ xát vào len nhiễm điện âm; thanh thuỷ tinh cọ xát vào lụa nhiễm điện dương.',
         '(a) Hai thước nhựa cùng nhiễm điện âm, cùng loại nên đẩy nhau.',
-        '(b) Thước nhựa nhiễm điện âm, thanh thủy tinh nhiễm điện dương, khác loại nên hút nhau.',
+        '(b) Thước nhựa nhiễm điện âm, thanh thuỷ tinh nhiễm điện dương, khác loại nên hút nhau.',
       ],
       answer: '(a) Thước treo bị đẩy ra xa; (b) thước treo bị hút lại gần.',
     },
@@ -159,9 +159,9 @@ export default {
     },
     {
       problem:
-        'Ba vật $A$, $B$, $C$ đã nhiễm điện. $A$ hút $B$, $B$ đẩy $C$. Biết $C$ là đũa thủy tinh vừa cọ xát vào lụa. Hỏi $A$, $B$ nhiễm điện loại gì?',
+        'Ba vật $A$, $B$, $C$ đã nhiễm điện. $A$ hút $B$, $B$ đẩy $C$. Biết $C$ là đũa thuỷ tinh vừa cọ xát vào lụa. Hỏi $A$, $B$ nhiễm điện loại gì?',
       steps: [
-        '$C$ là đũa thủy tinh cọ xát vào lụa nên $C$ nhiễm điện dương.',
+        '$C$ là đũa thuỷ tinh cọ xát vào lụa nên $C$ nhiễm điện dương.',
         '$B$ đẩy $C$ nên $B$ nhiễm điện cùng loại với $C$: $B$ nhiễm điện dương.',
         '$A$ hút $B$, mà $A$ đã nhiễm điện, nên $A$ nhiễm điện khác loại với $B$: $A$ nhiễm điện âm.',
       ],
@@ -190,7 +190,7 @@ export default {
         'Hai vật nhiễm điện khác loại.',
         'Hai vật nhiễm điện cùng loại.',
         'Một vật nhiễm điện, vật kia không nhiễm điện.',
-        'Cả hai vật đều trung hòa về điện.',
+        'Cả hai vật đều trung hoà về điện.',
       ],
       answer: 1,
       hints: ['Điện tích cùng loại thì đẩy hay hút nhau?'],
@@ -198,7 +198,7 @@ export default {
     },
     {
       type: 'choice',
-      prompt: 'Một vật trung hòa về điện, sau khi cọ xát thì nhiễm điện dương. Vì sao?',
+      prompt: 'Một vật trung hoà về điện, sau khi cọ xát thì nhiễm điện dương. Vì sao?',
       options: [
         'Vì vật nhận thêm electron.',
         'Vì vật nhận thêm điện tích dương từ vật kia.',
@@ -217,15 +217,15 @@ export default {
       type: 'match',
       prompt: 'Nối mỗi vật sau khi cọ xát với điều đã xảy ra với nó (theo quy ước của sách).',
       left: [
-        'Đũa thủy tinh cọ xát vào lụa',
+        'Đũa thuỷ tinh cọ xát vào lụa',
         'Đũa nhựa cọ xát vào len',
         'Mảnh len đã cọ xát vào đũa nhựa',
-        'Mảnh lụa đã cọ xát vào đũa thủy tinh',
+        'Mảnh lụa đã cọ xát vào đũa thuỷ tinh',
       ],
       right: [
         'Nhận thêm electron từ len, nhiễm điện âm',
         'Mất bớt electron sang lụa, nhiễm điện dương',
-        'Nhận thêm electron từ đũa thủy tinh, nhiễm điện âm',
+        'Nhận thêm electron từ đũa thuỷ tinh, nhiễm điện âm',
         'Mất bớt electron sang đũa nhựa, nhiễm điện dương',
       ],
       pairs: [
@@ -235,11 +235,11 @@ export default {
         [3, 2],
       ],
       hints: [
-        'Quy ước: thủy tinh cọ lụa nhiễm điện dương, nhựa cọ len nhiễm điện âm.',
+        'Quy ước: thuỷ tinh cọ lụa nhiễm điện dương, nhựa cọ len nhiễm điện âm.',
         'Hai vật cọ xát vào nhau luôn nhiễm điện trái dấu.',
       ],
       solution:
-        'Đũa thủy tinh cọ lụa nhiễm điện dương: nó mất bớt electron sang lụa, nên mảnh lụa nhận thêm electron và nhiễm điện âm. Đũa nhựa cọ len nhiễm điện âm: nó nhận thêm electron từ len, nên mảnh len mất bớt electron và nhiễm điện dương.',
+        'Đũa thuỷ tinh cọ lụa nhiễm điện dương: nó mất bớt electron sang lụa, nên mảnh lụa nhận thêm electron và nhiễm điện âm. Đũa nhựa cọ len nhiễm điện âm: nó nhận thêm electron từ len, nên mảnh len mất bớt electron và nhiễm điện dương.',
     },
     {
       type: 'choice',
@@ -311,7 +311,7 @@ export default {
   takeaways: [
     'Nhiều vật bị nhiễm điện khi cọ xát; vật nhiễm điện có khả năng hút các vật khác.',
     'Có hai loại điện tích: dương ($+$) và âm ($-$). Cùng loại thì đẩy nhau, khác loại thì hút nhau.',
-    'Quy ước: thủy tinh cọ xát vào lụa nhiễm điện dương; nhựa cọ xát vào len nhiễm điện âm.',
+    'Quy ước: thuỷ tinh cọ xát vào lụa nhiễm điện dương; nhựa cọ xát vào len nhiễm điện âm.',
     'Khi cọ xát, electron dịch chuyển giữa hai vật: vật nhận thêm electron nhiễm điện âm, vật mất bớt electron nhiễm điện dương.',
   ],
 };

@@ -92,7 +92,7 @@ export default {
   explore: {
     title: 'Lực kế và bình tràn',
     instruction:
-      'Chọn vật và chất lỏng. Kéo vật (hoặc chọn nó rồi bấm phím mũi tên lên, xuống) để nhúng dần vào bình tràn: theo dõi số chỉ lực kế, lực đẩy $F_A$ và lượng chất lỏng tràn ra. Khi vật đã chìm hẳn, nhúng sâu thêm thì $F_A$ có đổi không? Bấm "Thả vật khỏi lực kế" để xem vật chìm, lơ lửng hay nổi; thử khối gỗ trong dầu hỏa và khối sắt trong thủy ngân.',
+      'Chọn vật và chất lỏng. Kéo vật (hoặc chọn nó rồi bấm phím mũi tên lên, xuống) để nhúng dần vào bình tràn: theo dõi số chỉ lực kế, lực đẩy $F_A$ và lượng chất lỏng tràn ra. Khi vật đã chìm hẳn, nhúng sâu thêm thì $F_A$ có đổi không? Bấm "Thả vật khỏi lực kế" để xem vật chìm, lơ lửng hay nổi; thử khối gỗ trong dầu hoả và khối sắt trong thuỷ ngân.',
   },
   examples: [
     {
@@ -135,7 +135,7 @@ export default {
         'phương thẳng đứng, chiều từ trên xuống',
         'phương thẳng đứng, chiều từ dưới lên',
         'phương nằm ngang',
-        'phương và chiều tùy theo hình dạng vật',
+        'phương và chiều tuỳ theo hình dạng vật',
       ],
       answer: 1,
       hints: ['Vì sao lực kế chỉ ít đi khi nhúng vật vào nước?'],
@@ -175,7 +175,7 @@ export default {
     {
       type: 'number',
       prompt:
-        'Một vật thể tích $200\\ \\text{cm}^3$ nhúng chìm hoàn toàn trong dầu hỏa có trọng lượng riêng $8000\\ \\text{N/m}^3$. Tính lực đẩy Archimedes.',
+        'Một vật thể tích $200\\ \\text{cm}^3$ nhúng chìm hoàn toàn trong dầu hoả có trọng lượng riêng $8000\\ \\text{N/m}^3$. Tính lực đẩy Archimedes.',
       answer: 1.6,
       unit: 'N',
       hints: ['Đổi $200\\ \\text{cm}^3$ ra $\\text{m}^3$.'],
@@ -221,17 +221,17 @@ export default {
     },
     {
       type: 'choice',
-      prompt: 'Thả một viên bi sắt vào chậu thủy ngân thì viên bi',
+      prompt: 'Thả một viên bi sắt vào chậu thuỷ ngân thì viên bi',
       options: [
         'chìm xuống đáy vì sắt là kim loại nặng',
-        'nổi lên vì khối lượng riêng của sắt nhỏ hơn của thủy ngân',
+        'nổi lên vì khối lượng riêng của sắt nhỏ hơn của thuỷ ngân',
         'lơ lửng giữa chậu',
-        'tan vào thủy ngân',
+        'tan vào thuỷ ngân',
       ],
       answer: 1,
-      hints: ['Tra bảng: khối lượng riêng của sắt và của thủy ngân.'],
+      hints: ['Tra bảng: khối lượng riêng của sắt và của thuỷ ngân.'],
       solution:
-        'Sắt có $D = 7800\\ \\text{kg/m}^3$, nhỏ hơn thủy ngân ($13\\,600\\ \\text{kg/m}^3$), nên lực đẩy khi bi chìm hẳn lớn hơn trọng lượng bi: bi nổi lên.',
+        'Sắt có $D = 7800\\ \\text{kg/m}^3$, nhỏ hơn thuỷ ngân ($13\\,600\\ \\text{kg/m}^3$), nên lực đẩy khi bi chìm hẳn lớn hơn trọng lượng bi: bi nổi lên.',
     },
     {
       type: 'number',

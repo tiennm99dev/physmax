@@ -245,7 +245,7 @@
         class="block w-full"
         role="img"
         aria-label="Đồ thị khối lượng theo thể tích với {rows.length} điểm đo{rows.length > 1
-          ? ', các điểm nằm trên một đường thẳng đi qua gốc tọa độ'
+          ? ', các điểm nằm trên một đường thẳng đi qua gốc toạ độ'
           : ''}."
       >
         {#each vTicks as v (v)}
@@ -310,7 +310,7 @@
   <div class="flex flex-wrap gap-2">
     <button type="button" class={button.primary} onclick={record}>Ghi số đo vào bảng</button>
     <button type="button" class={button.quiet} onclick={reset} disabled={rows.length === 0}
-      >Xóa bảng</button
+      >Xoá bảng</button
     >
   </div>
 

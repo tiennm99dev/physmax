@@ -338,7 +338,7 @@
       {/each}
     </svg>
     <figcaption class="text-center text-xs text-slate-600">
-      ● 100 g nước &nbsp; ■ 200 g nước. Đường nét đứt đi qua gốc tọa độ, gần các điểm đo nhất.
+      ● 100 g nước &nbsp; ■ 200 g nước. Đường nét đứt đi qua gốc toạ độ, gần các điểm đo nhất.
     </figcaption>
   </figure>
 </div>

@@ -1,13 +1,13 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Nhật thực xảy ra lúc trăng non, nguyệt thực lúc trăng tròn, khi Mặt Trời, Trái Đất, Mặt Trăng gần thẳng hàng; thủy triều do lực hấp dẫn của Mặt Trăng và Mặt Trời, với triều cường và triều kém theo tuần trăng.',
+    'Nhật thực xảy ra lúc trăng non, nguyệt thực lúc trăng tròn, khi Mặt Trời, Trái Đất, Mặt Trăng gần thẳng hàng; thuỷ triều do lực hấp dẫn của Mặt Trăng và Mặt Trời, với triều cường và triều kém theo tuần trăng.',
   intro:
     'Giữa ban ngày, trời bỗng tối như đêm, gà lên chuồng; rồi một đêm trăng rằm, Mặt Trăng dần chuyển màu đỏ sậm. Người xưa coi đó là điềm lạ, còn ngày nay ta tính trước được từng phút. Cũng Mặt Trăng và Mặt Trời ấy, bằng lực hấp dẫn, làm nước biển dâng rút mỗi ngày. Vì sao có những hiện tượng này, và vì sao không phải tháng nào cũng có nhật thực?',
   objectives: [
     'Giải thích được định tính hiện tượng nhật thực, nguyệt thực và nêu được điều kiện xảy ra.',
     'Phân biệt được nhật thực toàn phần, một phần, hình khuyên; nguyệt thực toàn phần, một phần.',
-    'Giải thích được định tính hiện tượng thủy triều do lực hấp dẫn của Mặt Trăng và Mặt Trời.',
+    'Giải thích được định tính hiện tượng thuỷ triều do lực hấp dẫn của Mặt Trăng và Mặt Trời.',
     'Nêu được khi nào có triều cường, triều kém.',
     'Thiết kế được mô hình đơn giản về nhật thực, nguyệt thực.',
   ],
@@ -99,7 +99,7 @@ export default {
       ],
     },
     {
-      heading: 'Thủy triều',
+      heading: 'Thuỷ triều',
       blocks: [
         {
           type: 'p',
@@ -108,8 +108,8 @@ export default {
         {
           type: 'callout',
           tone: 'definition',
-          title: 'Thủy triều',
-          text: 'Thủy triều là hiện tượng nước biển dâng lên và rút xuống theo chu kì, chủ yếu do lực hấp dẫn của Mặt Trăng và của Mặt Trời tác dụng lên Trái Đất và lớp nước. Trái Đất tự quay nên một nơi trên bờ biển lần lượt đi qua các chỗ phồng và chỗ lõm của nước.',
+          title: 'Thuỷ triều',
+          text: 'Thuỷ triều là hiện tượng nước biển dâng lên và rút xuống theo chu kì, chủ yếu do lực hấp dẫn của Mặt Trăng và của Mặt Trời tác dụng lên Trái Đất và lớp nước. Trái Đất tự quay nên một nơi trên bờ biển lần lượt đi qua các chỗ phồng và chỗ lõm của nước.',
         },
         {
           type: 'p',
@@ -128,7 +128,7 @@ export default {
         { type: 'widget', name: 'thuy-trieu' },
         {
           type: 'p',
-          text: 'Theo âm lịch, trăng non vào khoảng mùng một, trăng tròn vào khoảng rằm, nên triều cường vào các ngày đó; triều kém vào khoảng mùng tám và hai mươi ba. Người đi biển, đánh cá, làm muối, vận hành cảng, làm công trình ven biển đều phải xem lịch thủy triều.',
+          text: 'Theo âm lịch, trăng non vào khoảng mùng một, trăng tròn vào khoảng rằm, nên triều cường vào các ngày đó; triều kém vào khoảng mùng tám và hai mươi ba. Người đi biển, đánh cá, làm muối, vận hành cảng, làm công trình ven biển đều phải xem lịch thuỷ triều.',
         },
       ],
     },
@@ -193,7 +193,7 @@ export default {
         'Biết khối lượng Mặt Trời gấp khoảng $2{,}7 \\cdot 10^7$ lần khối lượng Mặt Trăng; khoảng cách đến Mặt Trời gấp $390$ lần khoảng cách đến Mặt Trăng. Lực hút của Mặt Trời lên một vật ở Trái Đất gấp bao nhiêu lần của Mặt Trăng? Vì sao triều do Mặt Trời lại thấp hơn?',
       steps: [
         'Theo định luật vạn vật hấp dẫn, $F \\sim \\dfrac{M}{d^2}$, nên $\\dfrac{F_{\\text{Mặt Trời}}}{F_{\\text{Mặt Trăng}}} = \\dfrac{2{,}7 \\cdot 10^7}{390^2} \\approx 178$.',
-        'Thủy triều phụ thuộc vào chênh lệch lực hút giữa hai phía của Trái Đất, mà chênh lệch này tỉ lệ với $\\dfrac{M}{d^3}$.',
+        'Thuỷ triều phụ thuộc vào chênh lệch lực hút giữa hai phía của Trái Đất, mà chênh lệch này tỉ lệ với $\\dfrac{M}{d^3}$.',
         '$\\dfrac{2{,}7 \\cdot 10^7}{390^3} \\approx 0{,}46$, nên triều do Mặt Trời chỉ cao khoảng $0{,}46$ lần triều do Mặt Trăng.',
       ],
       answer:
@@ -243,7 +243,7 @@ export default {
         'Mặt Trăng ở xa, đĩa của nó nhỏ hơn đĩa Mặt Trời',
         'Người quan sát ở trong vùng bóng nửa tối của Mặt Trăng',
         'Mặt Trăng nằm trọn trong vùng bóng tối của Trái Đất',
-        'Mặt Trăng nằm giữa Trái Đất và Hỏa tinh',
+        'Mặt Trăng nằm giữa Trái Đất và Hoả tinh',
       ],
       pairs: [
         [0, 0],
@@ -317,13 +317,13 @@ export default {
     },
     {
       type: 'multi',
-      prompt: 'Những phát biểu nào đúng về thủy triều?',
+      prompt: 'Những phát biểu nào đúng về thuỷ triều?',
       options: [
-        'Thủy triều chủ yếu do lực hấp dẫn của Mặt Trăng và Mặt Trời',
+        'Thuỷ triều chủ yếu do lực hấp dẫn của Mặt Trăng và Mặt Trời',
         'Nước phồng lên ở cả phía gần và phía xa Mặt Trăng',
         'Triều cường xảy ra lúc trăng non và trăng tròn',
         'Mặt Trời có tác dụng tạo triều mạnh hơn Mặt Trăng',
-        'Thủy triều ở mọi bờ biển đều lên xuống đúng hai lần mỗi ngày',
+        'Thuỷ triều ở mọi bờ biển đều lên xuống đúng hai lần mỗi ngày',
       ],
       answers: [0, 1, 2],
       hints: [
@@ -371,7 +371,7 @@ export default {
     'Nhật thực, nguyệt thực xảy ra khi Mặt Trời, Trái Đất, Mặt Trăng gần thẳng hàng, nên chỉ có vào trăng non hoặc trăng tròn và khi Mặt Trời ở gần đường nút.',
     'Mặt phẳng quỹ đạo Mặt Trăng nghiêng khoảng $5^\\circ$ so với mặt phẳng hoàng đạo, nên không phải tháng nào cũng có.',
     'Nhật thực có ba loại: toàn phần, hình khuyên, một phần. Nguyệt thực dài hơn, thấy được ở cả nửa Trái Đất đang là đêm.',
-    'Thủy triều chủ yếu do lực hấp dẫn của Mặt Trăng và Mặt Trời; tác dụng của Mặt Trời chỉ bằng khoảng $0{,}46$ lần của Mặt Trăng.',
+    'Thuỷ triều chủ yếu do lực hấp dẫn của Mặt Trăng và Mặt Trời; tác dụng của Mặt Trời chỉ bằng khoảng $0{,}46$ lần của Mặt Trăng.',
     'Triều cường vào lúc trăng non, trăng tròn; triều kém vào lúc trăng bán nguyệt.',
   ],
 };

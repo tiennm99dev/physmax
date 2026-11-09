@@ -38,7 +38,7 @@ export const RODS = [
   { id: 'dong', label: 'Đồng', kappa: 1.2, metal: true },
   { id: 'nhom', label: 'Nhôm', kappa: 1, metal: true },
   { id: 'thep', label: 'Thép', kappa: 0.25, metal: true },
-  { id: 'thuy-tinh', label: 'Thủy tinh', kappa: 0.012, metal: false },
+  { id: 'thuy-tinh', label: 'Thuỷ tinh', kappa: 0.012, metal: false },
 ];
 
 /** Heat loss rate of a rod cell to the air, per second. */

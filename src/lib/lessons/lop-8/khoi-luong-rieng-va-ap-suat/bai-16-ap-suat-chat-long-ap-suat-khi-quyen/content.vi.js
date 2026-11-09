@@ -1,12 +1,12 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Chất lỏng gây áp suất theo mọi phương lên đáy bình, thành bình và các vật trong lòng nó, càng xuống sâu áp suất càng lớn; áp suất tác dụng vào chất lỏng được truyền đi nguyên vẹn theo mọi hướng (máy nén thủy lực); bình thông nhau chứa cùng một chất lỏng đứng yên có mực chất lỏng ngang nhau; Trái Đất và mọi vật trên Trái Đất chịu áp suất khí quyển theo mọi phương.',
+    'Chất lỏng gây áp suất theo mọi phương lên đáy bình, thành bình và các vật trong lòng nó, càng xuống sâu áp suất càng lớn; áp suất tác dụng vào chất lỏng được truyền đi nguyên vẹn theo mọi hướng (máy nén thuỷ lực); bình thông nhau chứa cùng một chất lỏng đứng yên có mực chất lỏng ngang nhau; Trái Đất và mọi vật trên Trái Đất chịu áp suất khí quyển theo mọi phương.',
   intro:
     'Người thợ lặn phải mặc bộ áo lặn chịu được áp suất lớn khi lặn sâu. Lật úp một cốc nước đầy có tờ giấy đậy miệng, nước không đổ ra. Hai hiện tượng này cho thấy chất lỏng và không khí đều gây ra áp suất. Áp suất ấy tác dụng theo phương nào và lớn cỡ nào?',
   objectives: [
     'Nêu được chất lỏng gây áp suất theo mọi phương lên đáy bình, thành bình và các vật ở trong lòng nó; càng sâu áp suất càng lớn.',
-    'Nêu được áp suất tác dụng vào chất lỏng được chất lỏng truyền đi nguyên vẹn theo mọi hướng; giải thích được nguyên tắc máy nén thủy lực.',
+    'Nêu được áp suất tác dụng vào chất lỏng được chất lỏng truyền đi nguyên vẹn theo mọi hướng; giải thích được nguyên tắc máy nén thuỷ lực.',
     'Nêu được đặc điểm mực chất lỏng trong bình thông nhau.',
     'Lấy được ví dụ chứng tỏ sự tồn tại của áp suất khí quyển, áp suất này tác dụng theo mọi phương; giải thích được một số ứng dụng.',
   ],
@@ -41,7 +41,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Bình thông nhau là bình có hai hoặc nhiều nhánh nối thông đáy với nhau. Trong hình dưới, khi khóa $K$ mở, nước chảy từ nhánh có mực nước cao sang nhánh có mực nước thấp cho tới khi đứng yên.',
+          text: 'Bình thông nhau là bình có hai hoặc nhiều nhánh nối thông đáy với nhau. Trong hình dưới, khi khoá $K$ mở, nước chảy từ nhánh có mực nước cao sang nhánh có mực nước thấp cho tới khi đứng yên.',
         },
         { type: 'widget', name: 'binh-thong-nhau' },
         {
@@ -57,7 +57,7 @@ export default {
       ],
     },
     {
-      heading: 'Sự truyền áp suất chất lỏng. Máy nén thủy lực',
+      heading: 'Sự truyền áp suất chất lỏng. Máy nén thuỷ lực',
       blocks: [
         {
           type: 'callout',
@@ -67,7 +67,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Máy nén thủy lực gồm hai xilanh, một nhỏ một to, thông đáy với nhau, chứa đầy chất lỏng (thường là dầu) và được đậy bằng hai pít-tông. Tác dụng lực $f$ lên pít-tông nhỏ diện tích $s$, áp suất $\\dfrac{f}{s}$ được dầu truyền nguyên vẹn tới pít-tông lớn diện tích $S$, tạo ra lực nâng $F$:',
+          text: 'Máy nén thuỷ lực gồm hai xilanh, một nhỏ một to, thông đáy với nhau, chứa đầy chất lỏng (thường là dầu) và được đậy bằng hai pít-tông. Tác dụng lực $f$ lên pít-tông nhỏ diện tích $s$, áp suất $\\dfrac{f}{s}$ được dầu truyền nguyên vẹn tới pít-tông lớn diện tích $S$, tạo ra lực nâng $F$:',
         },
         {
           type: 'tex',
@@ -90,7 +90,7 @@ export default {
           type: 'callout',
           tone: 'definition',
           title: 'Áp suất khí quyển',
-          text: 'Trái Đất và mọi vật trên Trái Đất đều chịu tác dụng của áp suất khí quyển theo mọi phương. Ở mặt nước biển, áp suất khí quyển vào khoảng $101\\,300\\ \\text{Pa}$ (bằng áp suất của cột thủy ngân cao $760\\ \\text{mm}$).',
+          text: 'Trái Đất và mọi vật trên Trái Đất đều chịu tác dụng của áp suất khí quyển theo mọi phương. Ở mặt nước biển, áp suất khí quyển vào khoảng $101\\,300\\ \\text{Pa}$ (bằng áp suất của cột thuỷ ngân cao $760\\ \\text{mm}$).',
         },
         {
           type: 'list',
@@ -126,7 +126,7 @@ export default {
     },
     {
       problem:
-        'Một máy nén thủy lực có pít-tông nhỏ diện tích $s = 4\\ \\text{cm}^2$, pít-tông lớn diện tích $S = 200\\ \\text{cm}^2$. Tác dụng lên pít-tông nhỏ một lực $f = 100\\ \\text{N}$. Tính lực nâng $F$ ở pít-tông lớn.',
+        'Một máy nén thuỷ lực có pít-tông nhỏ diện tích $s = 4\\ \\text{cm}^2$, pít-tông lớn diện tích $S = 200\\ \\text{cm}^2$. Tác dụng lên pít-tông nhỏ một lực $f = 100\\ \\text{N}$. Tính lực nâng $F$ ở pít-tông lớn.',
       steps: [
         'Áp suất được chất lỏng truyền nguyên vẹn: $\\dfrac{F}{S} = \\dfrac{f}{s}$, suy ra $\\dfrac{F}{f} = \\dfrac{S}{s}$.',
         '$\\dfrac{S}{s} = \\dfrac{200}{4} = 50$ (cùng đơn vị $\\text{cm}^2$ nên không cần đổi).',
@@ -136,7 +136,7 @@ export default {
     },
     {
       problem:
-        'Vì sao lật úp cốc nước đầy có tờ giấy đậy miệng thì nước không chảy ra, còn làm thí nghiệm đó trong một chuông thủy tinh đã hút hết không khí thì nước đổ ra?',
+        'Vì sao lật úp cốc nước đầy có tờ giấy đậy miệng thì nước không chảy ra, còn làm thí nghiệm đó trong một chuông thuỷ tinh đã hút hết không khí thì nước đổ ra?',
       steps: [
         'Ngoài không khí, tờ giấy chịu áp suất khí quyển (khoảng $101\\,300\\ \\text{Pa}$) đẩy từ dưới lên.',
         'Nước trong cốc cao khoảng $10\\ \\text{cm}$ chỉ gây áp suất khoảng $1000\\ \\text{Pa}$ lên tờ giấy, nhỏ hơn rất nhiều, nên tờ giấy bị ép chặt vào miệng cốc.',
@@ -189,14 +189,14 @@ export default {
         'phụ thuộc lượng nước đổ vào từng nhánh',
       ],
       answer: 2,
-      hints: ['Mở khóa $K$ trong hình bình thông nhau và chờ nước đứng yên.'],
+      hints: ['Mở khoá $K$ trong hình bình thông nhau và chờ nước đứng yên.'],
       solution:
         'Trong bình thông nhau chứa cùng một chất lỏng đứng yên, mực chất lỏng ở các nhánh luôn ở cùng một độ cao, dù các nhánh to nhỏ khác nhau.',
     },
     {
       type: 'number',
       prompt:
-        'Một kích thủy lực có pít-tông nhỏ diện tích $2\\ \\text{cm}^2$ và pít-tông lớn diện tích $100\\ \\text{cm}^2$. Cần tác dụng lên pít-tông nhỏ một lực $200\\ \\text{N}$. Lực nâng ở pít-tông lớn là bao nhiêu niutơn?',
+        'Một kích thuỷ lực có pít-tông nhỏ diện tích $2\\ \\text{cm}^2$ và pít-tông lớn diện tích $100\\ \\text{cm}^2$. Cần tác dụng lên pít-tông nhỏ một lực $200\\ \\text{N}$. Lực nâng ở pít-tông lớn là bao nhiêu niutơn?',
       answer: 10000,
       unit: 'N',
       hints: ['$\\dfrac{F}{f} = \\dfrac{S}{s}$.', 'Tỉ số diện tích là $\\dfrac{100}{2}$.'],
@@ -219,7 +219,7 @@ export default {
     {
       type: 'choice',
       prompt:
-        'Làm thí nghiệm cốc nước úp có tờ giấy đậy trong một chuông thủy tinh đã hút hết không khí thì',
+        'Làm thí nghiệm cốc nước úp có tờ giấy đậy trong một chuông thuỷ tinh đã hút hết không khí thì',
       options: [
         'nước vẫn ở trong cốc như khi ở ngoài không khí',
         'tờ giấy rơi, nước đổ ra vì không còn áp suất khí quyển đẩy tờ giấy',
@@ -251,7 +251,7 @@ export default {
   takeaways: [
     'Chất lỏng gây áp suất theo mọi phương lên đáy bình, thành bình và các vật trong lòng nó; càng sâu áp suất càng lớn ($p = d \\cdot h$).',
     'Bình thông nhau chứa cùng một chất lỏng đứng yên: mực chất lỏng ở các nhánh ở cùng một độ cao.',
-    'Áp suất tác dụng vào chất lỏng được truyền nguyên vẹn theo mọi hướng; máy nén thủy lực: $\\dfrac{F}{f} = \\dfrac{S}{s}$.',
+    'Áp suất tác dụng vào chất lỏng được truyền nguyên vẹn theo mọi hướng; máy nén thuỷ lực: $\\dfrac{F}{f} = \\dfrac{S}{s}$.',
     'Trái Đất và mọi vật trên Trái Đất chịu áp suất khí quyển theo mọi phương, khoảng $101\\,300\\ \\text{Pa}$ ở mặt nước biển.',
   ],
 };

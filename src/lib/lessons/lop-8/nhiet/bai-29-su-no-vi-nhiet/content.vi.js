@@ -51,7 +51,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Thí nghiệm với chất lỏng: một bình thủy tinh đựng đầy nước màu, nút có cắm một ống thủy tinh nhỏ. Đặt bình vào chậu nước nóng: mực nước màu trong ống dâng lên. Đặt bình vào chậu nước lạnh: mực nước màu hạ xuống. Làm thí nghiệm với ba bình giống nhau đựng rượu, dầu và nước cùng thể tích, cùng nhúng vào nước nóng: mực chất lỏng trong ba ống dâng lên khác nhau.',
+          text: 'Thí nghiệm với chất lỏng: một bình thuỷ tinh đựng đầy nước màu, nút có cắm một ống thuỷ tinh nhỏ. Đặt bình vào chậu nước nóng: mực nước màu trong ống dâng lên. Đặt bình vào chậu nước lạnh: mực nước màu hạ xuống. Làm thí nghiệm với ba bình giống nhau đựng rượu, dầu và nước cùng thể tích, cùng nhúng vào nước nóng: mực chất lỏng trong ba ống dâng lên khác nhau.',
         },
         {
           type: 'callout',
@@ -61,7 +61,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Thí nghiệm với chất khí: một bình cầu chứa không khí, nút có cắm ống thủy tinh, trong ống có một giọt nước màu. Áp hai bàn tay vào bình cho không khí trong bình nóng lên: giọt nước màu đi ra phía ngoài. Bỏ tay ra, không khí nguội đi: giọt nước màu đi vào trong. Chỉ hơi ấm của bàn tay đã đủ làm không khí nở ra thấy rõ, trong khi muốn thấy nước nở ra phải nhúng bình vào nước nóng: chất khí nở vì nhiệt nhiều hơn chất lỏng.',
+          text: 'Thí nghiệm với chất khí: một bình cầu chứa không khí, nút có cắm ống thuỷ tinh, trong ống có một giọt nước màu. Áp hai bàn tay vào bình cho không khí trong bình nóng lên: giọt nước màu đi ra phía ngoài. Bỏ tay ra, không khí nguội đi: giọt nước màu đi vào trong. Chỉ hơi ấm của bàn tay đã đủ làm không khí nở ra thấy rõ, trong khi muốn thấy nước nở ra phải nhúng bình vào nước nóng: chất khí nở vì nhiệt nhiều hơn chất lỏng.',
         },
         {
           type: 'table',
@@ -76,12 +76,12 @@ export default {
             ],
             [
               'Hơi nước: $183\\ \\text{cm}^3$',
-              'Dầu hỏa: $55\\ \\text{cm}^3$',
+              'Dầu hoả: $55\\ \\text{cm}^3$',
               'Đồng: $2{,}55\\ \\text{cm}^3$',
             ],
             [
               'Khí oxygen: $183\\ \\text{cm}^3$',
-              'Thủy ngân: $9\\ \\text{cm}^3$',
+              'Thuỷ ngân: $9\\ \\text{cm}^3$',
               'Sắt: $1{,}80\\ \\text{cm}^3$',
             ],
           ],
@@ -100,10 +100,10 @@ export default {
         {
           type: 'list',
           items: [
-            'Nhiệt kế chất lỏng: chất lỏng trong bầu nhiệt kế (rượu, thủy ngân) nở ra khi nóng lên, co lại khi lạnh đi, mực chất lỏng trong ống cho biết nhiệt độ.',
+            'Nhiệt kế chất lỏng: chất lỏng trong bầu nhiệt kế (rượu, thuỷ ngân) nở ra khi nóng lên, co lại khi lạnh đi, mực chất lỏng trong ống cho biết nhiệt độ.',
             'Băng kép dùng để tự động đóng ngắt mạch điện khi nhiệt độ thay đổi: trong bàn là, nồi cơm điện, bình nóng lạnh, thiết bị báo cháy. Khi đủ nóng, băng kép cong lên, rời tiếp điểm, ngắt điện; khi nguội đi, băng kép trở lại, đóng mạch.',
             'Khinh khí cầu: không khí trong khí cầu được đốt nóng, nở ra, nhẹ hơn không khí bên ngoài nên khí cầu bay lên.',
-            'Nút thủy tinh của lọ bị kẹt: hơ nóng cổ lọ, cổ lọ nở ra và mở được nút. Quả bóng bàn bị bẹp nhúng vào nước nóng sẽ phồng lên.',
+            'Nút thuỷ tinh của lọ bị kẹt: hơ nóng cổ lọ, cổ lọ nở ra và mở được nút. Quả bóng bàn bị bẹp nhúng vào nước nóng sẽ phồng lên.',
           ],
         },
         {
@@ -115,8 +115,8 @@ export default {
         {
           type: 'callout',
           tone: 'note',
-          title: 'Rót nước sôi vào cốc thủy tinh dày',
-          text: 'Thủy tinh dẫn nhiệt kém. Rót nước sôi vào cốc thủy tinh dày, mặt trong nóng lên và nở ra trước khi mặt ngoài kịp nóng, nên cốc dễ bị nứt vỡ. Cốc thủy tinh mỏng, hoặc tráng nước ấm trước, thì ít bị nứt hơn.',
+          title: 'Rót nước sôi vào cốc thuỷ tinh dày',
+          text: 'Thuỷ tinh dẫn nhiệt kém. Rót nước sôi vào cốc thuỷ tinh dày, mặt trong nóng lên và nở ra trước khi mặt ngoài kịp nóng, nên cốc dễ bị nứt vỡ. Cốc thuỷ tinh mỏng, hoặc tráng nước ấm trước, thì ít bị nứt hơn.',
         },
       ],
     },
@@ -249,7 +249,7 @@ export default {
         'Nhiệt kế rượu dùng để đo nhiệt độ',
         'Băng kép tự động ngắt điện trong bàn là',
         'Đường bê tông bị nứt vào ngày nắng nóng',
-        'Hơ nóng cổ lọ để mở nút thủy tinh bị kẹt',
+        'Hơ nóng cổ lọ để mở nút thuỷ tinh bị kẹt',
         'Ống dẫn hơi nóng bị vỡ do không có đoạn uốn cong',
       ],
       answers: [0, 1, 3],

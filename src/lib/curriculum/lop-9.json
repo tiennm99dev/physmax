@@ -12,12 +12,12 @@
       "lessons": [
         {
           "no": 1,
-          "title": "Bài 1. Nhận biết một số dụng cụ, hóa chất. Thuyết trình một vấn đề khoa học",
+          "title": "Bài 1. Nhận biết một số dụng cụ, hoá chất. Thuyết trình một vấn đề khoa học",
           "slug": "bai-1-nhan-biet-mot-so-dung-cu-hoa-chat-thuyet-trinh-mot-van-de-khoa-hoc",
           "kind": "theory",
           "keyIdeas": [
             "Dụng cụ quang học và điện",
-            "Hóa chất thường dùng",
+            "Hoá chất thường dùng",
             "Kĩ năng thuyết trình khoa học"
           ],
           "interactiveIdea": "Kho dụng cụ ảo: bấm vào từng dụng cụ để xem tên, công dụng và lưu ý an toàn, rồi ghép vào thí nghiệm phù hợp."
@@ -51,7 +51,7 @@
           "kind": "theory",
           "keyIdeas": [
             "Cơ năng bằng tổng động năng và thế năng",
-            "Chuyển hóa động năng và thế năng",
+            "Chuyển hoá động năng và thế năng",
             "Bảo toàn cơ năng khi bỏ qua ma sát"
           ],
           "interactiveIdea": "Đường trượt ván ảo vẽ được, biểu đồ cột năng lượng thay đổi theo vị trí, bật tắt ma sát."
@@ -218,15 +218,15 @@
       "lessons": [
         {
           "no": 16,
-          "title": "Bài 16. Vòng năng lượng trên Trái Đất. Năng lượng hóa thạch",
+          "title": "Bài 16. Vòng năng lượng trên Trái Đất. Năng lượng hoá thạch",
           "slug": "bai-16-vong-nang-luong-tren-trai-dat-nang-luong-hoa-thach",
           "kind": "theory",
           "keyIdeas": [
             "Vòng năng lượng từ Mặt Trời",
-            "Nhiên liệu hóa thạch",
+            "Nhiên liệu hoá thạch",
             "Tác động môi trường"
           ],
-          "interactiveIdea": "Sơ đồ vòng năng lượng tương tác: bấm từng khâu để thấy năng lượng được lưu trữ và chuyển hóa."
+          "interactiveIdea": "Sơ đồ vòng năng lượng tương tác: bấm từng khâu để thấy năng lượng được lưu trữ và chuyển hoá."
         },
         {
           "no": 17,

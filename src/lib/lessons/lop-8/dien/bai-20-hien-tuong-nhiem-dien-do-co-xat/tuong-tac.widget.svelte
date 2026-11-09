@@ -6,7 +6,7 @@
 
   const OPTIONS = [
     { value: '-1', label: 'Nhựa cọ len (−)' },
-    { value: '1', label: 'Thủy tinh cọ lụa (+)' },
+    { value: '1', label: 'Thuỷ tinh cọ lụa (+)' },
     { value: '0', label: 'Chưa cọ xát' },
   ];
   const NAME = /** @type {Record<number, string>} */ ({

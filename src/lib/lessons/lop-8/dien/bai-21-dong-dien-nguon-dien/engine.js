@@ -24,9 +24,9 @@ export const MATERIALS = [
   { id: 'su', label: 'Mảnh sứ', conducts: false, note: 'sứ là vật cách điện' },
   {
     id: 'thuy-tinh',
-    label: 'Thanh thủy tinh',
+    label: 'Thanh thuỷ tinh',
     conducts: false,
-    note: 'thủy tinh là vật cách điện',
+    note: 'thuỷ tinh là vật cách điện',
   },
   { id: 'go', label: 'Que gỗ khô', conducts: false, note: 'gỗ khô là vật cách điện' },
 ];

@@ -15,7 +15,7 @@ import { tidy } from '#lib/core/number-format.js';
 export const PLACES = [
   { id: 'trai-dat', name: 'Trái Đất', perKg: 9.8 },
   { id: 'mat-trang', name: 'Mặt Trăng', perKg: 1.6 },
-  { id: 'sao-hoa', name: 'Sao Hỏa', perKg: 3.7 },
+  { id: 'sao-hoa', name: 'Sao Hoả', perKg: 3.7 },
 ];
 
 /** @type {Array<{ id: string, name: string, mass: number }>} */

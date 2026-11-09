@@ -1,7 +1,7 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Thực hành đo năng lượng nhiệt mà nước trong bình nhiệt lượng kế nhận được khi bị đun nóng: năng lượng điện đo bằng joulemeter chuyển hóa thành năng lượng nhiệt trên dây đốt và làm nóng nước. Ghi số chỉ joulemeter khi nhiệt độ nước tăng thêm 3 °C, 6 °C, 9 °C với hai lượng nước khác nhau và nhận xét.',
+    'Thực hành đo năng lượng nhiệt mà nước trong bình nhiệt lượng kế nhận được khi bị đun nóng: năng lượng điện đo bằng joulemeter chuyển hoá thành năng lượng nhiệt trên dây đốt và làm nóng nước. Ghi số chỉ joulemeter khi nhiệt độ nước tăng thêm 3 °C, 6 °C, 9 °C với hai lượng nước khác nhau và nhận xét.',
   intro:
     'Muốn đun nóng một lượng nước xác định thêm vài độ thì cần cung cấp bao nhiêu năng lượng nhiệt? Đun nhiều nước hơn thì cần nhiều năng lượng hơn bao nhiêu? Trong bài thực hành này, em dùng joulemeter để đo năng lượng cung cấp cho nước và tìm câu trả lời bằng số liệu của chính mình.',
   objectives: [
@@ -42,7 +42,7 @@ export default {
           type: 'callout',
           tone: 'note',
           title: 'Vì sao đo năng lượng điện lại biết năng lượng nhiệt?',
-          text: 'Toàn bộ năng lượng điện mà dây đốt nhận được chuyển hóa thành năng lượng nhiệt của dây đốt rồi truyền cho nước. Nếu bỏ qua phần nhỏ làm nóng bình, que khuấy và tỏa ra không khí, số chỉ joulemeter chính là năng lượng nhiệt mà nước nhận được.',
+          text: 'Toàn bộ năng lượng điện mà dây đốt nhận được chuyển hoá thành năng lượng nhiệt của dây đốt rồi truyền cho nước. Nếu bỏ qua phần nhỏ làm nóng bình, que khuấy và toả ra không khí, số chỉ joulemeter chính là năng lượng nhiệt mà nước nhận được.',
         },
         {
           type: 'callout',
@@ -119,7 +119,7 @@ export default {
           type: 'callout',
           tone: 'note',
           title: 'Vì sao $200\\ \\text{g}$ nước chưa cần gấp đôi năng lượng?',
-          text: 'Trong bảng mẫu, $200\\ \\text{g}$ nước cần khoảng $1{,}9$ lần năng lượng của $100\\ \\text{g}$ nước chứ chưa đủ gấp đôi, vì joulemeter đo cả phần năng lượng làm nóng bình, dây đốt và que khuấy (phần này như nhau ở hai lần đo). Ngoài ra, một phần năng lượng tỏa ra không khí; khuấy chưa đều, đọc nhiệt kế chậm cũng gây sai số.',
+          text: 'Trong bảng mẫu, $200\\ \\text{g}$ nước cần khoảng $1{,}9$ lần năng lượng của $100\\ \\text{g}$ nước chứ chưa đủ gấp đôi, vì joulemeter đo cả phần năng lượng làm nóng bình, dây đốt và que khuấy (phần này như nhau ở hai lần đo). Ngoài ra, một phần năng lượng toả ra không khí; khuấy chưa đều, đọc nhiệt kế chậm cũng gây sai số.',
         },
       ],
     },
@@ -157,7 +157,7 @@ export default {
         'Mỗi $1\\ ^\\circ\\text{C}$ cần $1\\,410 : 3 = 470\\ \\text{J}$.',
         'Từ $25\\ ^\\circ\\text{C}$ tới $100\\ ^\\circ\\text{C}$ tăng $75\\ ^\\circ\\text{C}$, cần $75 \\cdot 470 = 35\\,250\\ \\text{J}$.',
       ],
-      answer: 'Khoảng $35\\,250\\ \\text{J}$ (chưa kể phần tỏa ra môi trường).',
+      answer: 'Khoảng $35\\,250\\ \\text{J}$ (chưa kể phần toả ra môi trường).',
     },
   ],
   practice: [
@@ -173,7 +173,7 @@ export default {
       answer: 1,
       hints: ['Đơn vị trên màn hình joulemeter là jun ($\\text{J}$).'],
       solution:
-        'Joulemeter đo năng lượng điện mà nguồn cung cấp cho dây đốt; năng lượng này chuyển hóa thành năng lượng nhiệt làm nóng nước.',
+        'Joulemeter đo năng lượng điện mà nguồn cung cấp cho dây đốt; năng lượng này chuyển hoá thành năng lượng nhiệt làm nóng nước.',
     },
     {
       type: 'order',
@@ -255,18 +255,18 @@ export default {
         'Số chỉ joulemeter thường lớn hơn một chút so với năng lượng chỉ riêng nước nhận được. Nguyên nhân là',
       options: [
         'bình nhiệt lượng kế, dây đốt và que khuấy cũng nóng lên',
-        'một phần năng lượng nhiệt tỏa ra không khí xung quanh',
+        'một phần năng lượng nhiệt toả ra không khí xung quanh',
         'nước tự sinh ra năng lượng',
         'nhiệt kế làm lạnh nước',
       ],
       answers: [0, 1],
       hints: ['Năng lượng điện chuyển thành năng lượng nhiệt, rồi đi đến những đâu?'],
       solution:
-        'Năng lượng nhiệt từ dây đốt còn làm nóng bình, dây đốt, que khuấy và một phần tỏa ra không khí, nên nước nhận ít hơn số chỉ joulemeter một chút.',
+        'Năng lượng nhiệt từ dây đốt còn làm nóng bình, dây đốt, que khuấy và một phần toả ra không khí, nên nước nhận ít hơn số chỉ joulemeter một chút.',
     },
   ],
   takeaways: [
-    'Joulemeter đo năng lượng điện cung cấp cho dây đốt; năng lượng này chuyển hóa thành năng lượng nhiệt làm nóng nước.',
+    'Joulemeter đo năng lượng điện cung cấp cho dây đốt; năng lượng này chuyển hoá thành năng lượng nhiệt làm nóng nước.',
     'Đặt joulemeter về $0$ (hoặc ghi số chỉ ban đầu) và ghi nhiệt độ ban đầu trước khi bật nguồn; khuấy nhẹ trước khi đọc nhiệt kế.',
     'Cùng một lượng nước: độ tăng nhiệt độ càng lớn thì năng lượng nhiệt cần cung cấp càng lớn, tỉ lệ với độ tăng nhiệt độ.',
     'Cùng độ tăng nhiệt độ: lượng nước càng nhiều thì năng lượng nhiệt cần cung cấp càng lớn.',

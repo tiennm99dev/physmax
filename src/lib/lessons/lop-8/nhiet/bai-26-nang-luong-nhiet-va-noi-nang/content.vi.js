@@ -58,7 +58,7 @@ export default {
           items: [
             'Các phân tử của mọi vật luôn chuyển động, kể cả cục nước đá, nên mọi vật đều có năng lượng nhiệt.',
             'Nhiệt độ của vật càng cao thì các phân tử chuyển động càng nhanh, năng lượng nhiệt của vật càng lớn; vật lạnh đi thì năng lượng nhiệt giảm.',
-            'Năng lượng nhiệt có thể chuyển hóa thành các dạng năng lượng khác và ngược lại: ấm điện chuyển điện năng thành năng lượng nhiệt làm nóng nước; nhà máy nhiệt điện dùng năng lượng nhiệt của nhiên liệu đốt cháy để sản xuất điện năng.',
+            'Năng lượng nhiệt có thể chuyển hoá thành các dạng năng lượng khác và ngược lại: ấm điện chuyển điện năng thành năng lượng nhiệt làm nóng nước; nhà máy nhiệt điện dùng năng lượng nhiệt của nhiên liệu đốt cháy để sản xuất điện năng.',
           ],
         },
         {
@@ -68,7 +68,7 @@ export default {
           rows: [
             [
               'Xoa hai bàn tay vào nhau',
-              'Ta thực hiện công: cơ năng của chuyển động tay chuyển hóa thành năng lượng nhiệt, tay nóng lên.',
+              'Ta thực hiện công: cơ năng của chuyển động tay chuyển hoá thành năng lượng nhiệt, tay nóng lên.',
             ],
             [
               'Áp hai bàn tay vào cốc nước ấm',
@@ -122,7 +122,7 @@ export default {
   examples: [
     {
       problem:
-        'Hai cốc thủy tinh giống nhau, mỗi cốc chứa $200\\ \\text{g}$ nước. Cốc thứ nhất ở $25\\ ^\\circ\\text{C}$, cốc thứ hai ở $70\\ ^\\circ\\text{C}$. So sánh động năng của các phân tử nước và nội năng của nước ở hai cốc.',
+        'Hai cốc thuỷ tinh giống nhau, mỗi cốc chứa $200\\ \\text{g}$ nước. Cốc thứ nhất ở $25\\ ^\\circ\\text{C}$, cốc thứ hai ở $70\\ ^\\circ\\text{C}$. So sánh động năng của các phân tử nước và nội năng của nước ở hai cốc.',
       steps: [
         'Nhiệt độ của vật càng cao thì các phân tử chuyển động càng nhanh, nên các phân tử nước ở cốc thứ hai ($70\\ ^\\circ\\text{C}$) chuyển động nhanh hơn, có động năng lớn hơn.',
         'Hai cốc có cùng khối lượng nước, tức là cùng số phân tử.',
@@ -145,7 +145,7 @@ export default {
     {
       problem: 'Nêu hai cách làm tăng năng lượng nhiệt của một đồng xu và giải thích.',
       steps: [
-        'Cách 1: cọ xát đồng xu lên mặt bàn. Ta thực hiện công, cơ năng chuyển hóa thành năng lượng nhiệt, đồng xu nóng lên.',
+        'Cách 1: cọ xát đồng xu lên mặt bàn. Ta thực hiện công, cơ năng chuyển hoá thành năng lượng nhiệt, đồng xu nóng lên.',
         'Cách 2: thả đồng xu vào cốc nước nóng (hoặc hơ trên lửa). Năng lượng nhiệt truyền từ vật nóng hơn sang đồng xu.',
         'Ở cả hai cách, nhiệt độ của đồng xu tăng, các nguyên tử đồng chuyển động nhanh hơn, năng lượng nhiệt của đồng xu tăng.',
       ],

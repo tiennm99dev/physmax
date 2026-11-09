@@ -84,13 +84,13 @@
   const SIGN_WORD = {
     duong: 'nhiễm điện dương',
     am: 'nhiễm điện âm',
-    'trung-hoa': 'trung hòa về điện',
+    'trung-hoa': 'trung hoà về điện',
   };
 
   const status = $derived.by(() => {
     const n = Math.abs(q);
     if (n === 0)
-      return `${RODS[rod]} và ${CLOTHS[cloth].toLowerCase()} đều trung hòa về điện: số electron bằng số điện tích dương.`;
+      return `${RODS[rod]} và ${CLOTHS[cloth].toLowerCase()} đều trung hoà về điện: số electron bằng số điện tích dương.`;
     const gains = q < 0;
     return `${RODS[rod]} ${gains ? 'nhận thêm' : 'mất bớt'} ${n} electron nên ${SIGN_WORD[chargeSign(q)]}; ${CLOTHS[cloth].toLowerCase()} ${gains ? 'mất bớt' : 'nhận thêm'} ${n} electron nên ${SIGN_WORD[chargeSign(-q)]}.`;
   });

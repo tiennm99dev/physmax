@@ -12,27 +12,27 @@
       "lessons": [
         {
           "no": 1,
-          "title": "Bài 1. Dao động điều hòa",
+          "title": "Bài 1. Dao động điều hoà",
           "slug": "bai-1-dao-dong-dieu-hoa",
           "kind": "theory",
           "keyIdeas": [
             "Dao động cơ, dao động tuần hoàn",
-            "Dao động điều hòa",
+            "Dao động điều hoà",
             "Li độ, biên độ, chu kì, tần số"
           ],
           "interactiveIdea": "Con lắc lò xo ảo dao động cạnh đồ thị li độ theo thời gian vẽ trực tiếp."
         },
         {
           "no": 2,
-          "title": "Bài 2. Mô tả dao động điều hòa",
+          "title": "Bài 2. Mô tả dao động điều hoà",
           "slug": "bai-2-mo-ta-dao-dong-dieu-hoa",
           "kind": "theory",
           "keyIdeas": ["Phương trình x = A cos(ωt + φ)", "Tần số góc, pha ban đầu", "Độ lệch pha"],
-          "interactiveIdea": "Chuyển động tròn đều chiếu lên trục tạo dao động điều hòa, thanh trượt A, ω, φ."
+          "interactiveIdea": "Chuyển động tròn đều chiếu lên trục tạo dao động điều hoà, thanh trượt A, ω, φ."
         },
         {
           "no": 3,
-          "title": "Bài 3. Vận tốc, gia tốc trong dao động điều hòa",
+          "title": "Bài 3. Vận tốc, gia tốc trong dao động điều hoà",
           "slug": "bai-3-van-toc-gia-toc-trong-dao-dong-dieu-hoa",
           "kind": "theory",
           "keyIdeas": [
@@ -44,7 +44,7 @@
         },
         {
           "no": 4,
-          "title": "Bài 4. Bài tập về dao động điều hòa",
+          "title": "Bài 4. Bài tập về dao động điều hoà",
           "slug": "bai-4-bai-tap-ve-dao-dong-dieu-hoa",
           "kind": "practice",
           "keyIdeas": [
@@ -56,7 +56,7 @@
         },
         {
           "no": 5,
-          "title": "Bài 5. Động năng. Thế năng. Sự chuyển hóa năng lượng trong dao động điều hòa",
+          "title": "Bài 5. Động năng. Thế năng. Sự chuyển hoá năng lượng trong dao động điều hoà",
           "slug": "bai-5-dong-nang-the-nang-su-chuyen-hoa-nang-luong-trong-dao-dong-dieu-hoa",
           "kind": "theory",
           "keyIdeas": [
@@ -76,7 +76,7 @@
         },
         {
           "no": 7,
-          "title": "Bài 7. Bài tập về sự chuyển hóa năng lượng trong dao động điều hòa",
+          "title": "Bài 7. Bài tập về sự chuyển hoá năng lượng trong dao động điều hoà",
           "slug": "bai-7-bai-tap-ve-su-chuyen-hoa-nang-luong-trong-dao-dong-dieu-hoa",
           "kind": "practice",
           "keyIdeas": [
@@ -274,11 +274,11 @@
           "slug": "bai-25-nang-luong-va-cong-suat-dien",
           "kind": "theory",
           "keyIdeas": ["Điện năng tiêu thụ", "Công suất điện", "Định luật Joule–Lenz"],
-          "interactiveIdea": "Bảng điều khiển thiết bị với công tơ điện ảo, tính nhiệt tỏa ra trên điện trở theo thời gian."
+          "interactiveIdea": "Bảng điều khiển thiết bị với công tơ điện ảo, tính nhiệt toả ra trên điện trở theo thời gian."
         },
         {
           "no": 26,
-          "title": "Bài 26. Thực hành: Đo suất điện động và điện trở trong của pin điện hóa",
+          "title": "Bài 26. Thực hành: Đo suất điện động và điện trở trong của pin điện hoá",
           "slug": "bai-26-thuc-hanh-do-suat-dien-dong-va-dien-tro-trong-cua-pin-dien-hoa",
           "kind": "activity",
           "keyIdeas": ["Mạch đo dùng biến trở", "Vẽ đồ thị U theo I", "Suy ra E và r"],
@@ -388,7 +388,7 @@
             "Mạch so sánh, khuếch đại đảo, không đảo",
             "Relay, LED, loa"
           ],
-          "interactiveIdea": "Mô phỏng op-amp: chỉnh điện áp vào và điện trở hồi tiếp, xem điện áp ra và bão hòa."
+          "interactiveIdea": "Mô phỏng op-amp: chỉnh điện áp vào và điện trở hồi tiếp, xem điện áp ra và bão hoà."
         },
         {
           "no": 9,

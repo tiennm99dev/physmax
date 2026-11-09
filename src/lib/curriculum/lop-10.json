@@ -118,7 +118,7 @@
             "Công thức v = v0 + at",
             "Độ dịch chuyển bằng diện tích dưới đồ thị v–t"
           ],
-          "interactiveIdea": "Đồ thị v–t kéo thả, vùng diện tích tô màu cho độ dịch chuyển và hoạt họa chuyển động tương ứng."
+          "interactiveIdea": "Đồ thị v–t kéo thả, vùng diện tích tô màu cho độ dịch chuyển và hoạt hoạ chuyển động tương ứng."
         },
         {
           "no": 10,
@@ -286,7 +286,7 @@
             "Công A = F.s.cosα",
             "Công phát động và công cản"
           ],
-          "interactiveIdea": "Kéo vật bằng lực xoay góc tùy ý, thanh đo công cập nhật theo cosα."
+          "interactiveIdea": "Kéo vật bằng lực xoay góc tuỳ ý, thanh đo công cập nhật theo cosα."
         },
         {
           "no": 24,
@@ -420,7 +420,7 @@
           "slug": "bai-34-khoi-luong-rieng-ap-suat-chat-long",
           "kind": "theory",
           "keyIdeas": ["Khối lượng riêng", "Áp suất chất lỏng p = ρgh", "Định luật Pascal"],
-          "interactiveIdea": "Bình chứa chất lỏng có cảm biến áp suất kéo theo độ sâu, kèm máy nén thủy lực ảo."
+          "interactiveIdea": "Bình chứa chất lỏng có cảm biến áp suất kéo theo độ sâu, kèm máy nén thuỷ lực ảo."
         }
       ]
     },
@@ -504,12 +504,12 @@
         },
         {
           "no": 6,
-          "title": "Bài 6. Nhật thực, nguyệt thực, thủy triều",
+          "title": "Bài 6. Nhật thực, nguyệt thực, thuỷ triều",
           "slug": "cd-bai-6-nhat-thuc-nguyet-thuc-thuy-trieu",
           "kind": "chuyen-de",
           "keyIdeas": [
             "Điều kiện xảy ra nhật thực, nguyệt thực",
-            "Thủy triều do lực hấp dẫn Mặt Trăng",
+            "Thuỷ triều do lực hấp dẫn Mặt Trăng",
             "Triều cường, triều kém"
           ],
           "interactiveIdea": "Kéo Mặt Trăng trên quỹ đạo để tạo nhật thực, nguyệt thực, kèm mô hình nước biển phồng theo lực hấp dẫn."
@@ -543,7 +543,7 @@
           "kind": "chuyen-de",
           "keyIdeas": [
             "Cơ cấu nguồn năng lượng Việt Nam",
-            "Tác động môi trường của nhiệt điện, thủy điện",
+            "Tác động môi trường của nhiệt điện, thuỷ điện",
             "Phát thải khí nhà kính"
           ],
           "interactiveIdea": "Biểu đồ cơ cấu điện Việt Nam điều chỉnh được, ứng dụng tính lượng phát thải CO₂ tương ứng."
@@ -556,7 +556,7 @@
           "keyIdeas": [
             "Chất ô nhiễm không khí, nước, đất",
             "Nguồn gốc chất ô nhiễm",
-            "Ảnh hưởng tới sức khỏe"
+            "Ảnh hưởng tới sức khoẻ"
           ],
           "interactiveIdea": "Thành phố ảo chọn nguồn thải để xem chất ô nhiễm lan truyền vào không khí, nước, đất."
         },
@@ -567,7 +567,7 @@
           "kind": "chuyen-de",
           "keyIdeas": [
             "Pin Mặt Trời, tua bin gió",
-            "Thủy điện, địa nhiệt, sinh khối",
+            "Thuỷ điện, địa nhiệt, sinh khối",
             "Hiệu suất và triển vọng"
           ],
           "interactiveIdea": "Mô phỏng tấm pin Mặt Trời và tua bin gió: chỉnh cường độ sáng, tốc độ gió để xem công suất phát."

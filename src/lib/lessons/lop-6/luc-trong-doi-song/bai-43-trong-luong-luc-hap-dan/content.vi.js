@@ -22,7 +22,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Số ghi trên bao bì, như "Khối lượng tịnh: $500\\ \\text{g}$", là khối lượng của chất chứa trong bao bì, không tính vỏ. Lượng chất của một vật không đổi khi ta mang vật đi nơi khác, nên khối lượng của vật ở Trái Đất, trên Mặt Trăng hay trên Sao Hỏa đều như nhau.',
+          text: 'Số ghi trên bao bì, như "Khối lượng tịnh: $500\\ \\text{g}$", là khối lượng của chất chứa trong bao bì, không tính vỏ. Lượng chất của một vật không đổi khi ta mang vật đi nơi khác, nên khối lượng của vật ở Trái Đất, trên Mặt Trăng hay trên Sao Hoả đều như nhau.',
         },
       ],
     },
@@ -73,7 +73,7 @@ export default {
           rows: [
             ['Trái Đất', '$1\\ \\text{kg}$', '$9{,}8\\ \\text{N}$'],
             ['Mặt Trăng', '$1\\ \\text{kg}$', '$1{,}6\\ \\text{N}$'],
-            ['Sao Hỏa', '$1\\ \\text{kg}$', '$3{,}7\\ \\text{N}$'],
+            ['Sao Hoả', '$1\\ \\text{kg}$', '$3{,}7\\ \\text{N}$'],
           ],
         },
         {
@@ -100,7 +100,7 @@ export default {
   explore: {
     title: 'Một vật, ba nơi',
     instruction:
-      'Chọn một vật rồi chọn nơi đặt vật. Ở Trái Đất, xem cân đĩa cân bằng với quả cân bao nhiêu và lực kế chỉ bao nhiêu. Mang vật tới Mặt Trăng hoặc Sao Hỏa: trước khi xem kết quả, hãy dự đoán số chỉ của cân và của lực kế sẽ lớn hơn, nhỏ hơn hay không đổi so với ở Trái Đất. Bảng cuối cùng ghi lại khối lượng và trọng lượng của vật ở các nơi em đã tới.',
+      'Chọn một vật rồi chọn nơi đặt vật. Ở Trái Đất, xem cân đĩa cân bằng với quả cân bao nhiêu và lực kế chỉ bao nhiêu. Mang vật tới Mặt Trăng hoặc Sao Hoả: trước khi xem kết quả, hãy dự đoán số chỉ của cân và của lực kế sẽ lớn hơn, nhỏ hơn hay không đổi so với ở Trái Đất. Bảng cuối cùng ghi lại khối lượng và trọng lượng của vật ở các nơi em đã tới.',
   },
   examples: [
     {

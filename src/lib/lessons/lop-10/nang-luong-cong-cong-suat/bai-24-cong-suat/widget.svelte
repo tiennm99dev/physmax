@@ -111,7 +111,7 @@
       viewBox="0 0 {W} {H}"
       class="mx-auto block w-full max-w-md select-none"
       role="img"
-      aria-label={`Tòa nhà cao ${formatNumber(height)} mét. Người đi bộ đang ở độ cao ${formatNumber((GROUND - stairY) / pxPerM, 1)} mét, thang máy ở độ cao ${formatNumber((GROUND - liftY) / pxPerM, 1)} mét.`}
+      aria-label={`Toà nhà cao ${formatNumber(height)} mét. Người đi bộ đang ở độ cao ${formatNumber((GROUND - stairY) / pxPerM, 1)} mét, thang máy ở độ cao ${formatNumber((GROUND - liftY) / pxPerM, 1)} mét.`}
     >
       <rect x="0" y={GROUND} width={W} height={H - GROUND} fill="#e2e8f0" />
       {#each floors as y, i (i)}

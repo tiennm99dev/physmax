@@ -29,9 +29,9 @@ export function wrap360(deg) {
 
 /** @type {Planet[]} */
 export const PLANETS = [
-  { id: 'thuy', name: 'Thủy tinh', a: 0.387, l0: 252.25, rate: 4.09233, i: 7, node: 48.33 },
+  { id: 'thuy', name: 'Thuỷ tinh', a: 0.387, l0: 252.25, rate: 4.09233, i: 7, node: 48.33 },
   { id: 'kim', name: 'Kim tinh', a: 0.723, l0: 181.98, rate: 1.60213, i: 3.39, node: 76.68 },
-  { id: 'hoa', name: 'Hỏa tinh', a: 1.524, l0: 355.45, rate: 0.52403, i: 1.85, node: 49.56 },
+  { id: 'hoa', name: 'Hoả tinh', a: 1.524, l0: 355.45, rate: 0.52403, i: 1.85, node: 49.56 },
 ];
 
 const EARTH = { a: 1, l0: 100.46, rate: 0.98561 };

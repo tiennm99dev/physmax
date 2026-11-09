@@ -21,10 +21,10 @@ export const SOLIDS = [
 
 /** @type {Material[]} */
 export const LIQUIDS = [
-  { id: 'thuy-ngan', name: 'Thủy ngân', density: 13600 },
+  { id: 'thuy-ngan', name: 'Thuỷ ngân', density: 13600 },
   { id: 'nuoc-muoi', name: 'Nước muối đặc', density: 1200 },
   { id: 'nuoc', name: 'Nước', density: 1000 },
-  { id: 'dau-hoa', name: 'Dầu hỏa', density: 800 },
+  { id: 'dau-hoa', name: 'Dầu hoả', density: 800 },
   { id: 'xang', name: 'Xăng', density: 700 },
 ];
 

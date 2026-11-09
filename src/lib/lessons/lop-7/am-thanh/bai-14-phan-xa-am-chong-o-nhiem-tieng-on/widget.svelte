@@ -90,7 +90,7 @@
       return `${head} ${material.name} ${material.why} nên phản xạ âm kém, hấp thụ phần lớn âm: âm phản xạ rất nhỏ, gần như không nghe thấy tiếng vang.`;
     }
     if (heard === 'merged') {
-      return `${head} Khoảng thời gian này nhỏ hơn 1/15 s ≈ 67 ms nên âm phản xạ hòa vào âm trực tiếp, làm âm nghe to và kéo dài hơn, không thành tiếng vang riêng. Lùi tường ra xa hơn ${m(minEchoDistance())}.`;
+      return `${head} Khoảng thời gian này nhỏ hơn 1/15 s ≈ 67 ms nên âm phản xạ hoà vào âm trực tiếp, làm âm nghe to và kéo dài hơn, không thành tiếng vang riêng. Lùi tường ra xa hơn ${m(minEchoDistance())}.`;
     }
     return `${head} Khoảng thời gian này không nhỏ hơn 1/15 s và ${material.name.toLowerCase()} phản xạ âm tốt (${material.why}): nghe rõ tiếng vang.`;
   });
@@ -210,7 +210,7 @@
     >
       <rect x={tx(0)} y="10" width={tx(ECHO_MIN) - tx(0)} height={BASE - 10} fill="#fef3c7" />
       <text x={tx(ECHO_MIN / 2)} y="22" text-anchor="middle" class="fill-amber-800 text-[13px]"
-        >hòa vào</text
+        >hoà vào</text
       >
       <line x1={S_LEFT} y1={BASE} x2={S_RIGHT} y2={BASE} stroke="#334155" stroke-width="1.5" />
       {#each [0, 0.05, 0.1, 0.15, 0.2, 0.25] as t, i (t)}

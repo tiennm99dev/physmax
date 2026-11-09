@@ -16,7 +16,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Ở bài trước, ta đã biết vật nhiễm điện mang điện tích. Nếu cho một vật nhiễm điện chạm vào một đầu bút thử điện mà đầu kia nối với vật khác, bóng đèn nhỏ trong bút lóe sáng trong khoảnh khắc: các điện tích đã dịch chuyển qua bóng đèn. Khi điện tích dịch chuyển hết, đèn tắt.',
+          text: 'Ở bài trước, ta đã biết vật nhiễm điện mang điện tích. Nếu cho một vật nhiễm điện chạm vào một đầu bút thử điện mà đầu kia nối với vật khác, bóng đèn nhỏ trong bút loé sáng trong khoảnh khắc: các điện tích đã dịch chuyển qua bóng đèn. Khi điện tích dịch chuyển hết, đèn tắt.',
         },
         {
           type: 'p',
@@ -62,7 +62,7 @@ export default {
         },
         {
           type: 'p',
-          text: 'Pin, acquy, pin mặt trời, máy phát điện (ở nhà máy thủy điện, nhiệt điện, điện gió) đều là nguồn điện. Đèn pin, điện thoại, đồng hồ… chỉ hoạt động khi được nối với nguồn điện; pin "hết điện" thì không còn cung cấp được năng lượng điện để duy trì dòng điện.',
+          text: 'Pin, acquy, pin mặt trời, máy phát điện (ở nhà máy thuỷ điện, nhiệt điện, điện gió) đều là nguồn điện. Đèn pin, điện thoại, đồng hồ… chỉ hoạt động khi được nối với nguồn điện; pin "hết điện" thì không còn cung cấp được năng lượng điện để duy trì dòng điện.',
         },
       ],
     },
@@ -84,7 +84,7 @@ export default {
           head: ['Vật dẫn điện', 'Vật cách điện'],
           rows: [
             ['Kim loại: đồng, nhôm, sắt, thép, bạc…', 'Nhựa, cao su'],
-            ['Than chì (ruột bút chì)', 'Sứ, thủy tinh'],
+            ['Than chì (ruột bút chì)', 'Sứ, thuỷ tinh'],
             ['Nước thường (nước máy, nước mưa), dung dịch muối', 'Gỗ khô, giấy khô, không khí khô'],
           ],
         },
@@ -140,7 +140,7 @@ export default {
         'dòng nước chảy trong ống dẫn',
       ],
       answer: 0,
-      hints: ['Hai từ khóa: "hạt mang điện" và "có hướng".'],
+      hints: ['Hai từ khoá: "hạt mang điện" và "có hướng".'],
       solution: 'Dòng điện là dòng chuyển dời có hướng của các hạt mang điện.',
     },
     {
@@ -252,6 +252,6 @@ export default {
   takeaways: [
     'Dòng điện là dòng chuyển dời có hướng của các hạt mang điện; trong kim loại, đó là dòng các electron tự do dịch chuyển có hướng.',
     'Nguồn điện cung cấp năng lượng điện, duy trì dòng điện; mỗi nguồn điện có hai cực: dương ($+$) và âm ($-$).',
-    'Vật dẫn điện cho dòng điện chạy qua (kim loại, than chì, nước thường); vật cách điện thì không (nhựa, cao su, sứ, thủy tinh, gỗ khô).',
+    'Vật dẫn điện cho dòng điện chạy qua (kim loại, than chì, nước thường); vật cách điện thì không (nhựa, cao su, sứ, thuỷ tinh, gỗ khô).',
   ],
 };

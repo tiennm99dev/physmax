@@ -70,7 +70,7 @@
           stroke-width="2"
         />
         <text x="150" y="28" text-anchor="middle" class="fill-slate-500 text-[10px]"
-          >chuông thủy tinh đã hút hết không khí</text
+          >chuông thuỷ tinh đã hút hết không khí</text
         >
       {/if}
       <rect x="20" y="232" width="260" height="6" fill="#cbd5e1" />

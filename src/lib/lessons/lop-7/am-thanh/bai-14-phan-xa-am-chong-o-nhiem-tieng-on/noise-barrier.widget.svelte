@@ -109,7 +109,7 @@
       >
     </svg>
     <figcaption class="px-2 text-center text-sm text-slate-600">
-      Ban đầu khoảng {BASE_LEVEL} dB; mục tiêu: {QUIET_LEVEL} dB trở xuống. Các con số chỉ để minh họa.
+      Ban đầu khoảng {BASE_LEVEL} dB; mục tiêu: {QUIET_LEVEL} dB trở xuống. Các con số chỉ để minh hoạ.
     </figcaption>
   </figure>
 

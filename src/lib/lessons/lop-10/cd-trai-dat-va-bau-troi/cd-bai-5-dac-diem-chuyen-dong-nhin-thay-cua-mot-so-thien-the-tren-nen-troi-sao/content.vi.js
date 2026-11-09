@@ -1,13 +1,13 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Mặt Trời đi trên hoàng đạo từ Tây sang Đông mỗi ngày khoảng 1 độ, Mặt Trăng đổi pha theo chu kì 29,5 ngày, Kim tinh và Thủy tinh luôn ở gần Mặt Trời; mô hình nhật tâm giải thích được tất cả.',
+    'Mặt Trời đi trên hoàng đạo từ Tây sang Đông mỗi ngày khoảng 1 độ, Mặt Trăng đổi pha theo chu kì 29,5 ngày, Kim tinh và Thuỷ tinh luôn ở gần Mặt Trời; mô hình nhật tâm giải thích được tất cả.',
   intro:
     'Dân gian có câu: "Đêm tháng năm chưa nằm đã sáng, ngày tháng mười chưa cười đã tối". Vì sao độ dài ngày đêm thay đổi theo tháng, vì sao trăng lúc tròn lúc khuyết, và vì sao có một "ngôi sao" sáng rực chỉ hiện ra lúc chiều tối hay lúc rạng đông?',
   objectives: [
     'Nêu được đặc điểm chuyển động nhìn thấy của Mặt Trời trong ngày và trong năm.',
     'Giải thích được các pha của Mặt Trăng và vì sao Mặt Trăng luôn hướng một mặt về Trái Đất.',
-    'Mô tả được chuyển động nhìn thấy của Kim tinh, Thủy tinh; nêu được chuyển động vòng nút của hành tinh.',
+    'Mô tả được chuyển động nhìn thấy của Kim tinh, Thuỷ tinh; nêu được chuyển động vòng nút của hành tinh.',
     'Dùng mô hình nhật tâm của Copernicus để giải thích các đặc điểm đó.',
   ],
   sections: [
@@ -16,7 +16,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Hệ Mặt Trời có $8$ hành tinh, kể từ trong ra ngoài: Thủy tinh, Kim tinh, Trái Đất, Hỏa tinh, Mộc tinh, Thổ tinh, Thiên Vương tinh, Hải Vương tinh. Các hành tinh chuyển động quanh Mặt Trời theo quỹ đạo gần tròn, gần như trong cùng một mặt phẳng, và theo cùng một chiều.',
+          text: 'Hệ Mặt Trời có $8$ hành tinh, kể từ trong ra ngoài: Thuỷ tinh, Kim tinh, Trái Đất, Hoả tinh, Mộc tinh, Thổ tinh, Thiên Vương tinh, Hải Vương tinh. Các hành tinh chuyển động quanh Mặt Trời theo quỹ đạo gần tròn, gần như trong cùng một mặt phẳng, và theo cùng một chiều.',
         },
         {
           type: 'callout',
@@ -71,7 +71,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Mặt Trăng tự nó không phát sáng, chỉ phản xạ ánh sáng Mặt Trời. Nửa quay về phía Mặt Trời luôn sáng, nhưng từ Trái Đất ta chỉ thấy một phần của nửa đó tùy vị trí của Mặt Trăng. Vì vậy ta thấy các pha.',
+          text: 'Mặt Trăng tự nó không phát sáng, chỉ phản xạ ánh sáng Mặt Trời. Nửa quay về phía Mặt Trời luôn sáng, nhưng từ Trái Đất ta chỉ thấy một phần của nửa đó tuỳ vị trí của Mặt Trăng. Vì vậy ta thấy các pha.',
         },
         {
           type: 'table',
@@ -91,11 +91,11 @@ export default {
       ],
     },
     {
-      heading: 'Kim tinh, Thủy tinh và các hành tinh khác',
+      heading: 'Kim tinh, Thuỷ tinh và các hành tinh khác',
       blocks: [
         {
           type: 'p',
-          text: 'Quỹ đạo của Kim tinh và Thủy tinh nằm bên trong quỹ đạo Trái Đất, nên nhìn từ Trái Đất chúng không bao giờ ra xa Mặt Trời. Góc lệch lớn nhất, khi đường nhìn từ Trái Đất tiếp xúc quỹ đạo của hành tinh, là khoảng $46^\\circ$ với Kim tinh. Với Thủy tinh, quỹ đạo tròn cho khoảng $23^\\circ$, còn thực tế quỹ đạo khá dẹt nên góc này từ khoảng $18^\\circ$ đến $28^\\circ$.',
+          text: 'Quỹ đạo của Kim tinh và Thuỷ tinh nằm bên trong quỹ đạo Trái Đất, nên nhìn từ Trái Đất chúng không bao giờ ra xa Mặt Trời. Góc lệch lớn nhất, khi đường nhìn từ Trái Đất tiếp xúc quỹ đạo của hành tinh, là khoảng $46^\\circ$ với Kim tinh. Với Thuỷ tinh, quỹ đạo tròn cho khoảng $23^\\circ$, còn thực tế quỹ đạo khá dẹt nên góc này từ khoảng $18^\\circ$ đến $28^\\circ$.',
         },
         {
           type: 'callout',
@@ -105,11 +105,11 @@ export default {
         },
         {
           type: 'p',
-          text: 'Hỏa tinh, Mộc tinh, Thổ tinh có quỹ đạo bên ngoài Trái Đất, nên có thể ở đối diện Mặt Trời và thấy suốt đêm. Thường chúng đi về phía Đông giữa các sao, nhưng có lúc dừng lại, đi giật lùi về phía Tây, rồi lại đi tiếp. Đường đi trên nền sao khi đó tạo thành chuyển động vòng nút.',
+          text: 'Hoả tinh, Mộc tinh, Thổ tinh có quỹ đạo bên ngoài Trái Đất, nên có thể ở đối diện Mặt Trời và thấy suốt đêm. Thường chúng đi về phía Đông giữa các sao, nhưng có lúc dừng lại, đi giật lùi về phía Tây, rồi lại đi tiếp. Đường đi trên nền sao khi đó tạo thành chuyển động vòng nút.',
         },
         {
           type: 'p',
-          text: 'Chọn Hỏa tinh ở phần Khám phá, đặt nền sao đứng yên và tua thời gian để thấy vòng nút xuất hiện đúng lúc Trái Đất vượt qua Hỏa tinh ở quỹ đạo trong, giống như từ ô tô chạy nhanh hơn, ta thấy xe chạy chậm phía trước lùi dần lại.',
+          text: 'Chọn Hoả tinh ở phần Khám phá, đặt nền sao đứng yên và tua thời gian để thấy vòng nút xuất hiện đúng lúc Trái Đất vượt qua Hoả tinh ở quỹ đạo trong, giống như từ ô tô chạy nhanh hơn, ta thấy xe chạy chậm phía trước lùi dần lại.',
         },
       ],
     },
@@ -303,12 +303,12 @@ export default {
     {
       type: 'number',
       prompt:
-        'Thủy tinh có bán kính quỹ đạo $0{,}39$ AU. Coi quỹ đạo là đường tròn, tính góc lệch lớn nhất của Thủy tinh với Mặt Trời khi nhìn từ Trái Đất (làm tròn đến độ).',
+        'Thuỷ tinh có bán kính quỹ đạo $0{,}39$ AU. Coi quỹ đạo là đường tròn, tính góc lệch lớn nhất của Thuỷ tinh với Mặt Trời khi nhìn từ Trái Đất (làm tròn đến độ).',
       answer: 23,
       tolerance: 1,
       unit: '°',
       hints: [
-        'Đường nhìn từ Trái Đất tiếp xúc với quỹ đạo Thủy tinh.',
+        'Đường nhìn từ Trái Đất tiếp xúc với quỹ đạo Thuỷ tinh.',
         'Dùng $\\sin\\theta = \\dfrac{r}{1\\ \\text{AU}}$.',
       ],
       solution: '$\\sin\\theta = 0{,}39$, nên $\\theta \\approx 23^\\circ$.',
@@ -354,24 +354,24 @@ export default {
     },
     {
       type: 'choice',
-      prompt: 'Mô hình nhật tâm giải thích chuyển động vòng nút của Hỏa tinh như thế nào?',
+      prompt: 'Mô hình nhật tâm giải thích chuyển động vòng nút của Hoả tinh như thế nào?',
       options: [
-        'Trái Đất ở quỹ đạo trong, đi nhanh hơn và vượt qua Hỏa tinh',
-        'Hỏa tinh thật sự đổi chiều chuyển động quanh Mặt Trời',
-        'Hỏa tinh quay trên một vòng tròn nhỏ quanh Trái Đất',
-        'Mặt Trăng kéo Hỏa tinh lùi lại',
+        'Trái Đất ở quỹ đạo trong, đi nhanh hơn và vượt qua Hoả tinh',
+        'Hoả tinh thật sự đổi chiều chuyển động quanh Mặt Trời',
+        'Hoả tinh quay trên một vòng tròn nhỏ quanh Trái Đất',
+        'Mặt Trăng kéo Hoả tinh lùi lại',
       ],
       answer: 0,
       hints: ['Hình dung ô tô em ngồi vượt qua một xe chạy chậm hơn.'],
       solution:
-        'Hỏa tinh luôn đi cùng một chiều quanh Mặt Trời. Khi Trái Đất ở quỹ đạo trong đi nhanh hơn và vượt qua, ta thấy Hỏa tinh như đi giật lùi trên nền sao.',
+        'Hoả tinh luôn đi cùng một chiều quanh Mặt Trời. Khi Trái Đất ở quỹ đạo trong đi nhanh hơn và vượt qua, ta thấy Hoả tinh như đi giật lùi trên nền sao.',
     },
   ],
   takeaways: [
     'Trong ngày, Mặt Trời đi từ Đông sang Tây do Trái Đất tự quay; trong năm, nó đi trên hoàng đạo về phía Đông, mỗi ngày khoảng $1^\\circ$.',
     'Mặt Trời chỉ mọc đúng Đông, lặn đúng Tây vào xuân phân và thu phân; độ cao giữa trưa là $h = 90^\\circ - |\\varphi - \\delta|$.',
     'Mặt Trăng có các pha theo chu kì khoảng $29{,}5$ ngày, mọc muộn dần khoảng $50$ phút mỗi ngày và luôn hướng một mặt về Trái Đất.',
-    'Kim tinh và Thủy tinh luôn ở gần Mặt Trời; Kim tinh chính là Sao Hôm và Sao Mai.',
+    'Kim tinh và Thuỷ tinh luôn ở gần Mặt Trời; Kim tinh chính là Sao Hôm và Sao Mai.',
     'Vòng nút của hành tinh xảy ra khi Trái Đất vượt qua hành tinh; mô hình nhật tâm giải thích được các đặc điểm này.',
   ],
 };

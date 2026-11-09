@@ -13,7 +13,7 @@ export const EFFECTS = {
   nhiet: 'Tác dụng nhiệt',
   'phat-sang': 'Tác dụng phát sáng',
   tu: 'Tác dụng từ',
-  'hoa-hoc': 'Tác dụng hóa học',
+  'hoa-hoc': 'Tác dụng hoá học',
   'sinh-li': 'Tác dụng sinh lí',
 };
 

@@ -68,7 +68,7 @@ export default {
           items: [
             'Cân điện tử (ĐCNN $0{,}1\\ \\text{g}$ hoặc $1\\ \\text{g}$).',
             'Thước có ĐCNN $1\\ \\text{mm}$.',
-            'Bình chia độ (GHĐ $100\\ \\text{mL}$ hoặc $250\\ \\text{mL}$), cốc thủy tinh, nước.',
+            'Bình chia độ (GHĐ $100\\ \\text{mL}$ hoặc $250\\ \\text{mL}$), cốc thuỷ tinh, nước.',
             'Một khối hộp chữ nhật (gỗ, nhôm), một hòn sỏi hoặc con ốc vừa lọt bình chia độ, một ít chất lỏng cần đo, khăn lau.',
           ],
         },
@@ -112,7 +112,7 @@ export default {
           type: 'callout',
           tone: 'warning',
           title: 'An toàn',
-          text: 'Thả vật nhẹ nhàng, nghiêng bình cho vật trượt theo thành bình để bình thủy tinh không vỡ và nước không bắn ra. Lau khô bàn và cân khi bị nước đổ.',
+          text: 'Thả vật nhẹ nhàng, nghiêng bình cho vật trượt theo thành bình để bình thuỷ tinh không vỡ và nước không bắn ra. Lau khô bàn và cân khi bị nước đổ.',
         },
       ],
     },

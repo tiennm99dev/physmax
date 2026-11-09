@@ -1,11 +1,11 @@
 /** @type {import('#lib/core/content-schema.js').LessonContent} */
 export default {
   summary:
-    'Ta không nhìn thấy dòng điện, nhưng nhận biết được nó qua các tác dụng: tác dụng nhiệt (vật dẫn nóng lên), tác dụng phát sáng (đèn LED, bóng đèn), tác dụng hóa học (tách đồng khỏi dung dịch, mạ điện), tác dụng sinh lí (lên cơ thể người và động vật), và tác dụng từ (nam châm điện, chuông điện).',
+    'Ta không nhìn thấy dòng điện, nhưng nhận biết được nó qua các tác dụng: tác dụng nhiệt (vật dẫn nóng lên), tác dụng phát sáng (đèn LED, bóng đèn), tác dụng hoá học (tách đồng khỏi dung dịch, mạ điện), tác dụng sinh lí (lên cơ thể người và động vật), và tác dụng từ (nam châm điện, chuông điện).',
   intro:
     'Dòng điện chạy trong dây dẫn mà ta không nhìn thấy các hạt mang điện dịch chuyển. Vậy làm sao biết trong mạch có dòng điện? Hãy nhìn bàn là nóng lên, đèn LED bật sáng, chuông cửa reo… Mỗi thiết bị cho thấy một tác dụng của dòng điện.',
   objectives: [
-    'Thực hiện hoặc mô tả được thí nghiệm minh họa các tác dụng cơ bản của dòng điện: nhiệt, phát sáng, hóa học, sinh lí.',
+    'Thực hiện hoặc mô tả được thí nghiệm minh hoạ các tác dụng cơ bản của dòng điện: nhiệt, phát sáng, hoá học, sinh lí.',
     'Nêu được tác dụng từ của dòng điện qua nam châm điện, chuông điện.',
     'Chỉ ra được tác dụng chính của dòng điện trong một số thiết bị: bàn là, ấm điện, đèn LED, bóng đèn sợi đốt, chuông điện, bình mạ điện, máy điện châm, cầu chì.',
     'Biết tác dụng sinh lí có thể gây nguy hiểm và thực hiện được các quy tắc an toàn điện.',
@@ -60,7 +60,7 @@ export default {
       ],
     },
     {
-      heading: 'Tác dụng hóa học',
+      heading: 'Tác dụng hoá học',
       blocks: [
         {
           type: 'p',
@@ -69,12 +69,12 @@ export default {
         {
           type: 'callout',
           tone: 'theorem',
-          title: 'Tác dụng hóa học',
-          text: 'Dòng điện chạy qua dung dịch muối kim loại có thể tách kim loại ra khỏi dung dịch, bám vào điện cực nối với cực âm. Đó là tác dụng hóa học của dòng điện.',
+          title: 'Tác dụng hoá học',
+          text: 'Dòng điện chạy qua dung dịch muối kim loại có thể tách kim loại ra khỏi dung dịch, bám vào điện cực nối với cực âm. Đó là tác dụng hoá học của dòng điện.',
         },
         {
           type: 'p',
-          text: 'Ứng dụng: mạ điện, phủ một lớp kim loại mỏng (đồng, kẽm, niken, vàng, bạc…) lên đồ vật để chống gỉ hoặc làm đẹp. Vật cần mạ được nối với cực âm của nguồn và nhúng vào dung dịch muối của kim loại dùng để mạ. Tác dụng hóa học còn dùng để tinh chế kim loại, sạc acquy.',
+          text: 'Ứng dụng: mạ điện, phủ một lớp kim loại mỏng (đồng, kẽm, niken, vàng, bạc…) lên đồ vật để chống gỉ hoặc làm đẹp. Vật cần mạ được nối với cực âm của nguồn và nhúng vào dung dịch muối của kim loại dùng để mạ. Tác dụng hoá học còn dùng để tinh chế kim loại, sạc acquy.',
         },
       ],
     },
@@ -136,14 +136,14 @@ export default {
     },
     {
       problem:
-        'Muốn mạ đồng cho một chiếc chìa khóa bằng sắt, cần làm như thế nào? Đây là ứng dụng tác dụng nào của dòng điện?',
+        'Muốn mạ đồng cho một chiếc chìa khoá bằng sắt, cần làm như thế nào? Đây là ứng dụng tác dụng nào của dòng điện?',
       steps: [
         'Kim loại dùng để mạ là đồng nên dùng dung dịch muối đồng, ví dụ dung dịch copper(II) sulfate.',
-        'Đồng tách khỏi dung dịch và bám vào điện cực nối với cực âm của nguồn, nên nối chìa khóa với cực âm, điện cực còn lại (thanh đồng hoặc thỏi than) nối với cực dương.',
-        'Nhúng cả hai vào dung dịch và cho dòng điện chạy qua một thời gian: lớp đồng bám dần lên chìa khóa.',
+        'Đồng tách khỏi dung dịch và bám vào điện cực nối với cực âm của nguồn, nên nối chìa khoá với cực âm, điện cực còn lại (thanh đồng hoặc thỏi than) nối với cực dương.',
+        'Nhúng cả hai vào dung dịch và cho dòng điện chạy qua một thời gian: lớp đồng bám dần lên chìa khoá.',
       ],
       answer:
-        'Nối chìa khóa với cực âm, nhúng vào dung dịch copper(II) sulfate cùng điện cực nối với cực dương, cho dòng điện chạy qua. Đây là tác dụng hóa học của dòng điện.',
+        'Nối chìa khoá với cực âm, nhúng vào dung dịch copper(II) sulfate cùng điện cực nối với cực dương, cho dòng điện chạy qua. Đây là tác dụng hoá học của dòng điện.',
     },
   ],
   practice: [
@@ -156,7 +156,7 @@ export default {
         'Tác dụng nhiệt',
         'Tác dụng sinh lí',
         'Tác dụng từ',
-        'Tác dụng hóa học',
+        'Tác dụng hoá học',
       ],
       pairs: [
         [0, 1],
@@ -169,14 +169,14 @@ export default {
         'Hỏi: khi có dòng điện chạy qua, thiết bị nóng lên, phát sáng, tách kim loại, tác động lên cơ thể, hay hút sắt?',
       ],
       solution:
-        'Ấm điện: nhiệt. Đèn LED: phát sáng. Bình mạ điện: hóa học. Máy điện châm: sinh lí. Chuông điện: từ.',
+        'Ấm điện: nhiệt. Đèn LED: phát sáng. Bình mạ điện: hoá học. Máy điện châm: sinh lí. Chuông điện: từ.',
     },
     {
       type: 'choice',
       prompt: 'Khi cho dòng điện chạy qua một đoạn dây sắt mảnh, dây nóng lên. Đó là',
       options: [
         'tác dụng nhiệt của dòng điện',
-        'tác dụng hóa học của dòng điện',
+        'tác dụng hoá học của dòng điện',
         'tác dụng sinh lí của dòng điện',
         'tác dụng phát sáng của dòng điện',
       ],
@@ -197,7 +197,7 @@ export default {
       answer: 1,
       hints: ['Trong mạ điện, vật cần mạ được nối với cực nào của nguồn?'],
       solution:
-        'Đồng tách ra khỏi dung dịch và bám vào thỏi than nối với cực âm của nguồn điện (tác dụng hóa học).',
+        'Đồng tách ra khỏi dung dịch và bám vào thỏi than nối với cực âm của nguồn điện (tác dụng hoá học).',
     },
     {
       type: 'choice',
@@ -217,7 +217,7 @@ export default {
     {
       type: 'multi',
       prompt: 'Bóng đèn sợi đốt đang sáng cho thấy những tác dụng nào của dòng điện?',
-      options: ['Tác dụng nhiệt', 'Tác dụng phát sáng', 'Tác dụng hóa học', 'Tác dụng sinh lí'],
+      options: ['Tác dụng nhiệt', 'Tác dụng phát sáng', 'Tác dụng hoá học', 'Tác dụng sinh lí'],
       answers: [0, 1],
       hints: ['Dây tóc bóng đèn có nóng không? Có phát sáng không?'],
       solution: 'Dây tóc nóng lên rất mạnh (tác dụng nhiệt) và phát sáng (tác dụng phát sáng).',
@@ -228,7 +228,7 @@ export default {
         'Chạm vào dây điện trần (không có lớp vỏ cách điện), dòng điện truyền qua cơ thể gây co giật, có thể gây chết người. Đó là do',
       options: [
         'tác dụng sinh lí của dòng điện',
-        'tác dụng hóa học của dòng điện',
+        'tác dụng hoá học của dòng điện',
         'tác dụng từ của dòng điện',
         'tác dụng phát sáng của dòng điện',
       ],
@@ -240,7 +240,7 @@ export default {
     {
       type: 'choice',
       prompt: 'Cầu chì bảo vệ mạch điện nhờ tác dụng nào của dòng điện?',
-      options: ['Tác dụng từ', 'Tác dụng nhiệt', 'Tác dụng hóa học', 'Tác dụng phát sáng'],
+      options: ['Tác dụng từ', 'Tác dụng nhiệt', 'Tác dụng hoá học', 'Tác dụng phát sáng'],
       answer: 1,
       hints: ['Khi dòng điện quá lớn, dây chảy trong cầu chì bị làm sao?'],
       solution:
@@ -251,7 +251,7 @@ export default {
       prompt: 'Nhận định nào sau đây đúng?',
       options: [
         'Dòng điện nào cũng có tác dụng phát sáng.',
-        'Dòng điện chạy qua dung dịch copper(II) sulfate chỉ có tác dụng hóa học.',
+        'Dòng điện chạy qua dung dịch copper(II) sulfate chỉ có tác dụng hoá học.',
         'Dòng điện chạy qua bất cứ vật dẫn nào cũng gây ra tác dụng nhiệt.',
         'Tác dụng nhiệt của dòng điện lúc nào cũng có ích.',
       ],
@@ -260,7 +260,7 @@ export default {
         'Dòng điện chạy qua dây dẫn trong nhà có làm nó sáng lên không? Có làm nó nóng lên chút nào không?',
       ],
       solution:
-        'Mọi vật dẫn đều nóng lên ít nhiều khi có dòng điện chạy qua. Dòng điện không phải lúc nào cũng làm vật phát sáng; dung dịch copper(II) sulfate cũng nóng lên (tác dụng nhiệt) chứ không chỉ có tác dụng hóa học; tác dụng nhiệt ở máy tính, động cơ là không mong muốn.',
+        'Mọi vật dẫn đều nóng lên ít nhiều khi có dòng điện chạy qua. Dòng điện không phải lúc nào cũng làm vật phát sáng; dung dịch copper(II) sulfate cũng nóng lên (tác dụng nhiệt) chứ không chỉ có tác dụng hoá học; tác dụng nhiệt ở máy tính, động cơ là không mong muốn.',
     },
     {
       type: 'text',
@@ -275,7 +275,7 @@ export default {
   takeaways: [
     'Tác dụng nhiệt: vật dẫn nóng lên khi có dòng điện chạy qua (bàn là, ấm điện, cầu chì).',
     'Tác dụng phát sáng: dòng điện làm đèn LED, dây tóc bóng đèn phát sáng; đèn LED chỉ cho dòng điện đi qua theo một chiều.',
-    'Tác dụng hóa học: dòng điện qua dung dịch muối kim loại tách kim loại bám vào điện cực nối với cực âm (mạ điện).',
+    'Tác dụng hoá học: dòng điện qua dung dịch muối kim loại tách kim loại bám vào điện cực nối với cực âm (mạ điện).',
     'Tác dụng sinh lí: dòng điện qua cơ thể gây co giật, có thể gây chết người; dòng điện nhỏ được dùng để chữa bệnh.',
     'Tác dụng từ: cuộn dây có dòng điện chạy qua trở thành nam châm điện (chuông điện, rơ-le, động cơ điện).',
   ],
