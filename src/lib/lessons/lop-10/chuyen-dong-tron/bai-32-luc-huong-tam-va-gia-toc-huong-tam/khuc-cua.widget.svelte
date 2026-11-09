@@ -6,7 +6,7 @@
   import { card } from '#lib/core/ui.js';
   import { linear } from '#lib/core/visuals/svg-math.js';
   import ForceArrow from '#lib/domain/force-arrow.svelte';
-  import { arcPath, pointAt } from '../_shared/circular.js';
+  import { arcPath, pointAt } from '#lib/domain/circular.js';
   import { CAR_MASS, MAX_TILT, ROADS, curve, sweepOnBoard } from './engine.js';
 
   const W = 360;

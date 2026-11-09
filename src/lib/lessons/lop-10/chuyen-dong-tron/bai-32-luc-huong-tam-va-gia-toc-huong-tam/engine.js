@@ -3,7 +3,7 @@
  * tangent when the string is cut, and a car on a curve held by friction and the
  * tilt of the road.
  */
-import { toRad } from '../_shared/circular.js';
+import { toRad } from '#lib/domain/circular.js';
 
 /** The book's free-fall acceleration, in m/s². */
 export const G = 9.8;

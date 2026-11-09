@@ -4,7 +4,7 @@
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
   import DragPoint from '#lib/core/visuals/drag-point.svelte';
-  import { TAU, arcPath, pointAt, slicePath, toDeg, toRad } from '../_shared/circular.js';
+  import { TAU, arcPath, pointAt, slicePath, toDeg, toRad } from '#lib/domain/circular.js';
   import { angleFrom } from './engine.js';
 
   const W = 360;

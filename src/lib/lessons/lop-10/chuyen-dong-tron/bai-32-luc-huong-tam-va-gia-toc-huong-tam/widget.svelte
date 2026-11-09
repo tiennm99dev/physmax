@@ -5,7 +5,7 @@
   import SliderField from '#lib/core/slider-field.svelte';
   import { button, card } from '#lib/core/ui.js';
   import ForceArrow from '#lib/domain/force-arrow.svelte';
-  import { TAU, pointAt, tangentAt, toRad } from '../_shared/circular.js';
+  import { TAU, pointAt, tangentAt, toRad } from '#lib/domain/circular.js';
   import {
     HIT_RADIUS,
     TARGETS,

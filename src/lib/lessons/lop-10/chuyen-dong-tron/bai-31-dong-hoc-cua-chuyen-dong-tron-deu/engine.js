@@ -3,7 +3,7 @@
  * wheel, a linear speed that grows with the distance from the centre.
  */
 import { tidy } from '#lib/core/number-format.js';
-import { TAU } from '../_shared/circular.js';
+import { TAU } from '#lib/domain/circular.js';
 
 /** Radius of the wheel on the board, in metres. */
 export const WHEEL_RADIUS = 0.5;
