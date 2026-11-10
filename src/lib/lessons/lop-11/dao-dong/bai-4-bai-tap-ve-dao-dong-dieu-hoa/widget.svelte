@@ -20,6 +20,8 @@
   });
   let solved = $state(false);
   let solvedCount = $state(0);
+  /** Wrong checks on this graph: each one makes the hints more specific. */
+  let misses = $state(0);
 
   const problem = $derived(makeProblem(rng(seed * 7919)));
   const phi = $derived(PHASES[problem.phase]);
@@ -33,6 +35,7 @@
     typedT = '';
     phase = -1;
     solved = false;
+    misses = 0;
     message = {
       tone: 'info',
       text: 'Đồ thị mới. Đọc $A$, $T$ và $\\varphi$ rồi bấm Kiểm tra.',
@@ -63,13 +66,26 @@
       };
       return;
     }
+    misses += 1;
+    const detailed = misses >= 2;
     const tips = [];
-    if (!r.A) tips.push('$A$ là tung độ của đỉnh cao nhất');
+    if (!r.A)
+      tips.push(
+        detailed
+          ? `$A$ là tung độ của đỉnh cao nhất; hai vạch ngang liền nhau cách nhau $${numTex(problem.A / 2, 1)}$ cm`
+          : '$A$ là tung độ của đỉnh cao nhất',
+      );
     if (!r.T)
       tips.push(
-        '$T$ là khoảng thời gian giữa hai đỉnh liên tiếp (hoặc hai lần liên tiếp đồ thị cắt trục cùng chiều)',
+        detailed
+          ? `$T$ là khoảng thời gian giữa hai đỉnh liên tiếp; hai vạch dọc liền nhau cách nhau $${numTex(problem.T / 4, 2)}$ s, đúng một phần tư chu kì`
+          : '$T$ là khoảng thời gian giữa hai đỉnh liên tiếp (hoặc hai lần liên tiếp đồ thị cắt trục cùng chiều)',
       );
-    if (!r.phase) {
+    if (!r.phase && !detailed)
+      tips.push(
+        '$\\varphi$: xem lúc $t = 0$ đồ thị ở đâu so với $A$, và ngay sau đó đi lên hay đi xuống',
+      );
+    if (!r.phase && detailed) {
       const h = startHint(problem);
       tips.push(
         `lúc $t = 0$ đồ thị ở $x_0 = ${numTex(h.x0, 1)}$ cm và ${h.way}; giải $\\cos\\varphi = \\dfrac{x_0}{A}$, chọn $\\varphi < 0$ nếu vật đi theo chiều dương, $\\varphi > 0$ nếu đi theo chiều âm`,

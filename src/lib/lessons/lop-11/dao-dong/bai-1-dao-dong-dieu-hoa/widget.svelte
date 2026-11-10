@@ -58,8 +58,8 @@
 
   const modeText = $derived(
     {
-      'dieu-hoa': `Dao động điều hoà: đồ thị li độ theo thời gian là đường hình sin. Sau mỗi chu kì $T = ${numTex(T, 1)}$ s vật trở lại vị trí cũ theo hướng cũ; li độ luôn nằm trong đoạn từ $-${numTex(A)}$ cm đến $${numTex(A)}$ cm.`,
-      'tuan-hoan': `Dao động tuần hoàn nhưng không điều hoà: vật chạy đều qua lại, sau mỗi $${numTex(T, 1)}$ s trạng thái lặp lại như cũ, nhưng đồ thị là đường gấp khúc, không phải đường hình sin.`,
+      'dieu-hoa': `Dao động điều hoà: đồ thị li độ theo thời gian là đường hình sin. Sau mỗi chu kì $T = ${numTex(T, 2)}$ s vật trở lại vị trí cũ theo hướng cũ; li độ luôn nằm trong đoạn từ $-${numTex(A)}$ cm đến $${numTex(A)}$ cm.`,
+      'tuan-hoan': `Dao động tuần hoàn nhưng không điều hoà: vật chạy đều qua lại, sau mỗi $${numTex(T, 2)}$ s trạng thái lặp lại như cũ, nhưng đồ thị là đường gấp khúc, không phải đường hình sin.`,
       'tat-dan':
         'Vẫn là dao động cơ (vật chuyển động qua lại quanh vị trí cân bằng O), nhưng không tuần hoàn: mỗi lần quay lại, vật không ra xa được như lần trước, nên trạng thái không lặp lại.',
     }[mode],
