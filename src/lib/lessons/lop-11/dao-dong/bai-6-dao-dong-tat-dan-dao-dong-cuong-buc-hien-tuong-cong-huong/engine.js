@@ -5,6 +5,7 @@
  * dies away; with the drive it settles to the driving frequency with the
  * steady amplitude of `drivenAmplitude`, largest near the natural frequency.
  */
+import { int, rng } from '#lib/core/drill.js';
 import { TAU } from '../_shared/oscillation.js';
 
 /** Drag settings: β in 1/s. */
@@ -51,11 +52,14 @@ export const envelope = (A0, beta, t) => A0 * Math.exp(-beta * t);
 
 /**
  * Share of the amplitude and of the energy left after one period of the
- * free motion, and the share of energy lost.
+ * free motion (the damped period 2π/ωd, the spacing of the graph's peaks),
+ * and the share of energy lost.
  * @param {number} f0 Hz @param {number} beta 1/s
  */
 export function lossPerPeriod(f0, beta) {
-  const amp = Math.exp(-beta / f0);
+  const w0 = TAU * f0;
+  const wd = Math.sqrt(Math.max(0, w0 * w0 - beta * beta));
+  const amp = wd === 0 ? 0 : Math.exp((-beta * TAU) / wd);
   return { amplitude: amp, energy: amp * amp, lost: 1 - amp * amp };
 }
 
@@ -107,3 +111,16 @@ export function resonanceCurve(f0, beta, n = 112) {
  * @param {number} f @param {number} f0
  */
 export const isResonance = (f, f0) => Math.abs(f - f0) <= RESONANCE_TOLERANCE + 1e-9;
+
+/**
+ * The hidden natural frequency of round `round` (1, 2, ...), never the same
+ * as the round before, so "Hệ khác" always brings a new system.
+ * @param {number} round
+ */
+export function naturalFor(round) {
+  let at = int(rng(4231), 0, NATURAL.length - 1);
+  for (let r = 2; r <= round; r += 1) {
+    at = (at + 1 + int(rng(r * 4231), 0, NATURAL.length - 2)) % NATURAL.length;
+  }
+  return NATURAL[at];
+}

@@ -160,6 +160,28 @@ export default {
       solution: '$W = 4W_t$ nên $x^2 = \\dfrac{A^2}{4}$, $|x| = \\dfrac{A}{2} = 3$ cm.',
     },
     {
+      type: 'match',
+      prompt:
+        'Ghép mỗi trạng thái năng lượng với độ lớn li độ tương ứng của vật dao động điều hoà biên độ $A$.',
+      left: ['$W_đ = W_t$', '$W_đ = 8W_t$', '$W_t = 3W_đ$'],
+      right: [
+        '$\\dfrac{A}{\\sqrt{2}}$',
+        '$\\dfrac{A}{3}$',
+        '$\\dfrac{\\sqrt{3}}{2}A$',
+        '$\\dfrac{A}{8}$',
+      ],
+      pairs: [
+        [0, 0],
+        [1, 1],
+        [2, 2],
+      ],
+      hints: [
+        'Viết $W$ theo $W_t$ trong từng trường hợp, rồi dùng $\\dfrac{x^2}{A^2} = \\dfrac{W_t}{W}$.',
+      ],
+      solution:
+        '$W_đ = W_t$: $W = 2W_t$, $|x| = \\dfrac{A}{\\sqrt{2}}$. $W_đ = 8W_t$: $W = 9W_t$, $|x| = \\dfrac{A}{3}$. $W_t = 3W_đ$: $W_t = \\dfrac{3}{4}W$, $|x| = \\dfrac{\\sqrt{3}}{2}A$.',
+    },
+    {
       type: 'number',
       prompt:
         'Một vật dao động điều hoà với biên độ $10$ cm. Tại vị trí thế năng bằng ba lần động năng, li độ của vật có độ lớn bao nhiêu? (Làm tròn đến hai chữ số thập phân.)',
@@ -169,15 +191,6 @@ export default {
       hints: ['$W_t = 3W_đ$ thì $W = W_t + \\dfrac{W_t}{3} = \\dfrac{4}{3}W_t$.'],
       solution:
         '$W_t = \\dfrac{3}{4}W$ nên $x^2 = \\dfrac{3}{4}A^2$, $|x| = \\dfrac{\\sqrt{3}}{2} \\cdot 10 \\approx 8{,}66$ cm.',
-    },
-    {
-      type: 'number',
-      prompt:
-        'Một vật dao động điều hoà đang ở li độ $x = \\dfrac{A}{3}$. Tỉ số giữa động năng và thế năng của vật bằng bao nhiêu?',
-      answer: 8,
-      hints: ['Tính $\\dfrac{W_t}{W} = \\dfrac{x^2}{A^2}$ trước.'],
-      solution:
-        '$\\dfrac{W_t}{W} = \\dfrac{1}{9}$, nên $W_đ = \\dfrac{8}{9}W$ và $\\dfrac{W_đ}{W_t} = 8$.',
     },
     {
       type: 'number',

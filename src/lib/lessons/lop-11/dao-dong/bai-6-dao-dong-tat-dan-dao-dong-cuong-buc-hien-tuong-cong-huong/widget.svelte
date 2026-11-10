@@ -1,5 +1,4 @@
 <script>
-  import { rng, pick } from '#lib/core/drill.js';
   import FeedbackNote from '#lib/core/feedback-note.svelte';
   import { frameLoop, reducedMotion } from '#lib/core/motion.js';
   import { formatFixed, formatNumber, numTex } from '#lib/core/number-format.js';
@@ -14,13 +13,13 @@
     F_MAX,
     F_MIN,
     F_STEP,
-    NATURAL,
     dampedAt,
     drivenAmplitude,
     drivenAt,
     envelope,
     isResonance,
     lossPerPeriod,
+    naturalFor,
     resonanceCurve,
   } from './engine.js';
 
@@ -57,8 +56,9 @@
     text: 'Đổi tần số $f$ của ngoại lực và theo dõi biên độ. Khi tìm được tần số làm biên độ lớn nhất, bấm Chốt.',
   });
   let found = $state(0);
+  let solved = $state(false);
 
-  const f0 = $derived(pick(rng(round * 4231), NATURAL));
+  const f0 = $derived(naturalFor(round));
   const drivenBeta = $derived(DRAGS[drivenDrag].beta);
   const amp = $derived(drivenAmplitude(f, f0, drivenBeta));
   const drivenX = $derived(drivenAt(f, f0, drivenBeta, t));
@@ -114,7 +114,8 @@
 
   function lockIn() {
     if (isResonance(f, f0)) {
-      found += 1;
+      if (!solved) found += 1;
+      solved = true;
       verdict = {
         tone: 'ok',
         text: `Cộng hưởng! Tần số riêng của hệ là $f_0 = ${numTex(f0, 2)}$ Hz. Khi $f = f_0$, biên độ dao động cưỡng bức đạt cực đại $A \\approx ${numTex(amp, 1)}$ cm.`,
@@ -138,6 +139,7 @@
 
   function nextSystem() {
     round += 1;
+    solved = false;
     showCurve = false;
     visited = [{ drag: drivenDrag, f }];
     verdict = {
@@ -256,9 +258,11 @@
       <button type="button" class={button.secondary} onclick={play}>
         {running ? 'Dừng' : 'Chạy'}
       </button>
-      <button type="button" class={button.secondary} onclick={() => (showCurve = !showCurve)}>
-        {showCurve ? 'Ẩn đường cộng hưởng' : 'Hiện đường cộng hưởng'}
-      </button>
+      {#if solved}
+        <button type="button" class={button.secondary} onclick={() => (showCurve = !showCurve)}>
+          {showCurve ? 'Ẩn đường cộng hưởng' : 'Hiện đường cộng hưởng'}
+        </button>
+      {/if}
       <button type="button" class={button.quiet} onclick={nextSystem}>Hệ khác</button>
     </div>
     <div aria-live="polite">
