@@ -123,7 +123,7 @@
     <p>
       <LiveRichText
         text={visible
-          ? `Vân sáng bậc $k = ${order}$ ở $x = ki = ${numTex(xk, 2)}$ mm; vân tối gần nó ở $x = ${numTex((order + 0.5) * spacing, 2)}$ mm.`
+          ? `Vân sáng bậc $k = ${order}$ ở $x = ki = ${numTex(xk, 2)}$ mm; hai vân tối kề nó ở $x = ${numTex((order - 0.5) * spacing, 2)}$ mm và $x = ${numTex((order + 0.5) * spacing, 2)}$ mm.`
           : `Vân sáng bậc $k = ${order}$ ở $x = ${numTex(xk, 2)}$ mm, ngoài phần màn đang vẽ.`}
       />
     </p>

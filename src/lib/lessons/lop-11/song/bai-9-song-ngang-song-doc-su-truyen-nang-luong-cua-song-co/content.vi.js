@@ -35,7 +35,7 @@ export default {
       blocks: [
         {
           type: 'p',
-          text: 'Treo một lò xo dài nằm ngang, nén nhanh rồi thả một đầu lò xo theo phương của trục lò xo. Trên lò xo xuất hiện các vùng các vòng xít lại (vùng nén) xen kẽ các vùng các vòng giãn ra (vùng dãn); các vùng này truyền dọc theo lò xo, còn mỗi vòng lò xo chỉ dao động qua lại quanh vị trí cân bằng dọc theo trục lò xo.',
+          text: 'Treo một lò xo dài nằm ngang, nén nhanh rồi thả một đầu lò xo theo phương của trục lò xo. Trên lò xo xuất hiện các vùng các vòng xít lại (vùng nén) xen kẽ các vùng các vòng dãn ra (vùng dãn); các vùng này truyền dọc theo lò xo, còn mỗi vòng lò xo chỉ dao động qua lại quanh vị trí cân bằng dọc theo trục lò xo.',
         },
         {
           type: 'callout',
